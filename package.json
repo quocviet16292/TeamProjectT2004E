@@ -1,0 +1,23 @@
+{
+  "name": "team-project",
+  "version": "1.0.0",
+  "description": "eProject Makeup Artist",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Semi-1",
+    "Makeup",
+    "Artist",
+    "eProjects"
+  ],
+  "author": "Team T2004E - FPT Aptech",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "mssql": "^6.2.1"
+  }
+}
