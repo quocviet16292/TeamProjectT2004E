@@ -13,7 +13,7 @@ app.set("view engine","ejs");
 app.use(express.static("public"));
 
 //------------Install Mssql------------
-const mssql = require("mssql");
+// const mssql = require("mssql");
 // const config = {
 //     server:'LAPTOP-QAOLFL7H\\SQLEXPRESS',
 //     database:'Lap4',
@@ -24,12 +24,19 @@ const mssql = require("mssql");
 //     }
 // };
 
-mssql.connect(config,(err)=>{
-    if(err) console.log(err);
-    else console.log("Connect Database Success !");
-});
-var db = new mssql.Request();
+// mssql.connect(config,(err)=>{
+//     if(err) console.log(err);
+//     else console.log("Connect Database Success !");
+// });
+// var db = new mssql.Request();
 
 //------------Install Body Parser------------
 const bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({extended:true}))
+
+
+
+//-----------Start-------------
+app.get('/', (req,res)=>{
+    res.render('home');
+})
