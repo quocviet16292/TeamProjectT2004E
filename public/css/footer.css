@@ -5,11 +5,12 @@
     -o-background-image: url('../imgs/bg-footer.png');
     -moz-background-image: url('../imgs/bg-footer.png');
     background-size: cover;
-    height: 200px;
+    height: 270px;
+    background-position: center center;
     background-repeat: no-repeat;
-
 }
 .vfooter__bg{
+    padding-top: 50px;
     background-color: #484848;
     padding-bottom: 40px;
 }
@@ -38,12 +39,16 @@
     list-style: none;
     font-size: 14px;
 }
+.vfooter__link ul li a{
+    text-decoration: none;
+    color: var(--text-color);
+}
 .vfooter-title{
     color: var(--main-color);
     font-size: 18px;
 }
 .vfooter__connect__payment{
-    margin-bottom: 20px;
+    margin-bottom: 50px;
 }
 .list__card{
     display: inline;
@@ -61,9 +66,27 @@
 .vfooter__connect__social ul li{
     list-style: none;
     display: inline;
-    margin-right: 5px;
+    margin-right: 10px;
 }
 .vfooter__connect__social ul li a{
     text-decoration: none;
     color: var(--text-color);
+    font-size: 18px;
+}
+.vfooter__bottom{
+    background-color: #444;
+    height: 50px;
+    display: flex;
+
+}
+.vfooter__bottom .container{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.vfooter__bottom p{
+    color: var(--main-color);
+    font-size: 13px;
+    padding: 0;
+    margin: 0;
 }
