@@ -40,3 +40,26 @@ app.use(bodyParser.urlencoded({extended:true}))
 app.get('/', (req,res)=>{
     res.render('home');
 })
+
+app.get('/booking', (req,res)=>{
+    res.render('book');
+})
+
+app.get('/pages/about-us', (req,res)=>{
+    res.render('aboutUs');
+})
+app.get('/pages/privacy-policy', (req,res)=>{
+    res.render('privacyPolicy');
+})
+app.get('/pages/terms-and-conditions', (req,res)=>{
+    res.render('termconditions');
+})
+app.get('/pages/how-to-book', (req,res)=>{
+    res.render('howtobook');
+})
+app.get('/pages/list-your-business', (req,res)=>{
+    res.render('listyourbusiness');
+})
+app.get('/pages/payments-cancellation', (req,res)=>{
+    res.render('paymentandcancellation');
+})

@@ -11,12 +11,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a8ceb5b1-59e0-4696-ad49-96b52bef462f" name="Default Changelist" comment="Viet">
-      <change afterPath="$PROJECT_DIR$/public/css/footer.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/main.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/home.ejs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/book.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/ftlink.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/serviceCart.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/aboutUs.ejs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/book.ejs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/howtobook.ejs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/listyourbusiness.ejs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/paymentandcancellation.ejs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/privacyPolicy.ejs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/termconditions.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/footer.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/footer.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/layout/footer.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/layout/footer.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -63,7 +70,11 @@
       <updated>1598620624559</updated>
       <workItem from="1598620625601" duration="945000" />
       <workItem from="1598621584340" duration="1322000" />
-      <workItem from="1598622920218" duration="8049000" />
+      <workItem from="1598622920218" duration="8328000" />
+      <workItem from="1598687205264" duration="21125000" />
+      <workItem from="1598766650227" duration="25518000" />
+      <workItem from="1598878717211" duration="1365000" />
+      <workItem from="1598880097907" duration="1221000" />
     </task>
     <task id="LOCAL-00001" summary="Viet">
       <created>1598621678893</created>
@@ -86,7 +97,21 @@
       <option name="project" value="LOCAL" />
       <updated>1598622517450</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Viet">
+      <created>1598632071546</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1598632071546</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Viet">
+      <created>1598689573756</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1598689573756</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -113,6 +138,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="522" y="235" key="#Notifications/0.0.1536.824@0.0.1536.824" timestamp="1598622584318" />
+    <state x="520" y="211" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1598879193230">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="520" y="211" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1598879193230" />
     <state x="146" y="64" key="DiffContextDialog" timestamp="1598623015456">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -121,13 +150,32 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="276" y="56" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1598621858946" />
-    <state x="360" y="142" key="Vcs.Push.Dialog.v2" timestamp="1598623046253">
+    <state x="360" y="142" key="Vcs.Push.Dialog.v2" timestamp="1598689577641">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="360" y="142" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1598623046253" />
-    <state x="628" y="63" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1598622510602">
+    <state x="360" y="142" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1598689577641" />
+    <state x="628" y="63" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1598631983978">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="628" y="63" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog/0.0.1536.824@0.0.1536.824" timestamp="1598622510602" />
+    <state x="628" y="63" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog/0.0.1536.824@0.0.1536.824" timestamp="1598631983978" />
+    <state x="425" y="187" key="run.anything.popup" timestamp="1598714253471">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1598714253471" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1598880761470">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1598880761470" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/public/js/serviceCart.js</url>
+          <line>44</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
