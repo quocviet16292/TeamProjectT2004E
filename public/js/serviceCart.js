@@ -1,3 +1,72 @@
+// Progress Bar and Step Form
+
+var currentTab = 0; // Current tab is set to be the first tab (0)
+showTab(currentTab); // Display the current tab
+
+
+function showTab(n) {
+    var x = document.getElementsByClassName("vbooking__step");
+    x[n].style.display = "block";
+    if (n == 0) {
+        document.getElementById("prevBtn").style.display = "none";
+    } else {
+        document.getElementById("prevBtn").style.display = "inline";
+    }
+    if (n == (x.length - 1)) {
+        document.getElementById("nextBtn").innerHTML = "Submit <i class=\"fas fa-paper-plane\"></i>";
+    } else {
+        document.getElementById("nextBtn").innerHTML = "Next <i class=\"fas fa-chevron-right\">";
+    }
+    fixStepIndicator(n)
+}
+
+
+function nextPrev(n) {
+    var x = document.getElementsByClassName("vbooking__step");
+    x[currentTab].style.display = "none";
+    currentTab = currentTab + n;
+    if (currentTab >= x.length) {
+        document.getElementById("bookForm").submit();
+        return false;
+    }
+    showTab(currentTab);
+}
+
+function validateForm() {
+    // This function deals with validation of the form fields
+    var x, y, i, valid = true;
+    x = document.getElementsByClassName("vbooking__step");
+    y = x[currentTab].getElementsByTagName("input");
+    for (i = 0; i < y.length; i++) {
+        if (y[i].value == "") {
+            y[i].className += " invalid";
+            valid = false;
+        }
+    }
+    // If the valid status is true, mark the step as finished and valid:
+    // if (valid) {
+    //   document.getElementsByClassName("step")[currentTab].className += " finish";
+    // }
+    // return valid; // return the valid status
+}
+
+function fixStepIndicator(n) {
+
+    var x = document.getElementsByClassName("progress__step");
+    for (let i = 0; i < x.length; i++) {
+        x[i].className = x[i].className.replace(" active__step", "");
+    }
+    for(let j=0; j < n+1; j++){
+        x[j].className += " active__step";
+    }
+
+}
+
+
+
+
+
+//Get Number
 function getNumber (e){
     let pNumbers = document.getElementById('qty__persons').value;
     e.querySelector('#display__numbers').innerHTML = pNumbers;
@@ -23,6 +92,7 @@ function removeItem(){
 
 //AddToCart
 // Number Spinner
+var selectList = [];
 $(function(){
     $('input[type="number"]').niceNumber({
         autoSize:false,
@@ -33,18 +103,13 @@ $(function(){
     });
     $('#btnchangeplus').click(function() {
         let textSelect = $('#service__select option:selected').text()
-        let selectList = $('.cart-row')
         if(selectList.length == 0){
             addToCart();
         }else{
-            for (let i = 0; i < selectList.length; i++) {
-                let titleList = selectList[i].querySelector('div h3').innerText;
-                if(textSelect == titleList){
-                    getNumber(selectList[i]);
-                }else{
-                    addToCart();
-                    //Mai sua tiep
-                }
+            if(selectList.includes(textSelect)){
+                getNumber();
+            }else {
+                addToCart();
             }
         }
 
@@ -59,6 +124,7 @@ function addToCart(){
 }
 
 function  addService(title, price){
+    selectList.push(title, price);
     var cartRow = document.createElement('div')
     cartRow.classList.add('cart-row')
     cartRow.classList.add('row')

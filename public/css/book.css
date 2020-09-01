@@ -2,18 +2,101 @@
     padding-bottom: 150px;
 }
 
-.vbooking__step .btn{
-    border-radius: 20px;;
+/*Progress Bar*/
+.vbooking__progressbar{
+    display: block;
+    width: 100%;
+    margin: 50px auto;
 }
+.vbooking__progressbar ul{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+}
+.vbooking__progressbar ul li{
+    display: inline-block;
+    position: relative;
+    width: 25%;
+    text-align: center;
+
+}
+.vbooking__progressbar ul li:before{
+    display: block;
+    content: '\2714';
+    color: white;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background-color: #ddd;
+    line-height: 38px;
+    text-align: center;
+    margin: 20px auto;
+    z-index: 2;
+    transition: background-color 1s ease;
+}
+.vbooking__progressbar ul li:after{
+    display: block;
+    content: '';
+    width: 100%;
+    height: 4px;
+    background-color: #ddd;
+    position: absolute;
+    top: 38px;
+    left: 0;
+    z-index: -1;
+    transition: background-color 1s ease;
+}
+.vbooking__progressbar ul li.active__step:before,
+.vbooking__progressbar ul li.active__step:after
+{
+    background-color: #666;
+
+}
+input.form-control{
+    border: 1px solid white;
+    border-bottom: 1px solid  rgba(0,0,0,0.54);
+    transition: all 0.5s ease;
+
+}
+select.form-control{
+    border: 1px solid rgba(0,0,0,0.25);
+    border-radius: 20px;
+    transition: all 0.5s ease;
+    padding-right: 20px;
+}
+.form-control:focus{
+    outline: none;
+    border: 1px solid #ff5c5d;
+    border-radius: 20px;
+    box-shadow: none;
+}
+
+.vbooking__step{
+    display: none;
+}
+
 .btn-right{
     float: right;
     background-color: var(--main-color);
     color: var(--text-color);
+    border-radius: 20px;;
 }
 .btn-left{
     float: left;
     background-color: var(--main-color);
     color: var(--text-color);
+    border-radius: 20px;;
+}
+.btn-right:hover, .btn-left:hover{
+    background-color: #666;
+    color: #fff;
+}
+#btn-step-4-next:hover{
+    background-color: #fff;
+    border: 1px solid var(--main-color);
+    color: var(--main-color);
 }
 
 .step-2-nice-number{
@@ -41,3 +124,21 @@
     color: var(--text-color);
     height: 40px;
 }
+
+
+#client__comment{
+    height: 200px;
+}
+small{
+    color: #333;
+}
+
+
+#step-4 h3{
+    font-size: 14px;
+    font-weight: 600;
+}
+.step-4__title{
+    margin-bottom: 30px;
+}
+
