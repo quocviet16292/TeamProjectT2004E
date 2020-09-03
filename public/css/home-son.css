@@ -10,8 +10,12 @@ body {
     letter-spacing: 0.1vw;
     word-spacing: 0.1vw;
     font-size: 0.85vw; /*vw ko đổi hiển thị chữ khi zoom to nhỏ màn hình đi kèm với thẻ viewport*/
+    position: relative!important;
 }
-
+.nemu-ssss{
+    position: fixed;
+    top: 0;
+}
 a{
     text-decoration: none;
     color: #333333;
@@ -390,12 +394,13 @@ img{
 }
 /*tittel*/
 .container-s1{
-    background-image: url("../imgs-s/bg2.jpeg");
+    /*background-image: url("../imgs-s/bg2.jpeg");*/
     /*background-repeat: no-repeat;*/
     background-size: cover;
 }
-.tiller-s{
+.tiller-s22{
     text-align: center;
+    padding: 2vw 0;
 }
 
 .menu-s{
