@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("header-son") %>
+<body>
+<%- include("navbar-Beauty-Artist-s") %>
+<section class="section section-Beauty-Artist">
+    <div class="container container-Artisan">
+            <div class="container-h1-s">
+                <h1>Artisan registration</h1>
+            </div>
+            <div class="container-menu">
+                    <div class="col-md-12">
+                        <form action="/luu-artist" method="post" data-toggle="validator" role="form">
+                            <div class="form-group">
+                                <label class="span-label">Client Name</label>
+                                <input type="text" name="aName" class="form-control" id="username" placeholder="Username" data-error="Nhập sai rồi, nhập lại đi" required>
+                                <div class="help-block with-errors"></div>
+                            </div>
+                            <hr>
+                            <div class="form-group">
+                                <label class="span-label">Email address</label>
+                                <input type="email" name="Email" class="form-control" placeholder="name@gmail.com" data-error="Email nhập sai định dạng" required>
+                                <div class="help-block with-errors"></div>
+                            </div>
+                            <hr>
+                            <div class="form-group">
+                                <label class="span-label">Phone Number</label>
+                                <input type="text" name="Phone" class="form-control" placeholder="+084" data-error="Error" required>
+                                <div class="help-block with-errors"></div>
+                            </div>
+                            <hr>
+                            <div class="form-group">
+                                <label class="span-label">District and City</label>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <select name="District" class="form-control">
+                                            <option value="Hoàng Mai">Hoàng Mai</option>
+                                            <option value="Ba Đình">Ba Đình</option>
+                                            <option value="Thanh Xuân">Thanh Xuân</option>
+                                            <option value="Hai Bà Trưng">Hai Bà Trưng</option>
+                                            <option value="Hoàn Kiếm">Hoàn Kiếm</option>
+                                            <option value="Đống Đa">Đống Đa</option>
+                                            <option value="Hà Đông">Hà Đông</option>
+                                            <option value="Tây Hồ">Tây Hồ</option>
+                                            <option value="Cầu Giấy">Cầu Giấy</option>
+                                            <option value="Nam Từ Liêm">Nam Từ Liêm</option>
+                                            <option value="Bắc Từ Liêm">Bắc Từ Liêm</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <select name="City" class="form-control">
+                                            <option value="1">Hà Nội</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="form-group">
+                                <label class="span-label">Address</label>
+                                <input type="text" name="Adress" class="form-control" data-error="Error" required>
+                                <div class="help-block with-errors"></div>
+                            </div>
+                            <hr>
+                            <div class="form-group">
+                                <label class="span-label">Location</label>
+                                <input type="text" name="aLocation" class="form-control" data-error="Error" required>
+                                <div class="help-block with-errors"></div>
+                            </div>
+                            <hr>
+                            <div class="form-group">
+                                <label class="span-label">Intro</label>
+                                <input type="text" name="Intro" class="form-control" data-error="Error" required>
+                                <div class="help-block with-errors"></div>
+                            </div>
+                            <hr>
+                            <div class="form-group">
+                                <label class="span-label">Avartar</label>
+                                <input type="text" name="Avartar" class="form-control" data-error="Error" required>
+                                <div class="help-block with-errors"></div>
+                            </div>
+                            <hr>
+                            <div class="form-group">
+                                <label class="span-label">Cover</label>
+                                <input type="text" name="Cover" class="form-control" data-error="Error" required>
+                                <div class="help-block with-errors"></div>
+                            </div>
+                            <hr>
+                            <div class="form-group">
+                                <label class="span-label">TimeRegis</label>
+                                <input type="text" name="TimeRegis" class="form-control" data-error="Error" required>
+                                <div class="help-block with-errors"></div>
+                            </div>
+                            <hr>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-outline-danger"><span>Registration</span></button>
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+</section>
+<script type="text/javascript" src="/js/jquery.js"></script>
+<script type="text/javascript" src="/libs/bootstrap/js/validator.js"></script>
+</body>
+</html>
