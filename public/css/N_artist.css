@@ -1,0 +1,512 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: GothamPro, sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.1vw;
+    word-spacing: 0.1vw;
+    font-size: 0.85vw; /*vw ko đổi hiển thị chữ khi zoom to nhỏ màn hình đi kèm với thẻ viewport*/
+    margin : 0;
+}
+.N_cover{
+    width: 100%;
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+@media (max-width: 800px) {
+    .N_cover{
+        background-position: center;
+    }
+}
+
+.N_cover_avatar{
+    width: 154px;
+    background-color: white;
+    position: absolute;
+    left: 42%;
+    bottom: -20%;
+    border-radius: 50%;
+}
+.N_profile{
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+.N_profile_name{
+    width: 100%;
+    text-align: center;
+    font-size: 35px;
+    font-weight: 600;
+    letter-spacing: -0.1rem;
+}
+.N_profile_aftername{
+    padding: 5px 0;
+    text-align: center;
+    color: #484848;
+    font-weight: 400;
+    font-size: 18px;
+    letter-spacing: 0rem;
+}
+.N_profile_bio{
+    max-width: 500px;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 20px;
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+.N_profile_note{
+    max-width: 95%;
+    text-align: center;
+    background-color: #F8F8F8;
+    border: 1px solid #F9F9F9;
+    color: #484848;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0rem;
+}
+.N_profile_addFavorite{
+    text-align: center;
+    margin-top: 25px;
+}
+.N_favorite{
+    width: 170px;
+    height: 50px;
+    background-color: white;
+    border: 1px solid #ff5c5c;
+    border-radius: 20px;
+    color: #ff5c5c;
+}
+.N_favorite:hover{
+    box-shadow: 0 0 11px rgba(33,33,33,.2);
+}
+.N_profile_ask{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+.N_ask{
+    width: 200px;
+    height: 50px;
+    border: 1px solid transparent;
+    background-color: #FF5C5C;
+    border-radius: 20px;
+    color: white;
+    text-transform: uppercase;
+    box-shadow: 1px 1px 2px 2px hsla(0, 0%, 0%, 0.1);
+}
+.N_profile_job{
+    width: 90%;
+    margin: 0 auto !important;
+
+}
+.border-box{
+    border: 1px solid rgba(0,0,0,0.1);
+    text-align: center;
+    padding: 20px 0;
+}
+/*Portfolio*/
+.Portfolio{
+    margin: auto !important;
+    width: 85%;
+}
+.Portfolio_name{
+    border-top: 1px solid rgba(0,0,0,0.1);
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    font-weight: 700;
+    color: #FF5C5C;
+    font-size: 24px;
+    padding: 5px 0;
+    margin-bottom: 20px;
+    letter-spacing: 0.2px;
+}
+.Portfolio_img{
+    box-sizing: border-box;
+    display: flex;
+
+    /*flex-direction: column;*/
+}
+.col-md-3{
+    width: 25%;
+    height: 270px;
+    /*margin-right: 2px;*/
+}
+.col-md-3 img{
+    width: 100%;
+    height: 250px;
+    cursor: pointer;
+    object-fit: cover;
+    border: 10px solid white;
+    -webkit-box-shadow: 0 3px 6px rgba(0,0,0,.25);
+    position: relative;
+}
+.col-md-3 i{
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: white;
+    font-size: 20px;
+    z-index: 1;
+}
+
+@media only screen and ( max-width : 739px ) {
+    .Portfolio_img{
+        flex-direction: column;
+        text-align: center;
+    }
+    .col-md-3 {
+        width: 70%;
+        height: 350px;
+        margin-bottom: 20px;
+    }
+
+    .col-md-3 img{
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+
+    }
+}
+.column{
+    display: none;
+}
+/*modal*/
+.row > .column {
+    padding: 0 8px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.column {
+    float: left;
+    width: 25%;
+}
+
+/* The Modal (background) */
+.modal {
+
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 50px;
+    left: 0;
+    margin: 0 auto;
+    overflow: auto;
+    background:rgba(0,0,0,0.5);
+
+
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+
+    margin: 0 auto;
+    padding: 0;
+    max-width: 460px;
+    max-height: 10%;
+
+}
+
+
+/* The Close Button */
+.close {
+    color: #FF5C5C;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 5rem;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #FF5C5C;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.mySlides {
+    display: none;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+/* Next & previous buttons */
+@media (min-width: 768px) {
+    .prev
+    {
+        transform: translateX(-100%);
+    }
+    .next
+    {
+        transform: translateX(100%);
+    }
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    width: auto;
+    padding: 50px;
+    margin-top: 50%;
+    color: #FF5C5C;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.demo {
+    opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+    opacity: 1;
+}
+
+img.hover-shadow {
+    transition: 0.3s;
+}
+
+
+/*service*/
+.N_Service{
+    width: 85%;
+    height: auto;
+    margin: 0 auto ;
+}
+@media (max-width: 500px) {
+    .N_Service{
+        width: 95%;
+    }
+
+}
+.N_Service_name{
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    font-weight: 700;
+    color: #FF5C5C;
+    font-size: 24px;
+    padding: 5px 0;
+    margin-bottom: 10px;
+    letter-spacing: 0.2px;
+}
+/*beauty*/
+.N_Beauty{
+    background-color: #ececf6;
+}
+.N_Beauty_Name{
+    border-top: 1px solid #484848;
+    border-bottom: 1px solid #484848;
+    text-transform: uppercase;
+
+    padding: 10px 0;
+    letter-spacing: 0.2px;
+    text-align: center;
+    font-weight: 600;
+    color: #484848;
+
+
+}
+.N_Beauty_Private{
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+
+}
+.N_Beauty_Private_Book{
+    box-sizing: border-box;
+    padding: 30px 10px;
+
+}
+
+.N_Beauty_Private_Book_name{
+    padding: 11px 18px;
+    border: 1px solid transparent;
+    background-color: #FF5C5C;
+    border-radius: 20px;
+    font-weight: 300;
+    color: white;
+    box-shadow: 1px 1px 2px 2px hsla(0,0%,0%,0.1);
+    text-align: center;
+
+}
+.N_Beauty_Private_introduce{
+    flex-basis: 75%;
+    letter-spacing: 0.1px;
+    font-size: 17px;
+    color: #484848;
+}
+.N_Beauty_Private_Book_name:hover{
+    box-shadow: 0 0 11px rgba(33,33,33,.2);
+}
+.N_Beauty_Private_introduce_first{
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+.N_Beauty_Private_introduce_second{
+    margin-bottom: 8px;
+}
+.N_Beauty_Private_introduce_ID span{
+    color: #ff5c5c;
+    font-weight: 500;
+}
+.N_Beauty_Private_introduce_ID i{
+    color: #484848;
+}
+@media (max-width: 500px) {
+    .N_Beauty_Private_introduce{
+        font-size: 14px;
+    }
+}
+
+#N_Beauty_BasicMakeUp{
+    background-color: white;
+}
+#N_Beauty_BasicMakeUp_2{
+    background-color: white;
+}
+/*Review*/
+.N_Review{
+    margin-top: 20px !important;
+    width: 85%;
+    height: auto;
+    margin: 0 auto ;
+}
+@media (max-width: 500px) {
+    .N_Review{
+        width: 95%;
+    }
+
+}
+.N_Review_name{
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    font-weight: 700;
+    color: #FF5C5C;
+    font-size: 24px;
+    padding: 5px 0;
+    margin-bottom: 10px;
+    letter-spacing: 0.2px;
+}
+.N_Review_comment{
+    width: 100%;
+    height: auto;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 20px;
+    padding: 20px 10px;
+    letter-spacing: 0.1px;
+    margin-bottom: 20px;
+    display: none;
+}
+
+
+.N_Review_comment_intro_ava img{
+    float: left;
+}
+.N_Review_comment_intro_rating {
+    text-align: right;
+}
+.N_Review_comment_intro_rating span{
+    padding-right: 5px;
+}
+@media (max-width: 768px) {
+    .N_Review_comment_intro_rating {
+        text-align: right;
+    }
+}
+
+.N_Review_comment_intro_rating i{
+    color: #FF5C5C;
+}
+.N_Review_comment_intro_comment{
+    padding-top: 10px;
+}
+.N_Review_comment_intro_ava_rating{
+    vertical-align:middle;
+    display: table-cell;
+    padding-left: 10px;
+}
+.N_Review_comment_intro_ava_rating_name{
+    font-weight: 600;
+}
+.noContent {
+    color: #000 !important;
+    background-color: transparent !important;
+    pointer-events: none;
+}
+
+#ninja-slider .caption {
+    position:absolute;
+    top:100%;
+}
+#ninja-slider .slider-inner {padding-bottom: 100px!important;}
+#ninja-slider li {margin-bottom: 100px!important;}
+
+
+#ninja-slider ul {overflow:visible!important;}
+#ninja-slider li {
+    overflow:hidden;
+}
+
+
+@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+/*reset css*/
+div,label{margin:0;padding:0;}
+body{margin:20px;}
+h1{font-size:1.5em;margin:10px;}
+/****** Style Star Rating Widget *****/
+#rating{border:none;float:left;}
+#rating>input{display:none;}/*ẩn input radio - vì chúng ta đã có label là GUI*/
+#rating>label:before{
+    margin-right: 5px;
+    font-size:1em;
+    font-family:FontAwesome;
+    display:inline-block;
+    content:"\f004";}/*1 ngôi sao*/
+#rating>.half:before{content:"\f004";position:absolute;}/*0.5 ngôi sao*/
+#rating>label{
+    color:#ddd;float:right;}/*float:right để lật ngược các ngôi sao lại đúng theo thứ tự trong thực tế*/
+/*thêm màu cho sao đã chọn và các ngôi sao phía trước*/
+#rating>input:checked~label,
+#rating:not(:checked)>label:hover,
+#rating:not(:checked)>label:hover~label{color:red;}
+/* Hover vào các sao phía trước ngôi sao đã chọn*/
+#rating>input:checked+label:hover,
+#rating>input:checked~label:hover,
+#rating>label:hover~input:checked~label,
+#rating>input:checked~label:hover~label{color:red;}

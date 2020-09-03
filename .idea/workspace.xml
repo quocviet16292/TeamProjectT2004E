@@ -11,20 +11,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a8ceb5b1-59e0-4696-ad49-96b52bef462f" name="Default Changelist" comment="Viet">
-      <change afterPath="$PROJECT_DIR$/public/css/book.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/ftlink.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/serviceCart.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/aboutUs.ejs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/book.ejs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/howtobook.ejs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/listyourbusiness.ejs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/paymentandcancellation.ejs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/privacyPolicy.ejs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/termconditions.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/footer.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/footer.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/layout/footer.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/layout/footer.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,9 +37,11 @@
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../btnhom" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
@@ -60,7 +49,18 @@
   <component name="Push.Settings">
     <option name="SHOW_DETAILS_PANEL" value="false" />
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\TeamProjectT2004E\public\js" />
+      <recent name="D:\TeamProjectT2004E\public\imgs" />
+      <recent name="D:\TeamProjectT2004E\public" />
+      <recent name="D:\TeamProjectT2004E\public\css" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="a8ceb5b1-59e0-4696-ad49-96b52bef462f" name="Default Changelist" comment="" />
@@ -75,6 +75,10 @@
       <workItem from="1598766650227" duration="25518000" />
       <workItem from="1598878717211" duration="1365000" />
       <workItem from="1598880097907" duration="1221000" />
+      <workItem from="1598962043786" duration="6222000" />
+      <workItem from="1599063592310" duration="1886000" />
+      <workItem from="1599098868213" duration="541000" />
+      <workItem from="1599103354029" duration="12737000" />
     </task>
     <task id="LOCAL-00001" summary="Viet">
       <created>1598621678893</created>
@@ -111,11 +115,18 @@
       <option name="project" value="LOCAL" />
       <updated>1598689573756</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Nam">
+      <created>1599132900838</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1599132900838</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
+    <option name="version" value="2" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -131,7 +142,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Viet" />
-    <option name="LAST_COMMIT_MESSAGE" value="Viet" />
+    <MESSAGE value="Nam" />
+    <option name="LAST_COMMIT_MESSAGE" value="Nam" />
   </component>
   <component name="WindowStateProjectService">
     <state x="522" y="235" key="#Notifications" timestamp="1598622584318">
@@ -142,10 +154,18 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="520" y="211" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1598879193230" />
+    <state x="308" y="0" key="CommitChangelistDialog2" timestamp="1599132897067">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="308" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1599132897067" />
     <state x="146" y="64" key="DiffContextDialog" timestamp="1598623015456">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="146" y="64" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1598623015456" />
+    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1599105795263">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1599105795263" />
     <state x="276" y="56" key="SettingsEditor" timestamp="1598621858946">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -158,9 +178,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="628" y="63" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog/0.0.1536.824@0.0.1536.824" timestamp="1598631983978" />
-    <state x="425" y="187" key="run.anything.popup" timestamp="1598714253471">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="492" y="277" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1598962056415">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state x="492" y="277" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1598962056415" />
+    <state x="378" y="165" key="run.anything.popup" timestamp="1599109287834">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="378" y="165" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1599109287834" />
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1598714253471" />
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1598880761470">
       <screen x="0" y="0" width="1536" height="824" />
