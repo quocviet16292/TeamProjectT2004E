@@ -9,13 +9,16 @@ function showTab(n) {
     x[n].style.display = "block";
     if (n == 0) {
         document.getElementById("prevBtn").style.display = "none";
+        // document.getElementById("nextBtn").setAttribute('onclick','getInfoStep1()');
     } else {
         document.getElementById("prevBtn").style.display = "inline";
     }
     if (n == (x.length - 1)) {
-        document.getElementById("nextBtn").innerHTML = "Submit <i class=\"fas fa-paper-plane\"></i>";
+        document.getElementById("nextBtn").innerHTML = "CONFIRM <i class=\"fas fa-paper-plane\"></i>";
+
     } else {
         document.getElementById("nextBtn").innerHTML = "Next <i class=\"fas fa-chevron-right\">";
+        document.getElementById("nextBtn").setAttribute('type','button');
     }
     fixStepIndicator(n)
 }
@@ -23,6 +26,7 @@ function showTab(n) {
 
 function nextPrev(n) {
     var x = document.getElementsByClassName("vbooking__step");
+    // if (n == 1 && !validateForm() && currentTab < 2) return false;
     x[currentTab].style.display = "none";
     currentTab = currentTab + n;
     if (currentTab >= x.length) {
@@ -44,11 +48,12 @@ function validateForm() {
         }
     }
     // If the valid status is true, mark the step as finished and valid:
-    // if (valid) {
-    //   document.getElementsByClassName("step")[currentTab].className += " finish";
-    // }
-    // return valid; // return the valid status
+    if (valid) {
+        document.getElementsByClassName("vbooking__step")[currentTab].className += " finish";
+    }
+    return valid; // return the valid status
 }
+
 
 function fixStepIndicator(n) {
 
@@ -61,18 +66,6 @@ function fixStepIndicator(n) {
     }
 
 }
-
-
-
-
-
-//Get Number
-function getNumber (e){
-    let pNumbers = document.getElementById('qty__persons').value;
-    e.querySelector('#display__numbers').innerHTML = pNumbers;
-    e.querySelector('#display__total').innerHTML = (pNumbers*500000).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-
-};
 
 // Remove Service Button
 function removeItem(){
@@ -88,8 +81,24 @@ function removeItem(){
     }
 }
 
+//Get Number
+function getNumber (){
+    let pNumbers = $('#qty__persons').val();
+    let cartRowTitle = document.getElementsByClassName('service__title');
+    let textSelect = $('#service__select option:selected').text();
+    for(let i =0; i <cartRowTitle.length; i++){
+        if(cartRowTitle[i].textContent == textSelect){
+            document.getElementsByClassName('service__title')[i].parentElement.children[1].children[0].innerText = pNumbers;
+            document.getElementsByClassName('service__title')[i].parentElement.children[2].children[0].innerText = (pNumbers*500000).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        }
+    }
 
+}
 
+//Reset Number
+function resetNumber(){
+    document.getElementById('qty__persons').value = 1;
+}
 //AddToCart
 // Number Spinner
 var selectList = [];
@@ -105,18 +114,19 @@ $(function(){
         let textSelect = $('#service__select option:selected').text()
         if(selectList.length == 0){
             addToCart();
+            getNumber();
         }else{
             if(selectList.includes(textSelect)){
                 getNumber();
             }else {
                 addToCart();
+                getNumber();
             }
         }
 
     })
 });
-
-
+let clientName = document.getElementById('Cname').value;
 function addToCart(){
     let title = $('#service__select option:selected').text()
     let price = 500000
@@ -132,16 +142,60 @@ function  addService(title, price){
     var cartRowContent = `
         <div class="col-11">
             <h3 class="service__title">${title}</h3>
-            <p><span id="display__numbers"></span><span> x ${price}</span></p>
-            <p><b><span id="display__total"></span></b></p>
+            <p><span class="display__number">1</span><span> x ${price}</span></p>
+            <p><b class="display__total"></b></p>
         </div>
         <div class="col-1">
             <a class="btn__remove" onclick="removeItem()"><i class="fas fa-times fa-lg" style="color: var(--main-color)"></i></i> </a>
         </div>`
     cartRow.innerHTML = cartRowContent
-    cartItem.append(cartRow)
+    var hline = document.createElement('hr');
+    cartItem.append(cartRow, hline);
+
+
+
+
+    var cartRow1 = document.createElement('div')
+    cartRow1.classList.add('cart-row')
+    cartRow1.classList.add('row')
+    var cartItem1 = document.getElementsByClassName('cart-items-2')[0]
+    var cartRowContent1 = `
+        <div class="col-12">
+            <h3 class="service__title">${title}</h3>
+            <p style="float: left"><span class="display__number">1</span><span> x ${price}</span></p>
+            <p style="float: right"><b class="display__total"></b></p> 
+        </div>`
+    cartRow1.innerHTML = cartRowContent1
+    var hline1 = document.createElement('hr');
+    cartItem1.append(cartRow1, hline1);
 }
 
+//Get Info and Print on the Step 4
+function getInfoStep1(){
+    document.getElementById('getCName').innerHTML = document.getElementById('Cname').value;
+    document.getElementById('getCName1').innerHTML = document.getElementById('Cname').value;
+    document.getElementById('getCity').innerHTML = document.getElementById('Ccity').options[document.getElementById('Ccity').selectedIndex].text + ", ";
+    document.getElementById('getCity1').innerHTML = document.getElementById('Ccity').options[document.getElementById('Ccity').selectedIndex].text + ",  ";
+    document.getElementById('getDistrict').innerHTML = document.getElementById('Cdistrict').options[document.getElementById('Cdistrict').selectedIndex].text;
+    document.getElementById('getDistrict1').innerHTML = document.getElementById('Cdistrict').options[document.getElementById('Cdistrict').selectedIndex].text;
+    document.getElementById('getCPhone').innerHTML = document.getElementById('Cphone').value;
+    document.getElementById('getCPhone1').innerHTML = document.getElementById('Cphone').value;
+    document.getElementById('getDate').innerHTML = document.getElementById('Cdate').value + " ";
+    document.getElementById('getDate1').innerHTML = document.getElementById('Cdate').value + " ";
+    document.getElementById('getTime').innerHTML = document.getElementById('Ctime').value;
+    document.getElementById('getTime1').innerHTML = document.getElementById('Ctime').value;
+    document.getElementById('getCEmail1').innerHTML = document.getElementById('Cemail').value;
+}
 
-
-
+// function sumCount(){
+    // let subtotal = document.getElementById('getSubtotal').innerText;
+    // let getItemList = document.getElementsByClassName('display__total');
+    let total = 0;
+    for(let i = 0; i < document.getElementsByClassName('display__total').length; i++){
+        total += (parseFloat(document.getElementsByClassName('display__total')[i].innerText)*1000000);
+        //Loi so thap phan
+    }
+    console.log(total);
+// }
+//
+// sumCount();
