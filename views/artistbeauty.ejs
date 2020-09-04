@@ -14,6 +14,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 
+
+
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <link rel="stylesheet" href="/libs/bootstrap-4.5.2-dist/css/bootstrap.css">
     <link rel="stylesheet" href="/libs/fontawesome-free-5.14.0-web/css/fontawesome.css">
@@ -25,70 +27,74 @@
 </head>
 <body>
 
-<!--<header class=" H_css_header" id="img_background">-->
-<!--    <div class="H_css_heaer_backgroundcolor">-->
-<!--        <div class="container ">-->
-<!--            <h1 style="font-size: 30px"> Beauty Artist</h1>-->
-<!--            <p style="font-size: 16px"> Find and book your favorite beauty artist.</p>-->
-<!--        </div>-->
+<header class=" H_css_header" id="img_background">
+    <div class="H_css_heaer_backgroundcolor">
+        <div class="container ">
+            <h1 style="font-size: 30px"> Beauty Artist</h1>
+            <p style="font-size: 16px"> Find and book your favorite beauty artist.</p>
+        </div>
 
-<!--    </div>-->
-<!--</header>-->
+    </div>
+</header>
 
 <div class="H_css_main">
     <div class="row">
         <div class="container" style="position: relative">
-            <div class=" col-3 H_css_main_left">
-                <div class=" H_form_right">
-                    <form id="H_form_id" method="get" action="#" >
-                        <div class="  H_form ">
-                            <label class="H_form">Select Service</label>
-                            <select name="H_select_service" id="H_service" class="H_select">
-                                <option value="0">All Service</option>
-                                <option value="1">Basic Make Up (Party, Graduation or Daily Make Up)</option>
-                                <option value="2">Sweet 17th Birthday Make Up</option>
-                            </select>
-                        </div>
-                        <div class=" H_form ">
-                            <label class="H_form">Select City</label>
-                            <input type="text" name="name_city"  class="H_select" placeholder="Nane City" >
-                        </div>
-                        <div class=" H_form">
-                            <label class="H_form">Sort by price</label>
-                            <a class=" H_hover" href="#">
-                                <label class="H_label">
-                                    <input type="radio" src="#" name="price">
-                                    <span class="H_label_p">Rp 0 - Rp 100.000 </span>
-                                </label>
-                            </a>
-                            <a class="H_hover" href="#">
-                                <label class="H_label">
-                                    <input type="radio" src="#" name="price">
-                                    <span class="H_label_p">Rp 100.000 - Rp 250.000</span>
-                                </label>
-                            </a>
-                            <a class=" H_hover" href="#">
-                                <label class="H_label">
-                                    <input type="radio" src="#" name="price">
-                                    <span class="H_label_p">Rp 250.000 - Rp 500.000 </span>
-                                </label>
-                            </a>
-                            <a class="H_hover" href="#">
-                                <label class="H_label">
-                                    <input type="radio" src="#" name="price">
-                                    <span class="H_label_p">Rp 500.000 - Rp 1000.000</span>
-                                </label>
-                            </a>
-                            <a class=" H_hover" href="#">
-                                <label class="H_label">
-                                    <input type="radio" src="#" name="price">
-                                    <span class="H_label_p">Rp 1000.000 +   </span>
-                                </label>
-                            </a>
-                        </div>
-                    </form>
+            <nav class="sticky-top">
+                <div class=" col-3 H_css_main_left">
+                    <div class=" H_form_right">
+                        <form id="H_form_id" method="get" action="#" >
+                            <div class="  H_form ">
+                                <label class="H_form">Select Service</label>
+                                <select name="H_select_service" id="H_service" class="H_select">
+                                    <option value="0">All Service</option>
+                                    <option value="1">Basic Make Up (Party, Graduation or Daily Make Up)</option>
+                                    <option value="2">Sweet 17th Birthday Make Up</option>
+                                </select>
+                            </div>
+                            <div class=" H_form ">
+                                <label class="H_form">Select City</label>
+                                <input type="text" name="name_city"  class="H_select" placeholder="Nane City" >
+                            </div>
+                            <div class=" H_form">
+                                <label class="H_form">Sort by price</label>
+                                <a class=" H_hover" href="#">
+                                    <label class="H_label">
+                                        <input type="radio" src="#" name="price">
+                                        <span class="H_label_p">Rp 0 - Rp 100.000 </span>
+                                    </label>
+                                </a>
+                                <a class="H_hover" href="#">
+                                    <label class="H_label">
+                                        <input type="radio" src="#" name="price">
+                                        <span class="H_label_p">Rp 100.000 - Rp 250.000</span>
+                                    </label>
+                                </a>
+                                <a class=" H_hover" href="#">
+                                    <label class="H_label">
+                                        <input type="radio" src="#" name="price">
+                                        <span class="H_label_p">Rp 250.000 - Rp 500.000 </span>
+                                    </label>
+                                </a>
+                                <a class="H_hover" href="#">
+                                    <label class="H_label">
+                                        <input type="radio" src="#" name="price">
+                                        <span class="H_label_p">Rp 500.000 - Rp 1000.000</span>
+                                    </label>
+                                </a>
+                                <a class=" H_hover" href="#">
+                                    <label class="H_label">
+                                        <input type="radio" src="#" name="price">
+                                        <span class="H_label_p">Rp 1000.000 +   </span>
+                                    </label>
+                                </a>
+                            </div>
+                        </form>
+                    </div>
                 </div>
-            </div>
+
+            </nav>
+
             <div class= " col-9 H_css_main_right">
                 <div class="row col-6  H_img_artist_desc">
                     <div class="H_img_artist">
