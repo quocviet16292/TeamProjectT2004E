@@ -5,7 +5,7 @@
 
 <!-- <%- include("Preloader-son") %>-->
 <section class="section sticky-top">
-    <nav class="navbar navbar-expand-md navbar-light  nav-head-s" id="nav-head-s">
+    <nav class="navbar navbar-expand-md navbar-light nav-head-s" id="nav-head-s">
         <div class="container-fluid">
             <div class="img-nav-s">
                 <a class="navbar-branch" href="#">
@@ -24,9 +24,9 @@
                                 FOR CLIENT
                             </button>
                             <div class="dropdown-content">
-                                <a class="dropdown-item" href="/addArtist">Beauty Job Artist</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Beauty Outlet</a>
+                                <a class="dropdown-item nav-item-s-dropdown-s2" href="/addArtist">Beauty Job Artist</a>
+                                <div class="dropdown-divider nav-item-s-divider"></div>
+                                <a class="dropdown-item nav-item-s-dropdown-s2" href="#">Beauty Outlet</a>
                             </div>
                         </div>
                     </li>
@@ -36,9 +36,9 @@
                                 PARTNER WITH US
                             </button>
                             <div class="dropdown-content">
-                                <a class="dropdown-item" href="#">Beauty Artists</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Beauty Outlets</a>
+                                <a class="dropdown-item nav-item-s-dropdown" href="#">Beauty Artists</a>
+                                <div class="dropdown-divider nav-item-s-divider"></div>
+                                <a class="dropdown-item nav-item-s-dropdown" href="#">Beauty Outlets</a>
                             </div>
                         </div>
                     </li>
@@ -55,6 +55,23 @@
             </div>
         </div>
     </nav>
+</section>
+<section class="section">
+    <div class="sbuttons">
+
+        <a href="#" target="_blank" class="sbutton whatsapp" tooltip="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+
+        <a href="#" target="_blank" class="sbutton fb" tooltip="Facebook"><i class="fab fa-facebook-f"></i></a>
+
+        <a href="#" target="_blank" class="sbutton gplus" tooltip="Google Plus"><i class="fab fa-google-plus-g"></i></a>
+
+        <a href="#" target="_blank" class="sbutton twitt" tooltip="Twitter"><i class="fab fa-twitter"></i></a>
+
+        <a href="#" target="_blank" class="sbutton pinteres" tooltip="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+
+        <a target="_blank" class="sbutton mainsbutton" tooltip="Share"><i class="fas fa-share-alt"></i></a>
+
+    </div>
 </section>
  <section class="section head-s1">
   <div class="video-s">
@@ -360,51 +377,61 @@
          </div>
          <div class="Beauty-Artist">
                  <% sps.map(function (v) { %>
-                     <div class="Beauty-Artist-s1">
-                         <div class="Beauty-Artist-s11">
-                             <img class="img-fluid imgs-cover" src="<%= v.Cover %>" alt="a">
-                         </div>
-                         <div class="Beauty-Artist-s112">
-                             <a href="chi-tiet-san-pham/<%= v.ID %>" class="Beauty-Artist-s112-a"><span class="Beauty-Artist-s112-span"><%= v.aName %></span></a>
-                         </div>
-                         <div class="Beauty-Artist-s1123">
-                             <a class="Beauty-Artist-s1123-a">Discount <%= v.SPromo*100 %>% OFF</a>
-                         </div>
-                         <div class="Beauty-Artist-s12">
-                             <div class="d-flex Beauty-Artist-s121">
-                                 <div class="tensp"><span class="Beauty-Artist-s121-span"><del><%= v.SPrice %> VND</del></span></div>
-                                 <div class="Beauty-Artist-s1212"><i class='fas fa-arrow-right'></i></div>
-                                 <div class="tensp"><span class="Beauty-Artist-s121-spans"><%= v.SPrice*(1-v.SPromo) %> VND</span> </div>
+                         <div class="Beauty-Artist-s1">
+                             <a href="#" class="Beauty-Artist-a">
+                             <div class="Beauty-Artist-s11">
+                                 <a href="#" class="Beauty-Artist-s11-a">
+                                     <img class="img-fluid imgs-cover" src="<%= v.Cover %>" alt="a">
+                                 </a>
                              </div>
-                             <div class="Beauty-Artist-s12-name">
-                                 <span><%= v.SName %> </span>
+                             <div class="Beauty-Artist-s112">
+                                 <a href="chi-tiet-san-pham/<%= v.ID %>" class="Beauty-Artist-s112-a"><span class="Beauty-Artist-s112-span"><%= v.aName %></span></a>
                              </div>
-                             <hr>
-                             <div class="d-flex">
-                                 <div class="col-lg-6 Beauty-Artist-s126">
-                                     <div class="d-flex Beauty-Artist-s125">
-                                         <i class="fa fa-clock-o Beauty-Artist-s125-icon"></i>
-                                         <span class="Beauty-Artist-s125-span">Until</span>
+                             <div class="Beauty-Artist-s1123">
+                                 <a class="Beauty-Artist-s1123-a">Discount <%= v.SPromo*100 %>% OFF</a>
+                             </div>
+                             <div class="Beauty-Artist-s12">
+                                 <a href="#" class="header-fooder-notamenu-s4">
+                                 <div class="d-flex Beauty-Artist-s121">
+                                         <div class="tensp"><span class="Beauty-Artist-s121-span"><del><%= v.SPrice %> VND</del></span></div>
+                                         <div class="Beauty-Artist-s1212"><i class='fas fa-arrow-right'></i></div>
+                                         <div class="tensp"><span class="Beauty-Artist-s121-span"><%= v.SPrice*(1-v.SPromo) %> VND</span> </div>
+                                 </div>
+                                 </a>
+                                 <div class="Beauty-Artist-s12-name">
+                                     <a href="#" class="header-fooder-notamenu-s4">
+                                         <span><%= v.SName %> </span>
+                                     </a>
+                                 </div>
+                                 <hr>
+                                 <div class="d-flex">
+                                     <div class="col-lg-6 Beauty-Artist-s126">
+                                         <div class="d-flex Beauty-Artist-s125">
+                                            <a href="#" class="header-fooder-notamenu-s4">
+                                                <i class="fa fa-clock-o Beauty-Artist-s125-icon"></i>
+                                                <span class="Beauty-Artist-s125-span">Until</span>
+                                            </a>
+                                         </div>
+                                         <div class="Beauty-Artist-s12-SWTime">
+                                             <span><%= v.SWTime %> </span>
+                                         </div>
                                      </div>
-                                     <div class="Beauty-Artist-s12-SWTime">
-                                         <span><%= v.SWTime %> </span>
+                                     <div class="col-lg-6">
+                                         <div class="d-flex Beauty-Artist-s125">
+                                             <a href="#" class="header-fooder-notamenu-s4 header-fooder-notamenu-s42">
+                                                 <i class='fas fa-map-marker-alt Beauty-Artist-s125-icon'></i>
+                                                 <span class="Beauty-Artist-s125-span">District</span>
+                                             </a>
+                                         </div>
+                                         <div class="Beauty-Artist-s12-SWTime">
+                                             <span><%= v.District %> </span>
+                                         </div>
                                      </div>
                                  </div>
-                                 <div class="col-lg-6">
-                                     <div class="d-flex Beauty-Artist-s125">
-                                         <i class='fas fa-map-marker-alt Beauty-Artist-s125-icon'></i>
-                                         <span class="Beauty-Artist-s125-span">District</span>
-                                     </div>
-                                     <div class="Beauty-Artist-s12-SWTime">
-                                         <span><%= v.District %> </span>
-                                     </div>
-                                 </div>
                              </div>
-
+                             <a href="#"><img class="imgs-avartar" src="<%= v.Avartar %>" alt="a"></a>
+                             </a>
                          </div>
-
-                         <img class="imgs-avartar" src="<%= v.Avartar %>" alt="a">
-                     </div>
                  <% }) %>
          </div>
      </div>
@@ -425,41 +452,47 @@
              <div id="lightSlider">
                  <% aps.map(function (v) { %>
                      <div class="Beauty-Artist-s1-s1">
-                         <div class="Beauty-Artist-s11-s1">
-                             <img class="img-fluid imgs-cover-s1" src="<%= v.Cover %>" alt="a">
-                         </div>
-                         <div class="Beauty-Artist-s112-s1">
-                             <a href="chi-tiet-san-pham/<%= v.ID %>" class="Beauty-Artist-s112-a-s1"><span class="Beauty-Artist-s112-span"><%= v.aName %></span></a>
-                         </div>
-                         <div class="Beauty-Artist-s1123-s1">
-                             <a class="Beauty-Artist-s1123-a-s1">Discount <%= v.SPromo*100 %>% OFF</a>
-                         </div>
-                         <div class="Beauty-Artist-s12-s1">
-                             <hr>
-                             <div class="d-flex">
-                                 <div class="col-lg-6 Beauty-Artist-s126-s1">
-                                     <div class="d-flex Beauty-Artist-s125-s2">
-                                         <i class='far fa-money-bill-alt Beauty-Artist-s125-icon-s2'></i>
-                                         <span class="Beauty-Artist-s125-span-s2">Start From</span>
+                         <a>
+                             <div class="Beauty-Artist-s11-s1">
+                                 <img class="img-fluid imgs-cover-s1" src="<%= v.Cover %>" alt="a">
+                             </div>
+                             <div class="Beauty-Artist-s112-s1">
+                                 <a href="chi-tiet-san-pham/<%= v.ID %>" class="Beauty-Artist-s112-a-s1"><span class="Beauty-Artist-s112-span"><%= v.aName %></span></a>
+                             </div>
+                             <div class="Beauty-Artist-s1123-s1">
+                                 <a class="Beauty-Artist-s1123-a-s1">Discount <%= v.SPromo*100 %>% OFF</a>
+                             </div>
+                             <div class="Beauty-Artist-s12-s1">
+                                 <hr>
+                                 <div class="d-flex">
+                                     <div class="col-lg-6 Beauty-Artist-s126-s1">
+                                         <div class="d-flex Beauty-Artist-s125-s2">
+                                             <a href="#" class="header-fooder-notamenu-s4 header-fooder-notamenu-s42">
+                                                 <i class='far fa-money-bill-alt Beauty-Artist-s125-icon-s2'></i>
+                                                 <span class="Beauty-Artist-s125-span-s2">Start From</span>
+                                             </a>
+                                         </div>
+                                         <div class="Beauty-Artist-s12-SWTime-s1">
+                                             <span><%= v.MINMONEY %> </span>
+                                         </div>
                                      </div>
-                                     <div class="Beauty-Artist-s12-SWTime-s1">
-                                         <span><%= v.MINMONEY %> </span>
+                                     <div class="col-lg-6">
+                                         <div class="d-flex Beauty-Artist-s125-s1">
+                                             <a href="#" class="header-fooder-notamenu-s4 header-fooder-notamenu-s42">
+                                                 <i class='fas fa-map-marker-alt Beauty-Artist-s125-icon-s1'></i>
+                                                 <span class="Beauty-Artist-s125-span-s1">District</span>
+                                             </a>
+                                         </div>
+                                         <div class="Beauty-Artist-s12-SWTime-s1">
+                                             <span><%= v.District %> </span>
+                                         </div>
                                      </div>
                                  </div>
-                                 <div class="col-lg-6">
-                                     <div class="d-flex Beauty-Artist-s125-s1">
-                                         <i class='fas fa-map-marker-alt Beauty-Artist-s125-icon-s1'></i>
-                                         <span class="Beauty-Artist-s125-span-s1">District</span>
-                                     </div>
-                                     <div class="Beauty-Artist-s12-SWTime-s1">
-                                         <span><%= v.District %> </span>
-                                     </div>
-                                 </div>
+
                              </div>
 
-                         </div>
-
-                         <img class="imgs-avartar" src="<%= v.Avartar %>" alt="a">
+                             <img class="imgs-avartar" src="<%= v.Avartar %>" alt="a">
+                         </a>
                      </div>
                  <% }) %>
              </div>
@@ -531,27 +564,27 @@
      <div class="container container-new-s1">
          <div class="container-new-s2">
              <div id="lightSliders1">
-                 <% sps.map(function (v) { %>
+                 <% mps.map(function (v) { %>
                      <div class="Beauty-Artist-s1-s1">
                          <div class="Beauty-Artist-s11-s1">
-                             <img class="img-fluid imgs-cover-s1" src="<%= v.Cover %>" alt="a">
+                             <img class="img-fluid imgs-cover-s1" src="<%= v.Avartar %>" alt="a">
                          </div>
                          <div class="Beauty-Artist-s112-s1">
                              <a href="chi-tiet-san-pham/<%= v.ID %>" class="Beauty-Artist-s112-a-s1"><span class="Beauty-Artist-s112-span"><%= v.aName %></span></a>
                          </div>
                          <div class="Beauty-Artist-s1123-s1">
-                             <a class="Beauty-Artist-s1123-a-s1">Discount <%= v.SPromo*100 %>% OFF</a>
+                             <a class="Beauty-Artist-s1123-a-s1">Discount <%= v.TongRT %></a>
                          </div>
                          <div class="Beauty-Artist-s12-s1">
                              <hr>
                              <div class="d-flex">
                                  <div class="col-lg-6 Beauty-Artist-s126-s1">
                                      <div class="d-flex Beauty-Artist-s125-s1">
-                                         <i class="fa fa-clock-o Beauty-Artist-s125-icon-s1"></i>
-                                         <span class="Beauty-Artist-s125-span-s1">Until</span>
+                                         <i class='far fa-money-bill-alt Beauty-Artist-s125-icon-s2'></i>
+                                         <span class="Beauty-Artist-s125-span-s2">Start From</span>
                                      </div>
                                      <div class="Beauty-Artist-s12-SWTime-s1">
-                                         <span><%= v.SWTime %> </span>
+                                         <span><%= v.MINMONEY %> </span>
                                      </div>
                                  </div>
                                  <div class="col-lg-6">
@@ -629,7 +662,7 @@
              });
          </script>
      </div>
-     <div class="container tillets2">
+     <div class="container tillets2-foot">
          <div class="tiller-s">
                  <h2 class="tiller-s2">Featured On</h2>
          </div>
@@ -664,6 +697,7 @@
          </div>
      </div>
  </section>
+
 <%- include("layout/footer") -%>
  </body>
  </html>
