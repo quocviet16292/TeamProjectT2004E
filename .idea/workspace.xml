@@ -11,7 +11,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a8ceb5b1-59e0-4696-ad49-96b52bef462f" name="Default Changelist" comment="Viet">
+      <change afterPath="$PROJECT_DIR$/public/css/header-son.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/services-son.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/imgs/buttons.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/incrementing.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/services-son.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/new2test.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/services-son.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/home-son.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/home-son.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/book.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/book.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/home-son.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/home-son.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/navbar-Beauty-Artist-s.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/navbar-Beauty-Artist-s.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/navbar-Promotions-s.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/navbar-Promotions-s.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +38,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="HTML File" />
         <option value="CSS File" />
       </list>
     </option>
@@ -36,31 +53,33 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../btnhom" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/imgs" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="Push.Settings">
     <option name="SHOW_DETAILS_PANEL" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\TeamProjectT2004E\public\js" />
       <recent name="D:\TeamProjectT2004E\public\imgs" />
       <recent name="D:\TeamProjectT2004E\public" />
-      <recent name="D:\TeamProjectT2004E\public\css" />
     </key>
   </component>
-  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
-  <component name="SvnConfiguration">
-    <configuration />
-  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="a8ceb5b1-59e0-4696-ad49-96b52bef462f" name="Default Changelist" comment="" />
@@ -75,10 +94,9 @@
       <workItem from="1598766650227" duration="25518000" />
       <workItem from="1598878717211" duration="1365000" />
       <workItem from="1598880097907" duration="1221000" />
-      <workItem from="1598962043786" duration="6222000" />
-      <workItem from="1599063592310" duration="1886000" />
-      <workItem from="1599098868213" duration="541000" />
-      <workItem from="1599103354029" duration="12737000" />
+      <workItem from="1599160987931" duration="3297000" />
+      <workItem from="1599180687246" duration="15541000" />
+      <workItem from="1599220153116" duration="11883000" />
     </task>
     <task id="LOCAL-00001" summary="Viet">
       <created>1598621678893</created>
@@ -115,18 +133,11 @@
       <option name="project" value="LOCAL" />
       <updated>1598689573756</updated>
     </task>
-    <task id="LOCAL-00006" summary="Nam">
-      <created>1599132900838</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1599132900838</updated>
-    </task>
-    <option name="localTasksCounter" value="7" />
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -142,30 +153,21 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Viet" />
-    <MESSAGE value="Nam" />
-    <option name="LAST_COMMIT_MESSAGE" value="Nam" />
+    <option name="LAST_COMMIT_MESSAGE" value="Viet" />
   </component>
   <component name="WindowStateProjectService">
     <state x="522" y="235" key="#Notifications" timestamp="1598622584318">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="522" y="235" key="#Notifications/0.0.1536.824@0.0.1536.824" timestamp="1598622584318" />
-    <state x="520" y="211" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1598879193230">
+    <state x="520" y="211" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1599161368614">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="520" y="211" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1598879193230" />
-    <state x="308" y="0" key="CommitChangelistDialog2" timestamp="1599132897067">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="308" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1599132897067" />
+    <state x="520" y="211" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1599161368614" />
     <state x="146" y="64" key="DiffContextDialog" timestamp="1598623015456">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="146" y="64" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1598623015456" />
-    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1599105795263">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1599105795263" />
     <state x="276" y="56" key="SettingsEditor" timestamp="1598621858946">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -178,14 +180,13 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="628" y="63" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog/0.0.1536.824@0.0.1536.824" timestamp="1598631983978" />
-    <state x="492" y="277" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1598962056415">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1599137915264">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="492" y="277" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1598962056415" />
-    <state x="378" y="165" key="run.anything.popup" timestamp="1599109287834">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1599137915264" />
+    <state x="425" y="187" key="run.anything.popup" timestamp="1598714253471">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="378" y="165" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1599109287834" />
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1598714253471" />
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1598880761470">
       <screen x="0" y="0" width="1536" height="824" />

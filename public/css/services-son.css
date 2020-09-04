@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    font-family: 'Nunito', sans-serif;
+}
+.nemu-ssss{
+    position: fixed;
+    top: 0;
+}
+a{
+    text-decoration: none;
+    color: #333333;
+}
+img{
+    max-width: 100%;
+}
+.nota{
+    color: #171717;
+    text-decoration: none !important;
+    background-color: transparent;
+    opacity: 1;
+}
+.nota:hover{
+    color: #cccccc;
+    list-style: none !important;
+    text-decoration: none !important;
+    opacity: 0.5;
+}
+
+.notamenu{
+    color: #FFFFFF;
+    text-decoration: none !important;
+    background-color: transparent;
+    opacity: 1;
+}
+
+.notamenu:hover{
+    color: #cccccc;
+    list-style: none;
+    text-decoration: none;
+    opacity: 0.5;
+}
+.container-p-s1{
+    text-align: left;
+    font-size: 1.4vw;
+    font-weight: bolder;
+}
+.vbooking__main{
+    padding-bottom: 150px;
+}
+
+/*Progress Bar*/
+.vbooking__progressbar{
+    display: block;
+    width: 100%;
+    margin: 50px auto;
+}
+.vbooking__progressbar ul{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+}
+.vbooking__progressbar ul li{
+    display: inline-block;
+    position: relative;
+    width: 25%;
+    text-align: center;
+
+}
+.vbooking__progressbar ul li:before{
+    display: block;
+    content: '\2714';
+    color: white;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background-color: #ddd;
+    line-height: 38px;
+    text-align: center;
+    margin: 20px auto;
+    z-index: 2;
+    transition: background-color 1s ease;
+}
+.vbooking__progressbar ul li:after{
+    display: block;
+    content: '';
+    width: 100%;
+    height: 4px;
+    background-color: #ddd;
+    position: absolute;
+    top: 38px;
+    left: 0;
+    z-index: -1;
+    transition: background-color 1s ease;
+}
+.vbooking__progressbar ul li.active__step:before,
+.vbooking__progressbar ul li.active__step:after
+{
+    background-color: #666;
+
+}
+input.form-control{
+    border: 1px solid white;
+    border-bottom: 1px solid  rgba(0,0,0,0.54);
+    transition: all 0.5s ease;
+
+}
+select.form-control{
+    border: 1px solid rgba(0,0,0,0.25);
+    border-radius: 20px;
+    transition: all 0.5s ease;
+    padding-right: 20px;
+}
+.form-control:focus{
+    outline: none;
+    border: 1px solid #ff5c5d;
+    border-radius: 20px;
+    box-shadow: none;
+}
+
+.vbooking__step{
+    display: none;
+}
+input.invalid {
+    background-color: #ffdddd;
+}
+
+h3.service__title{
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.btn-right{
+    float: right;
+    background-color: var(--main-color);
+    color: var(--text-color);
+    border-radius: 20px;;
+}
+.btn-left{
+    float: left;
+    background-color: var(--main-color);
+    color: var(--text-color);
+    border-radius: 20px;;
+}
+.btn-right:hover, .btn-left:hover{
+    background-color: #666;
+    color: #fff;
+}
+#btn-step-4-next:hover{
+    background-color: #fff;
+    border: 1px solid var(--main-color);
+    color: var(--main-color);
+}
+
+.step-2-nice-number{
+    display: flex;
+    flex-direction: column;
+}
+.nice-number input{
+    height: 23px;
+}
+.nice-number button:first-child{
+    background-color: var(--main-color);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding: 0 21px;
+    border: none;
+    color: var(--text-color);
+    height: 40px;
+}
+.nice-number button:last-child{
+    background-color: var(--main-color);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 0 21px;
+    border: none;
+    color: var(--text-color);
+    height: 40px;
+}
+
+
+#client__comment{
+    height: 200px;
+}
+small{
+    color: #333;
+}
+
+
+#step-4 h3{
+    font-size: 14px;
+    font-weight: 800;
+}
+.step-4__title{
+    margin-bottom: 30px;
+}
+
+.box__info{
+    border: 1px dashed #ccc;
+    background-color: #f5f5f5;
+}
