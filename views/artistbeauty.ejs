@@ -14,6 +14,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 
+
+
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <link rel="stylesheet" href="/libs/bootstrap-4.5.2-dist/css/bootstrap.css">
     <link rel="stylesheet" href="/libs/fontawesome-free-5.14.0-web/css/fontawesome.css">
@@ -24,6 +26,7 @@
 
 </head>
 <body>
+
 <header class=" H_css_header" id="img_background">
     <div class="H_css_heaer_backgroundcolor">
         <div class="container ">
@@ -33,184 +36,822 @@
 
     </div>
 </header>
+
 <div class="H_css_main">
-    <div class="container">
-        <div class=" col-3 H_css_main_left">
-            <div class=" H_form_right">
-                <form id="H_form_id" method="get" action="#" >
-                    <div class="  H_form ">
-                        <label class="H_form">Select Service</label>
-                        <select name="H_select_service" id="H_service" class="H_select">
-                            <option value="0">All Service</option>
-                            <option value="1">Basic Make Up (Party, Graduation or Daily Make Up)</option>
-                            <option value="2">Sweet 17th Birthday Make Up</option>
-                            Hairstyling / Hairdo Class (Online)                                        </option>
-                            <option value="88">
-                                Haicut Tutorial for Men or Women Class (Online)                                        </option>
-                            <option value="89">
-                                Beauty Product Consultation (Online)                                        </option>
-                        </select>
+    <div class="row">
+        <div class="container" style="position: relative">
+            <nav class="sticky-top">
+                <div class=" col-3 H_css_main_left">
+                    <div class=" H_form_right">
+                        <form id="H_form_id" method="get" action="#" >
+                            <div class="  H_form ">
+                                <label class="H_form">Select Service</label>
+                                <select name="H_select_service" id="H_service" class="H_select">
+                                    <option value="0">All Service</option>
+                                    <option value="1">Basic Make Up (Party, Graduation or Daily Make Up)</option>
+                                    <option value="2">Sweet 17th Birthday Make Up</option>
+                                </select>
+                            </div>
+                            <div class=" H_form ">
+                                <label class="H_form">Select City</label>
+                                <input type="text" name="name_city"  class="H_select" placeholder="Nane City" >
+                            </div>
+                            <div class=" H_form">
+                                <label class="H_form">Sort by price</label>
+                                <a class=" H_hover" href="#">
+                                    <label class="H_label">
+                                        <input type="radio" src="#" name="price">
+                                        <span class="H_label_p">Rp 0 - Rp 100.000 </span>
+                                    </label>
+                                </a>
+                                <a class="H_hover" href="#">
+                                    <label class="H_label">
+                                        <input type="radio" src="#" name="price">
+                                        <span class="H_label_p">Rp 100.000 - Rp 250.000</span>
+                                    </label>
+                                </a>
+                                <a class=" H_hover" href="#">
+                                    <label class="H_label">
+                                        <input type="radio" src="#" name="price">
+                                        <span class="H_label_p">Rp 250.000 - Rp 500.000 </span>
+                                    </label>
+                                </a>
+                                <a class="H_hover" href="#">
+                                    <label class="H_label">
+                                        <input type="radio" src="#" name="price">
+                                        <span class="H_label_p">Rp 500.000 - Rp 1000.000</span>
+                                    </label>
+                                </a>
+                                <a class=" H_hover" href="#">
+                                    <label class="H_label">
+                                        <input type="radio" src="#" name="price">
+                                        <span class="H_label_p">Rp 1000.000 +   </span>
+                                    </label>
+                                </a>
+                            </div>
+                        </form>
                     </div>
-                    <div class=" H_form ">
-                        <label class="H_form">Select City</label>
-                        <input type="text" name="name_city"  class="H_select" placeholder="Nane City" >
-                    </div>
-                    <div class=" H_form">
-                        <label class="H_form">Sort by price</label>
-                        <a class=" H_hover" href="#">
-                            <label class="H_label">
-                                <input type="radio" src="#" name="price">
-                                <span class="H_label_p">Rp 0 - Rp 100.000 </span>
-                            </label>
-                        </a>
-                        <a class="H_hover" href="#">
-                            <label class="H_label">
-                                <input type="radio" src="#" name="price">
-                                <span class="H_label_p">Rp 100.000 - Rp 250.000</span>
-                            </label>
-                        </a>
-                        <a class=" H_hover" href="#">
-                            <label class="H_label">
-                                <input type="radio" src="#" name="price">
-                                <span class="H_label_p">Rp 250.000 - Rp 500.000 </span>
-                            </label>
-                        </a>
-                        <a class="H_hover" href="#">
-                            <label class="H_label">
-                                <input type="radio" src="#" name="price">
-                                <span class="H_label_p">Rp 500.000 - Rp 1000.000</span>
-                            </label>
-                        </a>
-                        <a class=" H_hover" href="#">
-                            <label class="H_label">
-                                <input type="radio" src="#" name="price">
-                                <span class="H_label_p">Rp 1000.000 +   </span>
-                            </label>
-                        </a>
-                    </div>
-                </form>
-            </div>
-        </div>
-        <div class= "  col-9 H_css_main_right">
-            <div class="row col-6  H_img_artist_desc">
-                <div class="H_img_artist">
-                    <div class="H_topup">
-                        Top beauty artist
-                    </div>
-                    <div class="H_topup_icon">
-                        <img src=" https://www.hellobeauty.id/assets/images/verified.svg">
-                    </div>
-                </div>
-                <div class="H_img_artist">
-                    <img class="img-fluid" src="/img_huy/8f0a7615beb904c0fd06e08df1dcfd00-350-200.jpeg" height="200" width="350"/>
                 </div>
 
-                <a href="#" class="">
-                    <div class="H_info_artist">
-                        <div class=" H_avt_artist">
-                            <img class=" H_img " src="/img_huy/avtartist1.jpeg" height="250" width="250"/>
+            </nav>
+
+            <div class= " col-9 H_css_main_right">
+                <div class="row col-6  H_img_artist_desc">
+                    <div class="H_img_artist">
+                        <div class="H_topup">
+                            Top beauty artist
                         </div>
-                        <div class="H_artist_desc">
-                            <div class="H_Name_artist">Clara Santoso</div>
-                            <div class="H_description">Menerima services for Wedding, Pre Wedding...</div>
-                            <div class="H_loca "  ><i style="font-size:11px;color: #484848;" class="fas" >&#xf3c5;</i> Jakarta Barat - DKI Jakarta</div>
+                        <div class="H_topup_icon">
+                            <img src=" https://www.hellobeauty.id/assets/images/verified.svg">
                         </div>
                     </div>
-                    <div class=" H_display_review">
-                        <div class="row col-md-6 H_display_review_left">
+                    <div class="H_img_artist">
+                        <div id="demo" class="carousel slide" data-ride="carousel">
+                            <!-- Indicators -->
+                            <ul class="carousel-indicators">
+                                <li data-target="#demo" data-slide-to="0" class="active"></li>
+                                <li data-target="#demo" data-slide-to="1"></li>
+                                <li data-target="#demo" data-slide-to="2"></li>
+                                <li data-target="#demo" data-slide-to="3"></li>
+                                <li data-target="#demo" data-slide-to="4"></li>
+                            </ul>
+
+                            <!-- The slideshow -->
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="/img_huy/artist1.1.jpeg"  style="width:100%;">
+                                </div>
+                                <div class="carousel-item ">
+                                    <img src="/img_huy/artist1.2.jpeg"  style="width:100%;">
+                                </div>
+                                <div class="carousel-item ">
+                                    <img src="/img_huy/artist1.3.jpeg"  style="width:100%;" >
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="/img_huy/artist1.4.jpeg"  style="width:100%;" >
+                                </div>
+                                <div class="carousel-item ">
+                                    <img src="/img_huy/artist1.5.jpeg"   style="width:100%;">
+                                </div>
+                            </div>
+                            <!-- Left and right controls -->
+                            <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+                            </a>
+                            <a class="carousel-control-next" href="#demo" data-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <a href="#" class="">
+                        <div class="H_info_artist">
+                            <div class=" H_avt_artist">
+                                <img class="H_img " src="/img_huy/avtartist1.jpeg" height="250" width="250"/>
+                            </div>
+                            <div class="H_artist_desc">
+                                <div class="H_Name_artist">Clara Santoso</div>
+                                <div class="H_description">Menerima services for Wedding, Pre Wedding...</div>
+                                <div class="H_loca "  ><i style="font-size:11px;color: #484848;" class="fas" >&#xf3c5;</i> Jakarta Barat - DKI Jakarta</div>
+                            </div>
+                        </div>
+                        <div class=" H_display_review">
+                            <div class="row col-md-6 H_display_review_left">
                                     <span class="H_display_sprice">
                                         5/5.216 Review
                                     </span>
-                            <span class="H_Icon">
+                                <span class="H_Icon">
                                         <i style="font-size:15px; color: red;" class="fa">&#xf004; &#xf004; &#xf004; &#xf004; &#xf004;</i>
                                     </span>
+                            </div>
+                            <div class="row col-md-6 H_display_review_right">
+                                <span class="H_display_sprice">Start From</span>
+                                <span class="H_display_sprice2" style="font-size: 17px; font-weight: 600;color: rgba(0,0,0,0.54)">IDR 1.000.000,00</span>
+                            </div>
                         </div>
-                        <div class="row col-md-6 H_display_review_right">
-                            <span class="H_display_sprice">Start From</span>
-                            <span class="H_display_sprice2" style="font-size: 17px; font-weight: 600;color: rgba(0,0,0,0.54)">IDR 1.000.000,00</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="row col-6  H_img_artist_desc">
-                <div class="H_img_artist">
-                    <div class="H_topup">
-                        Top beauty artist
-                    </div>
-                    <div class="H_topup_icon">
-                        <img src=" https://www.hellobeauty.id/assets/images/verified.svg">
-                    </div>
+                    </a>
                 </div>
-                <div class="H_img_artist">
-                    <div id="demo" class="carousel slide" data-ride="carousel">
-                        <!-- Indicators -->
-                        <ul class="carousel-indicators">
-                            <li data-target="#demo" data-slide-to="0" class="active"></li>
-                            <li data-target="#demo" data-slide-to="1"></li>
-                            <li data-target="#demo" data-slide-to="2"></li>
-                            <li data-target="#demo" data-slide-to="3"></li>
-                            <li data-target="#demo" data-slide-to="4"></li>
-                        </ul>
-
-                        <!-- The slideshow -->
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="/img_huy/artist1.1.jpeg"  style="width:100%;">
-                            </div>
-                            <div class="carousel-item active">
-                                <img src="/img_huy/artist1.2.jpeg"  style="width:100%;">
-                            </div>
-                            <div class="carousel-item active">
-                                <img src="/img_huy/artist1.3.jpeg"  style="width:100%;" >
-                            </div>
-                            <div class="carousel-item active">
-                                <img src="/img_huy/artist1.4.jpeg"  style="width:100%;" >
-                            </div>
-                            <div class="carousel-item active">
-                                <img src="/img_huy/artist1.5.jpeg"   style="width:100%;">
-                            </div>
+                <div class="row col-6  H_img_artist_desc">
+                    <div class="H_img_artist">
+                        <div class="H_topup">
+                            Top beauty artist
                         </div>
-                        <!-- Left and right controls -->
-                        <a class="carousel-control-prev" href="#demo" data-slide="prev">
-                            <span class="carousel-control-prev-icon"></span>
-                        </a>
-                        <a class="carousel-control-next" href="#demo" data-slide="next">
-                            <span class="carousel-control-next-icon"></span>
-                        </a>
-                    </div>
-                </div>
-
-                <a href="#" class="">
-                    <div class="H_info_artist">
-                        <div class=" H_avt_artist">
-                            <img class="H_img " src="/img_huy/avtartist1.jpeg" height="250" width="250"/>
-                        </div>
-                        <div class="H_artist_desc">
-                            <div class="H_Name_artist">Clara Santoso</div>
-                            <div class="H_description">Menerima services for Wedding, Pre Wedding...</div>
-                            <div class="H_loca "  ><i style="font-size:11px;color: #484848;" class="fas" >&#xf3c5;</i> Jakarta Barat - DKI Jakarta</div>
+                        <div class="H_topup_icon">
+                            <img src=" https://www.hellobeauty.id/assets/images/verified.svg">
                         </div>
                     </div>
-                    <div class=" H_display_review">
-                        <div class="row col-md-6 H_display_review_left">
+                    <div class="H_img_artist">
+                        <div id="demo9" class="carousel slide" data-ride="carousel">
+                            <!-- Indicators -->
+                            <ul class="carousel-indicators">
+                                <li data-target="#demo9" data-slide-to="0" class="active"></li>
+                                <li data-target="#demo9" data-slide-to="1"></li>
+                                <li data-target="#demo9" data-slide-to="2"></li>
+                                <li data-target="#demo9" data-slide-to="3"></li>
+                                <li data-target="#demo9" data-slide-to="4"></li>
+                            </ul>
+
+                            <!-- The slideshow -->
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="/img_huy/1.jpeg"  style="width:100%;">
+                                </div>
+                                <div class="carousel-item ">
+                                    <img src="/img_huy/2.jpeg"  style="width:100%;">
+                                </div>
+                                <div class="carousel-item ">
+                                    <img src="/img_huy/3.jpeg"  style="width:100%;" >
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="/img_huy/4.jpeg"  style="width:100%;" >
+                                </div>
+                                <div class="carousel-item ">
+                                    <img src="/img_huy/5.jpeg"   style="width:100%;">
+                                </div>
+                            </div>
+                            <!-- Left and right controls -->
+                            <a class="carousel-control-prev" href="#demo9" data-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+                            </a>
+                            <a class="carousel-control-next" href="#demo9" data-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <a href="#" class="">
+                        <div class="H_info_artist">
+                            <div class=" H_avt_artist">
+                                <img class="H_img " src="/img_huy/avtartist2.jpeg" height="250" width="250"/>
+                            </div>
+                            <div class="H_artist_desc">
+                                <div class="H_Name_artist">Clara Santoso</div>
+                                <div class="H_description">Menerima services for Wedding, Pre Wedding...</div>
+                                <div class="H_loca "  ><i style="font-size:11px;color: #484848;" class="fas" >&#xf3c5;</i> Jakarta Barat - DKI Jakarta</div>
+                            </div>
+                        </div>
+                        <div class=" H_display_review">
+                            <div class="row col-md-6 H_display_review_left">
                                     <span class="H_display_sprice">
                                         5/5.216 Review
                                     </span>
-                            <span class="H_Icon">
+                                <span class="H_Icon">
                                         <i style="font-size:15px; color: red;" class="fa">&#xf004; &#xf004; &#xf004; &#xf004; &#xf004;</i>
                                     </span>
+                            </div>
+                            <div class="row col-md-6 H_display_review_right">
+                                <span class="H_display_sprice">Start From</span>
+                                <span class="H_display_sprice2" style="font-size: 17px; font-weight: 600;color: rgba(0,0,0,0.54)">1.000.000,00 VND</span>
+                            </div>
                         </div>
-                        <div class="row col-md-6 H_display_review_right">
-                            <span class="H_display_sprice">Start From</span>
-                            <span class="H_display_sprice2" style="font-size: 17px; font-weight: 600;color: rgba(0,0,0,0.54)">IDR 1.000.000,00</span>
+                    </a>
+                </div>
+                <div class="row col-6  H_img_artist_desc">
+                    <div class="H_img_artist">
+                        <div class="H_topup">
+                            Top beauty artist
+                        </div>
+                        <div class="H_topup_icon">
+                            <img src=" https://www.hellobeauty.id/assets/images/verified.svg">
                         </div>
                     </div>
-                </a>
+                    <div class="H_img_artist">
+                        <div id="demo8" class="carousel slide" data-ride="carousel">
+                            <!-- Indicators -->
+                            <ul class="carousel-indicators">
+                                <li data-target="#demo8" data-slide-to="0" class="active"></li>
+                                <li data-target="#demo8" data-slide-to="1"></li>
+                                <li data-target="#demo8" data-slide-to="2"></li>
+                                <li data-target="#demo8" data-slide-to="3"></li>
+                                <li data-target="#demo8" data-slide-to="4"></li>
+                            </ul>
+
+                            <!-- The slideshow -->
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="/img_huy/5.jpeg"  style="width:100%;">
+                                </div>
+                                <div class="carousel-item ">
+                                    <img src="/img_huy/7.jpg"  style="width:100%;">
+                                </div>
+                                <div class="carousel-item ">
+                                    <img src="/img_huy/14.jpg"  style="width:100%;" >
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="/img_huy/9.jpeg"  style="width:100%;" >
+                                </div>
+                                <div class="carousel-item ">
+                                    <img src="/img_huy/10.jpeg"   style="width:100%;">
+                                </div>
+                            </div>
+                            <!-- Left and right controls -->
+                            <a class="carousel-control-prev" href="#demo8" data-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+                            </a>
+                            <a class="carousel-control-next" href="#demo8" data-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <a href="#" class="">
+                        <div class="H_info_artist">
+                            <div class=" H_avt_artist">
+                                <img class="H_img " src="/img_huy/avtartist3.jpeg" height="250" width="250"/>
+                            </div>
+                            <div class="H_artist_desc">
+                                <div class="H_Name_artist">Clara Santoso</div>
+                                <div class="H_description">Menerima services for Wedding, Pre Wedding...</div>
+                                <div class="H_loca "  ><i style="font-size:11px;color: #484848;" class="fas" >&#xf3c5;</i> Jakarta Barat - DKI Jakarta</div>
+                            </div>
+                        </div>
+                        <div class=" H_display_review">
+                            <div class="row col-md-6 H_display_review_left">
+                                    <span class="H_display_sprice">
+                                        5/5.216 Review
+                                    </span>
+                                <span class="H_Icon">
+                                        <i style="font-size:15px; color: red;" class="fa">&#xf004; &#xf004; &#xf004; &#xf004; &#xf004;</i>
+                                    </span>
+                            </div>
+                            <div class="row col-md-6 H_display_review_right">
+                                <span class="H_display_sprice">Start From</span>
+                                <span class="H_display_sprice2" style="font-size: 17px; font-weight: 600;color: rgba(0,0,0,0.54)">1.000.000,00 VND</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="row col-6  H_img_artist_desc">
+                    <div class="H_img_artist">
+                        <div class="H_topup">
+                            Top beauty artist
+                        </div>
+                        <div class="H_topup_icon">
+                            <img src=" https://www.hellobeauty.id/assets/images/verified.svg">
+                        </div>
+                    </div>
+                    <div class="H_img_artist">
+                        <div id="demo7" class="carousel slide" data-ride="carousel">
+                            <!-- Indicators -->
+                            <ul class="carousel-indicators">
+                                <li data-target="#demo7" data-slide-to="0" class="active"></li>
+                                <li data-target="#demo7" data-slide-to="1"></li>
+                                <li data-target="#demo7" data-slide-to="2"></li>
+                                <li data-target="#demo7" data-slide-to="3"></li>
+                                <li data-target="#demo7" data-slide-to="4"></li>
+                            </ul>
+
+                            <!-- The slideshow -->
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="/img_huy/6.jpg"  style="width:100%;">
+                                </div>
+                                <div class="carousel-item ">
+                                    <img src="/img_huy/7.jpg"  style="width:100%;">
+                                </div>
+                                <div class="carousel-item ">
+                                    <img src="/img_huy/8.jpeg"  style="width:100%;" >
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="/img_huy/9.jpeg"  style="width:100%;" >
+                                </div>
+                                <div class="carousel-item ">
+                                    <img src="/img_huy/10.jpeg"   style="width:100%;">
+                                </div>
+                            </div>
+                            <!-- Left and right controls -->
+                            <a class="carousel-control-prev" href="#demo7" data-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+                            </a>
+                            <a class="carousel-control-next" href="#demo7" data-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <a href="#" class="">
+                        <div class="H_info_artist">
+                            <div class=" H_avt_artist">
+                                <img class="H_img " src="/img_huy/avtartist4.jpeg" height="250" width="250"/>
+                            </div>
+                            <div class="H_artist_desc">
+                                <div class="H_Name_artist">Clara Santoso</div>
+                                <div class="H_description">Menerima services for Wedding, Pre Wedding...</div>
+                                <div class="H_loca "  ><i style="font-size:11px;color: #484848;" class="fas" >&#xf3c5;</i> Jakarta Barat - DKI Jakarta</div>
+                            </div>
+                        </div>
+                        <div class=" H_display_review">
+                            <div class="row col-md-6 H_display_review_left">
+                                    <span class="H_display_sprice">
+                                        5/5.216 Review
+                                    </span>
+                                <span class="H_Icon">
+                                        <i style="font-size:15px; color: red;" class="fa">&#xf004; &#xf004; &#xf004; &#xf004; &#xf004;</i>
+                                    </span>
+                            </div>
+                            <div class="row col-md-6 H_display_review_right">
+                                <span class="H_display_sprice">Start From</span>
+                                <span class="H_display_sprice2" style="font-size: 17px; font-weight: 600;color: rgba(0,0,0,0.54)">1.000.000,00 VND</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="row col-6  H_img_artist_desc">
+                    <div class="H_img_artist">
+                        <div class="H_topup">
+                            Top beauty artist
+                        </div>
+                        <div class="H_topup_icon">
+                            <img src=" https://www.hellobeauty.id/assets/images/verified.svg">
+                        </div>
+                    </div>
+                    <div class="H_img_artist">
+                        <div id="demo6" class="carousel slide" data-ride="carousel">
+                            <!-- Indicators -->
+                            <ul class="carousel-indicators">
+                                <li data-target="#demo6" data-slide-to="0" class="active"></li>
+                                <li data-target="#demo6" data-slide-to="1"></li>
+                                <li data-target="#demo6" data-slide-to="2"></li>
+                                <li data-target="#demo6" data-slide-to="3"></li>
+                                <li data-target="#demo6" data-slide-to="4"></li>
+                            </ul>
+
+                            <!-- The slideshow -->
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="/img_huy/11.jpeg"  style="width:100%;">
+                                </div>
+                                <div class="carousel-item ">
+                                    <img src="/img_huy/12.jpeg"  style="width:100%;">
+                                </div>
+                                <div class="carousel-item ">
+                                    <img src="/img_huy/13.jpeg"  style="width:100%;" >
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="/img_huy/14.jpg"  style="width:100%;" >
+                                </div>
+                                <div class="carousel-item ">
+                                    <img src="/img_huy/1.jpeg"   style="width:100%;">
+                                </div>
+                            </div>
+                            <!-- Left and right controls -->
+                            <a class="carousel-control-prev" href="#demo6" data-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+                            </a>
+                            <a class="carousel-control-next" href="#demo6" data-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <a href="#" class="">
+                        <div class="H_info_artist">
+                            <div class=" H_avt_artist">
+                                <img class="H_img " src="/img_huy/avtartist3.jpeg" height="250" width="250"/>
+                            </div>
+                            <div class="H_artist_desc">
+                                <div class="H_Name_artist">Clara Santoso</div>
+                                <div class="H_description">Menerima services for Wedding, Pre Wedding...</div>
+                                <div class="H_loca "  ><i style="font-size:11px;color: #484848;" class="fas" >&#xf3c5;</i> Jakarta Barat - DKI Jakarta</div>
+                            </div>
+                        </div>
+                        <div class=" H_display_review">
+                            <div class="row col-md-6 H_display_review_left">
+                                    <span class="H_display_sprice">
+                                        5/5.216 Review
+                                    </span>
+                                <span class="H_Icon">
+                                        <i style="font-size:15px; color: red;" class="fa">&#xf004; &#xf004; &#xf004; &#xf004; &#xf004;</i>
+                                    </span>
+                            </div>
+                            <div class="row col-md-6 H_display_review_right">
+                                <span class="H_display_sprice">Start From</span>
+                                <span class="H_display_sprice2" style="font-size: 17px; font-weight: 600;color: rgba(0,0,0,0.54)">1.000.000,00 VND</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="row col-6  H_img_artist_desc">
+                    <div class="H_img_artist">
+                        <div class="H_topup">
+                            Top beauty artist
+                        </div>
+                        <div class="H_topup_icon">
+                            <img src=" https://www.hellobeauty.id/assets/images/verified.svg">
+                        </div>
+                    </div>
+                    <div class="H_img_artist">
+                        <div id="demo5" class="carousel slide" data-ride="carousel">
+                            <!-- Indicators -->
+                            <ul class="carousel-indicators">
+                                <li data-target="#demo5" data-slide-to="0" class="active"></li>
+                                <li data-target="#demo5" data-slide-to="1"></li>
+                                <li data-target="#demo5" data-slide-to="2"></li>
+                                <li data-target="#demo5" data-slide-to="3"></li>
+                                <li data-target="#demo5" data-slide-to="4"></li>
+                            </ul>
+
+                            <!-- The slideshow -->
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="/img_huy/2.jpeg"  style="width:100%;">
+                                </div>
+                                <div class="carousel-item ">
+                                    <img src="/img_huy/3.jpeg"  style="width:100%;">
+                                </div>
+                                <div class="carousel-item ">
+                                    <img src="/img_huy/4.jpeg"  style="width:100%;" >
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="/img_huy/5.jpeg"  style="width:100%;" >
+                                </div>
+                                <div class="carousel-item ">
+                                    <img src="/img_huy/8.jpeg"   style="width:100%;">
+                                </div>
+                            </div>
+                            <!-- Left and right controls -->
+                            <a class="carousel-control-prev" href="#demo5" data-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+                            </a>
+                            <a class="carousel-control-next" href="#demo5" data-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <a href="#" class="">
+                        <div class="H_info_artist">
+                            <div class=" H_avt_artist">
+                                <img class="H_img " src="/img_huy/avtartist6.jpeg" height="250" width="250"/>
+                            </div>
+                            <div class="H_artist_desc">
+                                <div class="H_Name_artist">Clara Santoso</div>
+                                <div class="H_description">Menerima services for Wedding, Pre Wedding...</div>
+                                <div class="H_loca "  ><i style="font-size:11px;color: #484848;" class="fas" >&#xf3c5;</i> Jakarta Barat - DKI Jakarta</div>
+                            </div>
+                        </div>
+                        <div class=" H_display_review">
+                            <div class="row col-md-6 H_display_review_left">
+                                    <span class="H_display_sprice">
+                                        5/5.216 Review
+                                    </span>
+                                <span class="H_Icon">
+                                        <i style="font-size:15px; color: red;" class="fa">&#xf004; &#xf004; &#xf004; &#xf004; &#xf004;</i>
+                                    </span>
+                            </div>
+                            <div class="row col-md-6 H_display_review_right">
+                                <span class="H_display_sprice">Start From</span>
+                                <span class="H_display_sprice2" style="font-size: 17px; font-weight: 600;color: rgba(0,0,0,0.54)">1.000.000,00 VND</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="row col-6  H_img_artist_desc">
+                    <div class="H_img_artist">
+                        <div class="H_topup">
+                            Top beauty artist
+                        </div>
+                        <div class="H_topup_icon">
+                            <img src=" https://www.hellobeauty.id/assets/images/verified.svg">
+                        </div>
+                    </div>
+                    <div class="H_img_artist">
+                        <div id="demo4" class="carousel slide" data-ride="carousel">
+                            <!-- Indicators -->
+                            <ul class="carousel-indicators">
+                                <li data-target="#demo4" data-slide-to="0" class="active"></li>
+                                <li data-target="#demo4" data-slide-to="1"></li>
+                                <li data-target="#demo4" data-slide-to="2"></li>
+                                <li data-target="#demo4" data-slide-to="3"></li>
+                                <li data-target="#demo4" data-slide-to="4"></li>
+                            </ul>
+
+                            <!-- The slideshow -->
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="/img_huy/3.jpeg"  style="width:100%;">
+                                </div>
+                                <div class="carousel-item ">
+                                    <img src="/img_huy/14.jpg"  style="width:100%;">
+                                </div>
+                                <div class="carousel-item ">
+                                    <img src="/img_huy/8.jpeg"  style="width:100%;" >
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="/img_huy/11.jpeg"  style="width:100%;" >
+                                </div>
+                                <div class="carousel-item ">
+                                    <img src="/img_huy/10.jpeg"   style="width:100%;">
+                                </div>
+                            </div>
+                            <!-- Left and right controls -->
+                            <a class="carousel-control-prev" href="#demo4" data-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+                            </a>
+                            <a class="carousel-control-next" href="#demo4" data-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <a href="#" class="">
+                        <div class="H_info_artist">
+                            <div class=" H_avt_artist">
+                                <img class="H_img " src="/img_huy/avtartist7.jpeg" height="250" width="250"/>
+                            </div>
+                            <div class="H_artist_desc">
+                                <div class="H_Name_artist">Clara Santoso</div>
+                                <div class="H_description">Menerima services for Wedding, Pre Wedding...</div>
+                                <div class="H_loca "  ><i style="font-size:11px;color: #484848;" class="fas" >&#xf3c5;</i> Jakarta Barat - DKI Jakarta</div>
+                            </div>
+                        </div>
+                        <div class=" H_display_review">
+                            <div class="row col-md-6 H_display_review_left">
+                                    <span class="H_display_sprice">
+                                        5/5.216 Review
+                                    </span>
+                                <span class="H_Icon">
+                                        <i style="font-size:15px; color: red;" class="fa">&#xf004; &#xf004; &#xf004; &#xf004; &#xf004;</i>
+                                    </span>
+                            </div>
+                            <div class="row col-md-6 H_display_review_right">
+                                <span class="H_display_sprice">Start From</span>
+                                <span class="H_display_sprice2" style=""> 2.000.000,00 VND</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="row col-6  H_img_artist_desc">
+                    <div class="H_img_artist">
+                        <div class="H_topup">
+                            Top beauty artist
+                        </div>
+                        <div class="H_topup_icon">
+                            <img src=" https://www.hellobeauty.id/assets/images/verified.svg">
+                        </div>
+                    </div>
+                    <div class="H_img_artist">
+                        <div id="demo3" class="carousel slide" data-ride="carousel">
+                            <!-- Indicators -->
+                            <ul class="carousel-indicators">
+                                <li data-target="#demo3" data-slide-to="0" class="active"></li>
+                                <li data-target="#demo3" data-slide-to="1"></li>
+                                <li data-target="#demo3" data-slide-to="2"></li>
+                                <li data-target="#demo3" data-slide-to="3"></li>
+                                <li data-target="#demo3" data-slide-to="4"></li>
+                            </ul>
+
+                            <!-- The slideshow -->
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="/img_huy/7.jpg"  style="width:100%;">
+                                </div>
+                                <div class="carousel-item ">
+                                    <img src="/img_huy/6.jpg"  style="width:100%;">
+                                </div>
+                                <div class="carousel-item ">
+                                    <img src="/img_huy/9.jpeg"  style="width:100%;" >
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="/img_huy/8.jpeg"  style="width:100%;" >
+                                </div>
+                                <div class="carousel-item ">
+                                    <img src="/img_huy/13.jpeg"   style="width:100%;">
+                                </div>
+                            </div>
+                            <!-- Left and right controls -->
+                            <a class="carousel-control-prev" href="#demo3" data-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+                            </a>
+                            <a class="carousel-control-next" href="#demo3" data-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <a href="#" class="">
+                        <div class="H_info_artist">
+                            <div class=" H_avt_artist">
+                                <img class="H_img " src="/img_huy/avtartist7.jpeg" height="250" width="250"/>
+                            </div>
+                            <div class="H_artist_desc">
+                                <div class="H_Name_artist">Clara Santoso</div>
+                                <div class="H_description">Menerima services for Wedding, Pre Wedding...</div>
+                                <div class="H_loca "  ><i style="font-size:11px;color: #484848;" class="fas" >&#xf3c5;</i> Jakarta Barat - DKI Jakarta</div>
+                            </div>
+                        </div>
+                        <div class=" H_display_review">
+                            <div class="row col-md-6 H_display_review_left">
+                                    <span class="H_display_sprice">
+                                        5/5.216 Review
+                                    </span>
+                                <span class="H_Icon">
+                                        <i style="font-size:15px; color: red;" class="fa">&#xf004; &#xf004; &#xf004; &#xf004; &#xf004;</i>
+                                    </span>
+                            </div>
+                            <div class="row col-md-6 H_display_review_right">
+                                <span class="H_display_sprice">Start From</span>
+                                <span class="H_display_sprice2" style="font-size: 17px; font-weight: 600;color: rgba(0,0,0,0.54)">1.000.000,00 VND</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="row col-6  H_img_artist_desc">
+                    <div class="H_img_artist">
+                        <div class="H_topup">
+                            Top beauty artist
+                        </div>
+                        <div class="H_topup_icon">
+                            <img src=" https://www.hellobeauty.id/assets/images/verified.svg">
+                        </div>
+                    </div>
+                    <div class="H_img_artist">
+                        <div id="demo2" class="carousel slide" data-ride="carousel">
+                            <!-- Indicators -->
+                            <ul class="carousel-indicators">
+                                <li data-target="#demo2" data-slide-to="0" class="active"></li>
+                                <li data-target="#demo2" data-slide-to="1"></li>
+                                <li data-target="#demo2" data-slide-to="2"></li>
+                                <li data-target="#demo2" data-slide-to="3"></li>
+                                <li data-target="#demo2" data-slide-to="4"></li>
+                            </ul>
+
+                            <!-- The slideshow -->
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="/img_huy/13.jpeg"  style="width:100%;">
+                                </div>
+                                <div class="carousel-item ">
+                                    <img src="/img_huy/7.jpg"  style="width:100%;">
+                                </div>
+                                <div class="carousel-item ">
+                                    <img src="/img_huy/8.jpeg"  style="width:100%;" >
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="/img_huy/10.jpeg"  style="width:100%;" >
+                                </div>
+                                <div class="carousel-item ">
+                                    <img src="/img_huy/9.jpeg"   style="width:100%;">
+                                </div>
+                            </div>
+                            <!-- Left and right controls -->
+                            <a class="carousel-control-prev" href="#demo2" data-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+                            </a>
+                            <a class="carousel-control-next" href="#demo2" data-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <a href="#" class="">
+                        <div class="H_info_artist">
+                            <div class=" H_avt_artist">
+                                <img class="H_img " src="/img_huy/avtartist2.jpeg" height="250" width="250"/>
+                            </div>
+                            <div class="H_artist_desc">
+                                <div class="H_Name_artist">Clara Santoso</div>
+                                <div class="H_description">Menerima services for Wedding, Pre Wedding...</div>
+                                <div class="H_loca "  ><i style="font-size:11px;color: #484848;" class="fas" >&#xf3c5;</i> Jakarta Barat - DKI Jakarta</div>
+                            </div>
+                        </div>
+                        <div class=" H_display_review">
+                            <div class="row col-md-6 H_display_review_left">
+                                    <span class="H_display_sprice">
+                                        5/5.216 Review
+                                    </span>
+                                <span class="H_Icon">
+                                        <i style="font-size:15px; color: red;" class="fa">&#xf004; &#xf004; &#xf004; &#xf004; &#xf004;</i>
+                                    </span>
+                            </div>
+                            <div class="row col-md-6 H_display_review_right">
+                                <span class="H_display_sprice">Start From</span>
+                                <span class="H_display_sprice2" style="font-size: 17px; font-weight: 600;color: rgba(0,0,0,0.54)">1.000.000,00 VND</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="row col-6  H_img_artist_desc">
+                    <div class="H_img_artist">
+                        <div class="H_topup">
+                            Top beauty artist
+                        </div>
+                        <div class="H_topup_icon">
+                            <img src=" https://www.hellobeauty.id/assets/images/verified.svg">
+                        </div>
+                    </div>
+                    <div class="H_img_artist">
+                        <div id="demo1" class="carousel slide" data-ride="carousel">
+                            <!-- Indicators -->
+                            <ul class="carousel-indicators">
+                                <li data-target="#demo1" data-slide-to="0" class="active"></li>
+                                <li data-target="#demo1" data-slide-to="1"></li>
+                                <li data-target="#demo1" data-slide-to="2"></li>
+                                <li data-target="#demo1" data-slide-to="3"></li>
+                                <li data-target="#demo1" data-slide-to="4"></li>
+                            </ul>
+
+                            <!-- The slideshow -->
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="/img_huy/14.jpg"  style="width:100%;">
+                                </div>
+                                <div class="carousel-item ">
+                                    <img src="/img_huy/13.jpeg"  style="width:100%;">
+                                </div>
+                                <div class="carousel-item ">
+                                    <img src="/img_huy/8.jpeg"  style="width:100%;" >
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="/img_huy/9.jpeg"  style="width:100%;" >
+                                </div>
+                                <div class="carousel-item ">
+                                    <img src="/img_huy/10.jpeg"   style="width:100%;">
+                                </div>
+                            </div>
+                            <!-- Left and right controls -->
+                            <a class="carousel-control-prev" href="#demo1" data-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+                            </a>
+                            <a class="carousel-control-next" href="#demo1" data-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <a href="#" class="">
+                        <div class="H_info_artist">
+                            <div class=" H_avt_artist">
+                                <img class="H_img " src="/img_huy/avtartist10.jpeg" height="250" width="250"/>
+                            </div>
+                            <div class="H_artist_desc">
+                                <div class="H_Name_artist">Clara Santoso</div>
+                                <div class="H_description">Menerima services for Wedding, Pre Wedding...</div>
+                                <div class="H_loca "  ><i style="font-size:11px;color: #484848;" class="fas" >&#xf3c5;</i> Jakarta Barat - DKI Jakarta</div>
+                            </div>
+                        </div>
+                        <div class=" H_display_review">
+                            <div class="row col-md-6 H_display_review_left">
+                                    <span class="H_display_sprice">
+                                        5/5.216 Review
+                                    </span>
+                                <span class="H_Icon">
+                                        <i style="font-size:15px; color: red;" class="fa">&#xf004; &#xf004; &#xf004; &#xf004; &#xf004;</i>
+                                    </span>
+                            </div>
+                            <div class="row col-md-6 H_display_review_right">
+                                <span class="H_display_sprice">Start From</span>
+                                <span class="H_display_sprice2" style="font-size: 17px; font-weight: 600;color: rgba(0,0,0,0.54)">1.000.000,00 VND</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+
             </div>
 
 
         </div>
-
 
     </div>
 </div>

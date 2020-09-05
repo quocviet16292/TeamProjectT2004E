@@ -59,13 +59,13 @@
     border: 1px solid salmon;
     border-radius: 10px;
 }
-.H_select:focus{
+.H_select:hover{
     border: 1px solid salmon;
     border-radius: 10px;
     width: 100%;
     height: 25px;
-    border-bottom: 0px;
 }
+
 label{
     float: left;
     width: 100%;
@@ -121,8 +121,7 @@ a.H_hover{
     padding: 5px 10px;
     position: absolute;
     border-radius: 20px;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
+
     z-index: 10;
     top: 20px;
     left: 0px;
@@ -220,4 +219,10 @@ a.H_hover{
     font-weight: 300;
     color: rgba(0,0,0,0.54) ;
 
+}
+.H_display_sprice2{
+    text-align: center;
+    font-size: 17px;
+    font-weight: 600;
+    color: rgba(0,0,0,0.54)
 }
