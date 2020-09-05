@@ -380,3 +380,7 @@ img{
     list-style: none;
     text-decoration: none;
 }
+.errors{
+    color: red;
+    font-size: 0.85vw;
+}

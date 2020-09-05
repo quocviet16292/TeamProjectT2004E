@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <script type="text/javascript" src='https://cdn.jsdelivr.net/g/lodash@4(lodash.min.js+lodash.fp.min.js)'></script>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Artisan registration</title>
+    <link rel="stylesheet" type="text/css" href="/css/home-son.css"/>
+    <script type="text/javascript" src="/js/jquery.js"></script>
+    <script type="text/javascript" src="/js/home-son.js"></script>
+    <link href="https://cdn.rawgit.com/mfd/f3d96ec7f0e8f034cc22ea73b3797b59/raw/856f1dbb8d807aabceb80b6d4f94b464df461b3e/gotham.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script type="text/javascript" src="/js/ResigArisist-son.js"></script>
+    <script type="text/javascript" src="/libs/bootstrap/js/bootstrap.js"></script>
+    <script type="text/javascript" src="/libs/bootstrap/js/validator.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/footer.css">
+</head>
+<body onload="renderListServices()">
+<%- include("navbar-Beauty-Artist-s") %>
+    <section class="section resiarrrrr">
+        <div class="container resssssss">
+            <div class="row">
+                <div class="container-h1-s">
+                    <h1 >Artisan Registration</h1>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-12">
+                    <form action="/save-artist" method="post">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label class="titttte">Full Name</label>
+                                <input type="text" name="aName" class="form-control" id="fullname">
+                                <div class="error" id="fullname-error"></div>
+                            </div>
+                            <hr>
+                            <div class="form-group">
+                                <label class="titttte">Email</label>
+                                <input type="text" name="Email" class="form-control" id="Email">
+                                <div class="error" id="Email-error"></div>
+                            </div>
+                            <hr>
+                            <div class="form-group">
+                                <label class="titttte">Phone Number</label>
+                                <input type="text" name="Phone" class="form-control" id="Phone">
+                                <div class="error" id="Phone-error"></div>
+                            </div>
+                            <hr>
+                            <div class="form-group">
+                                <label class="titttte">Address</label>
+                                <input type="text" name="Address" class="form-control" id="Address">
+                                <div class="error" id="Address-error"></div>
+                            </div>
+                            <hr>
+                            <div class="form-group">
+                                <label class="titttte">City</label>
+                                <select name="City" class="form-control" id="City">
+                                    <option value="" disabled selected>Select your city</option>
+                                    <option value="Tp Hà Nội">Hà Nội</option>
+                                    <option value="Tp HCM">Thành Phố Hồ Chí Minh</option>
+                                </select>
+                                <div class="error" id="City-error"></div>
+                            </div>
+                            <hr>
+                            <div class="form-group">
+                                <label class="titttte">District</label>
+                                <select name="District" class="form-control" id="District">
+                                    <option value="" disabled selected>Select your district</option>
+                                    <option value="Hoàng Mai">Hoàng Mai</option>
+                                    <option value="Ba Đình">Ba Đình</option>
+                                    <option value="Thanh Xuân">Thanh Xuân</option>
+                                    <option value="Hai Bà Trưng">Hai Bà Trưng</option>
+                                    <option value="Hoàn Kiếm">Hoàn Kiếm</option>
+                                    <option value="Đống Đa">Đống Đa</option>
+                                    <option value="Hà Đông">Hà Đông</option>
+                                    <option value="Tây Hồ">Tây Hồ</option>
+                                    <option value="Cầu Giấy">Cầu Giấy</option>
+                                    <option value="Nam Từ Liêm">Nam Từ Liêm</option>
+                                    <option value="Bắc Từ Liêm">Bắc Từ Liêm</option>
+                                </select>
+                                <div class="error" id="District-error"></div>
+                            </div>
+                            <hr>
+                            <div class="form-group">
+                                <div class="form-group">
+                                    <label class="titttte">Location</label>
+                                    <input type="text" id="aLocation" name="aLocation" class="form-control" data-error="Error" required>
+                                    <div class="error" id="aLocation-error"></div>
+                                </div>
+                                <hr>
+                                <div class="form-group">
+                                    <label class="titttte">Intro</label>
+                                    <input type="text" id="Intro" name="Intro" class="form-control" data-error="Error" required>
+                                    <div class="error" id="Intro-error"></div>
+                                </div>
+                                <hr>
+                                <div class="form-group">
+                                    <label class="titttte">Avartar</label>
+                                    <div class="custom-file">
+                                        <label class="custom-file-label" for="customFile">Choose file</label>
+                                        <input type="file" name="Avartar" class="custom-file-input" id="Avartar">
+                                        <div class="error" id="Avartar-error"></div>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="form-group">
+                                    <label class="titttte">Cover</label>
+                                    <div class="custom-file">
+                                        <label class="custom-file-label" for="customFile">Choose file</label>
+                                        <input type="file" name="Cover" class="custom-file-input" id="Cover">
+                                        <div class="error" id="Cover-error"></div>
+                                    </div>
+                                </div>
+                                <hr>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit"  onclick="save()" class="btn btn-danger"> Registration</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<%- include('layout/footer')-%>
+
+
+<script type="text/javascript" src='https://cdn.jsdelivr.net/g/lodash@4(lodash.min.js+lodash.fp.min.js)'></script>
+<script type="text/javascript" src="/js/ResigArisist-son.js"></script>
+
+</body>
+</html>
