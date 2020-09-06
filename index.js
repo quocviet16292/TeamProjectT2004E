@@ -137,3 +137,7 @@ app.get("/services",function (req,res) {
 app.post('/booking/success', (req,res)=>{
     res.render('success');
 })
+
+app.post('/artisan-registration-and-service/success', (req,res)=>{
+    res.render('regSuccess');
+})
