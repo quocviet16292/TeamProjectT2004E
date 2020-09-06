@@ -2,6 +2,7 @@
     font-size: 30px;
     font-weight: 500;
     line-height: 1.6;
+    margin-top: 50px;
 }
 .ftlink h3{
     font-size: 16px;
@@ -20,4 +21,8 @@ ol ul{
 ol>li{
     margin-top: 40px;
     font-size: 14px;
+}
+.small_container{
+    width: 700px;
+    margin: 0 auto;
 }

@@ -15,7 +15,6 @@ function showTab(n) {
     }
     if (n == (x.length - 1)) {
         document.getElementById("nextBtn").innerHTML = "CONFIRM <i class=\"fas fa-paper-plane\"></i>";
-
     } else {
         document.getElementById("nextBtn").innerHTML = "Next <i class=\"fas fa-chevron-right\">";
         document.getElementById("nextBtn").setAttribute('type','button');

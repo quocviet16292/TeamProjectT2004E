@@ -1,5 +1,4 @@
 
-<!--<%- include("Preloader-son") %>-->
 <section class="section sticky-top">
     <nav class="navbar navbar-expand-md navbar-light  nav-head-s" id="nav-head-s">
         <div class="container-fluid">
@@ -8,10 +7,10 @@
                     <img class="img-fluid img-nav-s" src="/imgs-s/logo-salmon.png">
                 </a>
             </div>
-            <form class="form-group form-group-nav-pro" action="/search" method="get">
-                <input class="form-control form-group-nav-pro-input" type="text" name="keyword" placeholder="Type beautician's name or service category"/>
-                <span class="form-group-nav-pro-icon"><i class="fa fa-search search-buton-s1"></i></span>
-            </form>
+<!--            <form class="form-group form-group-nav-pro" action="/search" method="get">-->
+<!--                <input class="form-control form-group-nav-pro-input" type="text" name="keyword" placeholder="Type beautician's name or service category"/>-->
+<!--                <span class="form-group-nav-pro-icon"><i class="fa fa-search search-buton-s1"></i></span>-->
+<!--            </form>-->
             <button class="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarResponsive">
                 <span class="navbar-toggler-icon"></span>
@@ -56,12 +55,47 @@
         </div>
     </nav>
 </section>
-<section class="section head-s1">
-    <div class="img-banne-s">
-        <img src="/imgs-s/banner-son.jpg">
-    </div>
-    <div class="header-promotion">
-        <span class="header-promotion-span-s1">Promotions</span><br>
-        <span class="header-promotion-span-s2">All promotions for you</span>
-    </div>
-    </section>
+<script type="text/javascript">
+
+    //     //Preloader set fixed time
+    setTimeout(function () {
+        $(".loader-bg").fadeToggle();
+    },3000);
+
+
+    // When the user scrolls down 10px from the top of the document, slide down the navbar
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
+            document.getElementById("nav-head-s").style.background = "#FFFFFF";
+        } else {
+            document.getElementById("nav-head-s").style.background = "none";
+        }
+    }
+
+
+    <!-- Initialize Swiper -->
+
+    var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 3,
+        direction: getDirection(),
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        on: {
+            resize: function () {
+                swiper.changeDirection(getDirection());
+            }
+        }
+    });
+
+    function getDirection() {
+        var windowWidth = window.innerWidth;
+        var direction = window.innerWidth <= 760 ? 'vertical' : 'horizontal';
+
+        return direction;
+    }
+
+</script>

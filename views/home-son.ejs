@@ -1,6 +1,6 @@
  <!DOCTYPE html>
  <html lang="en">
- <%- include("header-son") -%>
+ <%- include("layout/header-son") -%>
  <body>
 
 <!-- <%- include("Preloader-son") %>-->
@@ -49,7 +49,7 @@
                         <button class="btn btn-outline-light btn-nav-s2" data-toggle="modal" data-target="#myModal">Register</button>
                     </li>
                     <li class="nav-item nav-item-s">
-                        <button class="btn btn-outline-light btn-nav-s2" data-toggle="modal" data-target="#myModallogin">Login</button>
+                        <button class="btn btn-outline-light btn-nav-s2" data-toggle="modal" data-target="#myModallogin"><a href="/login">Login</a> </button>
                     </li>
                 </ul>
             </div>
@@ -283,11 +283,11 @@
       </div>
      <div class="header-fooder">
           <div class="d-flex">
-              <div class="col-lg-2"><a class="header-fooder-notamenu" href="#"><span class="header-fooder-notamenu-span">About Us</span></a></div>
-              <div class="col-lg-2"><a class="header-fooder-notamenu" href="#"><span class="header-fooder-notamenu-span">Services</span></a></div>
-              <div class="col-lg-2"><a class="header-fooder-notamenu" href="#"><span class="header-fooder-notamenu-span">Artists</span></a></div>
+              <div class="col-lg-2"><a class="header-fooder-notamenu" href="/pages/about-us"><span class="header-fooder-notamenu-span">About Us</span></a></div>
+              <div class="col-lg-2"><a class="header-fooder-notamenu" href="/services"><span class="header-fooder-notamenu-span">Services</span></a></div>
+              <div class="col-lg-2"><a class="header-fooder-notamenu" href="/services"><span class="header-fooder-notamenu-span">Artists</span></a></div>
               <div class="col-lg-2"><a class="header-fooder-notamenu" href="/Gallery"><span class="header-fooder-notamenu-span">Gallery</span></a></div>
-              <div class="col-lg-2"><a class="header-fooder-notamenu" href="#"><span class="header-fooder-notamenu-span">Blog</span></a></div>
+              <div class="col-lg-2"><a class="header-fooder-notamenu" href="/beautydaily"><span class="header-fooder-notamenu-span">Blog</span></a></div>
               <div class="col-lg-2"><a class="header-fooder-notamenu" href="#"><span class="header-fooder-notamenu-span">Book Now</span></a></div>
           </div>
      </div>
@@ -298,7 +298,7 @@
                    <h2>Browse & Discover</h2>
              </div>
                    <div class="menu-s">
-                       <a href="#" class="menus0212">
+                       <a href="/services" class="menus0212">
                            <div class="menu-s1">
                                <div class="menu-s1-span">Discover Salon, Spa, Beauty Clinics, and many more</div>
                                <div class="menu-s2-search">
@@ -310,7 +310,7 @@
                     <div class="menu-s02">
                         <div class="d-flex menus021">
                             <div class="col-lg-4">
-                                <a href="#" class="menus0212">
+                                <a href="/services" class="menus0212">
                                     <div class="menus0212-menu">
                                           <div class="menus0212-span">Basic Make Up</div>
                                           <button class="btn btn-outline-light menu-s2-search-button" data-toggle="modal" data-target="#myModallogin">View</button>
@@ -318,7 +318,7 @@
                                 </a>
                             </div>
                             <div class="col-lg-4">
-                                <a href="#" class="menus0212">
+                                <a href="/services" class="menus0212">
                                     <div class="menus0212-menu-2">
                                         <div class="menus0212-span">Wedding Make Up</div>
                                         <button class="btn btn-outline-light menu-s2-search-button" data-toggle="modal" data-target="#myModallogin">View</button>
@@ -326,7 +326,7 @@
                                 </a>
                             </div>
                             <div class="col-lg-4">
-                                <a href="#" class="menus0212">
+                                <a href="/services" class="menus0212">
                                     <div class="menus0212-menu-3">
                                         <div class="menus0212-span">Photoshoot Make Up</div>
                                         <button class="btn btn-outline-light menu-s2-search-button" data-toggle="modal" data-target="#myModallogin">View</button>
@@ -338,7 +338,7 @@
            <div class="menu-s02">
                <div class="d-flex menus021">
                    <div class="col-lg-4">
-                       <a href="#" class="menus0212">
+                       <a href="/services" class="menus0212">
                            <div class="menus0212-menu-4">
                                <div class="menus0212-span">Bridesmaid Make Up</div>
                                <button class="btn btn-outline-light menu-s2-search-button" data-toggle="modal" data-target="#myModallogin">View</button>
@@ -346,7 +346,7 @@
                        </a>
                    </div>
                    <div class="col-lg-4">
-                       <a href="#" class="menus0212">
+                       <a href="/services" class="menus0212">
                            <div class="menus0212-menu-5">
                                <div class="menus0212-span">Traditional Make Up</div>
                                <button class="btn btn-outline-light menu-s2-search-button" data-toggle="modal" data-target="#myModallogin">View</button>
@@ -354,7 +354,7 @@
                        </a>
                    </div>
                    <div class="col-lg-4">
-                       <a href="#" class="menus0212">
+                       <a href="/services" class="menus0212">
                            <div class="menus0212-menu-6">
                                <div class="menus0212-span">Character,Prosthetics Make Up</div>
                                <button class="btn btn-outline-light menu-s2-search-button" data-toggle="modal" data-target="#myModallogin">View</button>
@@ -370,28 +370,28 @@
                  <span class="container-tillets1-span">Offers From Beauty Artist</span>
              </div>
              <div class="col-lg-2 container-tillets1-left">
-                 <a href="#" class="notamenu">
-                     <span class="container-tillets1-left-span">Sell All <i class='fas fa-chevron-right'></i></span>
+                 <a href="/services" class="notamenu">
+                     <span class="container-tillets1-left-span">See All <i class='fas fa-chevron-right'></i></span>
                  </a>
              </div>
          </div>
          <div class="Beauty-Artist">
 
                  <div class="Beauty-Artist-s1">
-                     <a href="#" class="Beauty-Artist-a">
+<!--                     <a href="/artist" class="Beauty-Artist-a">-->
                          <div class="Beauty-Artist-s11">
-                             <a href="#" class="Beauty-Artist-s11-a">
+                             <a href="/artist" class="Beauty-Artist-s11-a">
                                  <img class="img-fluid imgs-cover" src="http://trangsun.com/public/images/backgrounds/musl3.jpg" alt="a">
                              </a>
                          </div>
                          <div class="Beauty-Artist-s112">
-                             <a href="#" class="Beauty-Artist-s112-a"><span class="Beauty-Artist-s112-span">Trang Sun</span></a>
+                             <a href="/artist" class="Beauty-Artist-s112-a"><span class="Beauty-Artist-s112-span">Trang Sun</span></a>
                          </div>
                          <div class="Beauty-Artist-s1123">
                              <a class="Beauty-Artist-s1123-a">Discount 25% OFF</a>
                          </div>
                          <div class="Beauty-Artist-s12">
-                             <a href="#" class="header-fooder-notamenu-s4">
+                             <a href="/artist" class="header-fooder-notamenu-s4">
                                  <div class="d-flex Beauty-Artist-s121">
                                      <div class="tensp"><span class="Beauty-Artist-s121-span"><del>1.200.000 VND</del></span></div>
                                      <div class="Beauty-Artist-s1212"><i class='fas fa-arrow-right'></i></div>
@@ -399,7 +399,7 @@
                                  </div>
                              </a>
                              <div class="Beauty-Artist-s12-name">
-                                 <a href="#" class="header-fooder-notamenu-s4">
+                                 <a href="/artist" class="header-fooder-notamenu-s4">
                                      <span>Wedding Make Up</span>
                                  </a>
                              </div>
@@ -407,7 +407,7 @@
                              <div class="d-flex">
                                  <div class="col-lg-6 Beauty-Artist-s126">
                                      <div class="d-flex Beauty-Artist-s125">
-                                         <a href="#" class="header-fooder-notamenu-s4">
+                                         <a href="/artist" class="header-fooder-notamenu-s4">
                                              <i class="fa fa-clock-o Beauty-Artist-s125-icon"></i>
                                              <span class="Beauty-Artist-s125-span">Until</span>
                                          </a>
@@ -430,23 +430,23 @@
                              </div>
                          </div>
                          <a href="#"><img class="imgs-avartar" src="http://trangsun.com/public/images/backgrounds/mu2.jpg" alt="a"></a>
-                     </a>
+<!--                     </a>-->
                  </div>
              <div class="Beauty-Artist-s1">
-                 <a href="#" class="Beauty-Artist-a">
+                 <a href="/artist" class="Beauty-Artist-a">
                      <div class="Beauty-Artist-s11">
-                         <a href="#" class="Beauty-Artist-s11-a">
+                         <a href="/artist" class="Beauty-Artist-s11-a">
                              <img class="img-fluid imgs-cover" src="http://trangsun.com/public/images/backgrounds/musl3.jpg" alt="a">
                          </a>
                      </div>
                      <div class="Beauty-Artist-s112">
-                         <a href="#" class="Beauty-Artist-s112-a"><span class="Beauty-Artist-s112-span">Trang Sun</span></a>
+                         <a href="/artist" class="Beauty-Artist-s112-a"><span class="Beauty-Artist-s112-span">Trang Sun</span></a>
                      </div>
                      <div class="Beauty-Artist-s1123">
                          <a class="Beauty-Artist-s1123-a">Discount 25% OFF</a>
                      </div>
                      <div class="Beauty-Artist-s12">
-                         <a href="#" class="header-fooder-notamenu-s4">
+                         <a href="/artist" class="header-fooder-notamenu-s4">
                              <div class="d-flex Beauty-Artist-s121">
                                  <div class="tensp"><span class="Beauty-Artist-s121-span"><del>1.200.000 VND</del></span></div>
                                  <div class="Beauty-Artist-s1212"><i class='fas fa-arrow-right'></i></div>
@@ -454,7 +454,7 @@
                              </div>
                          </a>
                          <div class="Beauty-Artist-s12-name">
-                             <a href="#" class="header-fooder-notamenu-s4">
+                             <a href="/artist" class="header-fooder-notamenu-s4">
                                  <span>Wedding Make Up</span>
                              </a>
                          </div>
@@ -462,7 +462,7 @@
                          <div class="d-flex">
                              <div class="col-lg-6 Beauty-Artist-s126">
                                  <div class="d-flex Beauty-Artist-s125">
-                                     <a href="#" class="header-fooder-notamenu-s4">
+                                     <a href="/artist" class="header-fooder-notamenu-s4">
                                          <i class="fa fa-clock-o Beauty-Artist-s125-icon"></i>
                                          <span class="Beauty-Artist-s125-span">Until</span>
                                      </a>
@@ -473,7 +473,7 @@
                              </div>
                              <div class="col-lg-6">
                                  <div class="d-flex Beauty-Artist-s125">
-                                     <a href="#" class="header-fooder-notamenu-s4 header-fooder-notamenu-s42">
+                                     <a href="/artist" class="header-fooder-notamenu-s4 header-fooder-notamenu-s42">
                                          <i class='fas fa-map-marker-alt Beauty-Artist-s125-icon'></i>
                                          <span class="Beauty-Artist-s125-span">District</span>
                                      </a>
@@ -484,24 +484,24 @@
                              </div>
                          </div>
                      </div>
-                     <a href="#"><img class="imgs-avartar" src="http://trangsun.com/public/images/backgrounds/mu2.jpg" alt="a"></a>
+                     <a href="/artist"><img class="imgs-avartar" src="http://trangsun.com/public/images/backgrounds/mu2.jpg" alt="a"></a>
                  </a>
              </div>
              <div class="Beauty-Artist-s1">
-                 <a href="#" class="Beauty-Artist-a">
+                 <a href="/artist" class="Beauty-Artist-a">
                      <div class="Beauty-Artist-s11">
-                         <a href="#" class="Beauty-Artist-s11-a">
+                         <a href="/artist" class="Beauty-Artist-s11-a">
                              <img class="img-fluid imgs-cover" src="http://trangsun.com/public/images/backgrounds/musl3.jpg" alt="a">
                          </a>
                      </div>
                      <div class="Beauty-Artist-s112">
-                         <a href="#" class="Beauty-Artist-s112-a"><span class="Beauty-Artist-s112-span">Trang Sun</span></a>
+                         <a href="/artist" class="Beauty-Artist-s112-a"><span class="Beauty-Artist-s112-span">Trang Sun</span></a>
                      </div>
                      <div class="Beauty-Artist-s1123">
                          <a class="Beauty-Artist-s1123-a">Discount 25% OFF</a>
                      </div>
                      <div class="Beauty-Artist-s12">
-                         <a href="#" class="header-fooder-notamenu-s4">
+                         <a href="/artist" class="header-fooder-notamenu-s4">
                              <div class="d-flex Beauty-Artist-s121">
                                  <div class="tensp"><span class="Beauty-Artist-s121-span"><del>1.200.000 VND</del></span></div>
                                  <div class="Beauty-Artist-s1212"><i class='fas fa-arrow-right'></i></div>
@@ -509,7 +509,7 @@
                              </div>
                          </a>
                          <div class="Beauty-Artist-s12-name">
-                             <a href="#" class="header-fooder-notamenu-s4">
+                             <a href="/artist" class="header-fooder-notamenu-s4">
                                  <span>Wedding Make Up</span>
                              </a>
                          </div>
@@ -517,7 +517,7 @@
                          <div class="d-flex">
                              <div class="col-lg-6 Beauty-Artist-s126">
                                  <div class="d-flex Beauty-Artist-s125">
-                                     <a href="#" class="header-fooder-notamenu-s4">
+                                     <a href="/artist" class="header-fooder-notamenu-s4">
                                          <i class="fa fa-clock-o Beauty-Artist-s125-icon"></i>
                                          <span class="Beauty-Artist-s125-span">Until</span>
                                      </a>
@@ -528,7 +528,7 @@
                              </div>
                              <div class="col-lg-6">
                                  <div class="d-flex Beauty-Artist-s125">
-                                     <a href="#" class="header-fooder-notamenu-s4 header-fooder-notamenu-s42">
+                                     <a href="/artist" class="header-fooder-notamenu-s4 header-fooder-notamenu-s42">
                                          <i class='fas fa-map-marker-alt Beauty-Artist-s125-icon'></i>
                                          <span class="Beauty-Artist-s125-span">District</span>
                                      </a>
@@ -539,24 +539,24 @@
                              </div>
                          </div>
                      </div>
-                     <a href="#"><img class="imgs-avartar" src="http://trangsun.com/public/images/backgrounds/mu2.jpg" alt="a"></a>
+                     <a href="/artist"><img class="imgs-avartar" src="http://trangsun.com/public/images/backgrounds/mu2.jpg" alt="a"></a>
                  </a>
              </div>
              <div class="Beauty-Artist-s1">
-                 <a href="#" class="Beauty-Artist-a">
+                 <a href="/artist" class="Beauty-Artist-a">
                      <div class="Beauty-Artist-s11">
-                         <a href="#" class="Beauty-Artist-s11-a">
+                         <a href="/artist" class="Beauty-Artist-s11-a">
                              <img class="img-fluid imgs-cover" src="http://trangsun.com/public/images/backgrounds/musl3.jpg" alt="a">
                          </a>
                      </div>
                      <div class="Beauty-Artist-s112">
-                         <a href="#" class="Beauty-Artist-s112-a"><span class="Beauty-Artist-s112-span">Trang Sun</span></a>
+                         <a href="/artist" class="Beauty-Artist-s112-a"><span class="Beauty-Artist-s112-span">Trang Sun</span></a>
                      </div>
                      <div class="Beauty-Artist-s1123">
                          <a class="Beauty-Artist-s1123-a">Discount 25% OFF</a>
                      </div>
                      <div class="Beauty-Artist-s12">
-                         <a href="#" class="header-fooder-notamenu-s4">
+                         <a href="/artist" class="header-fooder-notamenu-s4">
                              <div class="d-flex Beauty-Artist-s121">
                                  <div class="tensp"><span class="Beauty-Artist-s121-span"><del>1.200.000 VND</del></span></div>
                                  <div class="Beauty-Artist-s1212"><i class='fas fa-arrow-right'></i></div>
@@ -564,7 +564,7 @@
                              </div>
                          </a>
                          <div class="Beauty-Artist-s12-name">
-                             <a href="#" class="header-fooder-notamenu-s4">
+                             <a href="/artist" class="header-fooder-notamenu-s4">
                                  <span>Wedding Make Up</span>
                              </a>
                          </div>
@@ -572,7 +572,7 @@
                          <div class="d-flex">
                              <div class="col-lg-6 Beauty-Artist-s126">
                                  <div class="d-flex Beauty-Artist-s125">
-                                     <a href="#" class="header-fooder-notamenu-s4">
+                                     <a href="/artist" class="header-fooder-notamenu-s4">
                                          <i class="fa fa-clock-o Beauty-Artist-s125-icon"></i>
                                          <span class="Beauty-Artist-s125-span">Until</span>
                                      </a>
@@ -583,7 +583,7 @@
                              </div>
                              <div class="col-lg-6">
                                  <div class="d-flex Beauty-Artist-s125">
-                                     <a href="#" class="header-fooder-notamenu-s4 header-fooder-notamenu-s42">
+                                     <a href="/artist" class="header-fooder-notamenu-s4 header-fooder-notamenu-s42">
                                          <i class='fas fa-map-marker-alt Beauty-Artist-s125-icon'></i>
                                          <span class="Beauty-Artist-s125-span">District</span>
                                      </a>
@@ -594,24 +594,24 @@
                              </div>
                          </div>
                      </div>
-                     <a href="#"><img class="imgs-avartar" src="http://trangsun.com/public/images/backgrounds/mu2.jpg" alt="a"></a>
+                     <a href="/artist"><img class="imgs-avartar" src="http://trangsun.com/public/images/backgrounds/mu2.jpg" alt="a"></a>
                  </a>
              </div>
              <div class="Beauty-Artist-s1">
-                 <a href="#" class="Beauty-Artist-a">
+                 <a href="/artist" class="Beauty-Artist-a">
                      <div class="Beauty-Artist-s11">
-                         <a href="#" class="Beauty-Artist-s11-a">
+                         <a href="/artist" class="Beauty-Artist-s11-a">
                              <img class="img-fluid imgs-cover" src="http://trangsun.com/public/images/backgrounds/musl3.jpg" alt="a">
                          </a>
                      </div>
                      <div class="Beauty-Artist-s112">
-                         <a href="#" class="Beauty-Artist-s112-a"><span class="Beauty-Artist-s112-span">Trang Sun</span></a>
+                         <a href="/artist" class="Beauty-Artist-s112-a"><span class="Beauty-Artist-s112-span">Trang Sun</span></a>
                      </div>
                      <div class="Beauty-Artist-s1123">
                          <a class="Beauty-Artist-s1123-a">Discount 25% OFF</a>
                      </div>
                      <div class="Beauty-Artist-s12">
-                         <a href="#" class="header-fooder-notamenu-s4">
+                         <a href="/artist" class="header-fooder-notamenu-s4">
                              <div class="d-flex Beauty-Artist-s121">
                                  <div class="tensp"><span class="Beauty-Artist-s121-span"><del>1.200.000 VND</del></span></div>
                                  <div class="Beauty-Artist-s1212"><i class='fas fa-arrow-right'></i></div>
@@ -619,7 +619,7 @@
                              </div>
                          </a>
                          <div class="Beauty-Artist-s12-name">
-                             <a href="#" class="header-fooder-notamenu-s4">
+                             <a href="/artist" class="header-fooder-notamenu-s4">
                                  <span>Wedding Make Up</span>
                              </a>
                          </div>
@@ -627,7 +627,7 @@
                          <div class="d-flex">
                              <div class="col-lg-6 Beauty-Artist-s126">
                                  <div class="d-flex Beauty-Artist-s125">
-                                     <a href="#" class="header-fooder-notamenu-s4">
+                                     <a href="/artist" class="header-fooder-notamenu-s4">
                                          <i class="fa fa-clock-o Beauty-Artist-s125-icon"></i>
                                          <span class="Beauty-Artist-s125-span">Until</span>
                                      </a>
@@ -638,7 +638,7 @@
                              </div>
                              <div class="col-lg-6">
                                  <div class="d-flex Beauty-Artist-s125">
-                                     <a href="#" class="header-fooder-notamenu-s4 header-fooder-notamenu-s42">
+                                     <a href="/artist" class="header-fooder-notamenu-s4 header-fooder-notamenu-s42">
                                          <i class='fas fa-map-marker-alt Beauty-Artist-s125-icon'></i>
                                          <span class="Beauty-Artist-s125-span">District</span>
                                      </a>
@@ -649,24 +649,24 @@
                              </div>
                          </div>
                      </div>
-                     <a href="#"><img class="imgs-avartar" src="http://trangsun.com/public/images/backgrounds/mu2.jpg" alt="a"></a>
+                     <a href="/artist"><img class="imgs-avartar" src="http://trangsun.com/public/images/backgrounds/mu2.jpg" alt="a"></a>
                  </a>
              </div>
              <div class="Beauty-Artist-s1">
-                 <a href="#" class="Beauty-Artist-a">
+                 <a href="/artist" class="Beauty-Artist-a">
                      <div class="Beauty-Artist-s11">
-                         <a href="#" class="Beauty-Artist-s11-a">
+                         <a href="/artist" class="Beauty-Artist-s11-a">
                              <img class="img-fluid imgs-cover" src="http://trangsun.com/public/images/backgrounds/musl3.jpg" alt="a">
                          </a>
                      </div>
                      <div class="Beauty-Artist-s112">
-                         <a href="#" class="Beauty-Artist-s112-a"><span class="Beauty-Artist-s112-span">Trang Sun</span></a>
+                         <a href="/artist" class="Beauty-Artist-s112-a"><span class="Beauty-Artist-s112-span">Trang Sun</span></a>
                      </div>
                      <div class="Beauty-Artist-s1123">
                          <a class="Beauty-Artist-s1123-a">Discount 25% OFF</a>
                      </div>
                      <div class="Beauty-Artist-s12">
-                         <a href="#" class="header-fooder-notamenu-s4">
+                         <a href="/artist" class="header-fooder-notamenu-s4">
                              <div class="d-flex Beauty-Artist-s121">
                                  <div class="tensp"><span class="Beauty-Artist-s121-span"><del>1.200.000 VND</del></span></div>
                                  <div class="Beauty-Artist-s1212"><i class='fas fa-arrow-right'></i></div>
@@ -674,7 +674,7 @@
                              </div>
                          </a>
                          <div class="Beauty-Artist-s12-name">
-                             <a href="#" class="header-fooder-notamenu-s4">
+                             <a href="/artist" class="header-fooder-notamenu-s4">
                                  <span>Wedding Make Up</span>
                              </a>
                          </div>
@@ -682,7 +682,7 @@
                          <div class="d-flex">
                              <div class="col-lg-6 Beauty-Artist-s126">
                                  <div class="d-flex Beauty-Artist-s125">
-                                     <a href="#" class="header-fooder-notamenu-s4">
+                                     <a href="/artist" class="header-fooder-notamenu-s4">
                                          <i class="fa fa-clock-o Beauty-Artist-s125-icon"></i>
                                          <span class="Beauty-Artist-s125-span">Until</span>
                                      </a>
@@ -693,7 +693,7 @@
                              </div>
                              <div class="col-lg-6">
                                  <div class="d-flex Beauty-Artist-s125">
-                                     <a href="#" class="header-fooder-notamenu-s4 header-fooder-notamenu-s42">
+                                     <a href="/artist" class="header-fooder-notamenu-s4 header-fooder-notamenu-s42">
                                          <i class='fas fa-map-marker-alt Beauty-Artist-s125-icon'></i>
                                          <span class="Beauty-Artist-s125-span">District</span>
                                      </a>
@@ -704,24 +704,24 @@
                              </div>
                          </div>
                      </div>
-                     <a href="#"><img class="imgs-avartar" src="http://trangsun.com/public/images/backgrounds/mu2.jpg" alt="a"></a>
+                     <a href="/artist"><img class="imgs-avartar" src="http://trangsun.com/public/images/backgrounds/mu2.jpg" alt="a"></a>
                  </a>
              </div>
              <div class="Beauty-Artist-s1">
-                 <a href="#" class="Beauty-Artist-a">
+                 <a href="/artist" class="Beauty-Artist-a">
                      <div class="Beauty-Artist-s11">
-                         <a href="#" class="Beauty-Artist-s11-a">
+                         <a href="/artist" class="Beauty-Artist-s11-a">
                              <img class="img-fluid imgs-cover" src="http://trangsun.com/public/images/backgrounds/musl3.jpg" alt="a">
                          </a>
                      </div>
                      <div class="Beauty-Artist-s112">
-                         <a href="#" class="Beauty-Artist-s112-a"><span class="Beauty-Artist-s112-span">Trang Sun</span></a>
+                         <a href="/artist" class="Beauty-Artist-s112-a"><span class="Beauty-Artist-s112-span">Trang Sun</span></a>
                      </div>
                      <div class="Beauty-Artist-s1123">
                          <a class="Beauty-Artist-s1123-a">Discount 25% OFF</a>
                      </div>
                      <div class="Beauty-Artist-s12">
-                         <a href="#" class="header-fooder-notamenu-s4">
+                         <a href="/artist" class="header-fooder-notamenu-s4">
                              <div class="d-flex Beauty-Artist-s121">
                                  <div class="tensp"><span class="Beauty-Artist-s121-span"><del>1.200.000 VND</del></span></div>
                                  <div class="Beauty-Artist-s1212"><i class='fas fa-arrow-right'></i></div>
@@ -729,7 +729,7 @@
                              </div>
                          </a>
                          <div class="Beauty-Artist-s12-name">
-                             <a href="#" class="header-fooder-notamenu-s4">
+                             <a href="/artist" class="header-fooder-notamenu-s4">
                                  <span>Wedding Make Up</span>
                              </a>
                          </div>
@@ -737,7 +737,7 @@
                          <div class="d-flex">
                              <div class="col-lg-6 Beauty-Artist-s126">
                                  <div class="d-flex Beauty-Artist-s125">
-                                     <a href="#" class="header-fooder-notamenu-s4">
+                                     <a href="/artist" class="header-fooder-notamenu-s4">
                                          <i class="fa fa-clock-o Beauty-Artist-s125-icon"></i>
                                          <span class="Beauty-Artist-s125-span">Until</span>
                                      </a>
@@ -748,7 +748,7 @@
                              </div>
                              <div class="col-lg-6">
                                  <div class="d-flex Beauty-Artist-s125">
-                                     <a href="#" class="header-fooder-notamenu-s4 header-fooder-notamenu-s42">
+                                     <a href="/artist" class="header-fooder-notamenu-s4 header-fooder-notamenu-s42">
                                          <i class='fas fa-map-marker-alt Beauty-Artist-s125-icon'></i>
                                          <span class="Beauty-Artist-s125-span">District</span>
                                      </a>
@@ -759,24 +759,24 @@
                              </div>
                          </div>
                      </div>
-                     <a href="#"><img class="imgs-avartar" src="http://trangsun.com/public/images/backgrounds/mu2.jpg" alt="a"></a>
+                     <a href="/artist"><img class="imgs-avartar" src="http://trangsun.com/public/images/backgrounds/mu2.jpg" alt="a"></a>
                  </a>
              </div>
              <div class="Beauty-Artist-s1">
-                 <a href="#" class="Beauty-Artist-a">
+                 <a href="/artist" class="Beauty-Artist-a">
                      <div class="Beauty-Artist-s11">
                          <a href="#" class="Beauty-Artist-s11-a">
                              <img class="img-fluid imgs-cover" src="http://trangsun.com/public/images/backgrounds/musl3.jpg" alt="a">
                          </a>
                      </div>
                      <div class="Beauty-Artist-s112">
-                         <a href="#" class="Beauty-Artist-s112-a"><span class="Beauty-Artist-s112-span">Trang Sun</span></a>
+                         <a href="/artist" class="Beauty-Artist-s112-a"><span class="Beauty-Artist-s112-span">Trang Sun</span></a>
                      </div>
                      <div class="Beauty-Artist-s1123">
                          <a class="Beauty-Artist-s1123-a">Discount 25% OFF</a>
                      </div>
                      <div class="Beauty-Artist-s12">
-                         <a href="#" class="header-fooder-notamenu-s4">
+                         <a href="/artist" class="header-fooder-notamenu-s4">
                              <div class="d-flex Beauty-Artist-s121">
                                  <div class="tensp"><span class="Beauty-Artist-s121-span"><del>1.200.000 VND</del></span></div>
                                  <div class="Beauty-Artist-s1212"><i class='fas fa-arrow-right'></i></div>
@@ -784,7 +784,7 @@
                              </div>
                          </a>
                          <div class="Beauty-Artist-s12-name">
-                             <a href="#" class="header-fooder-notamenu-s4">
+                             <a href="/artist" class="header-fooder-notamenu-s4">
                                  <span>Wedding Make Up</span>
                              </a>
                          </div>
@@ -792,7 +792,7 @@
                          <div class="d-flex">
                              <div class="col-lg-6 Beauty-Artist-s126">
                                  <div class="d-flex Beauty-Artist-s125">
-                                     <a href="#" class="header-fooder-notamenu-s4">
+                                     <a href="/artist" class="header-fooder-notamenu-s4">
                                          <i class="fa fa-clock-o Beauty-Artist-s125-icon"></i>
                                          <span class="Beauty-Artist-s125-span">Until</span>
                                      </a>
@@ -803,7 +803,7 @@
                              </div>
                              <div class="col-lg-6">
                                  <div class="d-flex Beauty-Artist-s125">
-                                     <a href="#" class="header-fooder-notamenu-s4 header-fooder-notamenu-s42">
+                                     <a href="/artist" class="header-fooder-notamenu-s4 header-fooder-notamenu-s42">
                                          <i class='fas fa-map-marker-alt Beauty-Artist-s125-icon'></i>
                                          <span class="Beauty-Artist-s125-span">District</span>
                                      </a>
@@ -814,7 +814,7 @@
                              </div>
                          </div>
                      </div>
-                     <a href="#"><img class="imgs-avartar" src="http://trangsun.com/public/images/backgrounds/mu2.jpg" alt="a"></a>
+                     <a href="/artist"><img class="imgs-avartar" src="http://trangsun.com/public/images/backgrounds/mu2.jpg" alt="a"></a>
                  </a>
              </div>
 
@@ -827,8 +827,8 @@
                  <span class="container-tillets1-span">Beauty Artist <span class="container-tillets1-span-p"><u>NEW!</u></span></span>
              </div>
              <div class="col-lg-2 container-tillets1-left">
-                 <a href="#" class="notamenu">
-                     <span class="container-tillets1-left-span">Sell All <i class='fas fa-chevron-right'></i></span>
+                 <a href="/services" class="notamenu">
+                     <span class="container-tillets1-left-span">See All <i class='fas fa-chevron-right'></i></span>
                  </a>
              </div>
          </div>
@@ -838,12 +838,12 @@
              <div id="lightSlider">
 
                      <div class="Beauty-Artist-s1-s1">
-                         <a>
+                         <a href="/artist">
                              <div class="Beauty-Artist-s11-s1">
                                  <img class="img-fluid imgs-cover-s1" src="http://trangsun.com/public/images/backgrounds/mu2.jpg" alt="a">
                              </div>
                              <div class="Beauty-Artist-s112-s1">
-                                 <a href="#" class="Beauty-Artist-s112-a-s1"><span class="Beauty-Artist-s112-span">Trang Sun</span></a>
+                                 <a href="/artist" class="Beauty-Artist-s112-a-s1"><span class="Beauty-Artist-s112-span">Trang Sun</span></a>
                              </div>
                              <div class="Beauty-Artist-s1123-s1">
                                  <a class="Beauty-Artist-s1123-a-s1">Discount 25% OFF</a>
@@ -881,7 +881,50 @@
                          </a>
                      </div>
                  <div class="Beauty-Artist-s1-s1">
-                     <a>
+                     <a href="/artist">
+                         <div class="Beauty-Artist-s11-s1">
+                             <img class="img-fluid imgs-cover-s1" src="http://trangsun.com/public/images/backgrounds/mu2.jpg" alt="a">
+                         </div>
+                         <div class="Beauty-Artist-s112-s1">
+                             <a href="/artist" class="Beauty-Artist-s112-a-s1"><span class="Beauty-Artist-s112-span">Trang Sun</span></a>
+                         </div>
+                         <div class="Beauty-Artist-s1123-s1">
+                             <a class="Beauty-Artist-s1123-a-s1">Discount 25% OFF</a>
+                         </div>
+                         <div class="Beauty-Artist-s12-s1">
+                             <hr>
+                             <div class="d-flex">
+                                 <div class="col-lg-6 Beauty-Artist-s126-s1">
+                                     <div class="d-flex Beauty-Artist-s125-s2">
+                                         <a href="#" class="header-fooder-notamenu-s4 header-fooder-notamenu-s42">
+                                             <i class='far fa-money-bill-alt Beauty-Artist-s125-icon-s2'></i>
+                                             <span class="Beauty-Artist-s125-span-s2">Start From</span>
+                                         </a>
+                                     </div>
+                                     <div class="Beauty-Artist-s12-SWTime-s1">
+                                         <span> 700.000 </span>
+                                     </div>
+                                 </div>
+                                 <div class="col-lg-6">
+                                     <div class="d-flex Beauty-Artist-s125-s1">
+                                         <a href="#" class="header-fooder-notamenu-s4 header-fooder-notamenu-s42">
+                                             <i class='fas fa-map-marker-alt Beauty-Artist-s125-icon-s1'></i>
+                                             <span class="Beauty-Artist-s125-span-s1">District</span>
+                                         </a>
+                                     </div>
+                                     <div class="Beauty-Artist-s12-SWTime-s1">
+                                         <span>Đống Đa </span>
+                                     </div>
+                                 </div>
+                             </div>
+
+                         </div>
+
+                         <img class="imgs-avartar" src="http://trangsun.com/public/images/backgrounds/musl3.jpg" alt="a">
+                     </a>
+                 </div>
+                 <div class="Beauty-Artist-s1-s1">
+                     <a  href="/artist">
                          <div class="Beauty-Artist-s11-s1">
                              <img class="img-fluid imgs-cover-s1" src="http://trangsun.com/public/images/backgrounds/mu2.jpg" alt="a">
                          </div>
@@ -924,7 +967,7 @@
                      </a>
                  </div>
                  <div class="Beauty-Artist-s1-s1">
-                     <a>
+                     <a href="/artist">
                          <div class="Beauty-Artist-s11-s1">
                              <img class="img-fluid imgs-cover-s1" src="http://trangsun.com/public/images/backgrounds/mu2.jpg" alt="a">
                          </div>
@@ -967,50 +1010,7 @@
                      </a>
                  </div>
                  <div class="Beauty-Artist-s1-s1">
-                     <a>
-                         <div class="Beauty-Artist-s11-s1">
-                             <img class="img-fluid imgs-cover-s1" src="http://trangsun.com/public/images/backgrounds/mu2.jpg" alt="a">
-                         </div>
-                         <div class="Beauty-Artist-s112-s1">
-                             <a href="#" class="Beauty-Artist-s112-a-s1"><span class="Beauty-Artist-s112-span">Trang Sun</span></a>
-                         </div>
-                         <div class="Beauty-Artist-s1123-s1">
-                             <a class="Beauty-Artist-s1123-a-s1">Discount 25% OFF</a>
-                         </div>
-                         <div class="Beauty-Artist-s12-s1">
-                             <hr>
-                             <div class="d-flex">
-                                 <div class="col-lg-6 Beauty-Artist-s126-s1">
-                                     <div class="d-flex Beauty-Artist-s125-s2">
-                                         <a href="#" class="header-fooder-notamenu-s4 header-fooder-notamenu-s42">
-                                             <i class='far fa-money-bill-alt Beauty-Artist-s125-icon-s2'></i>
-                                             <span class="Beauty-Artist-s125-span-s2">Start From</span>
-                                         </a>
-                                     </div>
-                                     <div class="Beauty-Artist-s12-SWTime-s1">
-                                         <span> 700.000 </span>
-                                     </div>
-                                 </div>
-                                 <div class="col-lg-6">
-                                     <div class="d-flex Beauty-Artist-s125-s1">
-                                         <a href="#" class="header-fooder-notamenu-s4 header-fooder-notamenu-s42">
-                                             <i class='fas fa-map-marker-alt Beauty-Artist-s125-icon-s1'></i>
-                                             <span class="Beauty-Artist-s125-span-s1">District</span>
-                                         </a>
-                                     </div>
-                                     <div class="Beauty-Artist-s12-SWTime-s1">
-                                         <span>Đống Đa </span>
-                                     </div>
-                                 </div>
-                             </div>
-
-                         </div>
-
-                         <img class="imgs-avartar" src="http://trangsun.com/public/images/backgrounds/musl3.jpg" alt="a">
-                     </a>
-                 </div>
-                 <div class="Beauty-Artist-s1-s1">
-                     <a>
+                     <a href="/artist">
                          <div class="Beauty-Artist-s11-s1">
                              <img class="img-fluid imgs-cover-s1" src="http://trangsun.com/public/images/backgrounds/mu2.jpg" alt="a">
                          </div>
@@ -1122,7 +1122,47 @@
      <div class="container container-new-s1">
          <div class="container-new-s2">
              <div id="lightSliders1">
+        <a href="/artist">
+            <div class="Beauty-Artist-s1-s1">
+                <div class="Beauty-Artist-s11-s1">
+                    <img class="img-fluid imgs-cover-s1" src="https://maidomakeup.com/wp-content/uploads/2020/07/1_optimized-2048x660.jpg" alt="a">
+                </div>
+                <div class="Beauty-Artist-s112-s1">
+                    <a href="#" class="Beauty-Artist-s112-a-s1"><span class="Beauty-Artist-s112-span">Mai Đỗ</span></a>
+                </div>
+                <div class="Beauty-Artist-s1123-s1">
+                    <a class="Beauty-Artist-s1123-a-s1"> Discount 30% </a>
+                </div>
+                <div class="Beauty-Artist-s12-s1">
+                    <hr>
+                    <div class="d-flex">
+                        <div class="col-lg-6 Beauty-Artist-s126-s1">
+                            <div class="d-flex Beauty-Artist-s125-s1">
+                                <i class='far fa-money-bill-alt Beauty-Artist-s125-icon-s2'></i>
+                                <span class="Beauty-Artist-s125-span-s2">Start From</span>
+                            </div>
+                            <div class="Beauty-Artist-s12-SWTime-s1">
+                                <span>900.000 </span>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="d-flex Beauty-Artist-s125-s1">
+                                <i class='fas fa-map-marker-alt Beauty-Artist-s125-icon-s1'></i>
+                                <span class="Beauty-Artist-s125-span-s1">District</span>
+                            </div>
+                            <div class="Beauty-Artist-s12-SWTime-s1">
+                                <span> Cầu Giấy </span>
+                            </div>
+                        </div>
+                    </div>
 
+                </div>
+
+                <img class="imgs-avartar" src="http://trangsun.com/public/images/backgrounds/musl1.jpg" alt="a">
+            </div>
+        </a>
+
+                 <a href="/artist">
                      <div class="Beauty-Artist-s1-s1">
                          <div class="Beauty-Artist-s11-s1">
                              <img class="img-fluid imgs-cover-s1" src="https://maidomakeup.com/wp-content/uploads/2020/07/1_optimized-2048x660.jpg" alt="a">
@@ -1160,230 +1200,163 @@
 
                          <img class="imgs-avartar" src="http://trangsun.com/public/images/backgrounds/musl1.jpg" alt="a">
                      </div>
-                 <div class="Beauty-Artist-s1-s1">
-                     <div class="Beauty-Artist-s11-s1">
-                         <img class="img-fluid imgs-cover-s1" src="https://maidomakeup.com/wp-content/uploads/2020/07/1_optimized-2048x660.jpg" alt="a">
-                     </div>
-                     <div class="Beauty-Artist-s112-s1">
-                         <a href="#" class="Beauty-Artist-s112-a-s1"><span class="Beauty-Artist-s112-span">Mai Đỗ</span></a>
-                     </div>
-                     <div class="Beauty-Artist-s1123-s1">
-                         <a class="Beauty-Artist-s1123-a-s1"> Discount 30% </a>
-                     </div>
-                     <div class="Beauty-Artist-s12-s1">
-                         <hr>
-                         <div class="d-flex">
-                             <div class="col-lg-6 Beauty-Artist-s126-s1">
-                                 <div class="d-flex Beauty-Artist-s125-s1">
-                                     <i class='far fa-money-bill-alt Beauty-Artist-s125-icon-s2'></i>
-                                     <span class="Beauty-Artist-s125-span-s2">Start From</span>
+                 </a>
+                 <a href="/artist">
+                     <div class="Beauty-Artist-s1-s1">
+                         <div class="Beauty-Artist-s11-s1">
+                             <img class="img-fluid imgs-cover-s1" src="https://maidomakeup.com/wp-content/uploads/2020/07/1_optimized-2048x660.jpg" alt="a">
+                         </div>
+                         <div class="Beauty-Artist-s112-s1">
+                             <a href="#" class="Beauty-Artist-s112-a-s1"><span class="Beauty-Artist-s112-span">Mai Đỗ</span></a>
+                         </div>
+                         <div class="Beauty-Artist-s1123-s1">
+                             <a class="Beauty-Artist-s1123-a-s1"> Discount 30% </a>
+                         </div>
+                         <div class="Beauty-Artist-s12-s1">
+                             <hr>
+                             <div class="d-flex">
+                                 <div class="col-lg-6 Beauty-Artist-s126-s1">
+                                     <div class="d-flex Beauty-Artist-s125-s1">
+                                         <i class='far fa-money-bill-alt Beauty-Artist-s125-icon-s2'></i>
+                                         <span class="Beauty-Artist-s125-span-s2">Start From</span>
+                                     </div>
+                                     <div class="Beauty-Artist-s12-SWTime-s1">
+                                         <span>900.000 </span>
+                                     </div>
                                  </div>
-                                 <div class="Beauty-Artist-s12-SWTime-s1">
-                                     <span>900.000 </span>
+                                 <div class="col-lg-6">
+                                     <div class="d-flex Beauty-Artist-s125-s1">
+                                         <i class='fas fa-map-marker-alt Beauty-Artist-s125-icon-s1'></i>
+                                         <span class="Beauty-Artist-s125-span-s1">District</span>
+                                     </div>
+                                     <div class="Beauty-Artist-s12-SWTime-s1">
+                                         <span> Cầu Giấy </span>
+                                     </div>
                                  </div>
                              </div>
-                             <div class="col-lg-6">
-                                 <div class="d-flex Beauty-Artist-s125-s1">
-                                     <i class='fas fa-map-marker-alt Beauty-Artist-s125-icon-s1'></i>
-                                     <span class="Beauty-Artist-s125-span-s1">District</span>
-                                 </div>
-                                 <div class="Beauty-Artist-s12-SWTime-s1">
-                                     <span> Cầu Giấy </span>
-                                 </div>
-                             </div>
+
                          </div>
 
+                         <img class="imgs-avartar" src="http://trangsun.com/public/images/backgrounds/musl1.jpg" alt="a">
                      </div>
+                 </a>
+                 <a href="/artist">
+                     <div class="Beauty-Artist-s1-s1">
+                         <div class="Beauty-Artist-s11-s1">
+                             <img class="img-fluid imgs-cover-s1" src="https://maidomakeup.com/wp-content/uploads/2020/07/1_optimized-2048x660.jpg" alt="a">
+                         </div>
+                         <div class="Beauty-Artist-s112-s1">
+                             <a href="#" class="Beauty-Artist-s112-a-s1"><span class="Beauty-Artist-s112-span">Mai Đỗ</span></a>
+                         </div>
+                         <div class="Beauty-Artist-s1123-s1">
+                             <a class="Beauty-Artist-s1123-a-s1"> Discount 30% </a>
+                         </div>
+                         <div class="Beauty-Artist-s12-s1">
+                             <hr>
+                             <div class="d-flex">
+                                 <div class="col-lg-6 Beauty-Artist-s126-s1">
+                                     <div class="d-flex Beauty-Artist-s125-s1">
+                                         <i class='far fa-money-bill-alt Beauty-Artist-s125-icon-s2'></i>
+                                         <span class="Beauty-Artist-s125-span-s2">Start From</span>
+                                     </div>
+                                     <div class="Beauty-Artist-s12-SWTime-s1">
+                                         <span>900.000 </span>
+                                     </div>
+                                 </div>
+                                 <div class="col-lg-6">
+                                     <div class="d-flex Beauty-Artist-s125-s1">
+                                         <i class='fas fa-map-marker-alt Beauty-Artist-s125-icon-s1'></i>
+                                         <span class="Beauty-Artist-s125-span-s1">District</span>
+                                     </div>
+                                     <div class="Beauty-Artist-s12-SWTime-s1">
+                                         <span> Cầu Giấy </span>
+                                     </div>
+                                 </div>
+                             </div>
 
-                     <img class="imgs-avartar" src="http://trangsun.com/public/images/backgrounds/musl1.jpg" alt="a">
-                 </div>
-                 <div class="Beauty-Artist-s1-s1">
-                     <div class="Beauty-Artist-s11-s1">
-                         <img class="img-fluid imgs-cover-s1" src="https://maidomakeup.com/wp-content/uploads/2020/07/1_optimized-2048x660.jpg" alt="a">
-                     </div>
-                     <div class="Beauty-Artist-s112-s1">
-                         <a href="#" class="Beauty-Artist-s112-a-s1"><span class="Beauty-Artist-s112-span">Mai Đỗ</span></a>
-                     </div>
-                     <div class="Beauty-Artist-s1123-s1">
-                         <a class="Beauty-Artist-s1123-a-s1"> Discount 30% </a>
-                     </div>
-                     <div class="Beauty-Artist-s12-s1">
-                         <hr>
-                         <div class="d-flex">
-                             <div class="col-lg-6 Beauty-Artist-s126-s1">
-                                 <div class="d-flex Beauty-Artist-s125-s1">
-                                     <i class='far fa-money-bill-alt Beauty-Artist-s125-icon-s2'></i>
-                                     <span class="Beauty-Artist-s125-span-s2">Start From</span>
-                                 </div>
-                                 <div class="Beauty-Artist-s12-SWTime-s1">
-                                     <span>900.000 </span>
-                                 </div>
-                             </div>
-                             <div class="col-lg-6">
-                                 <div class="d-flex Beauty-Artist-s125-s1">
-                                     <i class='fas fa-map-marker-alt Beauty-Artist-s125-icon-s1'></i>
-                                     <span class="Beauty-Artist-s125-span-s1">District</span>
-                                 </div>
-                                 <div class="Beauty-Artist-s12-SWTime-s1">
-                                     <span> Cầu Giấy </span>
-                                 </div>
-                             </div>
                          </div>
 
+                         <img class="imgs-avartar" src="http://trangsun.com/public/images/backgrounds/musl1.jpg" alt="a">
                      </div>
+                 </a>
+                 <a href="/artist">
+                     <div class="Beauty-Artist-s1-s1">
+                         <div class="Beauty-Artist-s11-s1">
+                             <img class="img-fluid imgs-cover-s1" src="https://maidomakeup.com/wp-content/uploads/2020/07/1_optimized-2048x660.jpg" alt="a">
+                         </div>
+                         <div class="Beauty-Artist-s112-s1">
+                             <a href="#" class="Beauty-Artist-s112-a-s1"><span class="Beauty-Artist-s112-span">Mai Đỗ</span></a>
+                         </div>
+                         <div class="Beauty-Artist-s1123-s1">
+                             <a class="Beauty-Artist-s1123-a-s1"> Discount 30% </a>
+                         </div>
+                         <div class="Beauty-Artist-s12-s1">
+                             <hr>
+                             <div class="d-flex">
+                                 <div class="col-lg-6 Beauty-Artist-s126-s1">
+                                     <div class="d-flex Beauty-Artist-s125-s1">
+                                         <i class='far fa-money-bill-alt Beauty-Artist-s125-icon-s2'></i>
+                                         <span class="Beauty-Artist-s125-span-s2">Start From</span>
+                                     </div>
+                                     <div class="Beauty-Artist-s12-SWTime-s1">
+                                         <span>900.000 </span>
+                                     </div>
+                                 </div>
+                                 <div class="col-lg-6">
+                                     <div class="d-flex Beauty-Artist-s125-s1">
+                                         <i class='fas fa-map-marker-alt Beauty-Artist-s125-icon-s1'></i>
+                                         <span class="Beauty-Artist-s125-span-s1">District</span>
+                                     </div>
+                                     <div class="Beauty-Artist-s12-SWTime-s1">
+                                         <span> Cầu Giấy </span>
+                                     </div>
+                                 </div>
+                             </div>
 
-                     <img class="imgs-avartar" src="http://trangsun.com/public/images/backgrounds/musl1.jpg" alt="a">
-                 </div>
-                 <div class="Beauty-Artist-s1-s1">
-                     <div class="Beauty-Artist-s11-s1">
-                         <img class="img-fluid imgs-cover-s1" src="https://maidomakeup.com/wp-content/uploads/2020/07/1_optimized-2048x660.jpg" alt="a">
-                     </div>
-                     <div class="Beauty-Artist-s112-s1">
-                         <a href="#" class="Beauty-Artist-s112-a-s1"><span class="Beauty-Artist-s112-span">Mai Đỗ</span></a>
-                     </div>
-                     <div class="Beauty-Artist-s1123-s1">
-                         <a class="Beauty-Artist-s1123-a-s1"> Discount 30% </a>
-                     </div>
-                     <div class="Beauty-Artist-s12-s1">
-                         <hr>
-                         <div class="d-flex">
-                             <div class="col-lg-6 Beauty-Artist-s126-s1">
-                                 <div class="d-flex Beauty-Artist-s125-s1">
-                                     <i class='far fa-money-bill-alt Beauty-Artist-s125-icon-s2'></i>
-                                     <span class="Beauty-Artist-s125-span-s2">Start From</span>
-                                 </div>
-                                 <div class="Beauty-Artist-s12-SWTime-s1">
-                                     <span>900.000 </span>
-                                 </div>
-                             </div>
-                             <div class="col-lg-6">
-                                 <div class="d-flex Beauty-Artist-s125-s1">
-                                     <i class='fas fa-map-marker-alt Beauty-Artist-s125-icon-s1'></i>
-                                     <span class="Beauty-Artist-s125-span-s1">District</span>
-                                 </div>
-                                 <div class="Beauty-Artist-s12-SWTime-s1">
-                                     <span> Cầu Giấy </span>
-                                 </div>
-                             </div>
                          </div>
 
+                         <img class="imgs-avartar" src="http://trangsun.com/public/images/backgrounds/musl1.jpg" alt="a">
                      </div>
+                 </a>
+                 <a href="/artist">
+                     <div class="Beauty-Artist-s1-s1">
+                         <div class="Beauty-Artist-s11-s1">
+                             <img class="img-fluid imgs-cover-s1" src="https://maidomakeup.com/wp-content/uploads/2020/07/1_optimized-2048x660.jpg" alt="a">
+                         </div>
+                         <div class="Beauty-Artist-s112-s1">
+                             <a href="#" class="Beauty-Artist-s112-a-s1"><span class="Beauty-Artist-s112-span">Mai Đỗ</span></a>
+                         </div>
+                         <div class="Beauty-Artist-s1123-s1">
+                             <a class="Beauty-Artist-s1123-a-s1"> Discount 30% </a>
+                         </div>
+                         <div class="Beauty-Artist-s12-s1">
+                             <hr>
+                             <div class="d-flex">
+                                 <div class="col-lg-6 Beauty-Artist-s126-s1">
+                                     <div class="d-flex Beauty-Artist-s125-s1">
+                                         <i class='far fa-money-bill-alt Beauty-Artist-s125-icon-s2'></i>
+                                         <span class="Beauty-Artist-s125-span-s2">Start From</span>
+                                     </div>
+                                     <div class="Beauty-Artist-s12-SWTime-s1">
+                                         <span>900.000 </span>
+                                     </div>
+                                 </div>
+                                 <div class="col-lg-6">
+                                     <div class="d-flex Beauty-Artist-s125-s1">
+                                         <i class='fas fa-map-marker-alt Beauty-Artist-s125-icon-s1'></i>
+                                         <span class="Beauty-Artist-s125-span-s1">District</span>
+                                     </div>
+                                     <div class="Beauty-Artist-s12-SWTime-s1">
+                                         <span> Cầu Giấy </span>
+                                     </div>
+                                 </div>
+                             </div>
 
-                     <img class="imgs-avartar" src="http://trangsun.com/public/images/backgrounds/musl1.jpg" alt="a">
-                 </div>
-                 <div class="Beauty-Artist-s1-s1">
-                     <div class="Beauty-Artist-s11-s1">
-                         <img class="img-fluid imgs-cover-s1" src="https://maidomakeup.com/wp-content/uploads/2020/07/1_optimized-2048x660.jpg" alt="a">
-                     </div>
-                     <div class="Beauty-Artist-s112-s1">
-                         <a href="#" class="Beauty-Artist-s112-a-s1"><span class="Beauty-Artist-s112-span">Mai Đỗ</span></a>
-                     </div>
-                     <div class="Beauty-Artist-s1123-s1">
-                         <a class="Beauty-Artist-s1123-a-s1"> Discount 30% </a>
-                     </div>
-                     <div class="Beauty-Artist-s12-s1">
-                         <hr>
-                         <div class="d-flex">
-                             <div class="col-lg-6 Beauty-Artist-s126-s1">
-                                 <div class="d-flex Beauty-Artist-s125-s1">
-                                     <i class='far fa-money-bill-alt Beauty-Artist-s125-icon-s2'></i>
-                                     <span class="Beauty-Artist-s125-span-s2">Start From</span>
-                                 </div>
-                                 <div class="Beauty-Artist-s12-SWTime-s1">
-                                     <span>900.000 </span>
-                                 </div>
-                             </div>
-                             <div class="col-lg-6">
-                                 <div class="d-flex Beauty-Artist-s125-s1">
-                                     <i class='fas fa-map-marker-alt Beauty-Artist-s125-icon-s1'></i>
-                                     <span class="Beauty-Artist-s125-span-s1">District</span>
-                                 </div>
-                                 <div class="Beauty-Artist-s12-SWTime-s1">
-                                     <span> Cầu Giấy </span>
-                                 </div>
-                             </div>
                          </div>
 
+                         <img class="imgs-avartar" src="http://trangsun.com/public/images/backgrounds/musl1.jpg" alt="a">
                      </div>
-
-                     <img class="imgs-avartar" src="http://trangsun.com/public/images/backgrounds/musl1.jpg" alt="a">
-                 </div>
-                 <div class="Beauty-Artist-s1-s1">
-                     <div class="Beauty-Artist-s11-s1">
-                         <img class="img-fluid imgs-cover-s1" src="https://maidomakeup.com/wp-content/uploads/2020/07/1_optimized-2048x660.jpg" alt="a">
-                     </div>
-                     <div class="Beauty-Artist-s112-s1">
-                         <a href="#" class="Beauty-Artist-s112-a-s1"><span class="Beauty-Artist-s112-span">Mai Đỗ</span></a>
-                     </div>
-                     <div class="Beauty-Artist-s1123-s1">
-                         <a class="Beauty-Artist-s1123-a-s1"> Discount 30% </a>
-                     </div>
-                     <div class="Beauty-Artist-s12-s1">
-                         <hr>
-                         <div class="d-flex">
-                             <div class="col-lg-6 Beauty-Artist-s126-s1">
-                                 <div class="d-flex Beauty-Artist-s125-s1">
-                                     <i class='far fa-money-bill-alt Beauty-Artist-s125-icon-s2'></i>
-                                     <span class="Beauty-Artist-s125-span-s2">Start From</span>
-                                 </div>
-                                 <div class="Beauty-Artist-s12-SWTime-s1">
-                                     <span>900.000 </span>
-                                 </div>
-                             </div>
-                             <div class="col-lg-6">
-                                 <div class="d-flex Beauty-Artist-s125-s1">
-                                     <i class='fas fa-map-marker-alt Beauty-Artist-s125-icon-s1'></i>
-                                     <span class="Beauty-Artist-s125-span-s1">District</span>
-                                 </div>
-                                 <div class="Beauty-Artist-s12-SWTime-s1">
-                                     <span> Cầu Giấy </span>
-                                 </div>
-                             </div>
-                         </div>
-
-                     </div>
-
-                     <img class="imgs-avartar" src="http://trangsun.com/public/images/backgrounds/musl1.jpg" alt="a">
-                 </div>
-                 <div class="Beauty-Artist-s1-s1">
-                     <div class="Beauty-Artist-s11-s1">
-                         <img class="img-fluid imgs-cover-s1" src="https://maidomakeup.com/wp-content/uploads/2020/07/1_optimized-2048x660.jpg" alt="a">
-                     </div>
-                     <div class="Beauty-Artist-s112-s1">
-                         <a href="#" class="Beauty-Artist-s112-a-s1"><span class="Beauty-Artist-s112-span">Mai Đỗ</span></a>
-                     </div>
-                     <div class="Beauty-Artist-s1123-s1">
-                         <a class="Beauty-Artist-s1123-a-s1"> Discount 30% </a>
-                     </div>
-                     <div class="Beauty-Artist-s12-s1">
-                         <hr>
-                         <div class="d-flex">
-                             <div class="col-lg-6 Beauty-Artist-s126-s1">
-                                 <div class="d-flex Beauty-Artist-s125-s1">
-                                     <i class='far fa-money-bill-alt Beauty-Artist-s125-icon-s2'></i>
-                                     <span class="Beauty-Artist-s125-span-s2">Start From</span>
-                                 </div>
-                                 <div class="Beauty-Artist-s12-SWTime-s1">
-                                     <span>900.000 </span>
-                                 </div>
-                             </div>
-                             <div class="col-lg-6">
-                                 <div class="d-flex Beauty-Artist-s125-s1">
-                                     <i class='fas fa-map-marker-alt Beauty-Artist-s125-icon-s1'></i>
-                                     <span class="Beauty-Artist-s125-span-s1">District</span>
-                                 </div>
-                                 <div class="Beauty-Artist-s12-SWTime-s1">
-                                     <span> Cầu Giấy </span>
-                                 </div>
-                             </div>
-                         </div>
-
-                     </div>
-
-                     <img class="imgs-avartar" src="http://trangsun.com/public/images/backgrounds/musl1.jpg" alt="a">
-                 </div>
-             </div>
-         </div>
+                 </a>
          <script type="text/javascript">
              $(document).ready(function() {
                  $("#lightSliders1").lightSlider({
@@ -1475,7 +1448,10 @@
              </div>
          </div>
      </div>
+         </div>
+     </div>
  </section>
+
 <script type="text/javascript">
 
     //     //Preloader set fixed time

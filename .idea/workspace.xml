@@ -10,11 +10,33 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a8ceb5b1-59e0-4696-ad49-96b52bef462f" name="Default Changelist" comment="son">
+    <list default="true" id="a8ceb5b1-59e0-4696-ad49-96b52bef462f" name="Default Changelist" comment="Viet">
+      <change afterPath="$PROJECT_DIR$/public/css/blog.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/blog.ejs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/success.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/BeautyArtist.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/BeautyArtist.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/ftlink.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/ftlink.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/home-son.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/home-son.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/layout/navbar-promotuons-s.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/layout/navbar-promotuons-s.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/home-son.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/home-son.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/serviceCart.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/serviceCart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/artistbeauty.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/artistbeauty.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/book.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/book.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/header-son.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/layout/header-son.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/home-son.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/home-son.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/qlsv.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/qlsv.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/howtobook.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/howtobook.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/layout/footer.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/layout/footer.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/layout/navbar-Promotions-s.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/layout/navbar-Promotions-s.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/listyourbusiness.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/listyourbusiness.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/paymentandcancellation.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/paymentandcancellation.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/privacyPolicy.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/privacyPolicy.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/qlsv.ejs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/service.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/service.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/termconditions.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/termconditions.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +119,7 @@
       <workItem from="1599314573813" duration="3870000" />
       <workItem from="1599319531792" duration="22214000" />
       <workItem from="1599369566736" duration="2822000" />
-      <workItem from="1599375962328" duration="7232000" />
+      <workItem from="1599375962328" duration="4006000" />
     </task>
     <task id="LOCAL-00001" summary="Viet">
       <created>1598621678893</created>
@@ -176,14 +198,7 @@
       <option name="project" value="LOCAL" />
       <updated>1599381896582</updated>
     </task>
-    <task id="LOCAL-00012" summary="son">
-      <created>1599382829631</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1599382829631</updated>
-    </task>
-    <option name="localTasksCounter" value="13" />
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -216,30 +231,34 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="520" y="211" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1599380946034" />
-    <state x="393" y="0" key="CommitChangelistDialog2" timestamp="1599383398861">
+    <state x="393" y="0" key="CommitChangelistDialog2" timestamp="1599381892984">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="393" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1599383398861" />
+    <state x="393" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1599381892984" />
     <state x="146" y="64" key="DiffContextDialog" timestamp="1598623015456">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="146" y="64" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1598623015456" />
+    <state x="146" y="63" key="MergeDialog" timestamp="1599391725942">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="146" y="63" key="MergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1599391725942" />
     <state x="276" y="56" key="SettingsEditor" timestamp="1598621858946">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="276" y="56" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1598621858946" />
-    <state x="360" y="142" width="813" height="534" key="Vcs.Push.Dialog.v2" timestamp="1599382903278">
+    <state x="360" y="142" key="Vcs.Push.Dialog.v2" timestamp="1599398440960">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="360" y="142" width="813" height="534" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1599382903278" />
+    <state x="360" y="142" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1599398440960" />
     <state x="628" y="63" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1598631983978">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="628" y="63" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog/0.0.1536.824@0.0.1536.824" timestamp="1598631983978" />
-    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1599346702535">
+    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1599391442525">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1599346702535" />
+    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1599391442525" />
     <state x="425" y="187" key="run.anything.popup" timestamp="1599372684147">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

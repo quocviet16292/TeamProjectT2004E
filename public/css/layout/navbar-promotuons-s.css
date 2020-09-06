@@ -9,10 +9,7 @@ body {
     font-size: 0.85vw; /*vw ko đổi hiển thị chữ khi zoom to nhỏ màn hình đi kèm với thẻ viewport*/
     position: relative!important;
 }
-.nemu-ssss{
-    position: fixed;
-    top: 0;
-}
+
 a{
     text-decoration: none;
     color: #333333;
@@ -46,9 +43,9 @@ img{
     text-decoration: none;
     opacity: 0.5;
 }
-/*.head-s1{*/
-/*    position: relative;*/
-/*}*/
+.head-s1{
+    position: relative;
+}
 #video_background {
     position: absolute;
     top: 0;
