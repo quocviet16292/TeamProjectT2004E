@@ -3,8 +3,8 @@ const express = require("express");
 const app = express();
 
 //------------Port------------------
-const port = 1433;
-app.listen(port,()=>console.log(`Server: http://localhost:${port}`));
+const port = process.env.PORT || 3000;
+app.listen(port,()=>console.log("Server: http://localhost:3000"));
 
 //------------View Engine EJS-----------------
 app.set("view engine","ejs");
