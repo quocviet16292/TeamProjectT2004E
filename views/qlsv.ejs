@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>QLSV</title>
+    <link rel="stylesheet" href="/css/quanlysv.css"/>
+    <script type="text/javascript" src="/js/qlsv.js"></script>
+    <link rel="stylesheet" href="/libs/bootstrap/css/bootstrap.css">
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="libs/bootstrap/js/bootstrap.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="/libs/fontawesome-free-5.14.0-web/css/all.css">
+</head>
+<body onload="renderListStudent()">
+<fieldset>
+    <h3>Thông tin sinh viên</h3>
+    <form class="form-group">
+        <div class="form-group">
+            <label>Họ Tên Sinh viên</label>
+            <input type="text" name="sTen" id="fullname"/>
+            <div class="error" id="fullname-error"></div>
+        </div>
+        <div class="form-group">
+            <label>Địa chỉ email</label>
+            <input type="text" name="sEmail" id="email"/>
+            <div class="error" id="email-error"></div>
+        </div>
+        <div class="form-group">
+            <label>Số điện thoại</label>
+            <input type="text" name="sPhone" id="phone"/>
+            <div class="error" id="phone-error"></div>
+        </div>
+        <div class="form-group">
+            <label>Địa chỉ</label>
+            <input type="text" name="address" id="address"/>
+            <div class="error" id="address-error"></div>
+        </div>
+        <div class="form-group">
+            <label>Giới Tính</label>
+            <input type="radio" name="gender" id="male" value="1"/> Nam
+            <input type="radio" name="gender" id="famale" value="2"/> Nữ
+            <div class="error" id="gender-error"></div>
+        </div>
+        <div class="form-group">
+            <button type="submit" onclick="save()" class="btn btn-danger"> Luu Lai</button>
+        </div>
+    </form>
+    <div id="list_student">
+        <h3> Danh sách sinh viên </h3>
+        <table id="gird_students" width="600" border="1" cellpadding="0" cellspacing="0">
+
+        </table>
+    </div>
+</fieldset>
+<script src='https://cdn.jsdelivr.net/g/lodash@4(lodash.min.js+lodash.fp.min.js)'></script>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="/js/qlsv.js"></script>
+</body>
+</html>

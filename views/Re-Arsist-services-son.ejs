@@ -6,6 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Booking</title>
+    <link rel="stylesheet" type="text/css" href="/css/home-son.css"/>
     <link rel="stylesheet" href="/libs/bootstrap-4.5.2-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="/libs/fontawesome-free-5.14.0-web/css/all.css">
     <link rel="stylesheet" href="/libs/datepicker/datepicker.css">
@@ -16,11 +17,78 @@
     <link rel="stylesheet" href="/css/footer.css">
     <script type="text/javascript" src="/js/jquery.js"></script>
     <script type="text/javascript" src="/js/home-son.js"></script>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/bootstrap/css/bootstrap.css">
+    <script type="text/javascript" src="/libs/bootstrap/js/bootstrap.js"></script>
+    <script type="text/javascript" src='https://cdn.jsdelivr.net/g/lodash@4(lodash.min.js+lodash.fp.min.js)'></script>
 </head>
 <body onload="renderListStudent()">
 
-<%- include("navbar-Beauty-Artist-s") %>
+<section class="section sticky-top">
+    <nav class="navbar navbar-expand-md navbar-light  nav-head-s" id="nav-head-s">
+        <div class="container-fluid">
+            <div class="img-nav-s">
+                <a class="navbar-branch" href="/">
+                    <img class="img-fluid img-nav-s" src="/imgs-s/logo-salmon.png">
+                </a>
+            </div>
+            <form class="form-group form-group-nav-pro" action="/search" method="get">
+                <input class="form-control form-group-nav-pro-input" type="text" name="keyword" placeholder="Type beautician's name or service category"/>
+                <span class="form-group-nav-pro-icon"><i class="fa fa-search search-buton-s1"></i></span>
+            </form>
+            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarResponsive">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item nav-item-s1">
+                        <div class="dropdown">
+                            <button type="button" class="btn btn-outline-danger dropdown-toggle btn-nav-s1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                FOR CLIENT
+                            </button>
+                            <div class="dropdown-content">
+                                <a class="dropdown-item" href="/artisan-registration-and-service">Beauty Job Artist</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Beauty Outlet</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item nav-item-s">
+                        <div class="dropdown">
+                            <button type="button" class="btn btn-outline-light dropdown-toggle btn-nav-s2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                PARTNER WITH US
+                            </button>
+                            <div class="dropdown-content">
+                                <a class="dropdown-item" href="#">Beauty Artists</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Beauty Outlets</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item nav-item-s">
+                        <a href="#" class="notamenu notamenus"><i style="color: #ff5c5c" class="fa">&#xf290;</i></a>
+                    </li>
+                    <li class="nav-item nav-item-s">
+                        <button class="btn btn-outline-light btn-nav-s2" data-toggle="modal" data-target="#myModal">Register</button>
+                    </li>
+                    <li class="nav-item nav-item-s">
+                        <button class="btn btn-outline-light btn-nav-s2" data-toggle="modal" data-target="#myModallogin">Login</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</section>
+<section class="section head-s1">
+    <div class="img-banne-s">
+        <img src="/imgs-s/banner-son.jpg">
+    </div>
+    <div class="header-promotion">
+        <span class="header-promotion-span-s1">Beauty Artist</span><br>
+        <span class="header-promotion-span-s2">Find and book your favorite beauty artist.</span>
+    </div>
+</section>
 
 <div class="vbooking__header">
     <div class="container">
@@ -117,8 +185,8 @@
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label class="titttte">Intro</label><br>
-                                    <small>Introduce the service you provide?</small>
-                                    <textarea class="form-control son" id="Intro"></textarea>
+                                    <textarea class="form-control son" name="Intro" id="Intro" placeholder="Introduce the service you provide?"></textarea>
+                                    <div class="error" id="Intro-error"></div>
                                 </div>
                                 <div class="form-group">
                                     <label class="titttte">Location</label>
@@ -342,12 +410,13 @@
 <%- include('layout/footer')-%>
 
 
-
+<script type="text/javascript" src='https://cdn.jsdelivr.net/g/lodash@4(lodash.min.js+lodash.fp.min.js)'></script>
 <script src="/libs/jQuery/jQuery.js"></script>
 <script src="/libs/clockpicker-gh-pages/dist/bootstrap-clockpicker.min.js"></script>
 <script src="/libs/datepicker/datepicker.js"></script>
 <script src="/libs/Number-Input-Spinner-jQuery-Nice-Number/dist/jquery.nice-number.js"></script>
 <script src="/js/Re-Arsist-services-son.js"></script>
+
 <script>
     $('.datepicker').datepicker();
     $('.clockpicker').clockpicker();
@@ -360,8 +429,50 @@
         var Cover = $(this).val().split("\\").pop();
         $(this).siblings(".custom-file-label.lable-cover").addClass("selected").html(Cover);
     });
+</script>
+<script type="text/javascript">
+
+    //     //Preloader set fixed time
+    setTimeout(function () {
+        $(".loader-bg").fadeToggle();
+    },3000);
+
+
+    // When the user scrolls down 10px from the top of the document, slide down the navbar
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
+            document.getElementById("nav-head-s").style.background = "#FFFFFF";
+        } else {
+            document.getElementById("nav-head-s").style.background = "none";
+        }
+    }
+
+
+    <!-- Initialize Swiper -->
+
+    var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 3,
+        direction: getDirection(),
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        on: {
+            resize: function () {
+                swiper.changeDirection(getDirection());
+            }
+        }
+    });
+
+    function getDirection() {
+        var windowWidth = window.innerWidth;
+        var direction = window.innerWidth <= 760 ? 'vertical' : 'horizontal';
+
+        return direction;
+    }
 
 </script>
-
 </body>
 </html>

@@ -10,35 +10,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a8ceb5b1-59e0-4696-ad49-96b52bef462f" name="Default Changelist" comment="Viet">
-      <change afterPath="$PROJECT_DIR$/public/css/quanlysv.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/ArisistAdd-son.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/Re-services-son.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/ResigArisist-son.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/qlsv.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/Re-services-son.ejs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/ResigArisist-son.ejs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/qlsv.ejs" afterDir="false" />
+    <list default="true" id="a8ceb5b1-59e0-4696-ad49-96b52bef462f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/header-son.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/header-son.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/home-son.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/home-son.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/services-son.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/services-son.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/services-son.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/MU_Services_son.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/addArtist-son.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/cities.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/city.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/home-son.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/home-son.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/homes.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/navbar-Beauty-Artist-s.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/navbar-Beauty-Artist-s.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/navbar-Promotions-s.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/navbar-Promotions-s.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/new2test.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/services-son.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/slide.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/test.ejs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/Re-Arsist-services-son.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/Re-Arsist-services-son.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/Re-Arsist-services-son.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/Re-Arsist-services-son.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,8 +25,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -69,7 +45,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/css" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/js" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -86,11 +62,13 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\TeamProjectT2004E\views\layout" />
+      <recent name="D:\TeamProjectT2004E\public\css\layout" />
       <recent name="D:\TeamProjectT2004E\public\js" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\TeamProjectT2004E\public\css" />
       <recent name="D:\TeamProjectT2004E\public\js" />
+      <recent name="D:\TeamProjectT2004E\public\css" />
       <recent name="D:\TeamProjectT2004E\public\imgs" />
       <recent name="D:\TeamProjectT2004E\public" />
     </key>
@@ -115,7 +93,11 @@
       <workItem from="1599220153116" duration="13324000" />
       <workItem from="1599276141607" duration="5512000" />
       <workItem from="1599281761646" duration="16786000" />
-      <workItem from="1599298662382" duration="12010000" />
+      <workItem from="1599298662382" duration="12833000" />
+      <workItem from="1599314573813" duration="3870000" />
+      <workItem from="1599319531792" duration="22214000" />
+      <workItem from="1599369566736" duration="2822000" />
+      <workItem from="1599375962328" duration="4006000" />
     </task>
     <task id="LOCAL-00001" summary="Viet">
       <created>1598621678893</created>
@@ -159,7 +141,42 @@
       <option name="project" value="LOCAL" />
       <updated>1599240562814</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="son">
+      <created>1599311209630</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1599311209630</updated>
+    </task>
+    <task id="LOCAL-00008" summary="son">
+      <created>1599316645131</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1599316645131</updated>
+    </task>
+    <task id="LOCAL-00009" summary="son">
+      <created>1599353550396</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1599353550396</updated>
+    </task>
+    <task id="LOCAL-00010" summary="son">
+      <created>1599373011846</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1599373011846</updated>
+    </task>
+    <task id="LOCAL-00011" summary="son">
+      <created>1599381896582</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1599381896582</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -180,21 +197,22 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Viet" />
     <MESSAGE value="son 0509" />
-    <option name="LAST_COMMIT_MESSAGE" value="son 0509" />
+    <MESSAGE value="son" />
+    <option name="LAST_COMMIT_MESSAGE" value="son" />
   </component>
   <component name="WindowStateProjectService">
     <state x="522" y="235" key="#Notifications" timestamp="1598622584318">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="522" y="235" key="#Notifications/0.0.1536.824@0.0.1536.824" timestamp="1598622584318" />
-    <state x="520" y="211" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1599161368614">
+    <state x="520" y="211" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1599380946034">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="520" y="211" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1599161368614" />
-    <state x="393" y="0" key="CommitChangelistDialog2" timestamp="1599240619614">
+    <state x="520" y="211" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1599380946034" />
+    <state x="393" y="0" key="CommitChangelistDialog2" timestamp="1599381892984">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="393" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1599240619614" />
+    <state x="393" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1599381892984" />
     <state x="146" y="64" key="DiffContextDialog" timestamp="1598623015456">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -203,22 +221,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="276" y="56" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1598621858946" />
-    <state x="360" y="142" key="Vcs.Push.Dialog.v2" timestamp="1599240573790">
+    <state x="360" y="142" key="Vcs.Push.Dialog.v2" timestamp="1599373018908">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="360" y="142" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1599240573790" />
+    <state x="360" y="142" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1599373018908" />
     <state x="628" y="63" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1598631983978">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="628" y="63" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog/0.0.1536.824@0.0.1536.824" timestamp="1598631983978" />
-    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1599240640355">
+    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1599346702535">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1599240640355" />
-    <state x="425" y="187" key="run.anything.popup" timestamp="1598714253471">
+    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1599346702535" />
+    <state x="425" y="187" key="run.anything.popup" timestamp="1599372684147">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1598714253471" />
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1599372684147" />
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1598880761470">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

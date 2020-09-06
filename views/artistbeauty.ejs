@@ -23,78 +23,132 @@
     <link rel="stylesheet" href="/css/footer.css">
     <link rel="stylesheet" href="/css/BeautyArtist.css"/>
     <link rel="stylesheet" href="/css/main.css">
-
+    <link rel="stylesheet" href="/css/home-son.css"/>
 </head>
 <body>
 
+
 <header class=" H_css_header" id="img_background">
+    <section class="section sticky-top">
+        <nav class="navbar navbar-expand-md navbar-light  nav-head-s" id="nav-head-s">
+            <div class="container-fluid">
+                <div class="img-nav-s">
+                    <a class="navbar-branch" href="#">
+                        <img class="img-fluid img-nav-s" src="/imgs-s/logo-salmon.png">
+                    </a>
+                </div>
+                <form class="form-group form-group-nav-pro" action="/search" method="get">
+                    <input class="form-control form-group-nav-pro-input" type="text" name="keyword" placeholder="Type beautician's name or service category"/>
+                    <span class="form-group-nav-pro-icon"><i class="fa fa-search search-buton-s1"></i></span>
+                </form>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarResponsive">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item nav-item-s1">
+                            <div class="dropdown">
+                                <button type="button" class="btn btn-outline-danger dropdown-toggle btn-nav-s1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    FOR CLIENT
+                                </button>
+                                <div class="dropdown-content">
+                                    <a class="dropdown-item" href="/addArtist">Beauty Job Artist</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">Beauty Outlet</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item nav-item-s">
+                            <div class="dropdown">
+                                <button type="button" class="btn btn-outline-light dropdown-toggle btn-nav-s2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    PARTNER WITH US
+                                </button>
+                                <div class="dropdown-content">
+                                    <a class="dropdown-item" href="#">Beauty Artists</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">Beauty Outlets</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item nav-item-s">
+                            <a href="#" class="notamenu notamenus"><i style="color: #ff5c5c" class="fa">&#xf290;</i></a>
+                        </li>
+                        <li class="nav-item nav-item-s">
+                            <button class="btn btn-outline-light btn-nav-s2" data-toggle="modal" data-target="#myModal">Register</button>
+                        </li>
+                        <li class="nav-item nav-item-s">
+                            <button class="btn btn-outline-light btn-nav-s2" data-toggle="modal" data-target="#myModallogin">Login</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </section>
     <div class="H_css_heaer_backgroundcolor">
         <div class="container ">
             <h1 style="font-size: 30px"> Beauty Artist</h1>
             <p style="font-size: 16px"> Find and book your favorite beauty artist.</p>
         </div>
-
     </div>
 </header>
 
 <div class="H_css_main">
     <div class="row">
-        <div class="container" style="position: relative">
-            <nav class="sticky-top">
-                <div class=" col-3 H_css_main_left">
-                    <div class=" H_form_right">
+        <div class="container ">
+            <div class=" col-3 H_css_main_left">
+                <div class="sticky-top">
+                    <div class="H_form_right" >
                         <form id="H_form_id" method="get" action="#" >
                             <div class="  H_form ">
                                 <label class="H_form">Select Service</label>
                                 <select name="H_select_service" id="H_service" class="H_select">
-                                    <option value="0">All Service</option>
+                                    <option class="H_option" value="0">All Service</option>
                                     <option value="1">Basic Make Up (Party, Graduation or Daily Make Up)</option>
                                     <option value="2">Sweet 17th Birthday Make Up</option>
                                 </select>
                             </div>
                             <div class=" H_form ">
                                 <label class="H_form">Select City</label>
-                                <input type="text" name="name_city"  class="H_select" placeholder="Nane City" >
+                                <input class="H_css_main_left_input" type="text" name="name_city"  placeholder="Nane City" >
                             </div>
                             <div class=" H_form">
-                                <label class="H_form">Sort by price</label>
+                                <label class="H_form" style=" margin-top: 10px">Sort by price</label>
                                 <a class=" H_hover" href="#">
                                     <label class="H_label">
                                         <input type="radio" src="#" name="price">
-                                        <span class="H_label_p">Rp 0 - Rp 100.000 </span>
+                                        <span class="H_label_p"> 0 - 1.000.000 VND</span>
                                     </label>
                                 </a>
                                 <a class="H_hover" href="#">
                                     <label class="H_label">
                                         <input type="radio" src="#" name="price">
-                                        <span class="H_label_p">Rp 100.000 - Rp 250.000</span>
+                                        <span class="H_label_p"> 1.000.000 - 2.500.000 VND</span>
                                     </label>
                                 </a>
                                 <a class=" H_hover" href="#">
                                     <label class="H_label">
                                         <input type="radio" src="#" name="price">
-                                        <span class="H_label_p">Rp 250.000 - Rp 500.000 </span>
+                                        <span class="H_label_p"> 2.500.000 - 5.000.000 VND</span>
                                     </label>
                                 </a>
                                 <a class="H_hover" href="#">
                                     <label class="H_label">
                                         <input type="radio" src="#" name="price">
-                                        <span class="H_label_p">Rp 500.000 - Rp 1000.000</span>
+                                        <span class="H_label_p"> 5.000.000 - 10.000.000 VND</span>
                                     </label>
                                 </a>
                                 <a class=" H_hover" href="#">
                                     <label class="H_label">
                                         <input type="radio" src="#" name="price">
-                                        <span class="H_label_p">Rp 1000.000 +   </span>
+                                        <span class="H_label_p"> 10.000.000 VND  + ...  </span>
                                     </label>
                                 </a>
                             </div>
                         </form>
                     </div>
                 </div>
-
-            </nav>
-
+            </div>
             <div class= " col-9 H_css_main_right">
                 <div class="row col-6  H_img_artist_desc">
                     <div class="H_img_artist">
@@ -144,7 +198,7 @@
                         </div>
                     </div>
 
-                    <a href="#" class="">
+                    <a href="pages/service" class="">
                         <div class="H_info_artist">
                             <div class=" H_avt_artist">
                                 <img class="H_img " src="/img_huy/avtartist1.jpeg" height="250" width="250"/>
@@ -161,12 +215,12 @@
                                         5/5.216 Review
                                     </span>
                                 <span class="H_Icon">
-                                        <i style="font-size:15px; color: red;" class="fa">&#xf004; &#xf004; &#xf004; &#xf004; &#xf004;</i>
+                                        <i style="font-size:15px; color: red;" class="fa">&#xf004;&#xf004;&#xf004;&#xf004;&#xf004;</i>
                                     </span>
                             </div>
                             <div class="row col-md-6 H_display_review_right">
                                 <span class="H_display_sprice">Start From</span>
-                                <span class="H_display_sprice2" style="font-size: 17px; font-weight: 600;color: rgba(0,0,0,0.54)">IDR 1.000.000,00</span>
+                                <span class="H_display_sprice2" >1.000.000,00 VND</span>
                             </div>
                         </div>
                     </a>
@@ -219,7 +273,7 @@
                         </div>
                     </div>
 
-                    <a href="#" class="">
+                    <a href="pages/service" class="">
                         <div class="H_info_artist">
                             <div class=" H_avt_artist">
                                 <img class="H_img " src="/img_huy/avtartist2.jpeg" height="250" width="250"/>
@@ -236,12 +290,12 @@
                                         5/5.216 Review
                                     </span>
                                 <span class="H_Icon">
-                                        <i style="font-size:15px; color: red;" class="fa">&#xf004; &#xf004; &#xf004; &#xf004; &#xf004;</i>
+                                        <i style="font-size:15px; color: red;" class="fa">&#xf004;&#xf004;&#xf004;&#xf004;&#xf004;</i>
                                     </span>
                             </div>
                             <div class="row col-md-6 H_display_review_right">
                                 <span class="H_display_sprice">Start From</span>
-                                <span class="H_display_sprice2" style="font-size: 17px; font-weight: 600;color: rgba(0,0,0,0.54)">1.000.000,00 VND</span>
+                                <span class="H_display_sprice2">1.000.000,00 VND</span>
                             </div>
                         </div>
                     </a>
@@ -294,7 +348,7 @@
                         </div>
                     </div>
 
-                    <a href="#" class="">
+                    <a href="pages/service" class="">
                         <div class="H_info_artist">
                             <div class=" H_avt_artist">
                                 <img class="H_img " src="/img_huy/avtartist3.jpeg" height="250" width="250"/>
@@ -311,12 +365,12 @@
                                         5/5.216 Review
                                     </span>
                                 <span class="H_Icon">
-                                        <i style="font-size:15px; color: red;" class="fa">&#xf004; &#xf004; &#xf004; &#xf004; &#xf004;</i>
+                                        <i style="font-size:15px; color: red;" class="fa">&#xf004;&#xf004;&#xf004;&#xf004;&#xf004;</i>
                                     </span>
                             </div>
                             <div class="row col-md-6 H_display_review_right">
                                 <span class="H_display_sprice">Start From</span>
-                                <span class="H_display_sprice2" style="font-size: 17px; font-weight: 600;color: rgba(0,0,0,0.54)">1.000.000,00 VND</span>
+                                <span class="H_display_sprice2" >20.000.000,00 VND</span>
                             </div>
                         </div>
                     </a>
@@ -369,7 +423,7 @@
                         </div>
                     </div>
 
-                    <a href="#" class="">
+                    <a href="pages/service" class="">
                         <div class="H_info_artist">
                             <div class=" H_avt_artist">
                                 <img class="H_img " src="/img_huy/avtartist4.jpeg" height="250" width="250"/>
@@ -386,12 +440,12 @@
                                         5/5.216 Review
                                     </span>
                                 <span class="H_Icon">
-                                        <i style="font-size:15px; color: red;" class="fa">&#xf004; &#xf004; &#xf004; &#xf004; &#xf004;</i>
+                                        <i style="font-size:15px; color: red;" class="fa">&#xf004;&#xf004;&#xf004;&#xf004;&#xf004;</i>
                                     </span>
                             </div>
                             <div class="row col-md-6 H_display_review_right">
                                 <span class="H_display_sprice">Start From</span>
-                                <span class="H_display_sprice2" style="font-size: 17px; font-weight: 600;color: rgba(0,0,0,0.54)">1.000.000,00 VND</span>
+                                <span class="H_display_sprice2" >5.000.000,00 VND</span>
                             </div>
                         </div>
                     </a>
@@ -444,7 +498,7 @@
                         </div>
                     </div>
 
-                    <a href="#" class="">
+                    <a href="pages/service" class="">
                         <div class="H_info_artist">
                             <div class=" H_avt_artist">
                                 <img class="H_img " src="/img_huy/avtartist3.jpeg" height="250" width="250"/>
@@ -461,12 +515,12 @@
                                         5/5.216 Review
                                     </span>
                                 <span class="H_Icon">
-                                        <i style="font-size:15px; color: red;" class="fa">&#xf004; &#xf004; &#xf004; &#xf004; &#xf004;</i>
+                                        <i style="font-size:15px; color: red;" class="fa">&#xf004;&#xf004;&#xf004;&#xf004;&#xf004;</i>
                                     </span>
                             </div>
                             <div class="row col-md-6 H_display_review_right">
                                 <span class="H_display_sprice">Start From</span>
-                                <span class="H_display_sprice2" style="font-size: 17px; font-weight: 600;color: rgba(0,0,0,0.54)">1.000.000,00 VND</span>
+                                <span class="H_display_sprice2" >1.000.000,00 VND</span>
                             </div>
                         </div>
                     </a>
@@ -519,7 +573,7 @@
                         </div>
                     </div>
 
-                    <a href="#" class="">
+                    <a href="pages/service" class="">
                         <div class="H_info_artist">
                             <div class=" H_avt_artist">
                                 <img class="H_img " src="/img_huy/avtartist6.jpeg" height="250" width="250"/>
@@ -536,12 +590,12 @@
                                         5/5.216 Review
                                     </span>
                                 <span class="H_Icon">
-                                        <i style="font-size:15px; color: red;" class="fa">&#xf004; &#xf004; &#xf004; &#xf004; &#xf004;</i>
+                                        <i style="font-size:15px; color: red;" class="fa">&#xf004;&#xf004;&#xf004;&#xf004;&#xf004;</i>
                                     </span>
                             </div>
                             <div class="row col-md-6 H_display_review_right">
                                 <span class="H_display_sprice">Start From</span>
-                                <span class="H_display_sprice2" style="font-size: 17px; font-weight: 600;color: rgba(0,0,0,0.54)">1.000.000,00 VND</span>
+                                <span class="H_display_sprice2" >2.000.000,00 VND</span>
                             </div>
                         </div>
                     </a>
@@ -594,7 +648,8 @@
                         </div>
                     </div>
 
-                    <a href="#" class="">
+                    <a href="pages/service
+" class="">
                         <div class="H_info_artist">
                             <div class=" H_avt_artist">
                                 <img class="H_img " src="/img_huy/avtartist7.jpeg" height="250" width="250"/>
@@ -611,12 +666,12 @@
                                         5/5.216 Review
                                     </span>
                                 <span class="H_Icon">
-                                        <i style="font-size:15px; color: red;" class="fa">&#xf004; &#xf004; &#xf004; &#xf004; &#xf004;</i>
+                                        <i style="font-size:15px; color: red;" class="fa">&#xf004;&#xf004;&#xf004;&#xf004;&#xf004;</i>
                                     </span>
                             </div>
                             <div class="row col-md-6 H_display_review_right">
                                 <span class="H_display_sprice">Start From</span>
-                                <span class="H_display_sprice2" style=""> 2.000.000,00 VND</span>
+                                <span class="H_display_sprice2"> 5.000.000,00 VND</span>
                             </div>
                         </div>
                     </a>
@@ -669,7 +724,7 @@
                         </div>
                     </div>
 
-                    <a href="#" class="">
+                    <a href="pages/service" class="">
                         <div class="H_info_artist">
                             <div class=" H_avt_artist">
                                 <img class="H_img " src="/img_huy/avtartist7.jpeg" height="250" width="250"/>
@@ -686,12 +741,12 @@
                                         5/5.216 Review
                                     </span>
                                 <span class="H_Icon">
-                                        <i style="font-size:15px; color: red;" class="fa">&#xf004; &#xf004; &#xf004; &#xf004; &#xf004;</i>
+                                        <i style="font-size:15px; color: red;" class="fa">&#xf004;&#xf004;&#xf004;&#xf004;&#xf004;</i>
                                     </span>
                             </div>
                             <div class="row col-md-6 H_display_review_right">
                                 <span class="H_display_sprice">Start From</span>
-                                <span class="H_display_sprice2" style="font-size: 17px; font-weight: 600;color: rgba(0,0,0,0.54)">1.000.000,00 VND</span>
+                                <span class="H_display_sprice2" >10.000.000,00 VND</span>
                             </div>
                         </div>
                     </a>
@@ -744,7 +799,7 @@
                         </div>
                     </div>
 
-                    <a href="#" class="">
+                    <a href="pages/service" class="">
                         <div class="H_info_artist">
                             <div class=" H_avt_artist">
                                 <img class="H_img " src="/img_huy/avtartist2.jpeg" height="250" width="250"/>
@@ -761,12 +816,12 @@
                                         5/5.216 Review
                                     </span>
                                 <span class="H_Icon">
-                                        <i style="font-size:15px; color: red;" class="fa">&#xf004; &#xf004; &#xf004; &#xf004; &#xf004;</i>
+                                        <i style="font-size:15px; color: red;" class="fa">&#xf004;&#xf004;&#xf004;&#xf004;&#xf004;</i>
                                     </span>
                             </div>
                             <div class="row col-md-6 H_display_review_right">
                                 <span class="H_display_sprice">Start From</span>
-                                <span class="H_display_sprice2" style="font-size: 17px; font-weight: 600;color: rgba(0,0,0,0.54)">1.000.000,00 VND</span>
+                                <span class="H_display_sprice2" >7.500.000,00 VND</span>
                             </div>
                         </div>
                     </a>
@@ -819,7 +874,7 @@
                         </div>
                     </div>
 
-                    <a href="#" class="">
+                    <a href="pages/service" class="">
                         <div class="H_info_artist">
                             <div class=" H_avt_artist">
                                 <img class="H_img " src="/img_huy/avtartist10.jpeg" height="250" width="250"/>
@@ -836,12 +891,12 @@
                                         5/5.216 Review
                                     </span>
                                 <span class="H_Icon">
-                                        <i style="font-size:15px; color: red;" class="fa">&#xf004; &#xf004; &#xf004; &#xf004; &#xf004;</i>
+                                        <i style="font-size:15px; color: red;" class="fa">&#xf004;&#xf004;&#xf004;&#xf004;&#xf004;</i>
                                     </span>
                             </div>
                             <div class="row col-md-6 H_display_review_right">
                                 <span class="H_display_sprice">Start From</span>
-                                <span class="H_display_sprice2" style="font-size: 17px; font-weight: 600;color: rgba(0,0,0,0.54)">1.000.000,00 VND</span>
+                                <span class="H_display_sprice2" >1.700.000,00 VND</span>
                             </div>
                         </div>
                     </a>
@@ -855,6 +910,9 @@
 
     </div>
 </div>
-<%- include ('layout/footer'); -%>
+<div class="sticky-top">
+    <%- include ('layout/footer'); -%>
+
+</div>
 </body>
 </html>
