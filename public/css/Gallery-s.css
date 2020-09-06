@@ -1,23 +1,28 @@
 body{
     /*background-image: url("../imgs-s/parallax-6-1920x780-1.jpg");*/
+    background-color: #1b6d85;
 }
 h2{
-    color:#fff;
-    margin-bottom:40px;
+    color:#FFFFFF;
+    padding-top: 2vw;
     text-align:center;
     font-weight:100;
 }
 .demo-gallery{
-    padding-left: 15vw;
-    padding-right: 10vw;
+    /*padding-left: 15vw;*/
+    /*padding-right: 10vw;*/
+    padding: 0 1vw;
 }
 .demo-gallery > ul {
     margin-bottom: 0;
 }
+.gallery-sss{
+    background-color: #1b6d85;
+}
 .demo-gallery > ul > li {
     float: left;
-    margin-bottom: 15px;
-    margin-right: 20px;
+    /*margin-bottom: 5px;*/
+    /*margin-right: 10px;*/
     width: 200px;
 }
 .demo-gallery > ul > li a {

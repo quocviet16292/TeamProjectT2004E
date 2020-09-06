@@ -147,6 +147,9 @@ function showTab(n) {
 
 
 function nextPrev(n) {
+
+    // if (!valiDateFrom2.noError()) return ;
+
     var x = document.getElementsByClassName("vbooking__step");
     // if (n == 1 && !validateForm() && currentTab < 2) return false;
     x[currentTab].style.display = "none";
@@ -158,23 +161,24 @@ function nextPrev(n) {
     showTab(currentTab);
 }
 
-function validateForm() {
-    // This function deals with validation of the form fields
-    var x, y, i, valid = true;
-    x = document.getElementsByClassName("vbooking__step");
-    y = x[currentTab].getElementsByTagName("input");
-    for (i = 0; i < y.length; i++) {
-        if (y[i].value == "") {
-            y[i].className += " invalid";
-            valid = false;
-        }
-    }
-    // If the valid status is true, mark the step as finished and valid:
-    if (valid) {
-        document.getElementsByClassName("vbooking__step")[currentTab].className += " finish";
-    }
-    return valid; // return the valid status
-}
+//
+// function validateForm() {
+//     // This function deals with validation of the form fields
+//     var x, y, i, valid = true;
+//     x = document.getElementsByClassName("vbooking__step");
+//     y = x[currentTab].getElementsByTagName("input");
+//     for (i = 0; i < y.length; i++) {
+//         if (y[i].value == "") {
+//             y[i].className += " invalid";
+//             valid = false;
+//         }
+//     }
+//     // If the valid status is true, mark the step as finished and valid:
+//     if (valid) {
+//         document.getElementsByClassName("vbooking__step")[currentTab].className += " finish";
+//     }
+//     return valid; // return the valid status
+// }
 
 
 function fixStepIndicator(n) {
@@ -188,67 +192,6 @@ function fixStepIndicator(n) {
     }
 
 }
-
-// Remove Service Button
-function removeItem(){
-    let removeItemBtn = document.getElementsByClassName("btn__remove");
-    for(let i=0; i < removeItemBtn.length; i++){
-
-        let button = removeItemBtn[i];
-
-        button.addEventListener('click',(event)=>{
-            let buttonClicked = event.target;
-            buttonClicked.parentElement.parentElement.parentElement.remove();
-        })
-    }
-}
-
-
-function getNumber (){
-    let pNumbers = $('#qty__persons').val();
-    let cartRowTitle = document.getElementsByClassName('service__title');
-    let textSelect = $('#service__select option:selected').text();
-    for(let i =0; i <cartRowTitle.length; i++){
-        if(cartRowTitle[i].textContent == textSelect){
-            document.getElementsByClassName('service__title')[i].parentElement.children[1].children[0].innerText = pNumbers;
-            document.getElementsByClassName('service__title')[i].parentElement.children[2].children[0].innerText = (pNumbers*500000).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-        }
-    }
-
-}
-
-
-function resetNumber(){
-    document.getElementById('qty__persons').value = 1;
-}
-//AddToCart
-// Number Spinner
-var selectList = [];
-$(function(){
-    $('input[type="number"]').niceNumber({
-        autoSize:false,
-        autoSizeBuffer: 1,
-        buttonDecrement:'-',
-        buttonIncrement:"+",
-        buttonPosition:'around'
-    });
-    $('#btnchangeplus').click(function() {
-        let textSelect = $('#service__select option:selected').text()
-        if(selectList.length == 0){
-            addToCart();
-            getNumber();
-        }else{
-            if(selectList.includes(textSelect)){
-                getNumber();
-            }else {
-                addToCart();
-                getNumber();
-            }
-        }
-
-    })
-});
-
 
 
 //Get Info and Print on the Step 4
@@ -264,8 +207,6 @@ function getInfoStep1(){
     document.getElementById('getDistrict').innerHTML = document.getElementById('Cdistrict').value + " ";
     document.getElementById('getCity').innerHTML = document.getElementById('Ccity').value;
     document.getElementById('getCEmail').innerHTML = document.getElementById('Cemail').value;
-
-    // document.getElementById('list_student-1').innerHTML = document.getElementById('list_student') .value;
 
 }
 
@@ -432,4 +373,104 @@ function savess() {
     }else{
         document.getElementById('checkBoxs-error').innerHTML = '';
     }
+}
+
+function valiDateFrom2() {
+    let fullname = document.getElementById('Cname').value;
+    let Email = document.getElementById('Cemail').value;
+    let Phone = document.getElementById('Cphone').value;
+    let Address = document.getElementById('Address').value;
+    let City = document.getElementById('Ccity').value;
+    let District = document.getElementById('Cdistrict').value;
+    let aLocation = document.getElementById('aLocation').value;
+    let Intro = document.getElementById('Intro').value;
+    let SName = document.getElementById('SName').value;
+    let SDescribe = document.getElementById('SDescribe').value;
+    let SPrice = document.getElementById('SPrice').value;
+    let SPromo = document.getElementById('SPromo').value;
+    let SWTime = document.getElementById('SWTime').value;
+    //name a
+    if (_.isEmpty(fullname)){
+        fullname = '';
+        document.getElementById('fullname-error').innerHTML = 'Please enter your first and last name';
+    }else if (fullname.length < 6 ){
+        fullname = '';
+        document.getElementById('fullname-error').innerHTML = 'Name must not be less than 5 characters';
+    }else if (fullname.length >30 ){
+        fullname = '';
+        document.getElementById('fullname-error').innerHTML = 'Name Must not exceed 30 characters';
+    }else{
+        document.getElementById('fullname-error').innerHTML = '';
+    }
+
+    //email
+
+    if (_.isEmpty(Email)){
+        Email = '';
+        document.getElementById('Email-error').innerHTML = 'Please update your email';
+    }else if (!emailValid(Email)){
+        Email = '';
+        document.getElementById('Email-error').innerHTML = 'Email invalidate';
+    }else {
+        document.getElementById('email-error').innerHTML = '';
+    }
+
+    //phone
+
+    if (_.isEmpty(Phone)){
+        Phone = '';
+        document.getElementById('Phone-error').innerHTML = 'Please enter the phone number';
+    } else if (Phone.trim().length >10){
+        Phone = '';
+        document.getElementById('Phone-error').innerHTML = 'Wrong phone number';
+    }else if (phone.trim().length < 10){
+        Phone = '';
+        document.getElementById('Phone-error').innerHTML = 'Wrong phone number';
+    }else {
+        document.getElementById('Phone-error').innerHTML = '';
+    }
+
+    //Adresss
+
+    if (_.isEmpty(Address)){
+        Address = '';
+        document.getElementById('Address-error').innerHTML = 'Please enter your address';
+    }else {
+        document.getElementById('Address-error').innerHTML = '';
+    }
+
+    //City
+    if (_.isEmpty(City)){
+        City = '';
+        document.getElementById('City-error').innerHTML = 'Please enter a city';
+    }else {
+        document.getElementById('City-error').innerHTML = '';
+    }
+    //Dictric
+
+    if (_.isEmpty(District)){
+        District = '';
+        document.getElementById('District-error').innerHTML = 'Please enter the District';
+    }else {
+        document.getElementById('District-error').innerHTML = '';
+    }
+
+    //alocation
+
+    if (_.isEmpty(aLocation)){
+        aLocation = '';
+        document.getElementById('aLocation-error').innerHTML = 'Please enter Location';
+    }else {
+        document.getElementById('aLocation-error').innerHTML = '';
+    }
+
+    //alocation
+
+    if (_.isEmpty(Intro)){
+        Intro = '';
+        document.getElementById('Intro-error').innerHTML = 'Please enter Intro';
+    }else {
+        document.getElementById('Intro-error').innerHTML = '';
+    }
+
 }
