@@ -1,4 +1,102 @@
-// Progress Bar and Step Form
+
+function emailValid(Email) {
+    return /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/.test(Email);
+}
+function save() {
+    let fullname = document.getElementById('fullname').value;
+    if (_.isEmpty(fullname)){
+        document.getElementById('fullname-error').innerHTML = 'Please enter your first and last name';
+    }else if (fullname.length < 6){
+        document.getElementById('fullname-error').innerHTML = 'Name must not be less than 5 characters';
+    }
+}
+function save() {
+    let fullname = document.getElementById('fullname').value;
+    let Email = document.getElementById('Email').value;
+    let Phone = document.getElementById('Phone').value;
+    let Address = document.getElementById('Address').value;
+    let City = document.getElementById('City').value;
+    let District = document.getElementById('District').value;
+    let aLocation = document.getElementById('aLocation').value;
+    let Intro = document.getElementById('Intro').value;
+    let Avartar = document.getElementById('Avartar').value;
+    let Cover = document.getElementById('Cover').value;
+    let SName = document.getElementById('SName').value;
+    let SDescribe = document.getElementById('SDescribe').value;
+    let SPrice = document.getElementById('SPrice').value;
+    let SPromo = document.getElementById('SPromo').value;
+    let SWTime = document.getElementById('SWTime').value;
+
+    //Full name
+
+    if (_.isEmpty(fullname)){
+        fullname = '';
+        document.getElementById('fullname-error').innerHTML = 'Please enter your first and last name';
+    }else if(fullname.length <= 5){
+        document.getElementById('fullname-error').innerHTML = 'Name must not be less than 5 characters';
+    } else if(fullname.length > 30){
+        document.getElementById('fullname-error').innerHTML = 'Name Must not exceed 30 characters';
+    }
+    else {
+        document.getElementById('fullname-error').innerHTML = '';
+    }
+
+    //Email
+
+    if (_.isEmpty(email)){
+        email = '';
+        document.getElementById('email-error').innerHTML = 'Vui Lòng Nhập email';
+    }else if(!emailValid(email)){
+        email = '';
+        document.getElementById('email-error').innerHTML = 'email ko đúng định dạng';
+    } else {
+        document.getElementById('email-error').innerHTML = '';
+    }
+
+    //Phone
+
+    if (_.isEmpty(phone)){
+        phone = '';
+        document.getElementById('phone-error').innerHTML = 'Vui Lòng Nhập số điện thoại';
+    } else if (phone.trim().length >10){
+        phone = '';
+        document.getElementById('phone-error').innerHTML = 'sai số đt';
+    }else if (phone.trim().length < 10){
+        phone = '';
+        document.getElementById('phone-error').innerHTML = 'sai số đt';
+    }else {
+        document.getElementById('phone-error').innerHTML = '';
+    }
+
+    //address
+    if (_.isEmpty(address)){
+        address = '';
+        document.getElementById('address-error').innerHTML = 'Vui Lòng Nhập địa chỉ';
+    }else {
+        document.getElementById('address-error').innerHTML = '';
+    }
+
+    // sex
+
+    if(fullname && email && phone &&address && gender){
+
+        let students = localStorage.getItem('students') ?  JSON.parse(localStorage.getItem('students')) : [];
+
+        students.push({
+            fullname : fullname,
+            email : email,
+            phone : phone,
+            address : address,
+            gender : gender,
+        });
+
+        localStorage.setItem('students', JSON.stringify(students));
+        this.renderListStudent();
+    }
+}
+
+
+
 
 var currentTab = 0; // Current tab is set to be the first tab (0)
 showTab(currentTab); // Display the current tab
@@ -79,95 +177,6 @@ function removeItem(){
             buttonClicked.parentElement.parentElement.parentElement.remove();
         })
     }
-}
-
-//Get Number
-function getNumber (){
-    let pNumbers = $('#qty__persons').val();
-    let cartRowTitle = document.getElementsByClassName('service__title');
-    let textSelect = $('#service__select option:selected').text();
-    for(let i =0; i <cartRowTitle.length; i++){
-        if(cartRowTitle[i].textContent == textSelect){
-            document.getElementsByClassName('service__title')[i].parentElement.children[1].children[0].innerText = pNumbers;
-            document.getElementsByClassName('service__title')[i].parentElement.children[2].children[0].innerText = (pNumbers*500000).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-        }
-    }
-
-}
-
-//Reset Number
-function resetNumber(){
-    document.getElementById('qty__persons').value = 1;
-}
-//AddToCart
-// Number Spinner
-var selectList = [];
-$(function(){
-    $('input[type="number"]').niceNumber({
-        autoSize:false,
-        autoSizeBuffer: 1,
-        buttonDecrement:'-',
-        buttonIncrement:"+",
-        buttonPosition:'around'
-    });
-    $('#btnchangeplus').click(function() {
-        let textSelect = $('#service__select option:selected').text()
-        if(selectList.length == 0){
-            addToCart();
-            getNumber();
-        }else{
-            if(selectList.includes(textSelect)){
-                getNumber();
-            }else {
-                addToCart();
-                getNumber();
-            }
-        }
-
-    })
-});
-let clientName = document.getElementById('Cname').value;
-function addToCart(){
-    let title = $('#service__select option:selected').text()
-    let price = 500000
-    addService(title, price)
-}
-
-function  addService(title, price){
-    selectList.push(title, price);
-    var cartRow = document.createElement('div')
-    cartRow.classList.add('cart-row')
-    cartRow.classList.add('row')
-    var cartItem = document.getElementsByClassName('cart-items')[0]
-    var cartRowContent = `
-        <div class="col-11">
-            <h3 class="service__title">${title}</h3>
-            <p><span class="display__number">1</span><span> x ${price}</span></p>
-            <p><b class="display__total"></b></p>
-        </div>
-        <div class="col-1">
-            <a class="btn__remove" onclick="removeItem()"><i class="fas fa-times fa-lg" style="color: var(--main-color)"></i></i> </a>
-        </div>`
-    cartRow.innerHTML = cartRowContent
-    var hline = document.createElement('hr');
-    cartItem.append(cartRow, hline);
-
-
-
-
-    var cartRow1 = document.createElement('div')
-    cartRow1.classList.add('cart-row')
-    cartRow1.classList.add('row')
-    var cartItem1 = document.getElementsByClassName('cart-items-2')[0]
-    var cartRowContent1 = `
-        <div class="col-12">
-            <h3 class="service__title">${title}</h3>
-            <p style="float: left"><span class="display__number">1</span><span> x ${price}</span></p>
-            <p style="float: right"><b class="display__total"></b></p> 
-        </div>`
-    cartRow1.innerHTML = cartRowContent1
-    var hline1 = document.createElement('hr');
-    cartItem1.append(cartRow1, hline1);
 }
 
 //Get Info and Print on the Step 4

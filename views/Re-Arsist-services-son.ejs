@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="/css/footer.css">
     <script type="text/javascript" src="/js/jquery.js"></script>
     <script type="text/javascript" src="/js/home-son.js"></script>
-
+    <script type="text/javascript" src='https://cdn.jsdelivr.net/g/lodash@4(lodash.min.js+lodash.fp.min.js)'></script>
 </head>
 <body onload="renderListStudent()">
 
@@ -117,8 +117,8 @@
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label class="titttte">Intro</label><br>
-                                    <small>Introduce the service you provide?</small>
-                                    <textarea class="form-control son" id="Intro"></textarea>
+                                    <textarea class="form-control son" name="Intro" id="Intro" placeholder="Introduce the service you provide?"></textarea>
+                                    <div class="error" id="Intro-error"></div>
                                 </div>
                                 <div class="form-group">
                                     <label class="titttte">Location</label>
@@ -342,12 +342,13 @@
 <%- include('layout/footer')-%>
 
 
-
+<script type="text/javascript" src='https://cdn.jsdelivr.net/g/lodash@4(lodash.min.js+lodash.fp.min.js)'></script>
 <script src="/libs/jQuery/jQuery.js"></script>
 <script src="/libs/clockpicker-gh-pages/dist/bootstrap-clockpicker.min.js"></script>
 <script src="/libs/datepicker/datepicker.js"></script>
 <script src="/libs/Number-Input-Spinner-jQuery-Nice-Number/dist/jquery.nice-number.js"></script>
 <script src="/js/Re-Arsist-services-son.js"></script>
+
 <script>
     $('.datepicker').datepicker();
     $('.clockpicker').clockpicker();
@@ -360,8 +361,50 @@
         var Cover = $(this).val().split("\\").pop();
         $(this).siblings(".custom-file-label.lable-cover").addClass("selected").html(Cover);
     });
+</script>
+<script type="text/javascript">
+
+    //     //Preloader set fixed time
+    setTimeout(function () {
+        $(".loader-bg").fadeToggle();
+    },3000);
+
+
+    // When the user scrolls down 10px from the top of the document, slide down the navbar
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
+            document.getElementById("nav-head-s").style.background = "#FFFFFF";
+        } else {
+            document.getElementById("nav-head-s").style.background = "none";
+        }
+    }
+
+
+    <!-- Initialize Swiper -->
+
+    var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 3,
+        direction: getDirection(),
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        on: {
+            resize: function () {
+                swiper.changeDirection(getDirection());
+            }
+        }
+    });
+
+    function getDirection() {
+        var windowWidth = window.innerWidth;
+        var direction = window.innerWidth <= 760 ? 'vertical' : 'horizontal';
+
+        return direction;
+    }
 
 </script>
-
 </body>
 </html>
