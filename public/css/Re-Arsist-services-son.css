@@ -1,50 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
-
-body {
-    font-family: 'Nunito', sans-serif;
-}
-.nemu-ssss{
-    position: fixed;
-    top: 0;
-}
-a{
-    text-decoration: none;
-    color: #333333;
-}
-img{
-    max-width: 100%;
-}
-.nota{
-    color: #171717;
-    text-decoration: none !important;
-    background-color: transparent;
-    opacity: 1;
-}
-.nota:hover{
-    color: #cccccc;
-    list-style: none !important;
-    text-decoration: none !important;
-    opacity: 0.5;
-}
-
-.notamenu{
-    color: #FFFFFF;
-    text-decoration: none !important;
-    background-color: transparent;
-    opacity: 1;
-}
-
-.notamenu:hover{
-    color: #cccccc;
-    list-style: none;
-    text-decoration: none;
-    opacity: 0.5;
-}
-.container-p-s1{
-    text-align: left;
-    font-size: 1.4vw;
-    font-weight: bolder;
-}
 .vbooking__main{
     padding-bottom: 150px;
 }
@@ -98,16 +51,16 @@ img{
 .vbooking__progressbar ul li.active__step:before,
 .vbooking__progressbar ul li.active__step:after
 {
-    background-color: #666;
+    background-color: #ff5c5c;
 
 }
-input.form-control{
+input.form-control.son{
     border: 1px solid white;
     border-bottom: 1px solid  rgba(0,0,0,0.54);
     transition: all 0.5s ease;
 
 }
-select.form-control{
+select.form-control.son{
     border: 1px solid rgba(0,0,0,0.25);
     border-radius: 20px;
     transition: all 0.5s ease;
@@ -120,9 +73,9 @@ select.form-control{
     box-shadow: none;
 }
 
-/*.vbooking__step{*/
-/*    display: none;*/
-/*}*/
+.vbooking__step{
+    display: none;
+}
 input.invalid {
     background-color: #ffdddd;
 }
@@ -145,7 +98,7 @@ h3.service__title{
     border-radius: 20px;;
 }
 .btn-right:hover, .btn-left:hover{
-    background-color: #666;
+    background-color: #ff5c5c!important;
     color: #fff;
 }
 #btn-step-4-next:hover{
@@ -195,13 +148,68 @@ small{
 }
 .step-4__title{
     margin-bottom: 30px;
+    padding-left: 35%;
 }
 
 .box__info{
     border: 1px dashed #ccc;
     background-color: #f5f5f5;
 }
-.error{
-    font-size: 0.85vw;
-    color: red;
+
+.list_student-1{
+    width: 10%!important;
+    font-size: 0.85vw!important;
+}
+.list_student-2{
+    width: 20%!important;
+    font-size: 0.85vw!important;
+}
+.list_student-3{
+    width: 20%!important;
+    font-size: 0.85vw!important;
+}
+.list_student-4{
+    width: 20%!important;
+    font-size: 0.85vw!important;
+}
+.list_student-5{
+    width: 20%!important;
+    font-size: 0.85vw!important;
+}
+.list_student-6{
+    padding-right: 4vw!important;
+    font-size: 0.85vw!important;
+}
+.list_student-0{
+    font-size: 0.85vw!important;
+}
+
+.list_student-a-s4{
+    color: #171717!important;
+    text-decoration: none;
+    /*background-color: transparent;*/
+    opacity: 1;
+}
+
+.list_student-a:hover{
+    color: #171717!important;
+    list-style: none;
+    text-decoration: none;
+}
+.re-checkbox{
+    padding: 1vw 0;
+}
+.re-submit{
+    padding: 1vw 0;
+}
+.step-1-s1{
+    padding-bottom: 1vw;
+    padding-left: 35%;
+}
+.custom-file-label::after{
+    background-color: #ff5c5c!important;
+    color: #FFFFFF!important;
+}
+.sticky-top{
+    /*background-color: #FFFFFF!important;*/
 }

@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Booking</title>
+    <link rel="stylesheet" href="/libs/bootstrap-4.5.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/libs/fontawesome-free-5.14.0-web/css/all.css">
+    <link rel="stylesheet" href="/libs/datepicker/datepicker.css">
+    <link rel="stylesheet" href="/libs/clockpicker-gh-pages/dist/bootstrap-clockpicker.min.css">
+    <link rel="stylesheet" href="/libs/Number-Input-Spinner-jQuery-Nice-Number/dist/jquery.nice-number.min.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/Re-Arsist-services-son.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <script type="text/javascript" src="/js/jquery.js"></script>
+    <script type="text/javascript" src="/js/home-son.js"></script>
+
+</head>
+<body onload="renderListStudent()">
+
+<%- include("navbar-Beauty-Artist-s") %>
+
+<div class="vbooking__header">
+    <div class="container">
+        <hr>
+    </div>
+</div>
+<div class="vbooking__main">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="vbooking__box">
+
+                    <!--  --------------------Progress Bar--------------------------------->
+                    <div class="vbooking__progressbar" id="progressBar">
+                        <ul>
+                            <li class="progress__step active__step" id="progress__step1">Step 1</li>
+                            <li class="progress__step" id="progress__step2">Step 2</li>
+                            <li class="progress__step" id="progress__step3">Step 3</li>
+                            <li class="progress__step" id="progress__step4">Step 4</li>
+                        </ul>
+                        <hr>
+                    </div>
+                    <!-- ------------------------Step 1------------------------------------->
+                    <form action="#" method="post" id="bookForm">
+                        <div class="vbooking__step" id="step-1">
+                            <div class="col-md-12">
+                                <h4 class="step-1-s1">Artisan registration</h4>
+                                <div class="form-group">
+                                    <label class="titttte">Full Name</label>
+                                    <input type="text" name="aName" class="form-control son" id="Cname" placeholder="Example: Nguyễn Văn A">
+                                     <div class="error" id="fullname-error"></div>
+                                </div>
+                                <hr>
+                                <div class="form-group">
+                                    <label class="titttte">Email</label>
+                                    <input type="text" name="Email" class="form-control son" id="Cemail" placeholder="Example: NguyenVanA@gmail.com">
+                                    <small>This email will be your username for login</small>
+                                    <div class="error" id="Email-error"></div>
+                                </div>
+                                <hr>
+                                <div class="form-group">
+                                    <label class="titttte">Phone Number</label>
+                                    <input type="text" name="Phone" class="form-control son" id="Cphone" placeholder="Example: 0906240410">
+                                    <div class="error" id="Phone-error"></div>
+                                </div>
+                                <hr>
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label class="titttte">City</label>
+                                                <select name="City" class="form-control son" id="Ccity">
+                                                    <option value="" disabled selected>Select your city</option>
+                                                    <option value="Hà Nội">Hà Nội</option>
+                                                    <option value="Hồ Chí Minh">Thành Phố Hồ Chí Minh</option>
+                                                </select>
+                                                <div class="error" id="City-error"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label class="titttte">District</label>
+                                                <select name="District" class="form-control son" id="Cdistrict">
+                                                    <option value="" disabled selected>Select your district</option>
+                                                    <option value="Hoàng Mai">Hoàng Mai</option>
+                                                    <option value="Ba Đình">Ba Đình</option>
+                                                    <option value="Thanh Xuân">Thanh Xuân</option>
+                                                    <option value="Hai Bà Trưng">Hai Bà Trưng</option>
+                                                    <option value="Hoàn Kiếm">Hoàn Kiếm</option>
+                                                    <option value="Đống Đa">Đống Đa</option>
+                                                    <option value="Hà Đông">Hà Đông</option>
+                                                    <option value="Tây Hồ">Tây Hồ</option>
+                                                    <option value="Cầu Giấy">Cầu Giấy</option>
+                                                    <option value="Nam Từ Liêm">Nam Từ Liêm</option>
+                                                    <option value="Bắc Từ Liêm">Bắc Từ Liêm</option>
+                                                </select>
+                                                <div class="error" id="District-error"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="form-group">
+                                    <label class="titttte">Address</label>
+                                    <input type="text" name="Address" class="form-control son" id="Address" placeholder="Example: Xã Đàn,Nam Đồng,Đống Đa,Hà Nội">
+                                    <div class="error" id="Address-error"></div>
+                                </div>
+                                <hr>
+
+                            </div>
+                        </div>
+                        <!------------------------------Step 2-------------------------->
+                        <div class="vbooking__step" id="step-2">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label class="titttte">Intro</label><br>
+                                    <small>Introduce the service you provide?</small>
+                                    <textarea class="form-control son" id="Intro"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label class="titttte">Location</label>
+                                    <input type="text" name="aLocation" class="form-control son" id="aLocation" placeholder="Example: 21.0289127,105.7810929,18.66">
+                                </div>
+                                <hr>
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label class="titttte">Avartar</label>
+                                                <div class="custom-file">
+                                                    <label class="custom-file-label" for="customFile">Choose file</label>
+                                                    <input type="file" name="Avartar" class="custom-file-input" id="Avartar">
+                                                    <div class="error" id="Avartar-error"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label class="titttte">Cover</label>
+                                                <div class="custom-file">
+                                                    <label class="custom-file-label lable-cover" for="customFile">Choose file</label>
+                                                    <input type="file" name="Cover" class="custom-file-input input-cover" id="Cover">
+                                                    <div class="error" id="Cover-error"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+                            </div>
+                        </div>
+
+                        <!------------------------------Step 3-------------------------->
+                        <div class="vbooking__step" id="step-3">
+                            <div class="col-md-12">
+                                <h4 class="step-1-s1">Services registration</h4>
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <label class="titttte">Services Name</label>
+                                            <select name="SName"  class="form-control son" id="SName">
+                                                <option value="" disabled selected>select your services</option>
+                                                <option value="Basic">Basic Make Up</option>
+                                                <option value="Wedding">Wedding Make Up</option>
+                                                <option value="Photoshoot">Photoshoot Make Up</option>
+                                                <option value="Bridesmaid">Bridesmaid Make Up</option>
+                                                <option value="Mother or Sister of The Bride">Mother or Sister of The Bride Make Up</option>
+                                                <option value="Engagement"> Engagement Make Up</option>
+                                                <option value="Pre-Wedding">Pre-Wedding Make Up</option>
+                                                <option value="Sweet 17th Birthday">Sweet 17th Birthday Make Up</option>
+                                                <option value="Traditional Wedding">Traditional Wedding Make Up</option>
+                                                <option value="Character,SPFX,Prostethic">Character,SPFX,Prostethic Make Up<</option>
+                                            </select>
+                                            <div class="error" id="SName-error"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <label class="titttte">Describe</label>
+                                            <input type="text" name="SDescribe" class="form-control son" id="SDescribe" placeholder="Tell your clients what to expect from yout service..." required>
+                                            <div class="error" id="SDescribe-error"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <label class="titttte">Price</label><br>
+                                            <input type="number" name="SPrice" min="0" value="0" step="50000" class="form-control son" id="SPrice" required>
+                                            <div class="error" id="SPrice-error"></div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label class="titttte">Promotion</label><br>
+                                            <input type="number" name="SPromo" min="0" max="100" value="0" class="form-control son" id="SPromo" required>
+                                            <div class="error" id="SPromo-error"></div>
+                                        </div>
+
+                                            <div class="col-md-4">
+                                                <label class="titttte">Promotion end time</label>
+                                                <input type="date" name="SWTime" class="form-control son" value="0" id="SWTime" required>
+                                                <div class="error" id="SWTime-error"></div>
+                                            </div>
+                                    </div>
+                                    <hr>
+                                    <div class="form-group" style="padding-top: 2vw">
+                                        <div class="col-md-12 text-center" style="margin-bottom: 20px;">
+                                            <button type="button" ONCLICK="save2()" class="btn btn-danger add_service" id="add-service"><i class="fa fa-plus"></i> Save & Add More Services</button>
+                                        </div>
+                                    </div>
+                                    <div id="list_student">
+                                        <h3> Service list</h3>
+                                        <table id="gird_students"  class="table table-hover">
+
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                                <hr>
+                            </div>
+
+                        <!------------------------------Step 4-------------------------->
+                        <div class="vbooking__step" id="step-4">
+                            <div class="col-md-12">
+                                <h3 class="step-4__title">Artisan registration</h3>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <h3>Artisan Name :</h3>
+                                        <p id="getCName1"></p>
+                                        <h3>Phone Number :</h3>
+                                        <p id="getCPhone1"></p>
+                                        <h3>Email :</h3>
+                                        <p id="getCEmail1"></p>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h3>District :</h3>
+                                        <p id="getDistrict1"></p>
+                                        <h3>City :</h3>
+                                        <p id="getCity1"></p>
+                                        <h3>Address :</h3>
+                                        <p><span id="getAddress1"></span></p>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div id="list_student2">
+                                    <h3 class="step-4__title"> Service list</h3>
+                                    <table id="gird_students2"  class="table table-hover">
+
+                                    </table>
+                                </div>
+                                <div class="cartSum">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="row">
+                                                <div class="col-md-10 text-right">
+                                                    <b>Sub Total</b>
+                                                </div>
+                                                <div class="col-md-2">
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="col-md-12">
+                                            <div class="row">
+                                                <div class="col-md-10 text-right">
+                                                    <b>Grand Total</b>
+                                                </div>
+                                                <div class="col-md-2">
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                    </div>
+                                    <hr>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label>
+                                                <input type="checkbox" name="confirm" value="1">
+                                                I have agreed to HelloBeauty Terms & Conditions
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <button type="button" class="btn btn-left" id="prevBtn" onclick="nextPrev(-1);"><i class="fas fa-chevron-left"></i><span>    Previous</span></button>
+                            <button type="submit" class="btn btn-right" id="nextBtn" onclick="nextPrev(1);getInfoStep1();"><span>Next  </span><i class="fas fa-paper-plane"></i></button>
+                            <div style="clear: both;"></div>
+                        </div>
+
+
+                    </form>
+                </div>
+            </div>
+
+            <!------------------------------Left Box-------------------------->
+            <div class="col-md-4" style="margin-top: 50px;">
+                <div class="vbooking__box">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h5>Overview</h5>
+                            <table class="table">
+                                <tr>
+                                    <td>Subtotal:</td>
+                                    <td><b id="getSubtotal">0</b></td>
+                                </tr>
+                                <tr>
+                                    <td>Grand Total:</td>
+                                    <td><b id="getGrandtotal">0</b></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="col-md-12 box__info">
+                            <p><b>Artisan registration</b></p>
+                            <p>Artisan Name:&nbsp; <span id="getCName"></span></p>
+                            <p>Email:&nbsp;<span id="getCEmail"></span></p>
+                            <p>Phone: &nbsp;<span id="getCPhone"></span></p>
+                            <p>District: &nbsp;<span id="getDistrict"></span></p>
+                             <p>City:&nbsp;<span id="getCity"></span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include('layout/footer')-%>
+
+
+
+<script src="/libs/jQuery/jQuery.js"></script>
+<script src="/libs/clockpicker-gh-pages/dist/bootstrap-clockpicker.min.js"></script>
+<script src="/libs/datepicker/datepicker.js"></script>
+<script src="/libs/Number-Input-Spinner-jQuery-Nice-Number/dist/jquery.nice-number.js"></script>
+<script src="/js/Re-Arsist-services-son.js"></script>
+<script>
+    $('.datepicker').datepicker();
+    $('.clockpicker').clockpicker();
+    // Add the following code if you want the name of the file appear on select
+    $(".custom-file-input").on("change", function() {
+        var Avartar = $(this).val().split("\\").pop();
+        $(this).siblings(".custom-file-label").addClass("selected").html(Avartar);
+    });
+    $(".custom-file-input.input-cover").on("change", function() {
+        var Cover = $(this).val().split("\\").pop();
+        $(this).siblings(".custom-file-label.lable-cover").addClass("selected").html(Cover);
+    });
+
+</script>
+
+</body>
+</html>

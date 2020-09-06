@@ -6,24 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://cdn.jsdelivr.net/lightgallery/1.3.9/css/lightgallery.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="/css-s/Gallery-s.css"/>
-    <link rel="stylesheet" type="text/css" href="/css-s/home-son.css"/>
-    <link rel="stylesheet" type="text/css" href="/css-s/preloader.css"/>
-    <link href="/libs-s/bootstrap/css/bootstrap.css" rel="stylesheet" id="bootstrap-css">
-    <script src="/libs-s/bootstrap/js/bootstrap.js"></script>
-    <script type="text/javascript" src="/js-s/home-son.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/Gallery-s.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/home-son.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/preloader.css"/>
+    <link href="/libs/bootstrap/css/bootstrap.css" rel="stylesheet" id="bootstrap-css">
+    <script src="/libs/bootstrap/js/bootstrap.js"></script>
+    <script type="text/javascript" src="/js/home-son.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="/js-s/Gallery-s.js"></script>
+    <script type="text/javascript" src="/js/Gallery-s.js"></script>
+    <link rel="stylesheet" href="/css/footer.css">
 
 </head>
-
+<body class="home">
 <!--<%- include("Preloader-son") %>-->
-
-<section class="section head-s1">
-    <div class="img-banne-s">
-        <img src="/imgs-s/banner-son.jpg">
-    </div>
-    <nav class="navbar navbar-expand-md navbar-light sticky-top nav-head-s" id="nav-head-s">
+<section class="section  sticky-top">
+    <nav class="navbar navbar-expand-md navbar-light  nav-head-s" id="nav-head-s">
         <div class="container-fluid">
             <div class="img-nav-s">
                 <a class="navbar-branch" href="/">
@@ -46,7 +43,7 @@
                                 FOR CLIENT
                             </button>
                             <div class="dropdown-content">
-                                <a class="dropdown-item" href="#">Beauty Job Bidding</a>
+                                <a class="dropdown-item" href="/artisan-registration-and-service">Beauty Job Artist</a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#">Beauty Outlet</a>
                             </div>
@@ -77,14 +74,20 @@
             </div>
         </div>
     </nav>
+</section>
+<section class="section head-s1">
+    <div class="img-banne-s">
+        <img src="/imgs-s/banner-son.jpg">
+    </div>
+
     <div class="header-promotion">
         <span class="header-promotion-span-s1">Beauty Gallery</span><br>
         <span class="header-promotion-span-s2">Still friends but more beautiful.</span>
     </div>
 </section>
-<body class="home">
 
-<div class="container-fluid" style="margin-top:40px;">
+
+<div class="container-fluid gallery-sss">
     <h2>Products before & after makeup</h2>
     <div class="demo-gallery demo-gallery-s">
         <ul id="lightgallery" class="list-unstyled row">
@@ -246,5 +249,8 @@
         $('#lightgallery').lightGallery();
     });
 </script>
+
+<%- include('layout/footer')-%>
+
 </body>
 </html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Services Registration</title>
+    <link rel="stylesheet" type="text/css" href="/css/home-son.css"/>
+    <script type="text/javascript" src="/js/jquery.js"></script>
+<!--    <script type="text/javascript" src="/js/home-son.js"></script>-->
+    <link href="https://cdn.rawgit.com/mfd/f3d96ec7f0e8f034cc22ea73b3797b59/raw/856f1dbb8d807aabceb80b6d4f94b464df461b3e/gotham.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script type="text/javascript" src="/js/Re-services-son.js"></script>
+    <script type="text/javascript" src="/libs/bootstrap/js/bootstrap.js"></script>
+    <script type="text/javascript" src="/libs/bootstrap/js/validator.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/footer.css">
+</head>
+<body onload="renderListStudent()">
+
+<%- include("navbar-Promotions-s") %>
+
+<section  class="section section-Beauty-Artist">
+    <div class="container-Artisan">
+        <div class="container-h1-s">
+            <h1>Services registration</h1>
+        </div>
+        <div class="container-menu">
+            <div class="col-md-12">
+                <fieldset>
+                    <form action="#" method="post">
+                                                                               <div class="col-md-12">
+                                                                                   <div class="form-group">
+                                                                                       <div class="row">
+                                                                                           <div class="col-md-12">
+                                                                                               <label class="titttte">Services Name</label>
+                                                                                               <select name="SName"  class="form-control" id="SName">
+                                                                                                   <option value="" disabled selected>select your services</option>
+                                                                                                   <option value="Basic">Basic Make Up</option>
+                                                                                                   <option value="Wedding">Wedding Make Up</option>
+                                                                                                   <option value="Photoshoot">Photoshoot Make Up</option>
+                                                                                                   <option value="Bridesmaid">Bridesmaid Make Up</option>
+                                                                                                   <option value="Mother or Sister of The Bride">Mother or Sister of The Bride Make Up</option>
+                                                                                                   <option value="Engagement"> Engagement Make Up</option>
+                                                                                                   <option value="Pre-Wedding">Pre-Wedding Make Up</option>
+                                                                                                   <option value="Sweet 17th Birthday">Sweet 17th Birthday Make Up</option>
+                                                                                                   <option value="Traditional Wedding">Traditional Wedding Make Up</option>
+                                                                                                   <option value="Character,SPFX,Prostethic">Character,SPFX,Prostethic Make Up<</option>
+                                                                                               </select>
+                                                                                               <div class="error" id="SName-error"></div>
+                                                                                           </div>
+                                                                                       </div>
+                                                                                   </div>
+                                                                                   <hr>
+                                                                                   <div class="form-group">
+                                                                                       <div class="row">
+                                                                                           <div class="col-md-12">
+                                                                                               <label class="titttte">Describe</label>
+                                                                                               <input type="text" name="SDescribe" class="form-control" id="SDescribe" required>
+                                                                                               <div class="error" id="SDescribe-error"></div>
+                                                                                           </div>
+                                                                                       </div>
+                                                                                   </div>
+                                                                                   <hr>
+                                                                                   <div class="form-group">
+                                                                                       <div class="row">
+                                                                                           <div class="col-md-12">
+                                                                                               <label class="titttte">Price</label><br>
+                                                                                               <input type="number" name="SPrice" min="0" value="0" step="50000" class="form-control" id="SPrice" required>
+                                                                                               <div class="error" id="SPrice-error"></div>
+                                                                                           </div>
+                                                                                       </div>
+                                                                                   </div>
+                                                                                   <hr>
+                                                                                   <div class="form-group">
+                                                                                       <div class="row">
+                                                                                           <div class="col-md-6">
+                                                                                               <label class="titttte">Promotion</label><br>
+                                                                                               <input type="number" name="SPromo" min="0" max="100" value="0" class="form-control" id="SPromo" required>
+                                                                                               <div class="error" id="SPromo-error"></div>
+                                                                                           </div>
+                                                                                           <div class="col-md-6">
+                                                                                               <label class="titttte">Promotion end time</label>
+                                                                                               <input type="date" name="SWTime" class="form-control" value="0" id="SWTime" required>
+                                                                                               <div class="error" id="SWTime-error"></div>
+                                                                                           </div>
+                                                                                       </div>
+                                                                                       <hr>
+                                                                                       <div class="form-group" style="padding-top: 2vw">
+                                                                                           <div class="col-md-12 text-center" style="margin-bottom: 20px;">
+                                                                                               <button type="button" ONCLICK="save()" class="btn btn-danger add_service" id="add-service"><i class="fa fa-plus"></i> Save & Add More Services</button>
+                                                                                           </div>
+                                                                                       </div>
+                                                                                       <div id="list_student">
+                                                                                           <h3> Service list</h3>
+                                                                                           <table id="gird_students"  class="table table-hover">
+
+                                                                                           </table>
+                                                                                       </div>
+                                                                                   </div>
+                                                                               </div>
+
+                        <div class="row re-checkbox">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label>
+                                        <input id="checkBoxs" type="checkbox" name="checkBoxs" value="1">
+                                        I have agreed to HelloBeauty Terms & Conditions
+                                        <div class="error" id="checkBoxs-error"></div>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="form-group re-submit">
+                            <button type="submit"  onclick="savess()" class="btn btn-danger"> Registration</button>
+                        </div>
+                    </form>
+
+                </fieldset>
+            </div>
+        </div>
+    </div>
+</section>
+
+<%- include('layout/footer')-%>
+
+<script type="text/javascript" src='https://cdn.jsdelivr.net/g/lodash@4(lodash.min.js+lodash.fp.min.js)'></script>
+<script type="text/javascript" src="/js/Re-services-son.js"></script>
+</body>
+</html>

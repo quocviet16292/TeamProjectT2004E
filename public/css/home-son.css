@@ -1203,12 +1203,14 @@ img{
     background-size: cover;
 }
 .container-h1-s{
-    text-align: center;
-    padding: 3vw 0;
+    text-align: center!important;
+    padding: 2vw 2vw;
 
 }
 .container-Artisan{
     background-color: #FFFFFF;
+    width: 900px;
+    margin: 0 auto;
 }
 .span-label{
     font-size: 1.2vw;
@@ -1225,20 +1227,21 @@ img{
     padding-bottom: 1vw;
 }
 .nav-item-s-dropdown{
-    background-color: #FFFFFF!important;
-    color: #ff5c5c!important;
+    background-color: #ff5c5c!important;
+    color: #FFFFFF!important;
 }
 .nav-item-s-dropdown:hover{
-    background-color: #ff5c5c!important;
-    color: #FFFFFF!important;
-}
-.nav-item-s-dropdown-s2{
-    background-color: #ff5c5c!important;
-    color: #FFFFFF!important;
-}
-.nav-item-s-dropdown-s2:hover{
+
     background-color: #FFFFFF!important;
     color: #ff5c5c!important;
+}
+.nav-item-s-dropdown-s2{
+    background-color: #FFFFFF!important;
+    color: #ff5c5c!important;
+}
+.nav-item-s-dropdown-s2:hover{
+    background-color: #ff5c5c!important;
+    color: #FFFFFF!important;
 }
 .nav-item-s-divider{
     background-color: #FFFFFF!important;
@@ -1359,4 +1362,65 @@ img{
 }
 .sbutton.whatsapp {
     background: #00e676;
+}
+.error{
+    color: #ff5c5c;
+    font-size: 0.85vw;
+}
+.titttte{
+    font-size: 1vw;
+    font-weight: bolder;
+}
+.resiarrrrr{
+    background-image: url("../imgs-s/bg2.jpeg");
+}
+.resssssss{
+    background-color: #FFFFFF;
+    /*width: 900px!important;*/
+}
+.list_student-1{
+    width: 10%!important;
+    font-size: 0.85vw!important;
+}
+.list_student-2{
+    width: 20%!important;
+    font-size: 0.85vw!important;
+}
+.list_student-3{
+    width: 20%!important;
+    font-size: 0.85vw!important;
+}
+.list_student-4{
+    width: 20%!important;
+    font-size: 0.85vw!important;
+}
+.list_student-5{
+    width: 20%!important;
+    font-size: 0.85vw!important;
+}
+.list_student-6{
+    padding-right: 4vw!important;
+    font-size: 0.85vw!important;
+}
+.list_student-0{
+    font-size: 0.85vw!important;
+}
+
+.list_student-a-s4{
+    color: #171717!important;
+    text-decoration: none;
+    /*background-color: transparent;*/
+    opacity: 1;
+}
+
+.list_student-a:hover{
+    color: #171717!important;
+    list-style: none;
+    text-decoration: none;
+}
+.re-checkbox{
+    padding: 1vw 0;
+}
+.re-submit{
+    padding: 1vw 0;
 }
