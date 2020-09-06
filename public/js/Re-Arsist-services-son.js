@@ -148,7 +148,7 @@ function showTab(n) {
 
 function nextPrev(n) {
 
-    // if (!valiDateFrom2.noError()) return ;
+    if(n == 1 && !validateForm()) return false;
 
     var x = document.getElementsByClassName("vbooking__step");
     // if (n == 1 && !validateForm() && currentTab < 2) return false;
@@ -161,24 +161,24 @@ function nextPrev(n) {
     showTab(currentTab);
 }
 
-//
-// function validateForm() {
-//     // This function deals with validation of the form fields
-//     var x, y, i, valid = true;
-//     x = document.getElementsByClassName("vbooking__step");
-//     y = x[currentTab].getElementsByTagName("input");
-//     for (i = 0; i < y.length; i++) {
-//         if (y[i].value == "") {
-//             y[i].className += " invalid";
-//             valid = false;
-//         }
-//     }
-//     // If the valid status is true, mark the step as finished and valid:
-//     if (valid) {
-//         document.getElementsByClassName("vbooking__step")[currentTab].className += " finish";
-//     }
-//     return valid; // return the valid status
-// }
+
+function validateForm() {
+    // This function deals with validation of the form fields
+    var x, y, i, valid = true;
+    x = document.getElementsByClassName("vbooking__step");
+    y = x[currentTab].getElementsByTagName("input");
+    for (i = 0; i < y.length; i++) {
+        if (y[i].value == "") {
+            y[i].className += " invalid";
+            valid = false;
+        }
+    }
+    // If the valid status is true, mark the step as finished and valid:
+    if (valid) {
+        document.getElementsByClassName("vbooking__step")[currentTab].className += " finish";
+    }
+    return valid; // return the valid status
+}
 
 
 function fixStepIndicator(n) {
