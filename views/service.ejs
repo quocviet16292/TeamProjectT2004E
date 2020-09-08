@@ -1,110 +1,17 @@
 <!doctype html>
 <html lang="en">
 <head>
-<!--    <meta charset="UTF-8">-->
-<!--    <meta name="viewport"-->
-<!--          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">-->
-<!--    <meta http-equiv="X-UA-Compatible" content="ie=edge">-->
-<!--    <title>Service</title>-->
-
-
-<!--    <script src="https://kit.fontawesome.com/7d186d09cd.js" crossorigin="anonymous"></script>-->
-<!--    <script type="text/javascript" src="/js/jquery.js"></script>-->
-<!--    <script type="text/javascript" src="/js/validator.js"></script>-->
-<!--    <script type="text/javascript" src="/js/home-son.js"></script>-->
-<!--    <link rel="stylesheet" href="/libs/fontawesome-free-5.14.0-web/css/fontawesome.css">-->
-<!--    <link rel="stylesheet" href="/libs/fontawesome-free-5.14.0-web/css/all.css">-->
-<!--    <link rel="stylesheet" href="/css/footer.css">-->
-<!--    <link rel="stylesheet" href="/css/main.css">-->
-<!--        <link rel="stylesheet" type="text/css" href="/css/home-son.css"/>-->
-<!--        <script type="text/javascript" src="/js/home-son.js"></script>-->
-<!--        <link href="https://cdn.rawgit.com/mfd/f3d96ec7f0e8f034cc22ea73b3797b59/raw/856f1dbb8d807aabceb80b6d4f94b464df461b3e/gotham.css" rel="stylesheet">-->
-<!--        <meta name="viewport" content="width=device-width, initial-scale=1"/>-->
-<!--        <script src='https://kit.fontawesome.com/a076d05399.js'></script>-->
-<!--        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
-<!--        <script type="text/javascript" src="/js/jquery.js"></script>-->
-<!--        <link rel="stylesheet" type="text/css" href="/libs/bootstrap/css/bootstrap.css">-->
-<!--        <script type="text/javascript" src="/libs/bootstrap/js/bootstrap.js"></script>-->
-<!--    <link rel="stylesheet" href="/css/N_artist.css">-->
-        <meta charset="UTF-8">
         <title>Services</title>
-        <link rel="stylesheet" type="text/css" href="/css/home-son.css"/>
-        <link rel="stylesheet" href="/css/footer.css">
-        <link rel="stylesheet" href="/css/main.css">
-        <script type="text/javascript" src="/js/jquery.js"></script>
-        <script type="text/javascript" src="/js/validator.js"></script>
-        <script type="text/javascript" src="/js/home-son.js"></script>
-        <link href="https://cdn.rawgit.com/mfd/f3d96ec7f0e8f034cc22ea73b3797b59/raw/856f1dbb8d807aabceb80b6d4f94b464df461b3e/gotham.css" rel="stylesheet">
-        <meta name="viewport" content="width=device-width, initial-scale=1"/>
-        <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <script type="text/javascript" src="/js/jquery.js"></script>
-
-        <link rel="stylesheet" type="text/css" href="/libs/bootstrap/css/bootstrap.css">
-        <script type="text/javascript" src="/libs/bootstrap/js/bootstrap.js"></script>
-        <link rel="stylesheet" href="/libs/bootstrap-4.5.2-dist/css/bootstrap.css">
+        <%- include("layout/head-Aritst-son") -%>
         <link rel="stylesheet" href="/css/N_artist.css">
-
 
 </head>
 <body>
 
-<section class="section sticky-top">
-    <nav class="navbar navbar-expand-md navbar-light  nav-head-s" id="nav-head-s">
-        <div class="container-fluid">
-            <div class="img-nav-s">
-                <a class="navbar-branch" href="/">
-                    <img class="img-fluid img-nav-s" src="/imgs-s/logo-salmon.png">
-                </a>
-            </div>
-            <form class="form-group form-group-nav-pro" action="/search" method="get">
-                <input class="form-control form-group-nav-pro-input" type="text" name="keyword" placeholder="Type beautician's name or service category"/>
-                <span class="form-group-nav-pro-icon"><i class="fa fa-search search-buton-s1"></i></span>
-            </form>
-            <button class="navbar-toggler" type="button" data-toggle="collapse"
-                    data-target="#navbarResponsive">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item nav-item-s1">
-                        <div class="dropdown">
-                            <button type="button" class="btn btn-outline-danger dropdown-toggle btn-nav-s1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                FOR CLIENT
-                            </button>
-                            <div class="dropdown-content">
-                                <a class="dropdown-item" href="/artisan-registration-and-service">Beauty Job Artist</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Beauty Outlet</a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="nav-item nav-item-s">
-                        <div class="dropdown">
-                            <button type="button" class="btn btn-outline-light dropdown-toggle btn-nav-s2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                PARTNER WITH US
-                            </button>
-                            <div class="dropdown-content">
-                                <a class="dropdown-item" href="#">Beauty Artists</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Beauty Outlets</a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="nav-item nav-item-s">
-                        <a href="#" class="notamenu notamenus"><i style="color: #ff5c5c" class="fa">&#xf290;</i></a>
-                    </li>
-                    <li class="nav-item nav-item-s">
-                        <button class="btn btn-outline-light btn-nav-s2" data-toggle="modal" data-target="#myModal">Register</button>
-                    </li>
-                    <li class="nav-item nav-item-s">
-                        <button class="btn btn-outline-light btn-nav-s2" data-toggle="modal" data-target="#myModallogin">Login</button>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+<section class="section">
+    <%- include("layout/navbar-Promotions-s") -%>
 </section>
+
 <section class="section">
     <div class="container">
         <div class="N_cover" style="background-image: url(/imgs/img/a07b09bda52a8defd6aa7f611cfa9937-0-460.jpeg)">
@@ -643,7 +550,7 @@
         </span>
         </div>
     </div>
-    <%- include('layout/footer')-%>
+
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
@@ -783,5 +690,7 @@
     }
 
 </script>
+
+<%- include('layout/footer')-%>
 </body>
 </html>

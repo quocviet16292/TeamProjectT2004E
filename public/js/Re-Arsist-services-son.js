@@ -149,6 +149,7 @@ function showTab(n) {
 function nextPrev(n) {
 
     if(n == 1 && !validateForm()) return false;
+    // if(n == 1 && !savess()) return false;
 
     var x = document.getElementsByClassName("vbooking__step");
     // if (n == 1 && !validateForm() && currentTab < 2) return false;
