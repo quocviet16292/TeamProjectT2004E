@@ -10,34 +10,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a8ceb5b1-59e0-4696-ad49-96b52bef462f" name="Default Changelist" comment="Viet">
-      <change afterPath="$PROJECT_DIR$/public/css/blog.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/blog.ejs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/success.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/BeautyArtist.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/BeautyArtist.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/ftlink.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/ftlink.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/home-son.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/home-son.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/layout/navbar-promotuons-s.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/layout/navbar-promotuons-s.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/home-son.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/home-son.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/serviceCart.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/serviceCart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/artistbeauty.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/artistbeauty.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/book.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/book.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/header-son.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/layout/header-son.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/home-son.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/home-son.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/howtobook.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/howtobook.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/layout/footer.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/layout/footer.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/layout/navbar-Promotions-s.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/layout/navbar-Promotions-s.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/listyourbusiness.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/listyourbusiness.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/paymentandcancellation.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/paymentandcancellation.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/privacyPolicy.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/privacyPolicy.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/qlsv.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/service.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/service.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/termconditions.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/termconditions.ejs" afterDir="false" />
-    </list>
+    <list default="true" id="a8ceb5b1-59e0-4696-ad49-96b52bef462f" name="Default Changelist" comment="Viet" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -83,16 +56,16 @@
     <option name="SHOW_DETAILS_PANEL" value="false" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\TeamProjectT2004E\views\layout" />
-      <recent name="D:\TeamProjectT2004E\public\css\layout" />
-      <recent name="D:\TeamProjectT2004E\public\js" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\TeamProjectT2004E\public\js" />
       <recent name="D:\TeamProjectT2004E\public\css" />
       <recent name="D:\TeamProjectT2004E\public\imgs" />
       <recent name="D:\TeamProjectT2004E\public" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\TeamProjectT2004E\views\layout" />
+      <recent name="D:\TeamProjectT2004E\public\css\layout" />
+      <recent name="D:\TeamProjectT2004E\public\js" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -247,10 +220,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="276" y="56" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1598621858946" />
-    <state x="360" y="142" key="Vcs.Push.Dialog.v2" timestamp="1599398440960">
+    <state x="360" y="142" key="Vcs.Push.Dialog.v2" timestamp="1599564920707">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="360" y="142" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1599398440960" />
+    <state x="360" y="142" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1599564920707" />
     <state x="628" y="63" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1598631983978">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
