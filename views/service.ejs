@@ -642,103 +642,121 @@
              For appointment please reserve H-2
         </span>
         </div>
+            <div class="geolocation__map">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="N_Terms">
+                                <div class="N_Terms_Name">
+                                    Find in the Map
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div id="mapholder"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
     </div>
-    <%- include('layout/footer')-%>
-
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script>
-
-        $(document).ready(function(){
-            $(".column").slice(0, 4).show();
-            $("#ShowMoreIMG").on("click", function(e){
-                e.preventDefault();
-                $(".column:hidden").slice(0, 4).slideDown();
-                if($(".column:hidden").length == 0) {
-                    $("#ShowMoreIMG").hide();
-                }
-            });
-
-        })
-
-        $(document).ready(function(){
-            $(".N_Review_comment").slice(0, 4).show();
-            $("#loadLess").hide()
-            $("#loadMore").on("click", function(e){
-                e.preventDefault();
-                $(".N_Review_comment:hidden").slice(0, 4).slideDown();
-
-                if($(".N_Review_comment:hidden").length == 0) {
-                    $("#loadLess").show();
-                    $("#loadMore").hide();
-                }
-            });
-            $("#loadLess").on("click", function(e){
-                e.preventDefault();
-                $(".N_Review_comment:visible").slice(-4).slideUp();
-                if($(".N_Review_comment:hidden").length <= 4) {
-                    $("#loadLess").hide();
-                    $("#loadMore").show();
-                }
-            });
-
-        })
-
-        function openModal() {
-            document.getElementById("myModal").style.display = "block";
-        }
-
-        function closeModal() {
-            document.getElementById("myModal").style.display = "none";
-
-
-        }
-        var modal = document.getElementById("myModal");
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
-        var slideIndex = 1;
-        showSlides(slideIndex);
-
-        function plusSlides(n) {
-            showSlides(slideIndex += n);
-        }
-
-        function currentSlide(n) {
-            showSlides(slideIndex = n);
-        }
-
-        function showSlides(n) {
-            var i;
-            var slides = document.getElementsByClassName("mySlides");
-            var dots = document.getElementsByClassName("demo");
-            var captionText = document.getElementById("caption");
-            if (n > slides.length) {slideIndex = 1}
-            if (n < 1) {slideIndex = slides.length}
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-            }
-            slides[slideIndex-1].style.display = "block";
-            dots[slideIndex-1].className += " active";
-            captionText.innerHTML = dots[slideIndex-1].alt;
-        }
-        function calcRate(r) {
-            const f = ~~r,//Tương tự Math.floor(r)
-                id = 'star' + f + (r % f ? 'half' : '')
-            id && (document.getElementById(id).checked = !0)
-        }
-        $(document).ready(function(){
-            var sudoSlider = $(".modal-content").sudoSlider({
-                // Autoheight is on per default.
-            });
-        });
-    </script>
+    </div>
 </section>
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script>
+
+    $(document).ready(function(){
+        $(".column").slice(0, 4).show();
+        $("#ShowMoreIMG").on("click", function(e){
+            e.preventDefault();
+            $(".column:hidden").slice(0, 4).slideDown();
+            if($(".column:hidden").length == 0) {
+                $("#ShowMoreIMG").hide();
+            }
+        });
+
+    })
+
+    $(document).ready(function(){
+        $(".N_Review_comment").slice(0, 4).show();
+        $("#loadLess").hide()
+        $("#loadMore").on("click", function(e){
+            e.preventDefault();
+            $(".N_Review_comment:hidden").slice(0, 4).slideDown();
+
+            if($(".N_Review_comment:hidden").length == 0) {
+                $("#loadLess").show();
+                $("#loadMore").hide();
+            }
+        });
+        $("#loadLess").on("click", function(e){
+            e.preventDefault();
+            $(".N_Review_comment:visible").slice(-4).slideUp();
+            if($(".N_Review_comment:hidden").length <= 4) {
+                $("#loadLess").hide();
+                $("#loadMore").show();
+            }
+        });
+
+    })
+
+    function openModal() {
+        document.getElementById("myModal").style.display = "block";
+    }
+
+    function closeModal() {
+        document.getElementById("myModal").style.display = "none";
+
+
+    }
+    var modal = document.getElementById("myModal");
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("demo");
+        var captionText = document.getElementById("caption");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+        captionText.innerHTML = dots[slideIndex-1].alt;
+    }
+    function calcRate(r) {
+        const f = ~~r,//Tương tự Math.floor(r)
+            id = 'star' + f + (r % f ? 'half' : '')
+        id && (document.getElementById(id).checked = !0)
+    }
+    $(document).ready(function(){
+        var sudoSlider = $(".modal-content").sudoSlider({
+            // Autoheight is on per default.
+        });
+    });
+</script>
+
 <script type="text/javascript">
 
     //     //Preloader set fixed time
@@ -783,5 +801,64 @@
     }
 
 </script>
+
+
+
+<!--Geolocation API-->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCHCZ1jCe9H5p88Cv0-IOu83mSdeggqoNw"></script>
+<script>
+    function getLocation()
+    {
+        if (navigator.geolocation)
+        {
+            navigator.geolocation.getCurrentPosition(showPosition,showError);
+        }
+        else{x.innerHTML="Geolocation is not supported by this browser.";}
+    }
+
+    function showPosition(position)
+    {
+
+        //Add the latitude and longtitude, đang để tự động định vị vị trí của người dùng
+        var lat=position.coords.latitude;
+        var lon=position.coords.longitude;
+        var latlon=new google.maps.LatLng(lat, lon)
+        var mapholder=document.getElementById('mapholder')
+        mapholder.style.height='400px';
+        mapholder.style.width='100%';
+
+        var myOptions={
+            center:latlon,zoom:14,
+            mapTypeId:google.maps.MapTypeId.ROADMAP,
+            mapTypeControl:false,
+            navigationControlOptions:{style:google.maps.NavigationControlStyle.SMALL}
+        };
+        var map=new google.maps.Map(document.getElementById("mapholder"),myOptions);
+        var marker=new google.maps.Marker({position:latlon,map:map,title:"Artist is here!"});
+    }
+
+    function showError(error)
+    {
+        switch(error.code)
+        {
+            case error.PERMISSION_DENIED:
+                x.innerHTML="User denied the request for Geolocation."
+                break;
+            case error.POSITION_UNAVAILABLE:
+                x.innerHTML="Location information is unavailable."
+                break;
+            case error.TIMEOUT:
+                x.innerHTML="The request to get user location timed out."
+                break;
+            case error.UNKNOWN_ERROR:
+                x.innerHTML="An unknown error occurred."
+                break;
+        }
+    }
+    getLocation();
+</script>
+
+
+<%- include('layout/footer')-%>
 </body>
 </html>

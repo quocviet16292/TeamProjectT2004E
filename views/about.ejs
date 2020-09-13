@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>How to Book</title>
+    <link rel="stylesheet" href="/libs/bootstrap-4.5.2-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/libs/fontawesome-free-5.14.0-web/css/fontawesome.css">
+    <link rel="stylesheet" href="/libs/fontawesome-free-5.14.0-web/css/all.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/ftlink.css"> <!--    Only for Footer Link-->
+    <link rel="stylesheet" type="text/css" href="/css/home-son.css"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/aboutus.css">
+
+</head>
+<body>
+    <div class="about__title">
+        <span>A</span>
+        <span>B</span>
+        <span>O</span>
+        <span>U</span>
+        <span>T</span>
+        &nbsp;
+        &nbsp;
+        <span>U</span>
+        <span>S</span>
+        <p>SCROLL DOWN FOR MORE INFORMATION</p>
+    </div>
+    <section></section>
+    <div class=" about__content">
+        <div class="container">
+            <p class="mini_title"><a href="/"> HELLO BEAUTY</a></p>
+            <h1>ABOUT US</h1>
+            <hr>
+            <div class="about__content__div">
+                <div class="row">
+                    <div class="col-md-5 about__content__title" data-aos="fade-right" data-aos-delay="200" data-aos-duration="1000">PRESENTATION</div>
+                    <div style="background: url('/imgs/aboutus/2.jpg'); background-size: cover" class="col-md-7 about__content__img" data-aos="fade-left" data-aos-delay="200" data-aos-duration="1000">
+                        <div class="img__bottom" data-aos="fade-right" data-aos-duration="1000">
+                            <h3>Lorem ipsum</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                                magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="about__content__div">
+                <div class="row">
+                    <div class="col-md-7 about__content__img" style="background: url('/imgs/aboutus/1.jpg'); background-size: cover" data-aos="fade-right" data-aos-delay="200" data-aos-duration="1000">
+                        <div class="img__bottom--right" data-aos="fade-left" data-aos-duration="1000">
+                            <h3>Lorem ipsum</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                                magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-5 about__content__title" style="text-align: right"  data-aos="fade-left" data-aos-delay="200" data-aos-duration="1000">WHY US</div>
+                </div>
+            </div>
+
+            <hr>
+
+
+            <div class="about__content__div">
+                <div class="row">
+                    <div class="col-md-5 about__content__title" data-aos="fade-right" data-aos-delay="200" data-aos-duration="1000">VISION</div>
+                    <div class="col-md-7 about__content__img" style="background: url('/imgs/aboutus/3.jpg'); background-size: cover" data-aos="fade-left" data-aos-delay="200" data-aos-duration="1000">
+                        <div class="img__bottom" data-aos="fade-right" data-aos-duration="1000">
+                            <h3>Lorem ipsum</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                                magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <%- include ('layout/footer'); -%>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    var section = document.querySelector("section");
+    window.addEventListener('scroll',function (){
+        var value = window.scrollY;
+        section.style.clipPath = "circle("+value+"px at center)"
+    })
+
+    AOS.init();
+</script>
+</body>
+</html>
