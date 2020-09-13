@@ -1,0 +1,33 @@
+.salon-nav-s1{
+    width: 100%;
+}
+.salon-nav-s2{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+    /*padding: 2vw 0;*/
+    /*border: 1px solid #171717;*/
+    /*padding: 0!important;*/
+}
+/*.salon-nav-s2-1{*/
+/*    width: 50%;*/
+/*    *border: 1px solid #171717;*/
+/*    height: 20vw;*/
+/*}*/
+.img-fluid{
+    background-size: cover!important;
+}
+/*.salon-nav-s1{*/
+/*    padding: 0!important;*/
+/*    height: 20vw;*/
+/*}*/
+/*.salon-nav-s2-2{*/
+/*    height: 20vw;*/
+/*}*/
+/*.salon-nav-s3-1{*/
+/*    height: 10vw;*/
+/*}*/
+.section-salon-2{
+    padding: 2vw 0;
+}

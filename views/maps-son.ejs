@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Map Aritst</title>
+    <%- include("layout/head-Aritst-son") -%>
+    <link rel="stylesheet" href="/css/map-son.css"/>
+</head>
+
+<body>
+
+<%- include("layout/navbar-Beauty-Artist-s") %>
+
+<section class="section">
+    <div class="container">
+        <h1 class="h1-map">Employee System</h1>
+        <h2 class="h2-map">City:Hà Nội</h2>
+    </div>
+</section>
+<section class="section">
+    <div class="container">
+        <div id="map"></div>
+    </div>
+</section>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript">
+    // Map
+    var uluru = {lat: 21.0288, lng: 105.7795};
+    var coord = navigator.geolocation.getCurrentPosition(getLocation);
+    function getLocation(position) {
+        uluru = {
+            lat: position.coords.latitude,
+            lng: position.coords.longitude
+        }
+        initMap();
+    }
+    function initMap() {
+        // The map, centered at Uluru
+        var map = new google.maps.Map(
+            document.getElementById('map'), {zoom: 24, center: uluru});
+        // The marker, positioned at Uluru
+        var marker = new google.maps.Marker({position: uluru, map: map,
+            label:"Đại học FPT Hà Nội"});
+    }
+</script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCaj0mHlR-keu-9hsR6d-gB0L9BclG04rk&callback=initMap">
+</script>
+
+<%- include('layout/footer')-%>
+
+</body>
+</html>

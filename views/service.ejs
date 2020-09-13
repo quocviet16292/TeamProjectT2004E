@@ -1,110 +1,17 @@
 <!doctype html>
 <html lang="en">
 <head>
-<!--    <meta charset="UTF-8">-->
-<!--    <meta name="viewport"-->
-<!--          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">-->
-<!--    <meta http-equiv="X-UA-Compatible" content="ie=edge">-->
-<!--    <title>Service</title>-->
-
-
-<!--    <script src="https://kit.fontawesome.com/7d186d09cd.js" crossorigin="anonymous"></script>-->
-<!--    <script type="text/javascript" src="/js/jquery.js"></script>-->
-<!--    <script type="text/javascript" src="/js/validator.js"></script>-->
-<!--    <script type="text/javascript" src="/js/home-son.js"></script>-->
-<!--    <link rel="stylesheet" href="/libs/fontawesome-free-5.14.0-web/css/fontawesome.css">-->
-<!--    <link rel="stylesheet" href="/libs/fontawesome-free-5.14.0-web/css/all.css">-->
-<!--    <link rel="stylesheet" href="/css/footer.css">-->
-<!--    <link rel="stylesheet" href="/css/main.css">-->
-<!--        <link rel="stylesheet" type="text/css" href="/css/home-son.css"/>-->
-<!--        <script type="text/javascript" src="/js/home-son.js"></script>-->
-<!--        <link href="https://cdn.rawgit.com/mfd/f3d96ec7f0e8f034cc22ea73b3797b59/raw/856f1dbb8d807aabceb80b6d4f94b464df461b3e/gotham.css" rel="stylesheet">-->
-<!--        <meta name="viewport" content="width=device-width, initial-scale=1"/>-->
-<!--        <script src='https://kit.fontawesome.com/a076d05399.js'></script>-->
-<!--        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
-<!--        <script type="text/javascript" src="/js/jquery.js"></script>-->
-<!--        <link rel="stylesheet" type="text/css" href="/libs/bootstrap/css/bootstrap.css">-->
-<!--        <script type="text/javascript" src="/libs/bootstrap/js/bootstrap.js"></script>-->
-<!--    <link rel="stylesheet" href="/css/N_artist.css">-->
-        <meta charset="UTF-8">
         <title>Services</title>
-        <link rel="stylesheet" type="text/css" href="/css/home-son.css"/>
-        <link rel="stylesheet" href="/css/footer.css">
-        <link rel="stylesheet" href="/css/main.css">
-        <script type="text/javascript" src="/js/jquery.js"></script>
-        <script type="text/javascript" src="/js/validator.js"></script>
-        <script type="text/javascript" src="/js/home-son.js"></script>
-        <link href="https://cdn.rawgit.com/mfd/f3d96ec7f0e8f034cc22ea73b3797b59/raw/856f1dbb8d807aabceb80b6d4f94b464df461b3e/gotham.css" rel="stylesheet">
-        <meta name="viewport" content="width=device-width, initial-scale=1"/>
-        <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <script type="text/javascript" src="/js/jquery.js"></script>
-
-        <link rel="stylesheet" type="text/css" href="/libs/bootstrap/css/bootstrap.css">
-        <script type="text/javascript" src="/libs/bootstrap/js/bootstrap.js"></script>
-        <link rel="stylesheet" href="/libs/bootstrap-4.5.2-dist/css/bootstrap.css">
+        <%- include("layout/head-Aritst-son") -%>
         <link rel="stylesheet" href="/css/N_artist.css">
-
 
 </head>
 <body>
 
-<section class="section sticky-top">
-    <nav class="navbar navbar-expand-md navbar-light  nav-head-s" id="nav-head-s">
-        <div class="container-fluid">
-            <div class="img-nav-s">
-                <a class="navbar-branch" href="/">
-                    <img class="img-fluid img-nav-s" src="/imgs-s/logo-salmon.png">
-                </a>
-            </div>
-            <form class="form-group form-group-nav-pro" action="/search" method="get">
-                <input class="form-control form-group-nav-pro-input" type="text" name="keyword" placeholder="Type beautician's name or service category"/>
-                <span class="form-group-nav-pro-icon"><i class="fa fa-search search-buton-s1"></i></span>
-            </form>
-            <button class="navbar-toggler" type="button" data-toggle="collapse"
-                    data-target="#navbarResponsive">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item nav-item-s1">
-                        <div class="dropdown">
-                            <button type="button" class="btn btn-outline-danger dropdown-toggle btn-nav-s1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                FOR CLIENT
-                            </button>
-                            <div class="dropdown-content">
-                                <a class="dropdown-item" href="/artisan-registration-and-service">Beauty Job Artist</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Beauty Outlet</a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="nav-item nav-item-s">
-                        <div class="dropdown">
-                            <button type="button" class="btn btn-outline-light dropdown-toggle btn-nav-s2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                PARTNER WITH US
-                            </button>
-                            <div class="dropdown-content">
-                                <a class="dropdown-item" href="#">Beauty Artists</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Beauty Outlets</a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="nav-item nav-item-s">
-                        <a href="#" class="notamenu notamenus"><i style="color: #ff5c5c" class="fa">&#xf290;</i></a>
-                    </li>
-                    <li class="nav-item nav-item-s">
-                        <button class="btn btn-outline-light btn-nav-s2" data-toggle="modal" data-target="#myModal">Register</button>
-                    </li>
-                    <li class="nav-item nav-item-s">
-                        <button class="btn btn-outline-light btn-nav-s2" data-toggle="modal" data-target="#myModallogin">Login</button>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+<section class="section">
+    <%- include("layout/navbar-Promotions-s") -%>
 </section>
+
 <section class="section">
     <div class="container">
         <div class="N_cover" style="background-image: url(/imgs/img/a07b09bda52a8defd6aa7f611cfa9937-0-460.jpeg)">
@@ -642,121 +549,103 @@
              For appointment please reserve H-2
         </span>
         </div>
-            <div class="geolocation__map">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="N_Terms">
-                                <div class="N_Terms_Name">
-                                    Find in the Map
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div id="mapholder"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
     </div>
-    </div>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script>
+
+        $(document).ready(function(){
+            $(".column").slice(0, 4).show();
+            $("#ShowMoreIMG").on("click", function(e){
+                e.preventDefault();
+                $(".column:hidden").slice(0, 4).slideDown();
+                if($(".column:hidden").length == 0) {
+                    $("#ShowMoreIMG").hide();
+                }
+            });
+
+        })
+
+        $(document).ready(function(){
+            $(".N_Review_comment").slice(0, 4).show();
+            $("#loadLess").hide()
+            $("#loadMore").on("click", function(e){
+                e.preventDefault();
+                $(".N_Review_comment:hidden").slice(0, 4).slideDown();
+
+                if($(".N_Review_comment:hidden").length == 0) {
+                    $("#loadLess").show();
+                    $("#loadMore").hide();
+                }
+            });
+            $("#loadLess").on("click", function(e){
+                e.preventDefault();
+                $(".N_Review_comment:visible").slice(-4).slideUp();
+                if($(".N_Review_comment:hidden").length <= 4) {
+                    $("#loadLess").hide();
+                    $("#loadMore").show();
+                }
+            });
+
+        })
+
+        function openModal() {
+            document.getElementById("myModal").style.display = "block";
+        }
+
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+
+
+        }
+        var modal = document.getElementById("myModal");
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("demo");
+            var captionText = document.getElementById("caption");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+            captionText.innerHTML = dots[slideIndex-1].alt;
+        }
+        function calcRate(r) {
+            const f = ~~r,//Tương tự Math.floor(r)
+                id = 'star' + f + (r % f ? 'half' : '')
+            id && (document.getElementById(id).checked = !0)
+        }
+        $(document).ready(function(){
+            var sudoSlider = $(".modal-content").sudoSlider({
+                // Autoheight is on per default.
+            });
+        });
+    </script>
 </section>
-
-
-
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script>
-
-    $(document).ready(function(){
-        $(".column").slice(0, 4).show();
-        $("#ShowMoreIMG").on("click", function(e){
-            e.preventDefault();
-            $(".column:hidden").slice(0, 4).slideDown();
-            if($(".column:hidden").length == 0) {
-                $("#ShowMoreIMG").hide();
-            }
-        });
-
-    })
-
-    $(document).ready(function(){
-        $(".N_Review_comment").slice(0, 4).show();
-        $("#loadLess").hide()
-        $("#loadMore").on("click", function(e){
-            e.preventDefault();
-            $(".N_Review_comment:hidden").slice(0, 4).slideDown();
-
-            if($(".N_Review_comment:hidden").length == 0) {
-                $("#loadLess").show();
-                $("#loadMore").hide();
-            }
-        });
-        $("#loadLess").on("click", function(e){
-            e.preventDefault();
-            $(".N_Review_comment:visible").slice(-4).slideUp();
-            if($(".N_Review_comment:hidden").length <= 4) {
-                $("#loadLess").hide();
-                $("#loadMore").show();
-            }
-        });
-
-    })
-
-    function openModal() {
-        document.getElementById("myModal").style.display = "block";
-    }
-
-    function closeModal() {
-        document.getElementById("myModal").style.display = "none";
-
-
-    }
-    var modal = document.getElementById("myModal");
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-    }
-    var slideIndex = 1;
-    showSlides(slideIndex);
-
-    function plusSlides(n) {
-        showSlides(slideIndex += n);
-    }
-
-    function currentSlide(n) {
-        showSlides(slideIndex = n);
-    }
-
-    function showSlides(n) {
-        var i;
-        var slides = document.getElementsByClassName("mySlides");
-        var dots = document.getElementsByClassName("demo");
-        var captionText = document.getElementById("caption");
-        if (n > slides.length) {slideIndex = 1}
-        if (n < 1) {slideIndex = slides.length}
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-        for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex-1].style.display = "block";
-        dots[slideIndex-1].className += " active";
-        captionText.innerHTML = dots[slideIndex-1].alt;
-    }
-    function calcRate(r) {
-        const f = ~~r,//Tương tự Math.floor(r)
-            id = 'star' + f + (r % f ? 'half' : '')
-        id && (document.getElementById(id).checked = !0)
-    }
-    $(document).ready(function(){
-        var sudoSlider = $(".modal-content").sudoSlider({
-            // Autoheight is on per default.
-        });
-    });
-</script>
-
 <script type="text/javascript">
 
     //     //Preloader set fixed time
@@ -801,63 +690,6 @@
     }
 
 </script>
-
-
-
-<!--Geolocation API-->
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCHCZ1jCe9H5p88Cv0-IOu83mSdeggqoNw"></script>
-<script>
-    function getLocation()
-    {
-        if (navigator.geolocation)
-        {
-            navigator.geolocation.getCurrentPosition(showPosition,showError);
-        }
-        else{x.innerHTML="Geolocation is not supported by this browser.";}
-    }
-
-    function showPosition(position)
-    {
-
-        //Add the latitude and longtitude, đang để tự động định vị vị trí của người dùng
-        var lat=position.coords.latitude;
-        var lon=position.coords.longitude;
-        var latlon=new google.maps.LatLng(lat, lon)
-        var mapholder=document.getElementById('mapholder')
-        mapholder.style.height='400px';
-        mapholder.style.width='100%';
-
-        var myOptions={
-            center:latlon,zoom:14,
-            mapTypeId:google.maps.MapTypeId.ROADMAP,
-            mapTypeControl:false,
-            navigationControlOptions:{style:google.maps.NavigationControlStyle.SMALL}
-        };
-        var map=new google.maps.Map(document.getElementById("mapholder"),myOptions);
-        var marker=new google.maps.Marker({position:latlon,map:map,title:"Artist is here!"});
-    }
-
-    function showError(error)
-    {
-        switch(error.code)
-        {
-            case error.PERMISSION_DENIED:
-                x.innerHTML="User denied the request for Geolocation."
-                break;
-            case error.POSITION_UNAVAILABLE:
-                x.innerHTML="Location information is unavailable."
-                break;
-            case error.TIMEOUT:
-                x.innerHTML="The request to get user location timed out."
-                break;
-            case error.UNKNOWN_ERROR:
-                x.innerHTML="An unknown error occurred."
-                break;
-        }
-    }
-    getLocation();
-</script>
-
 
 <%- include('layout/footer')-%>
 </body>

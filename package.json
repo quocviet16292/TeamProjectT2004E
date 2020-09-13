@@ -16,12 +16,15 @@
   "author": "Team T2004E - FPT Aptech",
   "license": "ISC",
   "dependencies": {
-    "aos": "^2.3.4",
+    "@fooloomanzoo/datetime-input": "^3.0.4",
     "body-parser": "^1.19.0",
+    "date-fns": "^2.16.1",
+    "dayjs": "^1.8.35",
     "ejs": "^3.1.5",
     "express": "^4.17.1",
     "formidable": "^1.2.2",
     "lodash": "^4.17.20",
+    "moment": "^2.27.0",
     "mssql": "^6.2.1",
     "owl.carousel": "^2.3.4",
     "swiper": "^6.2.0"
