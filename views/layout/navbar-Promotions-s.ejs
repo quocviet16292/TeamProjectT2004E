@@ -1,16 +1,18 @@
 
-<section class="section sticky-top-s">
-    <nav class="navbar navbar-expand-md navbar-light  nav-head-s" id="nav-head-s">
+<section class="section sticky-top-s ">
+    <nav class="navbar navbar-expand-md navbar-light nav-head-s" id="nav-head-s">
         <div class="container-fluid">
             <div class="img-nav-s">
                 <a class="navbar-branch" href="/">
                     <img class="img-fluid img-nav-s" src="/imgs-s/logo-salmon.png">
                 </a>
             </div>
-            <form class="form-group form-group-nav-pro" action="/search" method="get">
-                <input class="form-control form-group-nav-pro-input" type="text" name="keyword" placeholder="Type beautician's name or service category"/>
-                <span class="form-group-nav-pro-icon"><i class="fa fa-search search-buton-s1"></i></span>
-            </form>
+            <div id="nav-pro" class="nav-from">
+                <form class="form-group form-group-nav-pro" action="/Promotion/search-2" method="get" >
+                    <input class="form-control form-group-nav-pro-input" type="text" name="keyword" placeholder="Type beautician's name or service category"/>
+                    <span class="form-group-nav-pro-icon"><i class="fa fa-search search-buton-s1"></i></span>
+                </form>
+            </div>
             <button class="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarResponsive">
                 <span class="navbar-toggler-icon"></span>
@@ -20,24 +22,24 @@
                     <li class="nav-item nav-item-s1">
                         <div class="dropdown">
                             <button type="button" class="btn btn-outline-danger dropdown-toggle btn-nav-s1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                FOR CLIENT
+                                For Client
                             </button>
                             <div class="dropdown-content">
-                                <a class="dropdown-item" href="/artisan-registration-and-service">Beauty Job Artist</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Beauty Outlet</a>
+                                <a class="dropdown-item nav-item-s-dropdown-s2" href="/artisan-registration-and-service">Beauty Job Artist</a>
+                                <div class="dropdown-divider nav-item-s-divider"></div>
+                                <a class="dropdown-item nav-item-s-dropdown-s2" href="#">Beauty Outlet</a>
                             </div>
                         </div>
                     </li>
                     <li class="nav-item nav-item-s">
                         <div class="dropdown">
                             <button type="button" class="btn btn-outline-light dropdown-toggle btn-nav-s2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                PARTNER WITH US
+                                Partner With Us
                             </button>
                             <div class="dropdown-content">
-                                <a class="dropdown-item" href="#">Beauty Artists</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Beauty Outlets</a>
+                                <a class="dropdown-item nav-item-s-dropdown" href="#">Beauty Artists</a>
+                                <div class="dropdown-divider nav-item-s-divider"></div>
+                                <a class="dropdown-item nav-item-s-dropdown" href="#">Beauty Outlets</a>
                             </div>
                         </div>
                     </li>
@@ -48,7 +50,7 @@
                         <button class="btn btn-outline-light btn-nav-s2" data-toggle="modal" data-target="#myModal">Register</button>
                     </li>
                     <li class="nav-item nav-item-s">
-                        <button class="btn btn-outline-light btn-nav-s2" data-toggle="modal" data-target="#myModallogin">Login</button>
+                        <button class="btn btn-outline-light btn-nav-s2" data-toggle="modal" data-target="#myModallogin"><a href="/login">Login</a> </button>
                     </li>
                 </ul>
             </div>

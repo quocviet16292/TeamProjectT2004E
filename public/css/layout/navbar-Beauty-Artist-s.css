@@ -4,8 +4,6 @@ body {
     font-family: 'Nunito', sans-serif;
     font-weight: 400;
     line-height: 1.5;
-    letter-spacing: 0.1vw;
-    word-spacing: 0.1vw;
     font-size: 0.85vw; /*vw ko đổi hiển thị chữ khi zoom to nhỏ màn hình đi kèm với thẻ viewport*/
     position: relative!important;
 }
@@ -25,7 +23,7 @@ body {
 }
 .head-s1{
     position: relative;
-    padding: 5vw 0;
+    /*padding: 5vw 0;*/
     z-index: -999;
 }
 
@@ -49,30 +47,56 @@ body {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f1f1f1;
+    background-color: #FF5C5C;
     min-width: 15vw;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
     z-index: 1;
 }
+.dropdown-content-s1{
+    background-color: #ffffff!important;
+}
+.dropdown-content-s1 a{
+    color: #FF5C5C!important;
 
+}
+.dropdown-content-s2 a{
+    color: #ffffff!important;
+    background-color: #FF5C5C;
+}
+.dropdown-content-s2 a:hover{
+    color: #FF5C5C!important;
+    background-color: #ffffff!important;
+}
 .dropdown-content a {
-    color: black;
+    color: #ffffff;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
 }
-
-.dropdown-content a:hover {background-color: #ddd;}
-
+.dropdown-divider{
+    margin: 0!important;
+}
+/*.dropdown-divider:hover{*/
+/*    background-color: #ffffff;*/
+/*}*/
+.dropdown-content a:hover {
+    background-color: #ffffff;
+    color: #FF5C5C;
+}
+.dropdown-content-s1 a:hover {
+    background-color: #FF5C5C!important;
+    color: #ffffff!important;
+}
 .dropdown:hover .dropdown-content {display: block;}
 
-.dropdown:hover .dropbtn {background-color: #3e8e41;}
+
 
 .nav-item-s{
     padding: 0 1vw;
 }
 .btn-nav-s1{
     /*border: 1px solid #cccccc!important;*/
+    border: none!important;
     padding: 0.375rem 1.5rem !important;
     font-size: 1rem;
     line-height: 1.5;
@@ -97,7 +121,7 @@ body {
 }
 
 .btn-nav-s2{
-    border: 1px solid #ff5c5c !important;
+    border: none !important;
     padding: 0.375rem 1.5rem;
     font-size: 1rem;
     line-height: 1.5;
@@ -174,10 +198,10 @@ body {
     min-height: auto;
     height: auto;
     z-index: -1000;
-    opacity: 0.7;
+    opacity: 0.7!important;
 }
 .header-promotion{
-    padding: 1vw 0 3vw 0;
+    padding: 2vw 0 2vw 0!important;
     text-align: center;
     color: #FFFFFF;
 }

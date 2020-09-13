@@ -8,7 +8,7 @@
                 </a>
             </div>
             <div id="nav-pro" class="nav-from">
-                <form class="form-group form-group-nav-pro" action="/search" method="get" >
+                <form class="form-group form-group-nav-pro" action="/Promotion/search-2" method="get" >
                     <input class="form-control form-group-nav-pro-input" type="text" name="keyword" placeholder="Type beautician's name or service category"/>
                     <span class="form-group-nav-pro-icon"><i class="fa fa-search search-buton-s1"></i></span>
                 </form>
@@ -22,7 +22,7 @@
                     <li class="nav-item nav-item-s1">
                         <div class="dropdown">
                             <button type="button" class="btn btn-outline-danger dropdown-toggle btn-nav-s1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                FOR CLIENT
+                                For Client
                             </button>
                             <div class="dropdown-content">
                                 <a class="dropdown-item nav-item-s-dropdown-s2" href="/artisan-registration-and-service">Beauty Job Artist</a>
@@ -34,7 +34,7 @@
                     <li class="nav-item nav-item-s">
                         <div class="dropdown">
                             <button type="button" class="btn btn-outline-light dropdown-toggle btn-nav-s2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                PARTNER WITH US
+                                Partner With Us
                             </button>
                             <div class="dropdown-content">
                                 <a class="dropdown-item nav-item-s-dropdown" href="#">Beauty Artists</a>
@@ -129,9 +129,9 @@
                                     </div>
                                     <div class="col-lg-11 col-lg-10-modal">
                                         <h5 class="modal-title modal-title-s1" id="exampleModalLabel">
-                                            <form class="form-group col-lg-10-modal" action="/search" method="get">
+                                            <form class="form-group col-lg-10-modal" action="/Promotion/search-2" method="get">
                                                 <input class="form-control input-s1" type="text" name="keyword" placeholder="What are your looking for?"/>
-                                                <button class="btn btn-primary input-s11" type="submit">Search</button>
+                                                <button class="btn btn-primary input-s11-s1" type="submit">Search</button>
                                             </form>
                                         </h5>
                                     </div>
@@ -144,34 +144,34 @@
                                 <div class="modal-body-bottom">
                                     <div class="d-flex modal-body-bottom-s0">
                                         <div class="col-auto modal-body-bottom-s01">
-                                            <button class="btn btn-outline-light modal-body-bottom-s1" data-toggle="modal" data-target="#myModallogin">Basic</button>
+                                            <form action="/Promotion/search/BaSic" method="get">
+                                                <button class="btn btn-outline-light modal-body-bottom-s1" data-toggle="modal" data-target="#myModallogin">Basic</button>
+                                            </form>
                                         </div>
                                         <div class="col-auto modal-body-bottom-s01">
-                                            <button class="btn btn-outline-light modal-body-bottom-s1" data-toggle="modal" data-target="#myModallogin">Wedding</button>
+                                            <form action="/Promotion/search/Wedding" method="get">
+                                                <button class="btn btn-outline-light modal-body-bottom-s1" data-toggle="modal" data-target="#myModallogin">Wedding</button>
+                                            </form>
                                         </div>
                                         <div class="col-auto modal-body-bottom-s01">
-                                            <button class="btn btn-outline-light modal-body-bottom-s1" data-toggle="modal" data-target="#myModallogin">Photoshoot</button>
+                                            <form action="/Promotion/search/Photoshoot" method="get">
+                                                <button class="btn btn-outline-light modal-body-bottom-s1" data-toggle="modal" data-target="#myModallogin">Photoshoot</button>
+                                            </form>
                                         </div>
                                         <div class="col-auto modal-body-bottom-s01">
-                                            <button class="btn btn-outline-light modal-body-bottom-s1" data-toggle="modal" data-target="#myModallogin">Bridesmaid</button>
+                                           <form action="/Promotion/search/Bridesmaid" method="get">
+                                               <button class="btn btn-outline-light modal-body-bottom-s1" data-toggle="modal" data-target="#myModallogin">Bridesmaid</button>
+                                           </form>
                                         </div>
                                         <div class="col-auto modal-body-bottom-s01">
-                                            <button class="btn btn-outline-light modal-body-bottom-s1" data-toggle="modal" data-target="#myModallogin">Mother or Sister of The Bride</button>
+                                            <form action="/Promotion/search/Traditional" method="get">
+                                                <button class="btn btn-outline-light modal-body-bottom-s1" data-toggle="modal" data-target="#myModallogin">Traditional Wedding</button>
+                                            </form>
                                         </div>
                                         <div class="col-auto modal-body-bottom-s01">
-                                            <button class="btn btn-outline-light modal-body-bottom-s1" data-toggle="modal" data-target="#myModallogin">Engagement</button>
-                                        </div>
-                                        <div class="col-auto modal-body-bottom-s01">
-                                            <button class="btn btn-outline-light modal-body-bottom-s1" data-toggle="modal" data-target="#myModallogin">Pre-Wedding</button>
-                                        </div>
-                                        <div class="col-auto modal-body-bottom-s01">
-                                            <button class="btn btn-outline-light modal-body-bottom-s1" data-toggle="modal" data-target="#myModallogin">Sweet 17th Birthday</button>
-                                        </div>
-                                        <div class="col-auto modal-body-bottom-s01">
-                                            <button class="btn btn-outline-light modal-body-bottom-s1" data-toggle="modal" data-target="#myModallogin">Traditional Wedding</button>
-                                        </div>
-                                        <div class="col-auto modal-body-bottom-s01">
-                                            <button class="btn btn-outline-light modal-body-bottom-s1" data-toggle="modal" data-target="#myModallogin">Character,SPFX,Prostethic</button>
+                                            <form action="/Promotion/search/Character" method="get">
+                                                <button class="btn btn-outline-light modal-body-bottom-s1" data-toggle="modal" data-target="#myModallogin">Character,SPFX,Prostethic</button>
+                                            </form>
                                         </div>
                                     </div>
                                 </div>
@@ -213,7 +213,7 @@
                                 </div>
                                 <div class="col-lg-11 col-lg-10-modal">
                                     <h5 class="modal-title modal-title-s1" id="exampleModalLabel">
-                                        <form class="form-group col-lg-10-modal" action="/search" method="get">
+                                        <form class="form-group col-lg-10-modal" action="/Promotion/search" method="get">
                                             <input class="form-control input-s1" type="text" name="keyword" placeholder="Where?"/>
                                             <button class="btn btn-primary input-s11" type="submit">Search</button>
                                         </form>
@@ -233,7 +233,9 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-4">
-                                    <button class="btn btn-primary input-s12" type="submit">SEARCH NEAR ME</button>
+                                    <form action="/map" method="get">
+                                        <button class="btn btn-primary input-s12" type="submit">Search Near Me</button>
+                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -244,37 +246,59 @@
                             <div class="modal-body-bottom2">
                                 <div class="d-flex modal-body-bottom-s0">
                                     <div class="col-auto modal-body-bottom-s01">
-                                        <button class="btn btn-outline-light modal-body-bottom-s1" data-toggle="modal" data-target="#myModallogin">Hai Bà Trưng</button>
+                                        <form action="/Promotion/search/HaiBaTrung" method="get">
+                                            <button class="btn btn-outline-light modal-body-bottom-s1" data-toggle="modal" data-target="#myModallogin">Hai Bà Trưng</button>
+                                        </form>
                                     </div>
                                     <div class="col-auto modal-body-bottom-s01">
-                                        <button class="btn btn-outline-light modal-body-bottom-s1" data-toggle="modal" data-target="#myModallogin">Hoàn Kiếm</button>
+                                        <form action="/Promotion/search/HoanKiem" method="get">
+                                            <button class="btn btn-outline-light modal-body-bottom-s1" data-toggle="modal" data-target="#myModallogin">Hoàn Kiếm</button>
+                                        </form>
                                     </div>
                                     <div class="col-auto modal-body-bottom-s01">
-                                        <button class="btn btn-outline-light modal-body-bottom-s1" data-toggle="modal" data-target="#myModallogin">Hà Đông</button>
+                                        <form action="/Promotion/search/HaDong" method="get">
+                                            <button class="btn btn-outline-light modal-body-bottom-s1" data-toggle="modal" data-target="#myModallogin">Hà Đông</button>
+                                        </form>
                                     </div>
                                     <div class="col-auto modal-body-bottom-s01">
-                                        <button class="btn btn-outline-light modal-body-bottom-s1" data-toggle="modal" data-target="#myModallogin">Ba Đình</button>
+                                        <form action="/Promotion/search/BaDinh" method="get">
+                                            <button class="btn btn-outline-light modal-body-bottom-s1" data-toggle="modal" data-target="#myModallogin">Ba Đình</button>
+                                        </form>
                                     </div>
                                     <div class="col-auto modal-body-bottom-s01">
-                                        <button class="btn btn-outline-light modal-body-bottom-s1" data-toggle="modal" data-target="#myModallogin">Đống Đa</button>
+                                        <form action="/Promotion/search/DongDa" method="get">
+                                            <button class="btn btn-outline-light modal-body-bottom-s1" data-toggle="modal" data-target="#myModallogin">Đống Đa</button>
+                                        </form>
                                     </div>
                                     <div class="col-auto modal-body-bottom-s01">
-                                        <button class="btn btn-outline-light modal-body-bottom-s1" data-toggle="modal" data-target="#myModallogin">Cầu Giấy</button>
+                                        <form action="/Promotion/search/CauGiay" method="get">
+                                            <button class="btn btn-outline-light modal-body-bottom-s1" data-toggle="modal" data-target="#myModallogin">Cầu Giấy</button>
+                                        </form>
                                     </div>
                                     <div class="col-auto modal-body-bottom-s01">
-                                        <button class="btn btn-outline-light modal-body-bottom-s1" data-toggle="modal" data-target="#myModallogin">Hoàng Mai</button>
+                                        <form action="/Promotion/search/HoangMai" method="get">
+                                            <button class="btn btn-outline-light modal-body-bottom-s1" data-toggle="modal" data-target="#myModallogin">Hoàng Mai</button>
+                                        </form>
                                     </div>
                                     <div class="col-auto modal-body-bottom-s01">
-                                        <button class="btn btn-outline-light modal-body-bottom-s1" data-toggle="modal" data-target="#myModallogin">Tây Hồ</button>
+                                        <form action="/Promotion/search/TayHo" method="get">
+                                            <button class="btn btn-outline-light modal-body-bottom-s1" data-toggle="modal" data-target="#myModallogin">Tây Hồ</button>
+                                        </form>
                                     </div>
                                     <div class="col-auto modal-body-bottom-s01">
-                                        <button class="btn btn-outline-light modal-body-bottom-s1" data-toggle="modal" data-target="#myModallogin">Nam Từ Liêm</button>
+                                        <form action="/Promotion/search/NamTuLiem" method="get">
+                                            <button class="btn btn-outline-light modal-body-bottom-s1" data-toggle="modal" data-target="#myModallogin">Nam Từ Liêm</button>
+                                        </form>
                                     </div>
                                     <div class="col-auto modal-body-bottom-s01">
-                                        <button class="btn btn-outline-light modal-body-bottom-s1" data-toggle="modal" data-target="#myModallogin">Bắc Từ Liêm</button>
+                                        <form action="/Promotion/search/BacTuLiem" method="get">
+                                            <button class="btn btn-outline-light modal-body-bottom-s1" data-toggle="modal" data-target="#myModallogin">Bắc Từ Liêm</button>
+                                        </form>
                                     </div>
                                     <div class="col-auto modal-body-bottom-s01">
-                                        <button class="btn btn-outline-light modal-body-bottom-s1" data-toggle="modal" data-target="#myModallogin">Thanh Xuân</button>
+                                        <form action="/Promotion/search/ThanhXuan" method="get">
+                                            <button class="btn btn-outline-light modal-body-bottom-s1" data-toggle="modal" data-target="#myModallogin">Thanh Xuân</button>
+                                        </form>
                                     </div>
                                 </div>
                             </div>
