@@ -26,3 +26,17 @@ ol>li{
     width: 700px;
     margin: 0 auto;
 }
+.ftlink a{
+    text-decoration: none;
+    color: var(--main-color);
+}
+.ftlink-hover:hover i{
+    animation: moveArrow;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    transition: ease-in-out;
+}
+@keyframes moveArrow {
+ from{margin-left: 0}
+    to{margin-left: -10px}
+}

@@ -1,5 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>home</title>
+    <link rel="stylesheet" type="text/css" href="/css/home-son.css"/>
+    <link href="https://cdn.rawgit.com/mfd/f3d96ec7f0e8f034cc22ea73b3797b59/raw/856f1dbb8d807aabceb80b6d4f94b464df461b3e/gotham.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="text/javascript" src="/js/jquery.js"></script>
+    <link rel="stylesheet" type="text/css" href="/libs/bootstrap/css/bootstrap.css">
+    <script type="text/javascript" src="/libs/bootstrap/js/bootstrap.js"></script>
+</head>
+<body>
 
-<section class="section sticky-top-s">
+<!--<%- include("Preloader-son") %>-->
+<section class="section sticky-top">
     <nav class="navbar navbar-expand-md navbar-light  nav-head-s" id="nav-head-s">
         <div class="container-fluid">
             <div class="img-nav-s">
@@ -7,12 +23,10 @@
                     <img class="img-fluid img-nav-s" src="/imgs-s/logo-salmon.png">
                 </a>
             </div>
-            <div id="nav-pro" class="nav-from">
-                <form class="form-group form-group-nav-pro" action="/Promotion/search-2" method="get" >
-                    <input class="form-control form-group-nav-pro-input" type="text" name="keyword" placeholder="Type beautician's name or service category"/>
-                    <span class="form-group-nav-pro-icon"><i class="fa fa-search search-buton-s1"></i></span>
-                </form>
-            </div>
+            <form class="form-group form-group-nav-pro" action="/search" method="get">
+                <input class="form-control form-group-nav-pro-input" type="text" name="keyword" placeholder="Type beautician's name or service category"/>
+                <span class="form-group-nav-pro-icon"><i class="fa fa-search search-buton-s1"></i></span>
+            </form>
             <button class="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarResponsive">
                 <span class="navbar-toggler-icon"></span>
@@ -22,9 +36,9 @@
                     <li class="nav-item nav-item-s1">
                         <div class="dropdown">
                             <button type="button" class="btn btn-outline-danger dropdown-toggle btn-nav-s1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                For Client
+                                FOR CLIENT
                             </button>
-                            <div class="dropdown-content dropdown-content-s1">
+                            <div class="dropdown-content">
                                 <a class="dropdown-item" href="/artisan-registration-and-service">Beauty Job Artist</a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#">Beauty Outlet</a>
@@ -34,9 +48,9 @@
                     <li class="nav-item nav-item-s">
                         <div class="dropdown">
                             <button type="button" class="btn btn-outline-light dropdown-toggle btn-nav-s2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Partner With Us
+                                PARTNER WITH US
                             </button>
-                            <div class="dropdown-content dropdown-content-s2">
+                            <div class="dropdown-content">
                                 <a class="dropdown-item" href="#">Beauty Artists</a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#">Beauty Outlets</a>
@@ -66,4 +80,5 @@
         <span class="header-promotion-span-s2">Find and book your favorite beauty artist.</span>
     </div>
 </section>
-<script type="text/javascript" src="/js/scrip-son2.js"></script>
+</body>
+</html>

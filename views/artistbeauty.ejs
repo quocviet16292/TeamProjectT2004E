@@ -1,19 +1,97 @@
 <!doctype html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Beauty Artist</title>
-    <%- include("layout/head-Aritst-son") -%>
-<!--    <link rel="stylesheet" href="/libs/bootstrap-4.5.2-dist/js/bootstrap.js">-->
-<!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">-->
-<!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>-->
-<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>-->
-<!--    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>-->
+    <link rel="stylesheet" href="/libs/bootstrap-4.5.2-dist/js/bootstrap.js">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+
+
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link rel="stylesheet" href="/libs/bootstrap-4.5.2-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/libs/fontawesome-free-5.14.0-web/css/fontawesome.css">
+    <link rel="stylesheet" href="/libs/fontawesome-free-5.14.0-web/css/all.css">
+    <link rel="stylesheet" href="/css/footer.css">
     <link rel="stylesheet" href="/css/BeautyArtist.css"/>
-<!--    <link rel="stylesheet" href="/css/home-son.css"/>-->
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/home-son.css"/>
 </head>
 <body>
 
-<%- include("layout/navbar-Beauty-Artist-s") -%>
+
+<header class=" H_css_header" id="img_background">
+    <section class="section sticky-top">
+        <nav class="navbar navbar-expand-md navbar-light  nav-head-s" id="nav-head-s">
+            <div class="container-fluid">
+                <div class="img-nav-s">
+                    <a class="navbar-branch" href="#">
+                        <img class="img-fluid img-nav-s" src="/imgs-s/logo-salmon.png">
+                    </a>
+                </div>
+                <form class="form-group form-group-nav-pro" action="/search" method="get">
+                    <input class="form-control form-group-nav-pro-input" type="text" name="keyword" placeholder="Type beautician's name or service category"/>
+                    <span class="form-group-nav-pro-icon"><i class="fa fa-search search-buton-s1"></i></span>
+                </form>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarResponsive">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item nav-item-s1">
+                            <div class="dropdown">
+                                <button type="button" class="btn btn-outline-danger dropdown-toggle btn-nav-s1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    FOR CLIENT
+                                </button>
+                                <div class="dropdown-content">
+                                    <a class="dropdown-item" href="/addArtist">Beauty Job Artist</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">Beauty Outlet</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item nav-item-s">
+                            <div class="dropdown">
+                                <button type="button" class="btn btn-outline-light dropdown-toggle btn-nav-s2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    PARTNER WITH US
+                                </button>
+                                <div class="dropdown-content">
+                                    <a class="dropdown-item" href="#">Beauty Artists</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">Beauty Outlets</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item nav-item-s">
+                            <a href="#" class="notamenu notamenus"><i style="color: #ff5c5c" class="fa">&#xf290;</i></a>
+                        </li>
+                        <li class="nav-item nav-item-s">
+                            <button class="btn btn-outline-light btn-nav-s2" data-toggle="modal" data-target="#myModal">Register</button>
+                        </li>
+                        <li class="nav-item nav-item-s">
+                            <button class="btn btn-outline-light btn-nav-s2" data-toggle="modal" data-target="#myModallogin"><a href="/login">Login</a> </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </section>
+    <div class="H_css_heaer_backgroundcolor">
+        <div class="container ">
+            <h1 style="font-size: 30px"> Beauty Artist</h1>
+            <p style="font-size: 16px"> Find and book your favorite beauty artist.</p>
+        </div>
+    </div>
+</header>
 
 <div class="H_css_main">
     <div class="row">
@@ -837,10 +915,7 @@
 </div>
 <div class="sticky-top">
     <%- include ('layout/footer'); -%>
-</div>
 
-<script type="text/javascript" src="/js/jquery.js"></script>
-<script type="text/javascript" src="/js/home-son.js"></script>
-<script type="text/javascript" src="/libs/bootstrap/js/bootstrap.js"></script>
+</div>
 </body>
 </html>

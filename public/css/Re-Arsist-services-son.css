@@ -150,17 +150,7 @@ small{
     margin-bottom: 30px;
     padding-left: 35%;
 }
-.box__info-p{
-    padding-top: 1vw;
-}
-.box__info-p-p{
-    font-size: 0.9vw!important;
-    font-weight: bolder;
-}
-.box__info-p-p-span{
-    font-size: 0.85vw!important;
-    font-weight: 450!important;
-}
+
 .box__info{
     border: 1px dashed #ccc;
     background-color: #f5f5f5;
@@ -222,7 +212,4 @@ small{
 }
 .sticky-top{
     /*background-color: #FFFFFF!important;*/
-}
-.step-s{
-    padding-top: 2vw;
 }
