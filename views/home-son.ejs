@@ -123,14 +123,14 @@
                                  <a href="#" class="Beauty-Artist-s112-a"><span class="Beauty-Artist-s112-span"><%= v.Name %></span></a>
                              </div>
                              <div class="Beauty-Artist-s1123">
-                                 <a class="Beauty-Artist-s1123-a">Discount <%= v.SPromo*100 %>% OFF</a>
+                                 <a class="Beauty-Artist-s1123-a">Discount <%= v.SPromo %>% OFF</a>
                              </div>
                              <div class="Beauty-Artist-s12">
                                  <a href="#" class="header-fooder-notamenu-s4">
                                      <div class="d-flex Beauty-Artist-s121">
                                          <div class="tensp"><span class="Beauty-Artist-s121-span"><del><%= v.SPrice %> VND</del></span></div>
                                          <div class="Beauty-Artist-s1212"><i class='fas fa-arrow-right'></i></div>
-                                         <div class="tensp"><span class="Beauty-Artist-s121-span"><%= v.SPrice*(1-v.SPromo) %> VND</span> </div>
+                                         <div class="tensp"><span class="Beauty-Artist-s121-span"><%= v.SPrice*(1-v.SPromo/100) %> VND</span> </div>
                                      </div>
                                  </a>
                                  <div class="Beauty-Artist-s12-name">
@@ -215,7 +215,7 @@
                                  <a href="#" class="Beauty-Artist-s112-a"><span class="Beauty-Artist-s112-span"><%= v.Name %></span></a>
                              </div>
                              <div class="Beauty-Artist-s1123">
-                                 <a class="Beauty-Artist-s1123-a">Discount <%= v.SPromo*100 %>% OFF</a>
+                                 <a class="Beauty-Artist-s1123-a">Discount <%= v.SPromo %>% OFF</a>
                              </div>
                              <div class="Beauty-Artist-s12">
 
