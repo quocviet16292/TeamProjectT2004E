@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Beauty Gallery</title>
+    <%- include("layout/head-Aritst-son") -%>
+    <link rel="stylesheet" type="text/css" href="/css/Arists-promotion-son.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/pagination.js"></script>
+    <script>
+        $(document).ready(function()
+        {
+            $("#tab").pagination({
+                items: 8,
+                contents: 'Beauty-Artist',
+                previous: 'Previous',
+                next: 'Next',
+                position: 'bottom',
+            });
+        });
+    </script>
+</head>
+<body class="home">
+
+<%- include("layout/navbar-sale-son") -%>
+
+<section class="section">
+    <div class="container">
+        <div class="d-flex">
+            <div class="col-lg-4 dropdown-pro-son">
+                <div class="dropdown">
+                    <button type="button" class="btn btn-outline-light dropdown-toggle btn-nav-s2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Default
+                    </button>
+                    <div class="dropdown-content dropdown-content-s2">
+                        <a class="dropdown-item" href="/Promotion/promo-lowest">Highest Discount >> Lowest Discount</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="/Promotion/promo-hight">Lowest Discount >> Highest Discount</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-8">
+                <div class="form-group form-control-pro">
+                   <form action="/Promotion/search" method="get">
+                       <label type="text"  class="lable-pro-son">Select District</label>
+                       <input type="text" name="keyword" class="form-control form-control-pro-son" id="Cname">
+                   </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="section promotion-conten">
+    <div class="container"  id="wrapper">
+        <div class="Beauty-Artist">
+
+            <!--             <a href="/artist" class="Beauty-Artist-a">-->
+            <% sps.map(function (v) { %>
+                <div class="Beauty-Artist-s1">
+                    <a href="#" class="Beauty-Artist-a">
+                        <img class="img-fluid imgs-cover" src="<%= v.Cover %>" alt="a">
+                        <a href="#"><img class="imgs-avartar" style="width: 15vw; height: 15vw" src="<%= v.Avartar %>" alt="a"></a>
+                        <div class="Beauty-Artist-s112">
+                            <a href="#" class="Beauty-Artist-s112-a"><span class="Beauty-Artist-s112-span"><%= v.Name %></span></a>
+                        </div>
+                        <div class="Beauty-Artist-s1123">
+                            <a class="Beauty-Artist-s1123-a">Discount <%= v.SPromo %>% OFF</a>
+                        </div>
+                        <div class="Beauty-Artist-s12">
+                            <a href="#" class="header-fooder-notamenu-s4">
+                                <div class="d-flex Beauty-Artist-s121">
+                                    <div class="tensp"><span class="Beauty-Artist-s121-span"><del><%= v.SPrice %> VND</del></span></div>
+                                    <div class="Beauty-Artist-s1212"><i class='fas fa-arrow-right'></i></div>
+                                    <div class="tensp"><span class="Beauty-Artist-s121-span"><%= v.SPrice*(1-v.SPromo/100) %> VND</span> </div>
+                                </div>
+                            </a>
+                            <div class="Beauty-Artist-s12-name">
+                                <a href="#" class="header-fooder-notamenu-s4">
+                                    <span><%= v.TName %> </span>
+                                </a>
+                            </div>
+                            <hr>
+                            <div class="d-flex">
+                                <div class="col-lg-6 Beauty-Artist-s126">
+                                    <div class="d-flex Beauty-Artist-s125">
+                                        <a href="#" class="header-fooder-notamenu-s4">
+                                            <i class="fa fa-clock-o Beauty-Artist-s125-icon"></i>&nbsp
+                                            <span class="Beauty-Artist-s125-span">Until</span>
+                                        </a>
+                                    </div>
+                                    <div class="Beauty-Artist-s12-SWTime">
+                                        <span id="demo">
+                                            <script type="text/javascript">
+                                                         var currentTime = new Date('<%= v.SWTime %>')
+                                                         var month = currentTime.getMonth() + 1
+                                                         var day = currentTime.getDate()
+                                                         var year = currentTime.getFullYear()
+                                                         document.write(day + "/" + month + "/" + year)
+                                                  </script>
+                                        </span>
+
+                                    </div>
+                                </div>
+
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex Beauty-Artist-s125">
+                                        <a href="#" class="header-fooder-notamenu-s4 header-fooder-notamenu-s42">
+                                            <i class='fas fa-map-marker-alt Beauty-Artist-s125-icon'></i>&nbsp
+                                            <span class="Beauty-Artist-s125-span">District</span>
+                                        </a>
+                                    </div>
+                                    <div class="Beauty-Artist-s12-SWTime">
+                                        <span><%= v.District %> </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            <% }) %>
+            <!--             </a>-->
+        </div>
+    </div>
+</section>
+
+
+
+<script type="text/javascript" src="/js/jquery.js"></script>
+<script type="text/javascript" src="/js/home-son.js"></script>
+<script type="text/javascript" src="/libs/bootstrap/js/bootstrap.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="/js/pagination.js"></script>
+
+<%- include('layout/footer')-%>
+
+</body>
+</html>
