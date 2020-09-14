@@ -13,10 +13,10 @@
     font-family: 'Nunito', sans-serif;
 }
 .vfooter__bgtop{
-    background-image: url('../imgs/bg-footer.png');
-    -webkit-background-image: url('../imgs/bg-footer.png');
-    -o-background-image: url('../imgs/bg-footer.png');
-    -moz-background-image: url('../imgs/bg-footer.png');
+    background-image: url('../imgs/bg-footer-hb.jpg');
+    -webkit-background-image: url('../imgs/bg-footer-hb.jpg');
+    -o-background-image: url('../imgs/bg-footer-hb.jpg');
+    -moz-background-image: url('../imgs/bg-footer-hb.jpg');
     background-size: cover;
     height: 270px;
     background-position: center center;
