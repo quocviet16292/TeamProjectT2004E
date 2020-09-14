@@ -520,7 +520,7 @@ app.post('/booking/success', async (req,res)=>{
     let i = req.body.quantity;
     let j = req.body.DThanhTien;
     let k = req.body.DComment;
-    let sID = req.params.serviceID;
+    let sID = req.body.service;
     let sv ="";
     let sql_text = "SELECT * FROM T2004E_Nhom1_MU_Services INNER JOIN T2004E_Nhom1_Artist ON " +
         "T2004E_Nhom1_Artist.Id = T2004E_Nhom1_MU_Services.Id WHERE S_Id = "+sID;
