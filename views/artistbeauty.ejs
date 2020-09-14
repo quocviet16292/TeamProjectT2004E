@@ -108,7 +108,7 @@
                 <ul class="list-group  list-group-flush">
                     <li class="list-group-item" ><% artist.map(function (v) {%>
                             <div class="row col-6  H_img_artist_desc " id="H_main">
-                                <div class="H_img_artist">
+                                <div class=" H_img_artist">
                                     <div class="H_topup">
                                         Top beauty artist
                                     </div>
@@ -117,45 +117,51 @@
                                     </div>
 
 
-                                    <img class="img-fluid rounded H_img" src="<%= v.PImageClient%>" >
-
-
-
-
 <!--                                </div>-->
 
 <!--                                <div class="H_img_artist">-->
-<!--                                    <div id="demo" class="carousel slide" data-ride="carousel" style="height: 100%;width: 100%" >-->
-<!--                                        &lt;!&ndash; Indicators &ndash;&gt;-->
-<!--&lt;!&ndash;                                        <ul class="carousel-indicators">&ndash;&gt;-->
-<!--&lt;!&ndash;                                            <li data-target="#demo" data-slide-to="0" class="active"></li>&ndash;&gt;-->
-<!--&lt;!&ndash;                                            <li data-target="#demo" data-slide-to="1"></li>&ndash;&gt;-->
-<!--&lt;!&ndash;                                            <li data-target="#demo" data-slide-to="2"></li>&ndash;&gt;-->
-<!--&lt;!&ndash;                                            <li data-target="#demo" data-slide-to="3"></li>&ndash;&gt;-->
-<!--&lt;!&ndash;                                            <li data-target="#demo" data-slide-to="4"></li>&ndash;&gt;-->
-<!--&lt;!&ndash;                                        </ul>&ndash;&gt;-->
+                                    <div id="demo" class="carousel slide" data-ride="carousel" style="height: 100%;width: 100%" >
+<!--                                         Indicators-->
+                                        <ul class="carousel-indicators">
+                                            <li data-target="#demo" data-slide-to="0" class="active"></li>
+                                            <li data-target="#demo" data-slide-to="1"></li>
+                                            <li data-target="#demo" data-slide-to="2"></li>
+                                            <li data-target="#demo" data-slide-to="3"></li>
+                                            <li data-target="#demo" data-slide-to="4"></li>
+                                        </ul>
 
-<!--                                        &lt;!&ndash; The slideshow &ndash;&gt;-->
-<!--                                        <div class="carousel-inner" style="height: 100%;width: 100%" >-->
+<!--                                       // The slideshow-->
+                                        <div class="carousel-inner active" style="height: 250px;width: 100%" >
+                                                    <div class="carousel-item active">
+                                                        <img class="img-fluid H_img" src="<%= v.Cover_1%>" >
+                                                    </div>
+                                                    <div class="carousel-item ">
+                                                        <img  class="img-fluid H_img" src="<%= v.Cover_2%>" >
+                                                    </div>
+                                                    <div class="carousel-item ">
+                                                        <img class="img-fluid H_img" src="<%= v.Cover_3%>">
+                                                    </div>
+                                                    <div class="carousel-item ">
+                                                        <img class="img-fluid H_img" src="<%= v.Cover_4%>" >
+                                                    </div>
+                                                    <div class="carousel-item ">
+                                                        <img class="img-fluid H_img" src="<%= v.Cover_5%>" >
+                                                    </div>
+<!--                                                        <script>-->
+<!--                                                            let x= document.getElementsByClassName('test');-->
+<!--                                                            x[0].classList = "carousel-item active";-->
+<!--                                                        </script>-->
 
-<!--                                                <div class="carousel-item " style="height: 100%;width: 100%" >-->
 
-
-<!--&lt;!&ndash;                                                        <script>&ndash;&gt;-->
-<!--&lt;!&ndash;                                                            let x= document.getElementsByClassName('test');&ndash;&gt;-->
-<!--&lt;!&ndash;                                                            x[0].classList = "carousel-item active";&ndash;&gt;-->
-<!--&lt;!&ndash;                                                        </script>&ndash;&gt;-->
-
-<!--                                                </div>-->
-<!--                                        </div>-->
-<!--                                        &lt;!&ndash; Left and right controls &ndash;&gt;-->
-<!--                                        <a class="carousel-control-prev" href="#demo" data-slide="prev">-->
-<!--                                            <span class="carousel-control-prev-icon"></span>-->
-<!--                                        </a>-->
-<!--                                        <a class="carousel-control-next" href="#demo" data-slide="next">-->
-<!--                                            <span class="carousel-control-next-icon"></span>-->
-<!--                                        </a>-->
-<!--                                    </div>-->
+                                        </div>
+                                        <!-- Left and right controls -->
+                                        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                                            <span class="carousel-control-prev-icon"></span>
+                                        </a>
+                                        <a class="carousel-control-next" href="#demo" data-slide="next">
+                                            <span class="carousel-control-next-icon"></span>
+                                        </a>
+                                    </div>
                                 </div>
 
                                 <a href="pages/service" class="">
