@@ -227,12 +227,17 @@
                             <%=v.SDescribe %>
                         </div>
                         <div class="N_Beauty_Private_introduce_ID">
-                            <span class="N_Beauty_Private_introduce_ID_BasisPrice"><i class="far fa-money-bill-alt"></i>  VND <%=v.SPrice %></span>
+                            <span id="N_oldPrice" class="N_Beauty_Private_introduce_ID_BasisPrice"><i class="far fa-money-bill-alt"></i>  VND <%=v.SPrice %></span>
 
-                            <i class="fas fa-hand-point-right"></i>
+                            <i id="N_hand_price" class="fas fa-hand-point-right"></i>
 
-                            <span><i class="far fa-money-bill-alt"></i>  VND <%=v.SPrice*(1-(v.SPromo/100)) %></span>
+                            <span id="N_priceOff"><i class="far fa-money-bill-alt"></i>  VND <%=v.SPrice*(1-(v.SPromo/100)) %></span>
                         </div>
+                        <script>
+
+                        </script>
+
+
                         <div class="N_Beauty_Private_introduce_time">
                             <span><i class="far fa-calendar-alt"></i>  For 3 hour</span>
                         </div>

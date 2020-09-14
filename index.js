@@ -19,7 +19,6 @@ const mssql = require("mssql");
 // var object = require('lodash/fp/object');
 // // Load a single method for smaller builds with browserify/rollup/webpack.
 // var extend = require('lodash/fp/extend');
-
 const config = {
     server:"DESKTOP-S30D2EK\\SQLEXPRESS",
     user:"sa",
@@ -29,12 +28,11 @@ const config = {
         encrypt:false
     }
 };
-// ------------Install Body Parser------------
-
+//------------Install Body Parser------------
 // const bodyParser = require("body-parser");
 // app.use(bodyParser.urlencoded({extended:true}))
 
-// Install MSSQL
+//Install MSSQL
 // const mssql = require("mssql");
 // const config = {
 //     server:'101.99.13.2',
@@ -45,7 +43,6 @@ const config = {
 //         encrypt: false,
 //     }
 // }
-
 mssql.connect(config,function (err) {
     if (err) console.log(err);
     else console.log("connect DB thanh cong");
