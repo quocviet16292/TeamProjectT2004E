@@ -77,8 +77,52 @@ app.get('/services', (req,res)=>{
 app.get('/beautydaily', (req,res)=>{
     res.render('blog');
 })
-app.get('/artist', (req,res)=>{
-    res.render('service');
+app.get("/service/:id",async function (req,res) {
+    let aid = req.params.id;
+    let artist = "select * from T2004E_Nhom1_Artist WHERE Id ="+aid;
+    let a = "ko co";
+
+    await db.query(artist).then(rs=>{
+        a = rs;
+    }).catch(function (err) {
+        console.log(err);
+    });
+    let service = "select * from T2004E_Nhom1_MU_Services\n" +
+        "inner join T2004E_Nhom1_Artist\n" +
+        "on T2004E_Nhom1_MU_Services.Id=T2004E_Nhom1_Artist.Id\n" +
+        "inner join T2004E_Nhom1_MU_Type\n" +
+        "on T2004E_Nhom1_MU_Services.T_Id = T2004E_Nhom1_MU_Type.T_Id\n" +
+        "where T2004E_Nhom1_Artist.Id = "+aid;
+    let s = [];
+    await db.query(service).then(rs=>{
+        s = rs;
+    }).catch(function (err) {
+        console.log(err);
+    });
+    // await res.send(a);
+    let portfolio = "select * from T2004E_Nhom1_Portfolio where P_Id ="+aid;
+    let p = [];
+    await db.query(portfolio).then(rs=>{
+        p = rs;
+    }).catch(function (err) {
+        console.log(err);
+    });
+    let review = "select * from T2004E_Nhom1_Review WHERE R_Id="+aid;
+    let r = [];
+    await db.query(review).then(rs=>{
+        r = rs;
+    }).catch(function (err) {
+        console.log(err);
+    });
+    await res.render("service",{
+        artist: a.recordset,
+        service: s.recordset,
+        portfolio: p.recordset,
+        review: r.recordset
+
+        // khachhang:kh,
+        // donhang:donhang
+    });
 })
 
 
@@ -88,9 +132,17 @@ app.get("/Registration-Services",function (req,res) {
 app.get("/Registration-Artisan",function (req,res) {
     res.render("ResigArisist-son");
 })
-app.get("/artist-beauty",function (req,res) {
-    res.render("artistbeauty");
-})
+app.get("/BeautyArtist",function (req,res) {
+    //lay du lieu
+    db.query("select * from T2004E_Nhom1_VIEW_SEACH_Huy", function(err,rows){
+        if(err)
+            res.send(err);
+        else
+            res.render("artistbeauty",{
+                artist:rows.recordset
+            })
+    })
+});
 app.get("/login",function (req,res) {
     res.render("H_login");
 })
@@ -520,16 +572,20 @@ app.post('/booking/success', async (req,res)=>{
     let i = req.body.quantity;
     let j = req.body.DThanhTien;
     let k = req.body.DComment;
-    let sID = req.body.service;
+    let title = req.body.serviceTitle;
+    let Art = req.body.artname;
     let sv ="";
-    let sql_text = "SELECT * FROM T2004E_Nhom1_MU_Services INNER JOIN T2004E_Nhom1_Artist ON " +
-        "T2004E_Nhom1_Artist.Id = T2004E_Nhom1_MU_Services.Id WHERE S_Id = "+sID;
+    let sql_text = "SELECT * FROM T2004E_Nhom1_MU_Services WHERE SName IN (N'"+title+"')";
     await db.query(sql_text).then(rs=>{
-        sv = rs;
+        sv = rs
     })
-
+    let sql_text1 = "SELECT * FROM T2004E_Nhom1_Artist WHERE Name LIKE N'"+Art+"'";
+    let idArt ="";
+    await db.query(sql_text1).then(rs=>{
+        idArt = rs
+    })
     let sql_text2 = "INSERT INTO T2004E_Nhom1_DonHang(Dkhang,DPhone,DEmail,DDate,DTime,DAdress,DTinh,DQuan,DThanhTien,DComment,Id)" +
-        " VALUES(N'"+a+"','"+b+"','"+c+"','"+d+","+e+"',"+f+"',N'"+g+"',N'"+h+"',"+j+",N'"+k+"', "+sv.Id+");SELECT SCOPE_IDENTITY() AS D_Id;";
+        " VALUES(N'"+a+"','"+b+"','"+c+"','"+d+","+e+"',"+f+"',N'"+g+"',N'"+h+"',"+j+",N'"+k+"', "+idArt.Id+");SELECT SCOPE_IDENTITY() AS D_Id;";
     await db.query(sql_text2,function (err,rows) {
         let donhang = rows.recordsets[0];
         let MaSo = donhang.D_Id;
@@ -543,4 +599,3 @@ app.post('/booking/success', async (req,res)=>{
         })
     })
 });
-
