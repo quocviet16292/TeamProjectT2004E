@@ -1,67 +1,87 @@
-body{
-    background-size: cover;
-    background-repeat: no-repeat;
+/* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+#map {
+    height: 100%;
 }
-.h1-map{
+
+/* Optional: Makes the sample page fill the window. */
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#goCenterUI,
+#setCenterUI {
+    background-color: #fff;
+    border: 2px solid #fff;
+    border-radius: 3px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    float: left;
+    margin-bottom: 22px;
     text-align: center;
-    color: #171717;
-    font-size: 2vw;
-    padding: 3vw 0 0 0;
 }
-.h2-map{
+
+#goCenterText,
+#setCenterText {
+    color: #191919;
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 15px;
+    line-height: 25px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#setCenterUI {
+    margin-left: 12px;
+}
+.map-son-s1{
+    margin: 0 13.5vw!important;
+    height: 60%!important;
+}
+.map-son-s0-span{
+    font-size: 2.2vw;
+
+}
+.map-son-s0{
     text-align: center;
-    color: #171717;
-    font-size: 1.4vw;
-    padding-bottom: 1vw;
+    padding-top: 2vw;
 }
-.section{
-    float:left;
+.map-son-s0-aloso{
+    width: 30%;
+    margin-top: 2vw;
+
+}
+.map-son-s1-aloso{
+    width: 40%;
+}
+
+.map-son-s2-aloso{
+    width: 30%;
+    margin-top: 2vw;
+}
+.map-son-s0-aloso-span{
+    margin-left: 1.6vw;
+    margin-top: 0!important;
+    margin-right: 0!important;
+    margin-bottom: 0!important;
+    padding: 0!important;
     width: 100%;
+    color: #FF5C5C!important;
+    padding-top: 1vw;
 }
-.item{
-    float: left;
-    width: 100%;
-    margin: 15px 0;
-    border: 1px solid #1b6d85;
-    border-radius: 5px;
-    background-color: #ffffff60;
-    padding: 20px;
-    position: relative;
+.map-son-s2-aloso-span{
+    margin: 0!important;
+    padding: 0!important;
+    width: 90%;
+    color: #FF5C5C!important;
+    padding-top: 1vw;
 }
-.item p{
-    font-size: 20px;
-    color: #ffffff;
+.map-son-s01{
+    justify-content: center;
 }
-.item .temp{
-    font-size: 35px;
-}
-.item .desc{
-    font-size: 16px;
-}
-.item img{
-    position: absolute;
-    right: 10px;
-    top:40px;
-}
-#map{
-    width: 100%;
-    float: left;
-    height: 500px;
-}
-.cities{
-    float:left;
-    width: 100%;
-}
-.cities li{
-    float: left;
-    width: 100%;
-    list-style: none;
-    background-color: whitesmoke;
-    margin: 10px 0;
-}
-.cities li a{
-    text-align: left;
-    float: left;
-    width: 100%;
-    padding: 10px 20px;
+.map-son-menu{
+    padding-top: 1vw;
 }
