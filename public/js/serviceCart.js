@@ -81,14 +81,15 @@ function removeItem(){
 }
 
 //Get Number
-function getNumber (){
-    let pNumbers = $('#qty__persons').val();
+function getNumber (price){
+    let pNumbers = parseInt($('#qty__persons').val());
     let cartRowTitle = document.getElementsByClassName('service__title');
     let textSelect = $('#service__select option:selected').text();
     for(let i =0; i <cartRowTitle.length; i++){
         if(cartRowTitle[i].textContent == textSelect){
             document.getElementsByClassName('service__title')[i].parentElement.children[1].children[0].innerText = pNumbers;
-            document.getElementsByClassName('service__title')[i].parentElement.children[2].children[0].innerText = (pNumbers*500000).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+            // document.getElementsByClassName('service__title')[i].parentElement.children[2].children[0].innerText = (pNumbers*price).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+            document.getElementsByClassName('service__title')[i].parentElement.children[2].children[0].innerHTML = pNumbers*500000;
         }
     }
 
@@ -101,35 +102,14 @@ function resetNumber(){
 //AddToCart
 // Number Spinner
 var selectList = [];
-$(function(){
-    $('input[type="number"]').niceNumber({
-        autoSize:false,
-        autoSizeBuffer: 1,
-        buttonDecrement:'-',
-        buttonIncrement:"+",
-        buttonPosition:'around'
-    });
-    $('#btnchangeplus').click(function() {
-        let textSelect = $('#service__select option:selected').text()
-        if(selectList.length == 0){
-            addToCart();
-            getNumber();
-        }else{
-            if(selectList.includes(textSelect)){
-                getNumber();
-            }else {
-                addToCart();
-                getNumber();
-            }
-        }
 
-    })
-});
+
 let clientName = document.getElementById('Cname').value;
-function addToCart(){
-    let title = $('#service__select option:selected').text()
-    let price = 500000
-    addService(title, price)
+
+
+function addToCart(price){
+    let title = $('#service__select option:selected').text();
+    addService(title, price);
 }
 
 function  addService(title, price){
@@ -141,8 +121,8 @@ function  addService(title, price){
     var cartRowContent = `
         <div class="col-11">
             <h3 class="service__title">${title}</h3>
-            <p><span class="display__number">1</span><span> x ${price}</span></p>
-            <p><b class="display__total"></b></p>
+            <p><span class="display__number" name="quantity">1</span><span> x ${price}</span></p>
+            <p><b class="display__total"  name="thanhtien"></b></p>
         </div>
         <div class="col-1">
             <a class="btn__remove" onclick="removeItem()"><i class="fas fa-times fa-lg" style="color: var(--main-color)"></i></i> </a>
@@ -161,8 +141,8 @@ function  addService(title, price){
     var cartRowContent1 = `
         <div class="col-12">
             <h3 class="service__title">${title}</h3>
-            <p style="float: left"><span class="display__number">1</span><span> x ${price}</span></p>
-            <p style="float: right"><b class="display__total"></b></p> 
+            <p style="float: left"><span class="display__number" name="quantity">1</span><span> x ${price}</span></p>
+            <p style="float: right"><b class="display__total" name="thanhtien"></b></p> 
         </div>`
     cartRow1.innerHTML = cartRowContent1
     var hline1 = document.createElement('hr');
@@ -187,14 +167,56 @@ function getInfoStep1(){
 }
 
 // function sumCount(){
-    // let subtotal = document.getElementById('getSubtotal').innerText;
-    // let getItemList = document.getElementsByClassName('display__total');
-    let total = 0;
-    for(let i = 0; i < document.getElementsByClassName('display__total').length; i++){
-        total += (parseFloat(document.getElementsByClassName('display__total')[i].innerText)*1000000);
-        //Loi so thap phan
-    }
-    console.log(total);
+// let subtotal = document.getElementById('getSubtotal').innerText;
+// let getItemList = document.getElementsByClassName('display__total');
+let total = 0;
+for(let i = 0; i < document.getElementsByClassName('display__total').length; i++){
+    total += (parseFloat(document.getElementsByClassName('display__total')[i].innerText)*1000000);
+    //Loi so thap phan
+}
+console.log(total);
 // }
 //
 // sumCount();
+
+
+function getSum(){
+    let x = $('.display__total');
+    let sum = 0;
+    for(let i=0; i < x.length; i++){
+        sum = sum + parseInt($('.display__total:eq(i)').text());
+    }
+
+    $('#getSubtotal').text(parseInt(sum));
+    console.log(sum);
+}
+
+$(function() {
+    $('input[type="number"]').niceNumber({
+        autoSize: false,
+        autoSizeBuffer: 1,
+        buttonDecrement: '-',
+        buttonIncrement: "+",
+        buttonPosition: 'around'
+    });
+    $('#btnchangeplus').click(function () {
+        let textSelect = $('#service__select option:selected').text()
+        if (selectList.length == 0) {
+            addToCart();
+            getNumber();
+            getSum();
+        } else {
+            if (selectList.includes(textSelect)) {
+                getNumber();
+                getSum();
+            } else {
+                addToCart();
+                getNumber();
+                getSum();
+            }
+        }
+    })
+})
+
+
+
