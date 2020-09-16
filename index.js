@@ -3,7 +3,7 @@ const express = require("express");
 const app = express();
 
 //------------Port------------------
-const port = 5000;
+const port = process.env.PORT || 3000;
 app.listen(port,()=>console.log(`Server: http://localhost:${port}`));
 
 //------------View Engine EJS-----------------
@@ -12,40 +12,19 @@ app.set("view engine","ejs");
 //------------Set Up static folder------------
 app.use(express.static("public"));
 
-const mssql = require("mssql");
-// Load the fp build.
-// var fp = require('lodash/fp');
-// // Load a method category.
-// var object = require('lodash/fp/object');
-// // Load a single method for smaller builds with browserify/rollup/webpack.
-// var extend = require('lodash/fp/extend');
 
-const config = {
-    server:"DESKTOP-S30D2EK\\SQLEXPRESS",
-    user:"sa",
-    password:"123",
-    database:"BeautySalon",
-    options:{
-        encrypt:false
-    }
-};
-// ------------Install Body Parser------------
-
-// const bodyParser = require("body-parser");
-// app.use(bodyParser.urlencoded({extended:true}))
 
 // Install MSSQL
-// const mssql = require("mssql");
-// const config = {
-//     server:'101.99.13.2',
-//     database:'test',
-//     user:'sa',
-//     password:'z@GH7ytQ',
-//     options: {
-//         encrypt: false,
-//     }
-// }
-
+const mssql = require("mssql");
+const config = {
+    server:'101.99.13.2',
+    database:'test',
+    user:'sa',
+    password:'z@GH7ytQ',
+    options: {
+        encrypt: false,
+    }
+}
 mssql.connect(config,function (err) {
     if (err) console.log(err);
     else console.log("connect DB thanh cong");
@@ -58,9 +37,6 @@ var db = new mssql.Request();
 const bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({extended:true}));
 
-// app.get("/",function (req,res) {
-//     res.render('home-son');
-// });
 
 //Của sơn
 app.get("/Promotions",function (req,res) {
@@ -77,8 +53,8 @@ app.get("/Gallery",function (req,res) {
 app.get('/booking', (req,res)=>{
     res.render('book');
 })
-app.get('/pages/about-us', (req,res)=>{
-    res.render('aboutUs');
+app.get('/about-us', (req,res)=>{
+    res.render('about');
 })
 app.get('/pages/privacy-policy', (req,res)=>{
     res.render('privacyPolicy');
@@ -101,8 +77,52 @@ app.get('/services', (req,res)=>{
 app.get('/beautydaily', (req,res)=>{
     res.render('blog');
 })
-app.get('/artist', (req,res)=>{
-    res.render('service');
+app.get("/service/:id",async function (req,res) {
+    let aid = req.params.id;
+    let artist = "select * from T2004E_Nhom1_Artist WHERE Id ="+aid;
+    let a = "ko co";
+
+    await db.query(artist).then(rs=>{
+        a = rs;
+    }).catch(function (err) {
+        console.log(err);
+    });
+    let service = "select * from T2004E_Nhom1_MU_Services\n" +
+        "inner join T2004E_Nhom1_Artist\n" +
+        "on T2004E_Nhom1_MU_Services.Id=T2004E_Nhom1_Artist.Id\n" +
+        "inner join T2004E_Nhom1_MU_Type\n" +
+        "on T2004E_Nhom1_MU_Services.T_Id = T2004E_Nhom1_MU_Type.T_Id\n" +
+        "where T2004E_Nhom1_Artist.Id = "+aid;
+    let s = [];
+    await db.query(service).then(rs=>{
+        s = rs;
+    }).catch(function (err) {
+        console.log(err);
+    });
+    // await res.send(a);
+    let portfolio = "select * from T2004E_Nhom1_Portfolio where P_Id ="+aid;
+    let p = [];
+    await db.query(portfolio).then(rs=>{
+        p = rs;
+    }).catch(function (err) {
+        console.log(err);
+    });
+    let review = "select * from T2004E_Nhom1_Review WHERE R_Id="+aid;
+    let r = [];
+    await db.query(review).then(rs=>{
+        r = rs;
+    }).catch(function (err) {
+        console.log(err);
+    });
+    await res.render("service",{
+        artist: a.recordset,
+        service: s.recordset,
+        portfolio: p.recordset,
+        review: r.recordset
+
+        // khachhang:kh,
+        // donhang:donhang
+    });
 })
 
 
@@ -112,9 +132,17 @@ app.get("/Registration-Services",function (req,res) {
 app.get("/Registration-Artisan",function (req,res) {
     res.render("ResigArisist-son");
 })
-app.get("/artist-beauty",function (req,res) {
-    res.render("artistbeauty");
-})
+app.get("/BeautyArtist",function (req,res) {
+    //lay du lieu
+    db.query("select * from T2004E_Nhom1_VIEW_SEACH_Huy", function(err,rows){
+        if(err)
+            res.send(err);
+        else
+            res.render("artistbeauty",{
+                artist:rows.recordset
+            })
+    })
+});
 app.get("/login",function (req,res) {
     res.render("H_login");
 })
@@ -480,4 +508,94 @@ app.get("/NewArtist/search/new-hight",function (req,res) {
                 aps: rows.recordset
             });
     });
+});
+
+
+//------------V
+app.get('/booking/:serviceID', async (req,res)=>{
+    let sID = req.params.serviceID;
+    let sql_text = "SELECT * FROM T2004E_Nhom1_MU_Services WHERE S_Id = "+sID;
+    let sql_text2 = "SELECT * FROM T2004E_Nhom1_MU_Services INNER JOIN T2004E_Nhom1_Artist ON T2004E_Nhom1_Artist.Id = T2004E_Nhom1_MU_Services.Id WHERE S_Id = "+sID;
+    let sql_text3 = "EXEC v_services @ID = "+sID;
+    let sql_text4 = "SELECT * FROM T2004E_Nhom1_City";
+    let sql_text5 = "SELECT * FROM T2004E_Nhom1_District";
+    let sv = "";
+    let art = "";
+    let allsv ="";
+    let city ="";
+    let district ="";
+    await db.query(sql_text).then(rs=>{
+        sv = rs;
+    }).catch(function (err){
+        console.log(err);
+    })
+    await db.query(sql_text2).then(rs=>{
+        art = rs;
+    }).catch(function (err){
+        console.log(err);
+    })
+    await db.query(sql_text3).then(rs=>{
+        allsv = rs;
+    }).catch(function (err){
+        console.log(err);
+    })
+    await db.query(sql_text4).then(rs=>{
+        city = rs;
+    }).catch(function (err){
+        console.log(err);
+    })
+    await db.query(sql_text5).then(rs=>{
+        district = rs;
+    }).catch(function (err){
+        console.log(err);
+    })
+
+    await res.render("book", {
+        sps: sv.recordset,
+        art: art.recordset,
+        allsv: allsv.recordset,
+        city: city.recordset,
+        district: district.recordset
+    });
+})
+
+
+app.post('/booking/success', async (req,res)=>{
+    let a = req.body.Dkhang;
+    let b = req.body.DPhone;
+    let c = req.body.DEmail;
+    let d = req.body.DDate;
+    let e = req.body.DTime;
+    let f = req.body.DAdress;
+    let g = req.body.DTinh;
+    let h = req.body.DQuan;
+    let i = req.body.quantity;
+    let j = req.body.DThanhTien;
+    let k = req.body.DComment;
+    let title = req.body.serviceTitle;
+    let Art = req.body.artname;
+    let sv ="";
+    let sql_text = "SELECT * FROM T2004E_Nhom1_MU_Services WHERE SName IN (N'"+title+"')";
+    await db.query(sql_text).then(rs=>{
+        sv = rs
+    })
+    let sql_text1 = "SELECT * FROM T2004E_Nhom1_Artist WHERE Name LIKE N'"+Art+"'";
+    let idArt ="";
+    await db.query(sql_text1).then(rs=>{
+        idArt = rs
+    })
+    let sql_text2 = "INSERT INTO T2004E_Nhom1_DonHang(Dkhang,DPhone,DEmail,DDate,DTime,DAdress,DTinh,DQuan,DThanhTien,DComment,Id)" +
+        " VALUES(N'"+a+"','"+b+"','"+c+"','"+d+","+e+"',"+f+"',N'"+g+"',N'"+h+"',"+j+",N'"+k+"', "+idArt.Id+");SELECT SCOPE_IDENTITY() AS D_Id;";
+    await db.query(sql_text2,function (err,rows) {
+        let donhang = rows.recordsets[0];
+        let MaSo = donhang.D_Id;
+        let sql_text3 = "";
+        sv.map(function (e) {
+            sql_text3 += "INSERT INTO T2004E_Nhom1_DonHang_Services(D_Id,S_Id,SoLuong,ThanhTien) VALUES("+MaSo+","+e.S_Id+", 2,"+(e.SPrice*2)+");";
+        })
+        db.query(sql_text3,function (err,rows) {
+            if(err) res.send(err);
+            else res.redirect("/booking/success");
+        })
+    })
 });
