@@ -1100,10 +1100,7 @@ body{
     position: relative;
     height: 27vw;
     background-color: #f4f7f6;
-    /*border-radius: 2vw;*/
-    /*-webkit-box-shadow: 5px 7px 5px 0 rgba(0,0,0,0.75);*/
-    /*-moz-box-shadow: 5px 7px 5px 0 rgba(0,0,0,0.75);*/
-    /*box-shadow: 5px 7px 5px 0 rgba(0,0,0,0.75);*/
+    box-shadow: 0px 30px 60px 0 rgba(0,0,0,0.3);
 }
 .Beauty-Artist-s1-ss1{
     height: 25vw!important;

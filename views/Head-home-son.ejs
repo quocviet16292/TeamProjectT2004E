@@ -143,36 +143,13 @@
                                 </div>
                                 <div class="modal-body-bottom">
                                     <div class="d-flex modal-body-bottom-s0">
+                                        <% tps.map(function (v) { %>
                                         <div class="col-auto modal-body-bottom-s01">
                                             <form action="/Promotion/search/BaSic" method="get">
-                                                <button class="btn btn-outline-light modal-body-bottom-s1" data-toggle="modal" data-target="#myModallogin">Basic</button>
+                                                <button class="btn btn-outline-light modal-body-bottom-s1"  data-toggle="modal" data-target="#myModallogin"><% v.District%></button>
                                             </form>
                                         </div>
-                                        <div class="col-auto modal-body-bottom-s01">
-                                            <form action="/Promotion/search/Wedding" method="get">
-                                                <button class="btn btn-outline-light modal-body-bottom-s1" data-toggle="modal" data-target="#myModallogin">Wedding</button>
-                                            </form>
-                                        </div>
-                                        <div class="col-auto modal-body-bottom-s01">
-                                            <form action="/Promotion/search/Photoshoot" method="get">
-                                                <button class="btn btn-outline-light modal-body-bottom-s1" data-toggle="modal" data-target="#myModallogin">Photoshoot</button>
-                                            </form>
-                                        </div>
-                                        <div class="col-auto modal-body-bottom-s01">
-                                           <form action="/Promotion/search/Bridesmaid" method="get">
-                                               <button class="btn btn-outline-light modal-body-bottom-s1" data-toggle="modal" data-target="#myModallogin">Bridesmaid</button>
-                                           </form>
-                                        </div>
-                                        <div class="col-auto modal-body-bottom-s01">
-                                            <form action="/Promotion/search/Traditional" method="get">
-                                                <button class="btn btn-outline-light modal-body-bottom-s1" data-toggle="modal" data-target="#myModallogin">Traditional Wedding</button>
-                                            </form>
-                                        </div>
-                                        <div class="col-auto modal-body-bottom-s01">
-                                            <form action="/Promotion/search/Character" method="get">
-                                                <button class="btn btn-outline-light modal-body-bottom-s1" data-toggle="modal" data-target="#myModallogin">Character,SPFX,Prostethic</button>
-                                            </form>
-                                        </div>
+                                            <% }) %>
                                     </div>
                                 </div>
                             </div>
