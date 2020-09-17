@@ -56,11 +56,11 @@
             <!--             <a href="/artist" class="Beauty-Artist-a">-->
             <% aps.map(function (v) { %>
                 <div class="Beauty-Artist-s1 Beauty-Artist-s1-ss1">
-                    <a href="#" class="Beauty-Artist-a">
+                    <a href="/service/<%= v.Id %>" class="Beauty-Artist-a">
                         <img class="img-fluid imgs-cover imgs-cover-ss1" src="<%= v.Cover %>" alt="a">
-                        <a href="#"><img class="imgs-avartar imgs-avartar-ss1" style="width: 15vw; height: 15vw" src="<%= v.Avartar %>" alt="a"></a>
+                        <a href="/service/<%= v.Id %>"><img class="imgs-avartar imgs-avartar-ss1" style="width: 15vw; height: 15vw" src="<%= v.Avartar %>" alt="a"></a>
                         <div class="Beauty-Artist-s112">
-                            <a href="#" class="Beauty-Artist-s112-a"><span class="Beauty-Artist-s112-span"><%= v.Name %></span></a>
+                            <a href="/service/<%= v.Id %>" class="Beauty-Artist-s112-a"><span class="Beauty-Artist-s112-span"><%= v.Name %></span></a>
                         </div>
                         <div class="Beauty-Artist-s1123">
                             <a class="Beauty-Artist-s1123-a">Discount <%= v.SPromo*100 %>% OFF</a>

@@ -1099,11 +1099,8 @@ body{
     text-align: center;
     position: relative;
     height: 27vw;
-    background-color: #FFFFFF;
-    /*border-radius: 2vw;*/
-    /*-webkit-box-shadow: 5px 7px 5px 0 rgba(0,0,0,0.75);*/
-    /*-moz-box-shadow: 5px 7px 5px 0 rgba(0,0,0,0.75);*/
-    /*box-shadow: 5px 7px 5px 0 rgba(0,0,0,0.75);*/
+    background-color: #f4f7f6;
+    box-shadow: 0px 30px 60px 0 rgba(0,0,0,0.3);
 }
 .Beauty-Artist-s1-ss1{
     height: 25vw!important;
@@ -1147,9 +1144,7 @@ body{
     opacity: 1;
     color: #ff5c5c!important;
 }
-.Beauty-Artist-s112-span{
-    font-size: 1vw;
-}
+
 .Beauty-Artist-s112-a:hover{
     color: #ff5c5c!important;
     list-style: none;
@@ -1254,7 +1249,7 @@ body{
 }
 .imgs-avartar-ss1{
     top: 18%!important;
-    left: 0;
+    left: 8%;
 }
 .Beauty-Artist-s112-s1{
     padding-top: 3vw;
@@ -1319,7 +1314,7 @@ body{
     padding: 0!important;
 }
 .Beauty-Artist-s125-icon-s2{
-    font-size: 0.9vw!important;
+    font-size: 1vw!important;
     opacity: 0.7;
 }
 .header-fooder-notamenu-s42{

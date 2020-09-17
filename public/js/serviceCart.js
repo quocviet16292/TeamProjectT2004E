@@ -129,12 +129,11 @@ function  addService(title, price){
     var cartRowContent1 = `
         <div class="col-12">
             <h3 class="service__title">${title}</h3>
-            <p style="float: left"><span class="display__number" name="quantity1">1</span><span> x ${price}</span></p>
-            <p style="float: right"><b class="display__total" name="thanhtien1"></b></p> 
+            <p style="float: left"><span class="display__number1" name="quantity1">1</span><span> x ${price}</span></p>
+            <p style="float: right"><b class="display__total1" name="thanhtien1"></b></p> 
         </div>`
-    cartRow1.innerHTML = cartRowContent1
-    var hline1 = document.createElement('hr');
-    cartItem1.append(cartRow1, hline1);
+    cartRow1.innerHTML = cartRowContent1;
+    cartItem1.append(cartRow1);
 }
 
 //Get Info and Print on the Step 4
@@ -173,10 +172,13 @@ function getSum(){
     let sum = 0;
     for(let i=0; i < x.length; i++){
         sum = sum + parseInt(x[i].innerHTML);
+        console.log(x.length, x[i].innerHTML, sum)
     }
 
     document.getElementById('getSubtotal').innerHTML = sum;
-    console.log(sum);
+    document.getElementById('getSubtotal1').innerHTML = sum;
+    document.getElementById('getGrandtotal').innerHTML = sum;
+    document.getElementById('getGrandtotal1').innerHTML = sum;
 }
 
 $(function() {

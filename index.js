@@ -77,6 +77,236 @@ app.get('/services', (req,res)=>{
 app.get('/beautydaily', (req,res)=>{
     res.render('blog');
 })
+app.get("/Registration-Services",function (req,res) {
+    res.render("Re-services-son");
+})
+app.get("/Registration-Artisan",function (req,res) {
+    res.render("ResigArisist-son");
+})
+app.get("/artist-beauty",function (req,res) {
+    res.render("artistbeauty");
+})
+app.get("/login",function (req,res) {
+    res.render("H_login");
+})
+// app.get("/services",function (req,res) {
+//     res.render("service");
+// })
+
+app.post('/booking/success', (req,res)=>{
+    res.render('success');
+})
+
+
+//CỦA SƠNNNNNNNNNNNNNNNNNNNNNNNNN
+
+app.get("/map",function (req,res) {
+    res.render("maps-son");
+});
+
+
+
+app.get("/",function (req,res) {
+
+    let sql_text = "SELECT * FROM T2004E_Nhom1_VIEW_SALE_CHUAN;SELECT * FROM T2004E_Nhom1_VIEW_NEW;SELECT * FROM T2004E_Nhom1_VIEW_RATING;SELECT * FROM T2004E_Nhom1_MU_Type;SELECT * FROM T2004E_Nhom1_Artist;";
+    db.query(sql_text,function (err,rows) {
+        if (err) res.send(err);
+        else{
+            res.render("home-son",{
+                sps: rows.recordsets[0],
+                aps: rows.recordsets[1],
+                mps: rows.recordsets[2],
+                vps: rows.recordsets[3],
+                dps: rows.recordsets[4],
+            });
+        }
+    })
+    // res.render("donhang");
+})
+
+app.get("/Promotion",function (req,res) {
+    let sql_text = "" +
+        "SELECT * FROM T2004E_Nhom1_VIEW_SALE_CHUAN_Promotion;";
+    db.query(sql_text,function (err,rows) {
+        if (err) res.send(err);
+        else{
+            res.render("Promotion-son",{
+                sps: rows.recordset
+            });
+        }
+    })
+    // res.render("donhang");
+})
+
+app.get("/New-Arists",function (req,res) {
+    let sql_text = "SELECT * FROM T2004E_Nhom1_VIEW_NEW_ARIST;";
+    db.query(sql_text,function (err,rows) {
+        if (err) res.send(err);
+        else{
+            res.render("New-Arists-son",{
+                aps: rows.recordset
+            });
+        }
+    })
+    // res.render("donhang");
+})
+
+app.get("/Promotion/District/search",function (req,res) {
+
+    let key_search = "'%"+req.query.keyword+"%'";
+    db.query("SELECT * FROM T2004E_Nhom1_VIEW_SEACH_Huy_2 WHERE District LIKE "+key_search,function (err,rows) {
+        if(err) res.send("Ko co ket qua");
+        else
+            // res.send(rows.recordset);
+            res.render("artistbeauty",{
+                artist: rows.recordset
+            });
+    });
+});
+app.get("/Promotion/Servis/search",function (req,res) {
+
+    let key_search = "'%"+req.query.keyword+"%'";
+    db.query("SELECT * FROM T2004E_Nhom1_VIEW_SEACH_Huy_2 WHERE TName LIKE "+key_search,function (err,rows) {
+        if(err) res.send("Ko co ket qua");
+        else
+            // res.send(rows.recordset);
+            res.render("artistbeauty",{
+                artist: rows.recordset
+            });
+    });
+});
+
+
+
+app.get("/Promotion/servic/:id",async function (req,res) {
+    let arad = req.params.id;
+    let sql_text1 = "SELECT top 300 a.Name,a.District,a.Avartar,a.Cover,a.Phone,b.TName,b.T_Id,c.SWTime,c.SPromo,e.*\n" +
+        "\t\tFROM T2004E_Nhom1_Artist a\n" +
+        "\t\tFULL JOIN T2004E_Nhom1_MU_Services c\n" +
+        "\t\tON c.Id = a.Id\n" +
+        "\t\tFULL JOIN T2004E_Nhom1_MU_Type b\n" +
+        "\t\tON c.T_Id = b.T_Id\n" +
+        "\t\tFULL JOIN T2004E_Nhom1_Portfolio_2 e\n" +
+        "\t\ton e.P_Id = a.Id\n" +
+        "\t\tWHERE b.T_Id =" +arad;
+    let add = "ko co";
+    await db.query(sql_text1).then(rs=>{
+        add = rs;
+    }).catch(function (err) {
+        console.log(err);
+    });
+    await res.render("artistbeauty",{
+        artist: add.recordset
+    });
+})
+
+app.get("/Promotion/District/:id",async function (req,res) {
+    let arad = req.params.id;
+    let sql_text1 = "SELECT  a.Name,a.District,a.Avartar,a.Cover,a.Phone,b.TName,b.T_Id,c.SWTime,c.SPromo,e.*,d.Name,d.Id\n" +
+        "\t\tFROM T2004E_Nhom1_Artist a\n" +
+        "\t\tFULL JOIN T2004E_Nhom1_MU_Services c\n" +
+        "\t\tON c.Id = a.Id\n" +
+        "\t\tFULL JOIN T2004E_Nhom1_MU_Type b\n" +
+        "\t\tON c.T_Id = b.T_Id\n" +
+        "\t\tFULL JOIN T2004E_Nhom1_Portfolio_2 e\n" +
+        "\t\tON e.P_Id = a.Id\n" +
+        "\t\tFULL JOIN T2004E_Nhom1_District d\n" +
+        "\t\tON d.Id =a.Id_District\n" +
+        "\t\tWHERE a.Id_District =" +arad;
+    let add = "ko co";
+    await db.query(sql_text1).then(rs=>{
+        add = rs;
+    }).catch(function (err) {
+        console.log(err);
+    });
+    await res.render("artistbeauty",{
+        artist: add.recordsets
+    });
+})
+
+app.get("/Promotion/search/lowest",function (req,res) {
+
+    db.query("SELECT * FROM T2004E_Nhom1_VIEW_SALE_CHUAN_Promotion_loswest",function (err,rows) {
+        if(err) res.send("Ko co ket qua");
+        else
+            // res.send(rows.recordset);
+            res.render("Promotion-son",{
+                sps: rows.recordset
+            });
+    });
+});
+app.get("/Promotion/search/hight",function (req,res) {
+
+    db.query("SELECT * FROM T2004E_Nhom1_VIEW_SALE_CHUAN_Promotion_hight",function (err,rows) {
+        if(err) res.send("Ko co ket qua");
+        else
+            // res.send(rows.recordset);
+            res.render("Promotion-son",{
+                sps: rows.recordset
+            });
+    });
+});
+
+app.get("/NewArtist/search",function (req,res) {
+
+    let key_search = "'%"+req.query.keyword+"%'";
+    db.query("SELECT * FROM T2004E_Nhom1_VIEW_NEW_ARIST WHERE District LIKE "+key_search,function (err,rows) {
+        if(err) res.send("Ko co ket qua");
+        else
+            // res.send(rows.recordset);
+            res.render("New-Arists-son",{
+                aps: rows.recordset
+            });
+    });
+});
+
+app.get("/NewArtist/search/new-lowest",function (req,res) {
+
+    db.query("SELECT * FROM T2004E_Nhom1_VIEW_NEW_ARIST_Nguoc;",function (err,rows) {
+        if(err) res.send("Ko co ket qua");
+        else
+            // res.send(rows.recordset);
+            res.render("New-Arists-son",{
+                aps: rows.recordset
+            });
+    });
+});
+
+app.get("/NewArtist/search/new-hight",function (req,res) {
+
+    db.query("SELECT * FROM T2004E_Nhom1_VIEW_NEW_ARIST;",function (err,rows) {
+        if(err) res.send("Ko co ket qua");
+        else
+            // res.send(rows.recordset);
+            res.render("New-Arists-son",{
+                aps: rows.recordset
+            });
+    });
+});
+
+
+
+//của nam
+// app.get("/BeautyArtist",function (req,res) {
+//     //lay du lieu
+//     db.query("select PImageClient, T2004E_Nhom1_Artist.* from T2004E_Nhom1_Artist\n" +
+//         "inner join T2004E_Nhom1_Portfolio on T2004E_Nhom1_Artist.Id = T2004E_Nhom1_Portfolio.P_Id\n" +
+//         "order by Name asc;select top 5 PImageClient from T2004E_Nhom1_Portfolio \n" +
+//         "inner join T2004E_Nhom1_Artist\n" +
+//         "on T2004E_Nhom1_Portfolio.P_Id = T2004E_Nhom1_Artist.Id",
+//         function(err,rows){
+//             if(err)
+//                 res.send("kog co ket qua");
+//             else
+//                 res.send(rows.recordset);  //trả về dữ liệu của database mk tryu vấn
+//
+//             // res.render("artistbeauty",{
+//             //     artist:rows.recordsets[0],
+//             //     img:rows.recordsets[1]
+//             // })
+//         })
+// });
+
 app.get("/service/:id",async function (req,res) {
     let aid = req.params.id;
     let artist = "select * from T2004E_Nhom1_Artist WHERE Id ="+aid;
@@ -118,412 +348,76 @@ app.get("/service/:id",async function (req,res) {
         artist: a.recordset,
         service: s.recordset,
         portfolio: p.recordset,
-        review: r.recordset
+        review: r.recordset,
 
         // khachhang:kh,
         // donhang:donhang
     });
 })
 
-
-app.get("/Registration-Services",function (req,res) {
-    res.render("Re-services-son");
-})
-app.get("/Registration-Artisan",function (req,res) {
-    res.render("ResigArisist-son");
-})
-app.get("/BeautyArtist",function (req,res) {
+app.get("/service",function (req,res) {
     //lay du lieu
-    db.query("select * from T2004E_Nhom1_VIEW_SEACH_Huy", function(err,rows){
+    db.query("select * from T2004E_Nhom1_MU_Services\n" +
+        "inner join T2004E_Nhom1_Artist\n" +
+        "on T2004E_Nhom1_MU_Services.Id=T2004E_Nhom1_Artist.Id\n" +
+        "inner join T2004E_Nhom1_MU_Type\n" +
+        "on T2004E_Nhom1_MU_Services.T_Id = T2004E_Nhom1_MU_Type.T_Id\n" +
+        "where T2004E_Nhom1_Artist.Id = 3;select * from T2004E_Nhom1_Artist where Id=3;" +
+        "select * from T2004E_Nhom1_Portfolio where P_Id = 3\n",
+        function(err,rows){
+            if(err)
+                res.send("kog co ket qua");
+            else
+                // res.send(rows.recordset);  //trả về dữ liệu của database mk tryu vấn
+
+                res.render("service",{
+                    service:rows.recordsets[0],
+                    artist:rows.recordsets[1],
+                    portfolio:rows.recordsets[2]
+                })
+        })
+});
+
+
+
+//
+
+// CỦA HUYYYYYYYYYYYYY
+
+app.get("/BeautyArtist",function (req,res) {
+
+
+    db.query( "select * from T2004E_Nhom1_VIEW_SEACH_Huy_1;", function(err,rows){
         if(err)
-            res.send(err);
+            res.send("kog co ket qua");
         else
+            // res.send(rows.recordset);  //trả về dữ liệu của database mk tryu vấn
+
             res.render("artistbeauty",{
                 artist:rows.recordset
+
             })
     })
 });
-app.get("/login",function (req,res) {
-    res.render("H_login");
-})
-app.get("/services",function (req,res) {
-    res.render("service");
-})
 
-app.post('/booking/success', (req,res)=>{
-    res.render('success');
-})
-
-
-//CỦA SƠNNNNNNNNNNNNNNNNNNNNNNNNN
-
-app.get("/map",function (req,res) {
-    res.render("maps-son");
-});
-
-
-
-app.get("/",function (req,res) {
-
-    let sql_text = "SELECT * FROM T2004E_Nhom1_VIEW_SALE_CHUAN;SELECT * FROM T2004E_Nhom1_VIEW_NEW;SELECT * FROM T2004E_Nhom1_VIEW_RATING;SELECT * FROM T2004E_Nhom1_MU_Type;";
-    db.query(sql_text,function (err,rows) {
-        if (err) res.send(err);
-        else{
-            res.render("home-son",{
-                sps: rows.recordsets[0],
-                aps: rows.recordsets[1],
-                mps: rows.recordsets[2],
-                vps: rows.recordsets[3],
-            });
-        }
-    })
-    // res.render("donhang");
-})
-
-app.get("/Promotion",function (req,res) {
-    let sql_text = "" +
-        "SELECT * FROM T2004E_Nhom1_VIEW_SALE_CHUAN_Promotion;";
-    db.query(sql_text,function (err,rows) {
-        if (err) res.send(err);
-        else{
-            res.render("Promotion-son",{
-                sps: rows.recordset
-            });
-        }
-    })
-    // res.render("donhang");
-})
-
-app.get("/New-Arists",function (req,res) {
-    let sql_text = "SELECT * FROM T2004E_Nhom1_VIEW_NEW_ARIST;";
-    db.query(sql_text,function (err,rows) {
-        if (err) res.send(err);
-        else{
-            res.render("New-Arists-son",{
-                aps: rows.recordset
-            });
-        }
-    })
-    // res.render("donhang");
-})
-
-app.get("/Promotion/search",function (req,res) {
-
-    let key_search = "'%"+req.query.keyword+"%'";
-    db.query("SELECT * FROM T2004E_Nhom1_VIEW_SEACH WHERE District LIKE "+key_search,function (err,rows) {
-        if(err) res.send("Ko co ket qua");
-        else
-            // res.send(rows.recordset);
-            res.render("Promotion-son",{
-                sps: rows.recordset
-            });
-    });
-});
-app.get("/Promotion/search-2",function (req,res) {
-
-    let key_search = "'%"+req.query.keyword+"%'";
-    db.query("SELECT * FROM T2004E_Nhom1_VIEW_SEACH WHERE TName LIKE "+key_search,function (err,rows) {
-        if(err) res.send("Ko co ket qua");
-        else
-            // res.send(rows.recordset);
-            res.render("Promotion-son",{
-                sps: rows.recordset
-            });
-    });
-});
-app.get("/Promotion/search-3",function (req,res) {
-
-    let key_search = "'%"+req.query.keyword+"%'";
-    db.query("SELECT * FROM T2004E_Nhom1_VIEW_SEACH WHERE District LIKE N"+key_search,function (err,rows) {
-        if(err) res.send("Ko co ket qua");
-        else
-            // res.send(rows.recordset);
-            res.render("Promotion-son",{
-                sps: rows.recordset
-            });
-    });
-});
-
-
-app.get("/Promotion/search/BaSic",function (req,res) {
-
-    // let key_search = "'%"+req.query.keyword+"%'";
-    db.query("SELECT * FROM T2004E_Nhom1_VIEW_SEACH WHERE TName LIKE '%BaSic%';",function (err,rows) {
-        if(err) res.send("Ko co ket qua");
-        else
-            // res.send(rows.recordset);
-            res.render("Promotion-son",{
-                sps: rows.recordset
-            });
-    });
-});
-app.get("/Promotion/search/Wedding",function (req,res) {
-
-    // let key_search = "'%"+req.query.keyword+"%'";
-    db.query("SELECT * FROM T2004E_Nhom1_VIEW_SEACH WHERE TName LIKE '%Wedding%';",function (err,rows) {
-        if(err) res.send("Ko co ket qua");
-        else
-            // res.send(rows.recordset);
-            res.render("Promotion-son",{
-                sps: rows.recordset
-            });
-    });
-});
-app.get("/Promotion/search/Photoshoot",function (req,res) {
-
-    // let key_search = "'%"+req.query.keyword+"%'";
-    db.query("SELECT * FROM T2004E_Nhom1_VIEW_SEACH WHERE TName LIKE '%Photoshoot%';",function (err,rows) {
-        if(err) res.send("Ko co ket qua");
-        else
-            // res.send(rows.recordset);
-            res.render("Promotion-son",{
-                sps: rows.recordset
-            });
-    });
-});
-app.get("/Promotion/search/Bridesmaid",function (req,res) {
-
-    // let key_search = "'%"+req.query.keyword+"%'";
-    db.query("SELECT * FROM T2004E_Nhom1_VIEW_SEACH WHERE TName LIKE '%Bridesmaid%';",function (err,rows) {
-        if(err) res.send("Ko co ket qua");
-        else
-            // res.send(rows.recordset);
-            res.render("Promotion-son",{
-                sps: rows.recordset
-            });
-    });
-});
-app.get("/Promotion/search/Traditional",function (req,res) {
-
-    // let key_search = "'%"+req.query.keyword+"%'";
-    db.query("SELECT * FROM T2004E_Nhom1_VIEW_SEACH WHERE TName LIKE '%Traditional%';",function (err,rows) {
-        if(err) res.send("Ko co ket qua");
-        else
-            // res.send(rows.recordset);
-            res.render("Promotion-son",{
-                sps: rows.recordset
-            });
-    });
-});
-app.get("/Promotion/search/Character",function (req,res) {
-
-    // let key_search = "'%"+req.query.keyword+"%'";
-    db.query("SELECT * FROM T2004E_Nhom1_VIEW_SEACH WHERE TName LIKE '%Character%';",function (err,rows) {
-        if(err) res.send("Ko co ket qua");
-        else
-            // res.send(rows.recordset);
-            res.render("Promotion-son",{
-                sps: rows.recordset
-            });
-    });
-});
-app.get("/Promotion/search/HaiBaTrung",function (req,res) {
-
-    // let key_search = "'%"+req.query.keyword+"%'";
-    db.query("SELECT * FROM T2004E_Nhom1_VIEW_SEACH WHERE District LIKE '%Hai%';",function (err,rows) {
-        if(err) res.send("Ko co ket qua");
-        else
-            // res.send(rows.recordset);
-            res.render("Promotion-son",{
-                sps: rows.recordset
-            });
-    });
-});
-app.get("/Promotion/search/HoanKiem",function (req,res) {
-
-    // let key_search = "'%"+req.query.keyword+"%'";
-    db.query("SELECT * FROM T2004E_Nhom1_VIEW_SEACH WHERE District LIKE N'%Hoàn%';",function (err,rows) {
-        if(err) res.send("Ko co ket qua");
-        else
-            // res.send(rows.recordset);
-            res.render("Promotion-son",{
-                sps: rows.recordset
-            });
-    });
-});
-app.get("/Promotion/search/HaDong",function (req,res) {
-
-    // let key_search = "'%"+req.query.keyword+"%'";
-    db.query("SELECT * FROM T2004E_Nhom1_VIEW_SEACH WHERE District LIKE N'%Hà%';",function (err,rows) {
-        if(err) res.send("Ko co ket qua");
-        else
-            // res.send(rows.recordset);
-            res.render("Promotion-son",{
-                sps: rows.recordset
-            });
-    });
-});
-app.get("/Promotion/search/BaDinh",function (req,res) {
-
-    // let key_search = "'%"+req.query.keyword+"%'";
-    db.query("SELECT * FROM T2004E_Nhom1_VIEW_SEACH WHERE District LIKE N'%Ba%';",function (err,rows) {
-        if(err) res.send("Ko co ket qua");
-        else
-            // res.send(rows.recordset);
-            res.render("Promotion-son",{
-                sps: rows.recordset
-            });
-    });
-});
-app.get("/Promotion/search/DongDa",function (req,res) {
-
-    // let key_search = "'%"+req.query.keyword+"%'";
-    db.query("SELECT * FROM T2004E_Nhom1_VIEW_SEACH WHERE District LIKE N'%Đống%';",function (err,rows) {
-        if(err) res.send("Ko co ket qua");
-        else
-            // res.send(rows.recordset);
-            res.render("Promotion-son",{
-                sps: rows.recordset
-            });
-    });
-});
-app.get("/Promotion/search/CauGiay",function (req,res) {
-
-    // let key_search = "'%"+req.query.keyword+"%'";
-    db.query("SELECT * FROM T2004E_Nhom1_VIEW_SEACH WHERE District LIKE N'%Cầu%';",function (err,rows) {
-        if(err) res.send("Ko co ket qua");
-        else
-            // res.send(rows.recordset);
-            res.render("Promotion-son",{
-                sps: rows.recordset
-            });
-    });
-});
-app.get("/Promotion/search/HoangMai",function (req,res) {
-
-    // let key_search = "'%"+req.query.keyword+"%'";
-    db.query("SELECT * FROM T2004E_Nhom1_VIEW_SEACH WHERE District LIKE N'%Hoàng%';",function (err,rows) {
-        if(err) res.send("Ko co ket qua");
-        else
-            // res.send(rows.recordset);
-            res.render("Promotion-son",{
-                sps: rows.recordset
-            });
-    });
-});
-app.get("/Promotion/search/TayHo",function (req,res) {
-
-    // let key_search = "'%"+req.query.keyword+"%'";
-    db.query("SELECT * FROM T2004E_Nhom1_VIEW_SEACH WHERE District LIKE N'%Tây%';",function (err,rows) {
-        if(err) res.send("Ko co ket qua");
-        else
-            // res.send(rows.recordset);
-            res.render("Promotion-son",{
-                sps: rows.recordset
-            });
-    });
-});
-app.get("/Promotion/search/NamTuLiem",function (req,res) {
-
-    // let key_search = "'%"+req.query.keyword+"%'";
-    db.query("SELECT * FROM T2004E_Nhom1_VIEW_SEACH WHERE District LIKE N'%Nam%';",function (err,rows) {
-        if(err) res.send("Ko co ket qua");
-        else
-            // res.send(rows.recordset);
-            res.render("Promotion-son",{
-                sps: rows.recordset
-            });
-    });
-});
-app.get("/Promotion/search/BacTuLiem",function (req,res) {
-
-    // let key_search = "'%"+req.query.keyword+"%'";
-    db.query("SELECT * FROM T2004E_Nhom1_VIEW_SEACH WHERE District LIKE N'%Bắc%';",function (err,rows) {
-        if(err) res.send("Ko co ket qua");
-        else
-            // res.send(rows.recordset);
-            res.render("Promotion-son",{
-                sps: rows.recordset
-            });
-    });
-});
-app.get("/Promotion/search/ThanhXuan",function (req,res) {
-
-    // let key_search = "'%"+req.query.keyword+"%'";
-    db.query("SELECT * FROM T2004E_Nhom1_VIEW_SEACH WHERE District LIKE N'%Thanh%';",function (err,rows) {
-        if(err) res.send("Ko co ket qua");
-        else
-            // res.send(rows.recordset);
-            res.render("Promotion-son",{
-                sps: rows.recordset
-            });
-    });
-});
-
-app.get("/Promotion/promo-lowest",function (req,res) {
-
-    db.query("SELECT * FROM T2004E_Nhom1_VIEW_SALE_CHUAN_Promotion_loswest",function (err,rows) {
-        if(err) res.send("Ko co ket qua");
-        else
-            // res.send(rows.recordset);
-            res.render("Promotion-son",{
-                sps: rows.recordset
-            });
-    });
-});
-app.get("/Promotion/promo-hight",function (req,res) {
-
-    db.query("SELECT * FROM T2004E_Nhom1_VIEW_SALE_CHUAN_Promotion_hight",function (err,rows) {
-        if(err) res.send("Ko co ket qua");
-        else
-            // res.send(rows.recordset);
-            res.render("Promotion-son",{
-                sps: rows.recordset
-            });
-    });
-});
-
-app.get("/NewArtist/search",function (req,res) {
-
-    let key_search = "'%"+req.query.keyword+"%'";
-    db.query("SELECT * FROM T2004E_Nhom1_View_New_Ar_S2 WHERE District LIKE "+key_search,function (err,rows) {
-        if(err) res.send("Ko co ket qua");
-        else
-            // res.send(rows.recordset);
-            res.render("New-Arists-son",{
-                aps: rows.recordset
-            });
-    });
-});
-
-app.get("/NewArtist/search/new-lowest",function (req,res) {
-
-    db.query("SELECT * FROM T2004E_Nhom1_VIEW_NEW_ARIST_Nguoc;",function (err,rows) {
-        if(err) res.send("Ko co ket qua");
-        else
-            // res.send(rows.recordset);
-            res.render("New-Arists-son",{
-                aps: rows.recordset
-            });
-    });
-});
-
-app.get("/NewArtist/search/new-hight",function (req,res) {
-
-    db.query("SELECT * FROM T2004E_Nhom1_VIEW_NEW_ARIST;",function (err,rows) {
-        if(err) res.send("Ko co ket qua");
-        else
-            // res.send(rows.recordset);
-            res.render("New-Arists-son",{
-                aps: rows.recordset
-            });
-    });
-});
 
 
 //------------V
 app.get('/booking/:serviceID', async (req,res)=>{
     let sID = req.params.serviceID;
+    let sname = req.query.serviceTitle;
     let sql_text = "SELECT * FROM T2004E_Nhom1_MU_Services WHERE S_Id = "+sID;
     let sql_text2 = "SELECT * FROM T2004E_Nhom1_MU_Services INNER JOIN T2004E_Nhom1_Artist ON T2004E_Nhom1_Artist.Id = T2004E_Nhom1_MU_Services.Id WHERE S_Id = "+sID;
     let sql_text3 = "EXEC v_services @ID = "+sID;
     let sql_text4 = "SELECT * FROM T2004E_Nhom1_City";
     let sql_text5 = "SELECT * FROM T2004E_Nhom1_District";
+    let sql_text6 = "SELECT * FROM T2004E_Nhom1_MU_Services WHERE SName LIKE N'"+sname+"'";
     let sv = "";
     let art = "";
     let allsv ="";
     let city ="";
     let district ="";
+    let svs ="";
     await db.query(sql_text).then(rs=>{
         sv = rs;
     }).catch(function (err){
@@ -549,13 +443,20 @@ app.get('/booking/:serviceID', async (req,res)=>{
     }).catch(function (err){
         console.log(err);
     })
+    await db.query(sql_text6).then(rs=>{
+        svs = rs;
+        console.log(svs);
+    }).catch(function (err){
+        console.log(err);
+    })
 
     await res.render("book", {
         sps: sv.recordset,
         art: art.recordset,
         allsv: allsv.recordset,
         city: city.recordset,
-        district: district.recordset
+        district: district.recordset,
+        svs:svs.recordset
     });
 })
 

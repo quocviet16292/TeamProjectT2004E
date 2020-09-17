@@ -197,6 +197,13 @@
                                     </div>
                                 </div>
                                 <hr>
+                                <div class="têsr">
+                                    hgjh
+                                    <% svs.map(function (e){%>
+                                        <div><%= e.SPrice%></div>
+                                    <% })%>
+                                </div>
+
                                 <div class="cart-items">
                                     <!--                                <div class="row cart-row">-->
                                     <!--                                    <div class="col-11">-->
@@ -281,8 +288,8 @@
                                                 <div class="col-md-10 text-right">
                                                     <b>Sub Total</b>
                                                 </div>
-                                                <div class="col-md-2">
-                                                    1000000
+                                                <div class="col-md-2" id="getSubtotal1" style="text-align: right">
+                                                    0
                                                 </div>
                                             </div>
                                         </div>
@@ -292,8 +299,8 @@
                                                 <div class="col-md-10 text-right">
                                                     <b>Grand Total</b>
                                                 </div>
-                                                <div class="col-md-2">
-                                                    1000000
+                                                <div class="col-md-2" id="getGrandtotal1">
+                                                    0
                                                 </div>
                                             </div>
                                         </div>
@@ -335,11 +342,11 @@
                             <table class="table">
                                 <tr>
                                     <td>Subtotal:</td>
-                                    <td><b id="getSubtotal">1000000</b></td>
+                                    <td><b id="getSubtotal">0</b></td>
                                 </tr>
                                 <tr>
                                     <td>Grand Total:</td>
-                                    <td><b id="getGrandtotal">1000000</b></td>
+                                    <td><b id="getGrandtotal">0</b></td>
                                 </tr>
                             </table>
                         </div>
@@ -375,7 +382,7 @@
 
     // Select City and District Cascade
     $("#Ccity").change(function() {
-        if($(this).data('options') == undefined){
+        if($(this).data('options') === undefined){
             $(this).data('options',$('#Cdistrict option').clone());
         }
         var id = $(this).val();
@@ -383,6 +390,16 @@
         $('#Cdistrict').html(options);
     });
 
+
+
+
+
+
+    // function addToCart(){
+    //     let title = $('#service__select option:selected').text();
+    //     let price =
+    //     addService(title, price);
+    // }
 
 </script>
 
