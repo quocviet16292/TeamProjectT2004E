@@ -133,14 +133,12 @@ a.H_hover{
     background-color: white;
     padding-top: 100px;
     height: auto;
-    float: left;
 
 }
 .H_img_artist_desc{
     background-color: white;
-    float: left;
     height: auto;
-    margin-left: 15px;
+
     display: block;
 
 
