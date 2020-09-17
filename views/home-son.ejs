@@ -61,23 +61,23 @@
          </div>
      </nav>
  </section>
-<!-- <section class="section">-->
-<!--     <div class="sbuttons">-->
+ <section class="section">
+     <div class="sbuttons">
 
-<!--         <a href="#" target="_blank" class="sbutton whatsapp" tooltip="WhatsApp"><i class="fab fa-whatsapp"></i></a>-->
+         <a href="#" target="_blank" class="sbutton whatsapp" tooltip="WhatsApp"><i class="fab fa-whatsapp"></i></a>
 
-<!--         <a href="#" target="_blank" class="sbutton fb" tooltip="Facebook"><i class="fab fa-facebook-f"></i></a>-->
+         <a href="#" target="_blank" class="sbutton fb" tooltip="Facebook"><i class="fab fa-facebook-f"></i></a>
 
-<!--         <a href="#" target="_blank" class="sbutton gplus" tooltip="Google Plus"><i class="fab fa-google-plus-g"></i></a>-->
+         <a href="#" target="_blank" class="sbutton gplus" tooltip="Google Plus"><i class="fab fa-google-plus-g"></i></a>
 
-<!--         <a href="#" target="_blank" class="sbutton twitt" tooltip="Twitter"><i class="fab fa-twitter"></i></a>-->
+         <a href="#" target="_blank" class="sbutton twitt" tooltip="Twitter"><i class="fab fa-twitter"></i></a>
 
-<!--         <a href="#" target="_blank" class="sbutton pinteres" tooltip="Pinterest"><i class="fab fa-pinterest-p"></i></a>-->
+         <a href="#" target="_blank" class="sbutton pinteres" tooltip="Pinterest"><i class="fab fa-pinterest-p"></i></a>
 
-<!--         <a target="_blank" class="sbutton mainsbutton" tooltip="Share"><i class="fas fa-share-alt"></i></a>-->
+         <a target="_blank" class="sbutton mainsbutton" tooltip="Share"><i class="fas fa-share-alt"></i></a>
 
-<!--     </div>-->
-<!-- </section>-->
+     </div>
+ </section>
  <section class="section head-s1">
      <div class="video-s">
          <video id="video_background" preload="auto" autoplay="true" loop="loop" muted volume="0">
@@ -120,7 +120,6 @@
                      </div>
                  </button>
 
-                 <!-- Modal -->
                  <div class="modal fade bd-example-modal-lg" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                      <div class="modal-dialog modal-lg" role="document">
                          <div class="modal-content">
@@ -149,7 +148,10 @@
                                      <div class="d-flex modal-body-bottom-s0">
                                          <% vps.map(function (v) { %>
                                              <div class="col-auto modal-body-bottom-s01">
-                                                 <a href="/Promotion/servic/<%= v.T_Id %>"><button class="btn btn-outline-light modal-body-bottom-s1"  data-toggle="modal" data-target="#myModallogin"><%= v.TName%></button></a>
+                                                 <a href="/Promotion/servic/<%= v.T_Id %>">
+                                                     <button class="btn btn-outline-light modal-body-bottom-s1"  data-toggle="modal" data-target="#myModallogin">
+                                                         <%= v.TName%>
+                                                     </button></a>
                                              </div>
                                          <% }) %>
                                      </div>
@@ -179,7 +181,6 @@
                      </button>
                  </div>
              </div>
-             <!-- Modal -->
              <div class="modal fade bd-example-modal-lg" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                  <div class="modal-dialog modal-lg" role="document">
                      <div class="modal-content">
@@ -226,10 +227,11 @@
                                  <div class="d-flex modal-body-bottom-s0">
                                      <% dps.map(function (v) { %>
                                      <div class="col-auto modal-body-bottom-s01">
-                                            <a href="/Promotion/District/<%= v.Id_District %>">
-                                                <button class="btn btn-outline-light modal-body-bottom-s1" name="District" value="<%= v.District %>" >
-                                                    <%= v.District%>
-                                               </button></a>
+                                            <a href="/Promotion/District/<%= v.Id %>">
+                                                <button class="btn btn-outline-light modal-body-bottom-s1" name="District" >
+                                                    <%= v.Name%>
+                                               </button>
+                                            </a>
                                      </div>
                                          <% }) %>
                                  </div>
@@ -251,8 +253,6 @@
          </div>
      </div>
  </section>
-
-
 
  <hr class="beotihr-01">
  <section class="section container-s1 container-s1-s0-s1">
@@ -277,78 +277,16 @@
                             <% vps.map(function (v) { %>
                                     <div class="col-lg-4 menus021-s1">
                                         <a href="/Promotion/servic/<%= v.T_Id %>" class="menus0212">
-
-<!--                                            <div class="menus0212-menu">-->
                                                 <div class="menu-img left-images">
                                                     <img src="<%= v.Title %>" class="img-fluid menus0212-menu-s2 zoom-hulot" alt="a">
                                                 </div>
                                                 <div class="menus0212-span">
-<!--                                                    <div class="menus0212-span-s2">-->
                                                         <span class="menus0212-span-span"><%= v.TName %></span>
-<!--                                                    </div>-->
-<!--                                                    <button class="btn btn-outline-light menu-s2-search-button-s2" data-toggle="modal" data-target="#myModallogin">View</button>-->
                                                 </div>
-<!--                                            </div>-->
-
                                         </a>
                                     </div>
                                 <% }) %>
-                                <script type="text/javascript">
-                                    $(document).ready(function() {
-                                        $("#lightSliders3").lightSlider({
-                                            item: 2,
-                                            autoWidth: false,
-                                            dots:true,
-                                            slideMove: 1, // slidemove will be 1 if loop is true
-                                            slideMargin: 20,
-
-                                            addClass: '',
-                                            mode: "slide",
-                                            useCSS: true,
-                                            cssEasing: 'ease', //'cubic-bezier(0.25, 0, 0.25, 1)',//
-                                            easing: 'linear', //'for jquery animation',////
-
-                                            speed: 600, //ms'
-                                            auto: true,
-                                            loop: true,
-                                            slideEndAnimation: true,
-                                            pause: 6000,
-
-                                            keyPress: true,
-                                            controls: false,
-                                            prevHtml: '<i class=\'far fa-arrow-alt-circle-left\' style=\'font-size:36px;\'></i>',
-                                            nextHtml: '<i class=\'far fa-arrow-alt-circle-right\' style=\'font-size:36px;\'></i>',
-
-                                            rtl:false,
-                                            adaptiveHeight:false,
-
-                                            vertical:false,
-                                            verticalHeight:500,
-                                            vThumbWidth:100,
-
-                                            thumbItem:10,
-                                            pager: false,
-                                            gallery: false,
-                                            galleryMargin: 5,
-                                            thumbMargin: 5,
-                                            currentPagerPosition: 'middle',
-
-                                            enableTouch:true,
-                                            enableDrag:true,
-                                            freeMove:true,
-                                            swipeThreshold: 40,
-
-                                            responsive : [],
-
-                                            onBeforeStart: function (el) {},
-                                            onSliderLoad: function (el) {},
-                                            onBeforeSlide: function (el) {},
-                                            onAfterSlide: function (el) {},
-                                            onBeforeNextSlide: function (el) {},
-                                            onBeforePrevSlide: function (el) {}
-                                        });
-                                    });
-                                </script>
+                                <script type="text/javascript" src="/js/scrip-son3.js"></script>
                         </div>
                     </div>
        </div>
@@ -362,13 +300,11 @@
              <hr class="tiller-s22-span-s1">
          </div>
          <div class="Beauty-Artist">
-
-<!--             <a href="/artist" class="Beauty-Artist-a">-->
                  <% sps.map(function (v) { %>
                      <div class="Beauty-Artist-s1">
-                         <a href="</service/<%= v.Id %>>" class="Beauty-Artist-a">
+                         <a href="/service/<%= v.Id %>" class="Beauty-Artist-a">
                                      <img class="img-fluid imgs-cover" src="<%= v.Cover %>" alt="a">
-                                 <a href="/service/<%= v.Id %>"><img class="imgs-avartar" style="width: 15vw; height: 15vw" src="<%= v.Avartar %>" alt="a"></a>
+                                     <img class="imgs-avartar" src="<%= v.Avartar %>" alt="a">
                              <div class="Beauty-Artist-s112">
                                  <a href="/service/<%= v.Id %>" class="Beauty-Artist-s112-a"><span class="Beauty-Artist-s112-span"><%= v.Name %></span></a>
                              </div>
@@ -380,14 +316,15 @@
                                      <div class="d-flex Beauty-Artist-s121">
                                          <div class="tensp"><span class="Beauty-Artist-s121-span"><del><%= v.SPrice %> VND</del></span></div>
                                          <div class="Beauty-Artist-s1212"><i class='fas fa-arrow-right'></i></div>
-                                         <div class="tensp"><span class="Beauty-Artist-s121-span"><%= v.SPrice*(1-v.SPromo/100) %> VND</span> </div>
+                                         <div class="tensp"><span class="Beauty-Artist-s121-span">
+                                                 <script type="text/javascript">
+                                                        var a= parseInt('<%= v.SPrice*(1-v.SPromo/100) %>');
+                                                        document.write(a);
+                                                 </script>
+                                          VND</span>
+                                         </div>
                                      </div>
                                  </a>
-                                 <script>
-                                     let x = document.getElementsByClassName('Beauty-Artist-s121-span').innerText;
-                                     let y = parseInt(x);
-                                     x = y;
-                                 </script>
                                  <div class="Beauty-Artist-s12-name">
                                      <a href="#" class="header-fooder-notamenu-s4">
                                          <span><%= v.TName %> </span>
@@ -412,7 +349,6 @@
                                                          document.write(day + "/" + month + "/" + year)
                                                   </script>
                                              </span>
-<!--                                             <%= v.SWTime %>-->
                                          </div>
                                      </div>
                                      <div class="col-lg-6">
@@ -430,9 +366,7 @@
                              </div>
                          </a>
                      </div>
-
                  <% }) %>
-<!--             </a>-->
          </div>
      </div>
 
@@ -447,27 +381,15 @@
              <h3 class="tiller-s22-h3"><a href="/New-Arists" class="tiller-s22-h3-a">NEW MAKEUP ARTIST</a> </h3>
              <hr class="tiller-s22-span-s1">
          </div>
-<!--         <div class="d-flex tillets1-s1">-->
-<!--             <div class="col-lg-10 container-tillets1">-->
-<!--                 <span class="container-tillets1-span">Beauty Artist <span class="container-tillets1-span-p"><u>NEW!</u></span></span>-->
-<!--             </div>-->
-<!--             <div class="col-lg-2 container-tillets1-left">-->
-<!--                 <a href="/services" class="notamenu">-->
-<!--                     <span class="container-tillets1-left-span">See All <i class='fas fa-chevron-right'></i></span>-->
-<!--                 </a>-->
-<!--             </div>-->
-<!--         </div>-->
      <div class="Beauty-Artist">
-<!--         <div class="container-new-s2">-->
              <div id="lightSliders">
-<!--                 <a href="/artist">-->
                  <% aps.map(function (v) { %>
                      <div class="Beauty-Artist-s1 Beauty-Artist-s1-ss1">
                          <a href="/service/<%= v.Id %>" class="Beauty-Artist-a">
                              <img class="img-fluid imgs-cover imgs-cover-ss1" src="<%= v.Cover %>" alt="a">
-                             <a href="/service/<%= v.Id %>"><img class="imgs-avartar imgs-avartar-ss1" style="width: 15vw; height: 15vw" src="<%= v.Avartar %>" alt="a"></a>
+                             <img class="imgs-avartar-22" src="<%= v.Avartar %>" alt="a">
                              <div class="Beauty-Artist-s112">
-                                 <a href="/service/<%= v.Id %>" class="Beauty-Artist-s112-a"><span class="Beauty-Artist-s112-span"><%= v.Name %></span></a>
+                                 <a href="#" class="Beauty-Artist-s112-a"><span class="Beauty-Artist-s112-span"><%= v.Name %></span></a>
                              </div>
                              <div class="Beauty-Artist-s1123">
                                  <a class="Beauty-Artist-s1123-a">Discount <%= v.SPromo %>% OFF</a>
@@ -485,7 +407,6 @@
                                          </div>
                                          <div class="Beauty-Artist-s12-SWTime">
                                              <span><%= v.SPrice %></span>
-                                             <!--                                             <%= v.SWTime %>-->
                                          </div>
                                      </div>
                                      <div class="col-lg-6">
@@ -504,77 +425,14 @@
                          </a>
                      </div>
                  <% }) %>
-<!--                 </a>-->
-
-                 <script type="text/javascript">
-                     $(document).ready(function() {
-                         $("#lightSliders").lightSlider({
-                             item: 4,
-                             autoWidth: false,
-                             dots:false,
-                             slideMove: 1, // slidemove will be 1 if loop is true
-                             slideMargin: 10,
-
-                             addClass: '',
-                             mode: "slide",
-                             useCSS: true,
-                             cssEasing: 'ease', //'cubic-bezier(0.25, 0, 0.25, 1)',//
-                             easing: 'linear', //'for jquery animation',////
-
-                             speed: 400, //ms'
-                             auto: false,
-                             loop: true,
-                             slideEndAnimation: true,
-                             pause: 2000,
-
-                             keyPress: false,
-                             controls: true,
-                             prevHtml: '<i class=\'far fa-arrow-alt-circle-left\' style=\'font-size:36px;\'></i>',
-                             nextHtml: '<i class=\'far fa-arrow-alt-circle-right\' style=\'font-size:36px;\'></i>',
-
-                             rtl:false,
-                             adaptiveHeight:false,
-
-                             vertical:false,
-                             verticalHeight:500,
-                             vThumbWidth:100,
-
-                             thumbItem:10,
-                             pager: false,
-                             gallery: false,
-                             galleryMargin: 5,
-                             thumbMargin: 5,
-                             currentPagerPosition: 'middle',
-
-                             enableTouch:true,
-                             enableDrag:true,
-                             freeMove:true,
-                             swipeThreshold: 40,
-
-                             responsive : [],
-
-                             onBeforeStart: function (el) {},
-                             onSliderLoad: function (el) {},
-                             onBeforeSlide: function (el) {},
-                             onAfterSlide: function (el) {},
-                             onBeforeNextSlide: function (el) {},
-                             onBeforePrevSlide: function (el) {}
-                         });
-                     });
-                 </script>
+                     <script type="text/javascript" src="/js/slide-son2.js"></script>
              </div>
          </div>
      </div>
      <hr class="beotihr-04">
  </section>
  <section class="section container-s1 container-s1-s1 container-s1-s1-s3">
-
      <div class="container tillets2">
-<!--         <div class="d-flex tillets1-s1">-->
-<!--             <div class="col-lg-10 container-tillets1">-->
-<!--                 <span class="container-tillets1-span">Beauty Artist Of The Month</span>-->
-<!--             </div>-->
-<!--         </div>-->
          <div class="tiller-s22-s1-s1">
              <span class="tiller-s22-s0"><u>BEST!</u></span>
              <h3 class="tiller-s22-h3">MAKEUP ARTIST THE MONTH</h3>
@@ -587,7 +445,6 @@
                  <% mps.map(function (v) { %>
                      <div class="Beauty-Artist-s1 Beauty-Artist-s1-ss Beauty-Artist-s1-ss-s1">
                          <a href="/service/<%= v.Id %>" class="Beauty-Artist-a">
-
                              <img class="img-fluid imgs-cover imgs-cover-ss1" src="<%= v.Avartar %>" alt="a">
                              <a href="/service/<%= v.Id %>"><div class="icon-imgs-cover-ss1"><i class='fas fa-certificate' style='font-size:48px;color:red'></i></div></a>
                              <div class="Beauty-Artist-s112">
@@ -610,7 +467,6 @@
                                          </div>
                                          <div class="Beauty-Artist-s12-SWTime">
                                              <span> <%= v.SPrice %></span>
-                                             <!--                                             <%= v.SWTime %>-->
                                          </div>
                                      </div>
                                      <div class="col-lg-6">
@@ -629,63 +485,7 @@
                          </a>
                      </div>
                  <% }) %>
-
-                 <script type="text/javascript">
-                     $(document).ready(function() {
-                         $("#lightSliders1").lightSlider({
-                             item: 4,
-                             autoWidth: false,
-                             dots:false,
-                             slideMove: 1, // slidemove will be 1 if loop is true
-                             slideMargin: 10,
-
-                             addClass: '',
-                             mode: "slide",
-                             useCSS: true,
-                             cssEasing: 'ease', //'cubic-bezier(0.25, 0, 0.25, 1)',//
-                             easing: 'linear', //'for jquery animation',////
-
-                             speed: 400, //ms'
-                             auto: false,
-                             loop: true,
-                             slideEndAnimation: true,
-                             pause: 2000,
-
-                             keyPress: false,
-                             controls: true,
-                             prevHtml: '<i class=\'far fa-arrow-alt-circle-left\' style=\'font-size:36px;\'></i>',
-                             nextHtml: '<i class=\'far fa-arrow-alt-circle-right\' style=\'font-size:36px;\'></i>',
-
-                             rtl:false,
-                             adaptiveHeight:false,
-
-                             vertical:false,
-                             verticalHeight:500,
-                             vThumbWidth:100,
-
-                             thumbItem:10,
-                             pager: false,
-                             gallery: false,
-                             galleryMargin: 5,
-                             thumbMargin: 5,
-                             currentPagerPosition: 'middle',
-
-                             enableTouch:true,
-                             enableDrag:true,
-                             freeMove:true,
-                             swipeThreshold: 40,
-
-                             responsive : [],
-
-                             onBeforeStart: function (el) {},
-                             onSliderLoad: function (el) {},
-                             onBeforeSlide: function (el) {},
-                             onAfterSlide: function (el) {},
-                             onBeforeNextSlide: function (el) {},
-                             onBeforePrevSlide: function (el) {}
-                         });
-                     });
-                 </script>
+<script type="text/javascript" src="/js/slide-son1.js"></script>
              </div>
          </div>
      </div>
