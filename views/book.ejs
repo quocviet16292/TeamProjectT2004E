@@ -186,7 +186,7 @@
                                             <label>Select Service</label>
                                             <select name="service" class="form-control" id="service__select" onchange="resetNumber()">
                                                 <% allsv.map(e=>{ %>
-                                                    <option value="<%= e.S_Id %>" class="service_name"><%= e.SName %></option>
+                                                    <option value="<%= e.S_Id %>" class="service_name"> <%= e.SName %> </option>
                                                 <% }); %>
                                             </select>
                                         </div>

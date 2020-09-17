@@ -161,7 +161,3 @@ small{
 #service__select option:nth-child(even){
     background: #99999920;
 }
-.cart-row{
-    margin-bottom: 10px;
-    border-bottom: .5px solid #48484820;
-}
