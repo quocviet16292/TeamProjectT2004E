@@ -6,7 +6,7 @@ $(document).ready(function() {
 
         if(pos_body>271){
             $('.sticky-top-s').addClass('co-dinh-menu');
-            document.getElementById("nav-head-s").style.background = "#FFFFFF";
+            document.getElementById("nav-head-s").style.background = "#f5f5f5";
             document.getElementById("nav-head-s").style.boxShadow = "0px 3px 9px 0px rgba(0,0,0,0.75)";
             document.getElementById("nav-pro").style.display = 'block';
         }

@@ -56,7 +56,7 @@
                 <div class="Beauty-Artist-s1">
                     <a href="/service/<%= v.Id %>" class="Beauty-Artist-a">
                         <img class="img-fluid imgs-cover" src="<%= v.Cover %>" alt="a">
-                        <a href="/service/<%= v.Id %>"><img class="imgs-avartar" style="width: 15vw; height: 15vw" src="<%= v.Avartar %>" alt="a"></a>
+                        <a href="/service/<%= v.Id %>"><img class="imgs-avartar" src="<%= v.Avartar %>" alt="a"></a>
                         <div class="Beauty-Artist-s112">
                             <a href="#" class="Beauty-Artist-s112-a"><span class="Beauty-Artist-s112-span"><%= v.Name %></span></a>
                         </div>
@@ -68,7 +68,12 @@
                                 <div class="d-flex Beauty-Artist-s121">
                                     <div class="tensp"><span class="Beauty-Artist-s121-span"><del><%= v.SPrice %> VND</del></span></div>
                                     <div class="Beauty-Artist-s1212"><i class='fas fa-arrow-right'></i></div>
-                                    <div class="tensp"><span class="Beauty-Artist-s121-span"><%= v.SPrice*(1-v.SPromo/100) %> VND</span> </div>
+                                    <div class="tensp"><span class="Beauty-Artist-s121-span">
+                                             <script type="text/javascript">
+                                                        var a= parseInt('<%= v.SPrice*(1-v.SPromo/100) %>');
+                                                        document.write(a);
+                                                 </script>
+                                            VND</span> </div>
                                 </div>
                             </a>
                             <div class="Beauty-Artist-s12-name">

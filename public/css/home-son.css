@@ -343,10 +343,14 @@ img{
 }
 .input-s11{
     position: absolute;
-    top: 830%;
+    top: 1000%;
     left: 38%;
     padding: 0.3rem 3rem !important;
-    border-radius: 0.5vw;
+    /*padding-top: 0.3rem;*/
+    /*padding-left: 3rem;*/
+    /*padding-right: 3rem;*/
+    /*padding-bottom: 1rem;*/
+    /*border-radius: 0.5vw;*/
     background-color: #ff5c5c!important;
     border: none!important;
 
@@ -392,7 +396,7 @@ img{
     height: 5vw;
 }
 .modal-body-bottom2{
-    padding-bottom: 2.5vw;
+    padding-bottom: 4vw;
 }
 
 .modal-body-arow{
@@ -1068,14 +1072,35 @@ img{
     width: 100%;
     height: 40%;
 }
+
 .imgs-cover-ss1{
     height: 50%!important;
 }
 .imgs-avartar{
     position: absolute;
-    top: 12%;
-    left: 5%;
-    clip-path: circle(15%);
+    top: 30%;
+    left: 35%;
+    border-radius: 50%;
+    background-image: none;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    object-fit: cover;
+    width: 5vw;
+    height: 5vw;
+}
+.imgs-avartar-22{
+    position: absolute;
+    top: 38%;
+    left: 35%;
+    border-radius: 50%;
+    background-image: none;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    object-fit: cover;
+    width: 5vw;
+    height: 5vw;
 }
 .icon-imgs-cover-ss1{
     position: absolute;

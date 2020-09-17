@@ -1128,11 +1128,18 @@ body{
 .imgs-cover-ss1{
     height: 50%!important;
 }
-.imgs-avartar{
+.imgs-avartar-22{
     position: absolute;
-    top: 12%;
-    left: 0;
-    clip-path: circle(15%);
+    top: 38%;
+    left: 35%;
+    border-radius: 50%;
+    background-image: none;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    object-fit: cover;
+    width: 5vw;
+    height: 5vw;
 }
 
 .Beauty-Artist-s112{
@@ -1151,7 +1158,9 @@ body{
     text-decoration: none;
     opacity: 0.7;
 }
-
+.Beauty-Artist-s112-span{
+    font-size: 1vw;
+}
 .Beauty-Artist-s1123{
     padding: 0.5vw 0;
 }
@@ -1249,7 +1258,7 @@ body{
 }
 .imgs-avartar-ss1{
     top: 18%!important;
-    left: 8%;
+    /*left: 6%;*/
 }
 .Beauty-Artist-s112-s1{
     padding-top: 3vw;
@@ -1314,7 +1323,7 @@ body{
     padding: 0!important;
 }
 .Beauty-Artist-s125-icon-s2{
-    font-size: 1vw!important;
+    font-size: 0.9vw!important;
     opacity: 0.7;
 }
 .header-fooder-notamenu-s42{
