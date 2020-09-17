@@ -13,32 +13,10 @@
     <list default="true" id="a8ceb5b1-59e0-4696-ad49-96b52bef462f" name="Default Changelist" comment="Viet">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/Arists-promotion-son.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/Arists-promotion-son.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/BeautyArtist.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/BeautyArtist.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/blog.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/blog.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/home-son.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/home-son.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/map-son.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/map-son.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/new-arists.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/new-arists.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/Re-Arsist-services-son.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/Re-Arsist-services-son.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/home-son.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/home-son.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/incrementing.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/incrementing.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/jquery-3.3.1.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/jquery-3.3.1.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/main-son.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/main-son.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/popper.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/popper.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/serviceCart.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/serviceCart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/validation-son.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/validation-son.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/Head-home-son.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/Head-home-son.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/New-Arists-son.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/New-Arists-son.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/Promotion-son.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/Promotion-son.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/about.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/about.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/N_artist.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/N_artist.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/artistbeauty.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/artistbeauty.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/book.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/book.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/home-son.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/home-son.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/layout/head-Aritst-son.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/layout/head-Aritst-son.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/layout/header-son.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/layout/header-son.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/layout/navbar-Beauty-Artist-s.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/layout/navbar-Beauty-Artist-s.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/layout/navbar-Promotions-s.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/layout/navbar-Promotions-s.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/maps-son.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/maps-son.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/service.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/service.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -130,7 +108,7 @@
       <workItem from="1600085974994" duration="7312000" />
       <workItem from="1600094235412" duration="7985000" />
       <workItem from="1600141002261" duration="12891000" />
-      <workItem from="1600259562797" duration="7205000" />
+      <workItem from="1600259562797" duration="10946000" />
     </task>
     <task id="LOCAL-00001" summary="Viet">
       <created>1598621678893</created>
@@ -307,7 +285,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600102267964</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Viet">
+      <created>1600332953628</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1600332953628</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -364,22 +349,26 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="756" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1599408088498" />
-    <state x="146" y="63" key="MergeDialog" timestamp="1599391725942">
+    <state x="146" y="63" key="MergeDialog" timestamp="1600333884869">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="146" y="63" key="MergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1599391725942" />
+    <state x="146" y="63" key="MergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1600333884869" />
+    <state x="406" y="172" key="MultipleFileMergeDialog" timestamp="1600333884873">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="406" y="172" key="MultipleFileMergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1600333884873" />
     <state x="434" y="112" key="SettingsEditor" timestamp="1600164399011">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="434" y="112" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1600164399011" />
-    <state x="360" y="142" key="Vcs.Push.Dialog.v2" timestamp="1600102269652">
+    <state x="360" y="142" key="Vcs.Push.Dialog.v2" timestamp="1600333897378">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="360" y="142" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1600102269652" />
-    <state x="628" y="63" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1600102257575">
+    <state x="360" y="142" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1600333897378" />
+    <state x="628" y="63" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1600332918718">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="628" y="63" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog/0.0.1536.824@0.0.1536.824" timestamp="1600102257575" />
+    <state x="628" y="63" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog/0.0.1536.824@0.0.1536.824" timestamp="1600332918718" />
     <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1600092740681">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -407,13 +396,8 @@
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/index.js</url>
-          <line>138</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/public/js/serviceCart.js</url>
-          <line>215</line>
+          <line>218</line>
           <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
