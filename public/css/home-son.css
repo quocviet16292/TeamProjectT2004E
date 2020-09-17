@@ -343,12 +343,17 @@ img{
 }
 .input-s11{
     position: absolute;
-    top: 930%;
+    top: 1000%;
     left: 38%;
     padding: 0.3rem 3rem !important;
-    border-radius: 0.5vw;
+    /*padding-top: 0.3rem;*/
+    /*padding-left: 3rem;*/
+    /*padding-right: 3rem;*/
+    /*padding-bottom: 1rem;*/
+    /*border-radius: 0.5vw;*/
     background-color: #ff5c5c!important;
     border: none!important;
+
 }
 .input-s11:focus{
     box-shadow: none!important;
@@ -391,7 +396,7 @@ img{
     height: 5vw;
 }
 .modal-body-bottom2{
-    padding-bottom: 2.5vw;
+    padding-bottom: 4vw;
 }
 
 .modal-body-arow{
@@ -438,14 +443,17 @@ img{
     list-style: none;
     text-decoration: none;
 }
-
+.sbutton mainsbutton{
+    z-index: 9999!important;
+}
 .Beauty-Artist-s1:hover{
     -ms-transform: scale(1.01); /* IE 9 */
     -webkit-transform: scale(1.01); /* Safari 3-8 */
     transform: scale(1.01);
-    -webkit-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
-    box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+    /*-webkit-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);*/
+    /*-moz-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);*/
+    /*box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);*/
+    box-shadow: 0px 30px 60px 0 rgba(0,0,0,0.3);
 }
 .Beauty-Artist-s1-s1:hover{
     -ms-transform: scale(1.03); /* IE 9 */
@@ -527,6 +535,7 @@ img{
 }
 .container-s1-s0-s1{
     padding-bottom: 2vw;
+    z-index: 10!important;
 }
 .container-s1-s0-s2{
     padding-bottom: 3vw;
@@ -579,6 +588,7 @@ img{
     /*padding-top: 2vw;*/
     position: relative;
     padding-bottom: 4vw;
+
 }
 .container-s1-s1-s3{
     padding-top: 3vw;
@@ -689,11 +699,11 @@ img{
 }
 
 .menus0212:hover .menus0212-span{
-    transform: translateY(-12px);
+    transform: translateY(-24px);
 }
-.menus0212:hover .left-images{
-    transform: translateY(12px);
-}
+/*.menus0212:hover .left-images{*/
+/*    transform: translateY(12px);*/
+/*}*/
 .menus0212-span{
     font-size: 1.2vw;
     color: #171717;
@@ -1032,10 +1042,8 @@ img{
     position: relative;
     height: 27vw;
     background-color: #FFFFFF;
-    /*border-radius: 2vw;*/
-    /*-webkit-box-shadow: 5px 7px 5px 0 rgba(0,0,0,0.75);*/
-    /*-moz-box-shadow: 5px 7px 5px 0 rgba(0,0,0,0.75);*/
-    /*box-shadow: 5px 7px 5px 0 rgba(0,0,0,0.75);*/
+
+    /*box-shadow: 0px 30px 60px 0 rgba(0,0,0,0.3);*/
 }
 .Beauty-Artist-s1-ss1{
     height: 25vw!important;
@@ -1064,14 +1072,35 @@ img{
     width: 100%;
     height: 40%;
 }
+
 .imgs-cover-ss1{
     height: 50%!important;
 }
 .imgs-avartar{
     position: absolute;
-    top: 12%;
-    left: 5%;
-    clip-path: circle(15%);
+    top: 30%;
+    left: 35%;
+    border-radius: 50%;
+    background-image: none;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    object-fit: cover;
+    width: 5vw;
+    height: 5vw;
+}
+.imgs-avartar-22{
+    position: absolute;
+    top: 38%;
+    left: 35%;
+    border-radius: 50%;
+    background-image: none;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    object-fit: cover;
+    width: 5vw;
+    height: 5vw;
 }
 .icon-imgs-cover-ss1{
     position: absolute;
@@ -1222,7 +1251,7 @@ img{
     font-size: 1.6vw;
     left: 11%;
     top: 6.5%;
-    z-index: 99999;
+    z-index: 888;
     color: #ffffff;
     /*clip-path: circle(15%);*/
     /*padding: 2vw 2vw;*/
@@ -1442,6 +1471,7 @@ img{
     position: fixed;
     margin: 1em;
     left: 2%;
+    z-index: 9999!important;
 }
 .sbutton {
     display: block;

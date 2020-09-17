@@ -52,21 +52,18 @@
 <section class="section promotion-conten">
     <div class="container"  id="wrapper">
         <div class="Beauty-Artist">
-
-            <!--             <a href="/artist" class="Beauty-Artist-a">-->
             <% aps.map(function (v) { %>
                 <div class="Beauty-Artist-s1 Beauty-Artist-s1-ss1">
-                    <a href="#" class="Beauty-Artist-a">
-                        <img class="img-fluid imgs-cover imgs-cover-ss1" src="<%= v.Cover %>" alt="a">
-                        <a href="#"><img class="imgs-avartar imgs-avartar-ss1" style="width: 15vw; height: 15vw" src="<%= v.Avartar %>" alt="a"></a>
+                    <a href="/service/<%= v.Id %>" class="Beauty-Artist-a">
+                        <img class="img-fluid imgs-cover imgs-cover-ss1" src="<%= v.Avartar %>" alt="a">
+                       <img class="imgs-avartar-22" src="<%= v.Cover  %>" alt="a">
                         <div class="Beauty-Artist-s112">
-                            <a href="#" class="Beauty-Artist-s112-a"><span class="Beauty-Artist-s112-span"><%= v.Name %></span></a>
+                            <a href="/service/<%= v.Id %>" class="Beauty-Artist-s112-a"><span class="Beauty-Artist-s112-span"><%= v.Name %></span></a>
                         </div>
                         <div class="Beauty-Artist-s1123">
                             <a class="Beauty-Artist-s1123-a">Discount <%= v.SPromo*100 %>% OFF</a>
                         </div>
                         <div class="Beauty-Artist-s12">
-
                             <hr>
                             <div class="d-flex">
                                 <div class="col-lg-6 Beauty-Artist-s126 Beauty-Artist-s126-s1l2">
@@ -78,13 +75,7 @@
                                     </div>
                                     <div class="Beauty-Artist-s12-SWTime">
                                         <span id="demo"><%= v.SPrice %></span>
-                                        <!--                                             <%= v.TimeRegis %>-->
                                     </div>
-<!--                                    <script type="text/javascript">-->
-<!--                                        var d = new Date("<%= v.TimeRegis %>");-->
-<!--                                        var n = d.toLocaleDateString();-->
-<!--                                        document.getElementById("demo").innerHTML = n;-->
-<!--                                    </script>-->
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="d-flex Beauty-Artist-s125">
@@ -102,7 +93,6 @@
                     </a>
                 </div>
             <% }) %>
-            <!--             </a>-->
         </div>
     </div>
 </section>

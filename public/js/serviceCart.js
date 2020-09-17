@@ -66,19 +66,6 @@ function fixStepIndicator(n) {
 
 }
 
-// Remove Service Button
-function removeItem(){
-    let removeItemBtn = document.getElementsByClassName("btn__remove");
-    for(let i=0; i < removeItemBtn.length; i++){
-
-        let button = removeItemBtn[i];
-
-        button.addEventListener('click',(event)=>{
-            let buttonClicked = event.target;
-            buttonClicked.parentElement.parentElement.parentElement.remove();
-        })
-    }
-}
 
 //Get Number
 function getNumber (price){
@@ -120,7 +107,7 @@ function  addService(title, price){
     var cartItem = document.getElementsByClassName('cart-items')[0]
     var cartRowContent = `
         <div class="col-11">
-            <h3 class="service__title">${title}</h3>
+            <h3 class="service__title" name="serviceTitle">${title}</h3>
             <p><span class="display__number" name="quantity">1</span><span> x ${price}</span></p>
             <p><b class="display__total"  name="thanhtien"></b></p>
         </div>
@@ -128,8 +115,9 @@ function  addService(title, price){
             <a class="btn__remove" onclick="removeItem()"><i class="fas fa-times fa-lg" style="color: var(--main-color)"></i></i> </a>
         </div>`
     cartRow.innerHTML = cartRowContent
-    var hline = document.createElement('hr');
-    cartItem.append(cartRow, hline);
+
+    cartItem.append(cartRow);
+
 
 
 
@@ -141,12 +129,11 @@ function  addService(title, price){
     var cartRowContent1 = `
         <div class="col-12">
             <h3 class="service__title">${title}</h3>
-            <p style="float: left"><span class="display__number" name="quantity">1</span><span> x ${price}</span></p>
-            <p style="float: right"><b class="display__total" name="thanhtien"></b></p> 
+            <p style="float: left"><span class="display__number1" name="quantity1">1</span><span> x ${price}</span></p>
+            <p style="float: right"><b class="display__total1" name="thanhtien1"></b></p> 
         </div>`
-    cartRow1.innerHTML = cartRowContent1
-    var hline1 = document.createElement('hr');
-    cartItem1.append(cartRow1, hline1);
+    cartRow1.innerHTML = cartRowContent1;
+    cartItem1.append(cartRow1);
 }
 
 //Get Info and Print on the Step 4
@@ -169,26 +156,29 @@ function getInfoStep1(){
 // function sumCount(){
 // let subtotal = document.getElementById('getSubtotal').innerText;
 // let getItemList = document.getElementsByClassName('display__total');
-let total = 0;
-for(let i = 0; i < document.getElementsByClassName('display__total').length; i++){
-    total += (parseFloat(document.getElementsByClassName('display__total')[i].innerText)*1000000);
-    //Loi so thap phan
-}
-console.log(total);
+// let total = 0;
+// for(let i = 0; i < document.getElementsByClassName('display__total').length; i++){
+//     total += (parseFloat(document.getElementsByClassName('display__total')[i].innerText)*500000);
+//     //Loi so thap phan
 // }
+// console.log(total);
+// // }
 //
 // sumCount();
 
 
 function getSum(){
-    let x = $('.display__total');
+    let x = document.getElementsByClassName('display__total');
     let sum = 0;
     for(let i=0; i < x.length; i++){
-        sum = sum + parseInt($('.display__total:eq(i)').text());
+        sum = sum + parseInt(x[i].innerHTML);
+        console.log(x.length, x[i].innerHTML, sum)
     }
 
-    $('#getSubtotal').text(parseInt(sum));
-    console.log(sum);
+    document.getElementById('getSubtotal').innerHTML = sum;
+    document.getElementById('getSubtotal1').innerHTML = sum;
+    document.getElementById('getGrandtotal').innerHTML = sum;
+    document.getElementById('getGrandtotal1').innerHTML = sum;
 }
 
 $(function() {
@@ -220,3 +210,24 @@ $(function() {
 
 
 
+
+// Remove Service Button
+//REMOVE nhưng chưa xóa khỏi mảng SelectList được
+function removeItem(){
+    let removeItemBtn = document.getElementsByClassName("btn__remove");
+    for(let i=0; i < removeItemBtn.length; i++){
+
+        let button = removeItemBtn[i];
+
+        button.addEventListener('click',(event)=>{
+            let buttonClicked = event.target;
+            let title = buttonClicked.parentElement.parentElement.children[0].children[0].innerText;
+            buttonClicked.parentElement.parentElement.parentElement.remove();
+            for(let j=0; j < selectList.length; j++){
+                if(selectList[j] === title){
+                    selectList.splice(j,2);
+                }
+            }
+        })
+    }
+}

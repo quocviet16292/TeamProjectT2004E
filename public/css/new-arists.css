@@ -1099,11 +1099,8 @@ body{
     text-align: center;
     position: relative;
     height: 27vw;
-    background-color: #FFFFFF;
-    /*border-radius: 2vw;*/
-    /*-webkit-box-shadow: 5px 7px 5px 0 rgba(0,0,0,0.75);*/
-    /*-moz-box-shadow: 5px 7px 5px 0 rgba(0,0,0,0.75);*/
-    /*box-shadow: 5px 7px 5px 0 rgba(0,0,0,0.75);*/
+    background-color: #f4f7f6;
+    box-shadow: 0px 30px 60px 0 rgba(0,0,0,0.3);
 }
 .Beauty-Artist-s1-ss1{
     height: 25vw!important;
@@ -1131,11 +1128,18 @@ body{
 .imgs-cover-ss1{
     height: 50%!important;
 }
-.imgs-avartar{
+.imgs-avartar-22{
     position: absolute;
-    top: 12%;
-    left: 0;
-    clip-path: circle(15%);
+    top: 38%;
+    left: 35%;
+    border-radius: 50%;
+    background-image: none;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    object-fit: cover;
+    width: 5vw;
+    height: 5vw;
 }
 
 .Beauty-Artist-s112{
@@ -1147,16 +1151,16 @@ body{
     opacity: 1;
     color: #ff5c5c!important;
 }
-.Beauty-Artist-s112-span{
-    font-size: 1vw;
-}
+
 .Beauty-Artist-s112-a:hover{
     color: #ff5c5c!important;
     list-style: none;
     text-decoration: none;
     opacity: 0.7;
 }
-
+.Beauty-Artist-s112-span{
+    font-size: 1vw;
+}
 .Beauty-Artist-s1123{
     padding: 0.5vw 0;
 }
@@ -1254,7 +1258,7 @@ body{
 }
 .imgs-avartar-ss1{
     top: 18%!important;
-    left: 0;
+    /*left: 6%;*/
 }
 .Beauty-Artist-s112-s1{
     padding-top: 3vw;

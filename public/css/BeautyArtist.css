@@ -1,5 +1,3 @@
-
-
 #img_background{
     background-image: url("https://www.hellobeauty.id/assets/images/banner.jpg ");
     background-size: cover ;
@@ -158,6 +156,9 @@ a.H_hover{
     height: auto;
     display: inline-block;
     vertical-align:top;
+}
+.H_thumb{
+    object-fit: cover;
 }
 .H_thumb img{
     width: 100%;

@@ -24,7 +24,7 @@
 .vheaderBD__nav ul li a{
     color: black;
     letter-spacing: 0.5px;
-
+    animation: 0.3ms ease-in-out;
 }
 
 .vheaderBD__nav ul li a:hover{
@@ -103,6 +103,7 @@
 .owl-content button{
     background: transparent;
     border-radius: 0;
+    animation: 0.8ms ease-in-out;
 }
 .owl-content a{
     text-decoration: none;

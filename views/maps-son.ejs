@@ -13,9 +13,9 @@
         "use strict";
 
         let map;
-        const chicago = {
-            lat: -33.91721,
-            lng: 151.22630
+        const hanoi = {
+            lat: 21.0287993,
+            lng: 105.7805116
         };
         /**
          * The CenterControl adds a control to the map that recenters the map on
@@ -66,13 +66,13 @@
 
         function initMap() {
             map = new google.maps.Map(document.getElementById("map"), {
-                zoom: 15,
-                center: chicago
+                zoom: 14,
+                center: hanoi
             }); // Create the DIV to hold the control and call the CenterControl()
             // constructor passing in this DIV.
 
             const centerControlDiv = document.createElement("div");
-            const control = new CenterControl(centerControlDiv, map, chicago);
+            const control = new CenterControl(centerControlDiv, map, hanoi);
             centerControlDiv.index = 1;
             centerControlDiv.style.paddingTop = "10px";
             map.controls[google.maps.ControlPosition.TOP_CENTER].push(
@@ -82,74 +82,108 @@
                 'https://developers.google.com/maps/documentation/javascript/examples/full/images/';
 
             var icons = {
-                parking: {
-                    icon: iconBase + 'parking_lot_maps.png'
-                },
                 library: {
                     icon: iconBase + 'library_maps.png'
-                },
-                info: {
-                    icon: iconBase + 'info-i_maps.png'
                 }
             };
 
             var features = [
                 {
-                    position: new google.maps.LatLng(-33.91721, 151.22630),
-                    type: 'info'
+                    position: new google.maps.LatLng(21.0287993, 105.7805116),
+                    type: 'library'
                 }, {
-                    position: new google.maps.LatLng(-33.91539, 151.22820),
-                    type: 'info'
+                    position: new google.maps.LatLng(21.042803, 105.796175),
+                    type: 'library'
                 }, {
-                    position: new google.maps.LatLng(-33.91747, 151.22912),
-                    type: 'info'
+                    position: new google.maps.LatLng(21.037161, 105.836231),
+                    type: 'library'
                 }, {
-                    position: new google.maps.LatLng(-33.91910, 151.22907),
-                    type: 'info'
+                    position: new google.maps.LatLng(21.029926, 105.854181),
+                    type: 'library'
                 }, {
-                    position: new google.maps.LatLng(-33.91725, 151.23011),
-                    type: 'info'
+                    position: new google.maps.LatLng(21.044237, 105.845561),
+                    type: 'library'
                 }, {
-                    position: new google.maps.LatLng(-33.91872, 151.23089),
-                    type: 'info'
+                    position: new google.maps.LatLng(21.011340, 105.848796),
+                    type: 'library'
                 }, {
-                    position: new google.maps.LatLng(-33.91784, 151.23094),
-                    type: 'info'
+                    position: new google.maps.LatLng(21.003288, 105.851338),
+                    type: 'library'
                 }, {
-                    position: new google.maps.LatLng(-33.91682, 151.23149),
-                    type: 'info'
+                    position: new google.maps.LatLng(20.997320, 105.868144),
+                    type: 'library'
                 }, {
-                    position: new google.maps.LatLng(-33.91790, 151.23463),
-                    type: 'info'
+                    position: new google.maps.LatLng(21.004765, 105.845864),
+                    type: 'library'
                 }, {
-                    position: new google.maps.LatLng(-33.91666, 151.23468),
-                    type: 'info'
+                    position: new google.maps.LatLng(21.014827, 105.851542),
+                    type: 'library'
                 }, {
-                    position: new google.maps.LatLng(-33.916988, 151.233640),
-                    type: 'info'
+                    position: new google.maps.LatLng(21.017696, 105.843122),
+                    type: 'library'
                 }, {
-                    position: new google.maps.LatLng(-33.91662347903106, 151.22879464019775),
-                    type: 'parking'
+                    position: new google.maps.LatLng(21.019437, 105.834668),
+                    type: 'library'
                 }, {
-                    position: new google.maps.LatLng(-33.916365282092855, 151.22937399734496),
-                    type: 'parking'
+                    position: new google.maps.LatLng(21.012349, 105.837030),
+                    type: 'library'
                 }, {
-                    position: new google.maps.LatLng(-33.91665018901448, 151.2282474695587),
-                    type: 'parking'
+                    position: new google.maps.LatLng(20.991392, 105.849052),
+                    type: 'library'
                 }, {
-                    position: new google.maps.LatLng(-33.919543720969806, 151.23112279762267),
-                    type: 'parking'
+                    position: new google.maps.LatLng(20.986518, 105.852131),
+                    type: 'library'
                 }, {
-                    position: new google.maps.LatLng(-33.91608037421864, 151.23288232673644),
-                    type: 'parking'
+                    position: new google.maps.LatLng(20.974144, 105.817302),
+                    type: 'library'
                 }, {
-                    position: new google.maps.LatLng(-33.91851096391805, 151.2344058214569),
-                    type: 'parking'
+                    position: new google.maps.LatLng(20.960365, 105.802625),
+                    type: 'library'
                 }, {
-                    position: new google.maps.LatLng(-33.91818154739766, 151.2346203981781),
-                    type: 'parking'
+                    position: new google.maps.LatLng(21.001120, 105.814734),
+                    type: 'library'
                 }, {
-                    position: new google.maps.LatLng(-33.91727341958453, 151.23348314155578),
+                    position: new google.maps.LatLng(20.994698, 105.806700),
+                    type: 'library'
+                }
+                , {
+                    position: new google.maps.LatLng(20.998515, 105.804276),
+                    type: 'library'
+                }, {
+                    position: new google.maps.LatLng(20.990835, 105.789377),
+                    type: 'library'
+                }, {
+                    position: new google.maps.LatLng(20.968718, 105.775057),
+                    type: 'library'
+                }, {
+                    position: new google.maps.LatLng(20.985643, 105.781984),
+                    type: 'library'
+                }, {
+                    position: new google.maps.LatLng(21.016129, 105.795425),
+                    type: 'library'
+                }, {
+                    position: new google.maps.LatLng(21.008569, 105.803034),
+                    type: 'library'
+                }
+
+
+                , {
+                    position: new google.maps.LatLng(21.016500, 105.815689),
+                    type: 'library'
+                }, {
+                    position: new google.maps.LatLng(21.020494, 105.818483),
+                    type: 'library'
+                }, {
+                    position: new google.maps.LatLng(21.025766, 105.774680),
+                    type: 'library'
+                }, {
+                    position: new google.maps.LatLng(21.031033, 105.789760),
+                    type: 'library'
+                }, {
+                    position: new google.maps.LatLng(21.037111, 105.786388),
+                    type: 'library'
+                }, {
+                    position: new google.maps.LatLng(21.042534, 105.783599),
                     type: 'library'
                 }
             ];
@@ -172,27 +206,24 @@
         <div class="map-son-s0">
             <div class="row map-son-s01">
                 <div class="map-son-s0-aloso"><hr class="map-son-s0-aloso-span"></div>
-                <!--        <span class="map-son-s0-aloso-span"></span>-->
                 <div class="map-son-s1-aloso"><span class="map-son-s0-span">Artisans System</span></div>
                 <div class="map-son-s2-aloso"><hr class="map-son-s2-aloso-span"> </div>
             </div>
         </div>
         <div class="map-son-menu">
+            <form method="get" class="form-group">
             <div class="row">
                 <div class="col-lg-4">
-                    <form method="get" class="form-group">
                         <div class="form-group">
                             <label for="exampleFormControlSelect1"><span>Tỉnh/Thành Phố</span></label>
                             <select class="form-control" id="exampleFormControlSelect1">
                                 <option value="" disabled selected>select your City</option>
-                                <option>Hà Nội</option>
+                                <option value="Hà Nội">Hà Nội</option>
                                 <option>Hồ Chí Minh</option>
                             </select>
                         </div>
-                    </form>
                 </div>
                 <div class="col-lg-4">
-                    <form method="get" class="form-group">
                         <div class="form-group">
                             <label for="exampleFormControlSelect1"><span>Quận/Huyện</span></label>
                             <select class="form-control" id="exampleFormControlSelect1">
@@ -210,15 +241,17 @@
                                 <option value="Bắc Từ Liêm">Bắc Từ Liêm</option>
                             </select>
                         </div>
-                    </form>
                 </div>
-                <div class="col-lg-4">
-                    <form class="form-group" action="#" method="get" >
+                <div class="col-lg-2">
                         <label for="exampleFormControlSelect1"><span>Tìm Kiếm</span></label>
-                        <input class="form-control form-map-son" type="text" name="keyword" placeholder="Type beautician's name or service category"/>
-                    </form>
+                        <input class="form-control form-map-son" type="text" name="keyword" placeholder=""/>
+
+                </div>
+                <div class="col-lg-2">
+                    <button type="submit" class="btn-danger map-son-buttom">Tìm Kiếm</button>
                 </div>
             </div>
+            </form>
         </div>
     </div>
 </section>
