@@ -144,7 +144,7 @@ app.post('/booking/success', (req,res)=>{
 })
 
 
-//CỦA SƠNNNNNNNNNNNNNNNNNNNNNNNNN
+//------------------------------------------SON------------------------------------------------------------------
 
 app.get("/map",function (req,res) {
     res.render("maps-son");
@@ -153,20 +153,7 @@ app.get("/map",function (req,res) {
 
 
 app.get("/",function (req,res) {
-
-    let sql_text = "SELECT TOP 8 a.Id_District,d.Id,a.Name,a.District,a.Avartar,a.Cover,b.TName,c.SWTime,c.SPrice,c.SPromo\n" +
-        "\t\tFROM T2004E_Nhom1_Artist a\n" +
-        "\t\tINNER JOIN T2004E_Nhom1_District d\n" +
-        "\t\tON d.Id = a.Id_District\n" +
-        "\t\tINNER JOIN T2004E_Nhom1_MU_Services c\n" +
-        "\t\tON c.Id = a.Id\n" +
-        "\t\tINNER JOIN T2004E_Nhom1_MU_Type b\n" +
-        "\t\tON c.T_Id = b.T_Id\n" +
-        "\n" +
-        "\t\tWHERE NOT EXISTS (SELECT * FROM T2004E_Nhom1_MU_Services cc WHERE cc.Id = c.Id and cc.SPromo > c.SPromo) and c.SPromo IS NOT NULL\n" +
-        "\t\tORDER BY c.SPromo DESC" +
-        ";SELECT * FROM T2004E_Nhom1_VIEW_NEW;SELECT * FROM T2004E_Nhom1_VIEW_RATING;SELECT * FROM T2004E_Nhom1_MU_Type;" +
-        "SELECT * FROM T2004E_Nhom1_District WHERE Id IN ('001','002','003','005','006','007','008','009','019','021','268');";
+    let sql_text = "SELECT * FROM view_home;SELECT * FROM T2004E_Nhom1_VIEW_NEW;SELECT * FROM T2004E_Nhom1_VIEW_RATING;SELECT * FROM T2004E_Nhom1_MU_Type; SELECT * FROM T2004E_Nhom1_District WHERE Id IN ('001','002','003','005','006','007','008','009','019','021','268');";
     db.query(sql_text,function (err,rows) {
         if (err) res.send(err);
         else{
@@ -179,7 +166,7 @@ app.get("/",function (req,res) {
             });
         }
     })
-    // res.render("donhang");
+    // console.log(sps);
 })
 
 app.get("/Promotion",function (req,res) {
@@ -341,27 +328,8 @@ app.get("/NewArtist/search/new-hight",function (req,res) {
 });
 
 
+// //---------------------------------------------NAM------------------------------------------
 
-//của nam
-// app.get("/BeautyArtist",function (req,res) {
-//     //lay du lieu
-//     db.query("select PImageClient, T2004E_Nhom1_Artist.* from T2004E_Nhom1_Artist\n" +
-//         "inner join T2004E_Nhom1_Portfolio on T2004E_Nhom1_Artist.Id = T2004E_Nhom1_Portfolio.P_Id\n" +
-//         "order by Name asc;select top 5 PImageClient from T2004E_Nhom1_Portfolio \n" +
-//         "inner join T2004E_Nhom1_Artist\n" +
-//         "on T2004E_Nhom1_Portfolio.P_Id = T2004E_Nhom1_Artist.Id",
-//         function(err,rows){
-//             if(err)
-//                 res.send("kog co ket qua");
-//             else
-//                 res.send(rows.recordset);  //trả về dữ liệu của database mk tryu vấn
-//
-//             // res.render("artistbeauty",{
-//             //     artist:rows.recordsets[0],
-//             //     img:rows.recordsets[1]
-//             // })
-//         })
-// });
 
 app.get("/service/:id",async function (req,res) {
     let aid = req.params.id;
@@ -436,9 +404,17 @@ app.get("/service",function (req,res) {
 
 
 
-//
 
-// CỦA HUYYYYYYYYYYYYY
+
+
+
+
+
+
+
+
+
+// CỦA HUYYYYYYYYYYYYY------------------------------------------------------------
 
 app.get("/registet",function (req,res) {
     res.render("H_register")
@@ -530,7 +506,7 @@ app.get("/sprice",function (req,res) {
 
 
 
-//------------V
+//------------V----------------------------------------------------------------------------
 app.get('/booking/:serviceID', async (req,res)=>{
     let sID = req.params.serviceID;
     let sname = req.query.serviceTitle;
