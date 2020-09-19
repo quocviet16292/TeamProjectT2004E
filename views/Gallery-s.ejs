@@ -4,6 +4,10 @@
     <title>Beauty Gallery</title>
     <%- include("layout/head-Aritst-son") -%>
     <link rel="stylesheet" type="text/css" href="/css/Gallery-s.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 </head>
 <body class="home">
 
@@ -12,7 +16,7 @@
     <span class="gallery-span">photo album makeup contest 2020</span>
 </section>
 <div class="masonry-container">
-    <div class="panel">
+    <a class="panel" href="/imgs-s/SBD01.jpg" data-fancybox="gallery" data-caption="Hariwon, Bắc Từ Liêm">
         <div class="panel-wrapper">
             <div class="panel-overlay">
                 <div class="panel-text">
@@ -27,8 +31,8 @@
             </div>
             <img class="panel-img" src="/imgs-s/SBD01.jpg" alt=""/>
         </div>
-    </div>
-    <div class="panel">
+    </a>
+    <a class="panel" href="/imgs-s/SBD02.jpg" data-fancybox="gallery" data-caption="Phương Thanh, Đống Đa">
         <div class="panel-wrapper">
             <div class="panel-overlay">
                 <div class="panel-text">
@@ -42,8 +46,9 @@
                 <img class="panel-vingette" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/375042/darken-gradient.png" alt=""/>
             </div>
             <img class="panel-img" src="/imgs-s/SBD02.jpg" alt=""/>
-        </div></div>
-    <div class="panel">
+        </div>
+    </a>
+    <a class="panel" href="/imgs-s/SBD04.jpg" data-fancybox="gallery" data-caption="Hồ Ngọc Hà, Hoàn Kiếm">
         <div class="panel-wrapper">
             <div class="panel-overlay">
                 <div class="panel-text">
@@ -58,9 +63,9 @@
             </div>
             <img class="panel-img" src="/imgs-s/SBD04.jpg" alt=""/>
         </div>
-    </div>
+    </a>
 
-    <div class="panel">
+    <a class="panel" href="/imgs-s/test06.jpg" data-fancybox="gallery" data-caption="Trang Sun,Tây Hồ">
         <div class="panel-wrapper">
             <div class="panel-overlay">
                 <div class="panel-text">
@@ -75,8 +80,8 @@
             </div>
             <img class="panel-img" src="/imgs-s/test06.jpg" alt=""/>
         </div>
-    </div>
-    <div class="panel">
+    </a>
+    <a class="panel" href="/imgs-s/SBD09.jpg" data-fancybox="gallery" data-caption="Mỹ Tâm,Hai Bà Trưng">
         <div class="panel-wrapper">
             <div class="panel-overlay">
                 <div class="panel-text">
@@ -91,9 +96,9 @@
             </div>
             <img class="panel-img" src="/imgs-s/SBD09.jpg" alt=""/>
         </div>
-    </div>
+    </a>
 
-    <div class="panel">
+    <a class="panel" href="/imgs-s/test01.jpg" data-fancybox="gallery" data-caption="Ngọc Dung,Nam Từ Liêm">
         <div class="panel-wrapper">
             <div class="panel-overlay">
                 <div class="panel-text">
@@ -108,8 +113,8 @@
             </div>
             <img class="panel-img" src="/imgs-s/test01.jpg" alt=""/>
         </div>
-    </div>
-    <div class="panel">
+    </a>
+    <a class="panel" href="/imgs-s/anhnen03.jpg" data-fancybox="gallery" data-caption="Mai Đỗ,Cầu Giấy">
         <div class="panel-wrapper">
             <div class="panel-overlay">
                 <div class="panel-text">
@@ -124,9 +129,9 @@
             </div>
             <img class="panel-img" src="/imgs-s/anhnen03.jpg" alt=""/>
         </div>
-    </div>
+    </a>
 
-    <div class="panel">
+    <a class="panel" href="/imgs-s/test07.jpg" data-fancybox="gallery" data-caption="Hà Nguyễn, Đống Đa">
         <div class="panel-wrapper">
             <div class="panel-overlay">
                 <div class="panel-text">
@@ -141,8 +146,8 @@
             </div>
             <img class="panel-img" src="/imgs-s/test07.jpg" alt=""/>
         </div>
-    </div>
-    <div class="panel">
+    </a>
+    <a class="panel" href="/imgs-s/test05.jpg" data-fancybox="gallery" data-caption="Ngọc Trinh, Ba Đình">
         <div class="panel-wrapper">
             <div class="panel-overlay">
                 <div class="panel-text">
@@ -157,9 +162,9 @@
             </div>
             <img class="panel-img" src="/imgs-s/test05.jpg" alt=""/>
         </div>
-    </div>
+    </a>
 
-    <div class="panel">
+    <a class="panel" href="/imgs-s/test09.jpg" data-fancybox="gallery" data-caption="Ngọc Dung, Bắc Từ Liêm">
         <div class="panel-wrapper">
             <div class="panel-overlay">
                 <div class="panel-text">
@@ -174,8 +179,8 @@
             </div>
             <img class="panel-img" src="/imgs-s/test09.jpg" alt=""/>
         </div>
-    </div>
-    <div class="panel">
+    </a>
+    <a class="panel" href="/imgs-s/test11.jpg" data-fancybox="gallery" data-caption="Mai Phương Thúy, Thanh Xuân">
         <div class="panel-wrapper">
             <div class="panel-overlay">
                 <div class="panel-text">
@@ -190,8 +195,10 @@
             </div>
             <img class="panel-img" src="/imgs-s/test11.jpg" alt=""/>
         </div>
-    </div>
+    </a>
 </div>
+<script type="text/javascript" src="/js/jquery.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 
 <%- include('layout/footer')-%>
 

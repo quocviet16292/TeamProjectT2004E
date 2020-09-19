@@ -515,6 +515,7 @@ body{
     -webkit-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
     box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+
 }
 .Beauty-Artist-s1-s1:hover{
     -ms-transform: scale(1.03); /* IE 9 */
@@ -1183,6 +1184,7 @@ body{
 .Beauty-Artist-s121{
     text-align: center;
     justify-content: center!important;
+    padding-top: 0.5vw;
 }
 .Beauty-Artist-s1212{
     padding: 0 0.5vw;
@@ -1194,6 +1196,7 @@ body{
 
 .Beauty-Artist-s12-name{
     padding-top: 0.5vw;
+    color: #171717;
 }
 .Beauty-Artist-s125-span{
     font-size: 0.85vw;
@@ -1202,6 +1205,7 @@ body{
 }
 .Beauty-Artist-s125{
     justify-content: center!important;
+    color: #171717;
     /*padding-left: 1vw;*/
 }
 .Beauty-Artist-s125-icon{
@@ -1211,9 +1215,11 @@ body{
 .Beauty-Artist-s12-SWTime{
     padding: 0.5vw 0;
     font-size: 0.85vw;
+    color: #171717;
 }
 .Beauty-Artist-s126{
     border-right: 1px solid #cccccc;
+    color: #171717;
 }
 
 .lSPrev{
@@ -1237,6 +1243,19 @@ body{
 }
 .Beauty-Artist-a{
     width: 100%;
+}
+.Beauty-Artist-a:hover{
+   text-decoration: none;
+}
+.Beauty-Artist-s112-span{
+    font-size: 1vw;
+    color: #FF5C5C;
+}
+.Beauty-Artist-s121-span-icon{
+    color: #171717!important;
+}
+.Beauty-Artist-s121-span{
+    color: #171717;
 }
 .imgs-cover-s1{
     width: 100%;
@@ -1309,6 +1328,7 @@ body{
     justify-items: center!important;
     align-items: center;
     text-align: center;
+
 }
 .Beauty-Artist-s125-s2{
     justify-items: center!important;

@@ -186,3 +186,49 @@ html, body {
     text-transform: uppercase;
 }
 
+
+/* Gallery */
+
+#lightbox{
+    background: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+#lightbox img{
+    width: 80%;
+    padding: 5%;
+}
+#prevButton, #nextButton, #exitButton{
+    color: #fff;
+    font-size: 2em;
+    transition: opacity 0.8s;
+}
+#exitButton {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+#prevButton:hover, #nextButton:hover, #exitButton:hover{
+    cursor: pointer;
+    opacity: 0.7;
+}
+@media screen and (min-width: 768px) {
+    #lightbox img {
+        width: 60%;
+    }
+    #prevButton, #nextButton, #exitButton{
+        font-size: 3rem;
+    }
+}
+@media screen and (min-width: 1200px) {
+    #lightbox img {
+        width: 50%;
+    }
+}
