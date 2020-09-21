@@ -161,3 +161,6 @@ small{
 #service__select option:nth-child(even){
     background: #99999920;
 }
+#submitBtn{
+    display: none;
+}
