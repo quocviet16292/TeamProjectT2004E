@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Adding State to Controls</title>
+    <title>Place Autocomplete Arists Search</title>
     <link type="text/css" rel="stylesheet" href="/css/map-son.css"/>
     <%- include("layout/head-Aritst-son") -%>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <script
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCaj0mHlR-keu-9hsR6d-gB0L9BclG04rk&callback=initMap&libraries=&v=weekly"
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCHCZ1jCe9H5p88Cv0-IOu83mSdeggqoNw&callback=initMap&libraries=places&v=weekly"
             defer
     ></script>
     <script type="text/javascript" src="/js/map-son.js"></script>
+
 </head>
 <body>
 <%- include("layout/navbar-sale-son") -%>
+
 <section class="section">
     <div class="container">
         <div class="map-son-s0">
@@ -22,54 +24,88 @@
                 <div class="map-son-s2-aloso"><hr class="map-son-s2-aloso-span"> </div>
             </div>
         </div>
-        <div class="map-son-menu">
-            <form method="get" class="form-group">
-            <div class="row">
-                <div class="col-lg-4">
-                        <div class="form-group">
-                            <label for="exampleFormControlSelect1"><span>Tỉnh/Thành Phố</span></label>
-                            <select class="form-control" id="exampleFormControlSelect1">
-                                <option value="" disabled selected>select your City</option>
-                                <option value="Hà Nội">Hà Nội</option>
-                                <option>Hồ Chí Minh</option>
-                            </select>
-                        </div>
-                </div>
-                <div class="col-lg-4">
-                        <div class="form-group">
-                            <label for="exampleFormControlSelect1"><span>Quận/Huyện</span></label>
-                            <select class="form-control" id="exampleFormControlSelect1">
-                                <option value="" disabled selected>select your District</option>
-                                <option value="Hoàng Mai">Hoàng Mai</option>
-                                <option value="Ba Đình">Ba Đình</option>
-                                <option value="Thanh Xuân">Thanh Xuân</option>
-                                <option value="Hai Bà Trưng">Hai Bà Trưng</option>
-                                <option value="Hoàn Kiếm">Hoàn Kiếm</option>
-                                <option value="Đống Đa">Đống Đa</option>
-                                <option value="Hà Đông">Hà Đông</option>
-                                <option value="Tây Hồ">Tây Hồ</option>
-                                <option value="Cầu Giấy">Cầu Giấy</option>
-                                <option value="Nam Từ Liêm">Nam Từ Liêm</option>
-                                <option value="Bắc Từ Liêm">Bắc Từ Liêm</option>
-                            </select>
-                        </div>
-                </div>
-                <div class="col-lg-2">
-                        <label for="exampleFormControlSelect1"><span>Tìm Kiếm</span></label>
-                        <input class="form-control form-map-son" type="text" name="keyword" placeholder=""/>
-
-                </div>
-                <div class="col-lg-2">
-                    <button type="submit" class="btn-danger map-son-buttom">Tìm Kiếm</button>
-                </div>
-            </div>
-            </form>
-        </div>
     </div>
 </section>
+<form method="#" onsubmit="showAddress(this.address.value); return false">
+    <div class="hotel-search ">
+        <div id="controls" class="controls">
+            <div class="col-lg-4 form-group-city">
+                <div class="form-group form-group-District form-group-District-city">
+                    <label for="exampleFormControlSelect1"><span>City</span></label>
+                    <select class="form-control" id="exampleFormControlSelect1">
+                        <option value="" disabled selected>Select your City</option>
+                        <option value="Hà Nội">Hà Nội</option>
+<!--                        <option>Hồ Chí Minh</option>-->
+                    </select>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <form method="get" class="form-group form-group-District">
+                    <label for="exampleFormControlSelect1" class="form-group-District"><span class="form-group-District">District</span></label>
+                    <select class="form-control" id="country">
+                        <option value="all">Select your District</option>
+                        <option value="hk">Hoàn Kiếm</option>
+                        <option value="hbt">Hai Bà Trưng </option>
+                        <option value="hm">Hoàng Mai</option>
+                        <option value="dd" selected>Đống Đa</option>
+                        <option value="bd">Ba Đình</option>
+                        <option value="hd">Hà Đông</option>
+                        <option value="cg">Cầu Giấy</option>
+                        <option value="btl">Bắc Từ Liêm</option>
+                        <option value="ntl">Nam Từ Liêm</option>
+                        <option value="th">Tây Hồ</option>
+                        <option value="tx">Thanh Xuân</option>
+                    </select>
+                </form>
+            </div>
+            <div class="col-lg-2">
+                <label for="exampleFormControlSelect1"><span>Tìm Kiếm</span></label>
+                <input class="form-control form-map-son" type="text" name="keyword" placeholder=""/>
 
-    <div id="map" class="map-son-s1" ></div>
+            </div>
+            <div class="col-lg-2 submit-search">
+                <button type="submit" class="btn-danger map-son-buttom">Tìm Kiếm</button>
+            </div>
+        </div>
+    </div>
+</form>
+    <div id="map" class="map-son-s1"></div>
+
+    <div id="listing">
+        <table id="resultsTable">
+            <tbody id="results"></tbody>
+        </table>
+    </div>
+
+    <div style="display: none">
+        <div id="info-content">
+            <table>
+                <tr id="iw-url-row" class="iw_table_row">
+                    <td id="iw-icon" class="iw_table_icon"></td>
+                    <td id="iw-url"></td>
+                </tr>
+                <tr id="iw-address-row" class="iw_table_row">
+                    <td class="iw_attribute_name">Address:</td>
+                    <td id="iw-address"></td>
+                </tr>
+                <tr id="iw-phone-row" class="iw_table_row">
+                    <td class="iw_attribute_name">Telephone:</td>
+                    <td id="iw-phone"></td>
+                </tr>
+                <tr id="iw-rating-row" class="iw_table_row">
+                    <td class="iw_attribute_name">Rating:</td>
+                    <td id="iw-rating"></td>
+                </tr>
+                <tr id="iw-website-row" class="iw_table_row">
+                    <td class="iw_attribute_name">Website:</td>
+                    <td id="iw-website"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
 
 <%- include('layout/footer')-%>
+
+<script type="text/javascript" src="/js/map-son.js"></script>
 </body>
 </html>

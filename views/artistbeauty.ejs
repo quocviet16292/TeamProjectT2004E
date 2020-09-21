@@ -6,16 +6,10 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Beauty Artist</title>
-
-
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-
-
-
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <link rel="stylesheet" href="/libs/bootstrap-4.5.2-dist/css/bootstrap.css">
     <link rel="stylesheet" href="/libs/fontawesome-free-5.14.0-web/css/fontawesome.css">
@@ -26,8 +20,6 @@
     <link rel="stylesheet" href="/css/home-son.css"/>
 </head>
 <body>
-
-
 <header class=" H_css_header" id="img_background">
     <section class="section sticky-top ">
         <%- include ('layout/navbar-Promotions-s'); -%>
@@ -80,74 +72,40 @@
                                         <div class="H_topup_icon">
                                             <img src=" https://www.hellobeauty.id/assets/images/verified.svg">
                                         </div>
-                                        <div  class="carousel slide " data-ride="carousel">
-                                            <!--                                                         Indicators-->
-                                            <ul class="carousel-indicators">
-                                                <li data-target="#id_img1" data-slide-to="0" class="active"></li>
-                                                <li data-target="#id_img2" data-slide-to="1"></li>
-                                                <li data-target="#id_img3" data-slide-to="2"></li>
-                                                <li data-target="#id_img4" data-slide-to="3"></li>
-                                            </ul>
-                                            <!--                                                         The slideshow -->
-                                            <div class="carousel-inner active H_article">
-                                                <div  class="carousel-item active H_thumb  ">
-                                                    <img id="id_img1" src="<%= v.Cover_1%>"  >
-                                                </div>
-                                                <div class="carousel-item H_thumb">
-                                                    <img id="id_img2"   src="<%= v.Cover_2%>" >
-                                                </div>
-                                                <div   class="carousel-item H_thumb">
-                                                    <img id="id_img3" src="<%= v.Cover_3%>" >
-                                                </div>
-                                                <div   class="carousel-item H_thumb">
-                                                    <img id="id_img4" src="<%= v.Cover_4%>" >
-                                                </div>
-                                            </div>
-                                            <!-- Left and right controls -->
-                                            <!--                                                        <a class="carousel-control-prev" href="#id_img" data-slide="prev">-->
-                                            <!--                                                            <span class="carousel-control-prev-icon"></span>-->
-                                            <!--                                                        </a>-->
-                                            <!--                                                        <a class="carousel-control-next" href="#id_img" data-slide="next">-->
-                                            <!--                                                            <span class="carousel-control-next-icon"></span>-->
-                                            <!--                                                        </a>-->
-                                        </div>
-                                        <a href="/service/<%=v.P_Id%>" class="">
-                                            <div class="H_info_artist">
-                                                <div class=" H_avt_artist">
-                                                    <img class="H_img " src="<%= v.Avartar%>" height="250" width="250"/>
-                                                </div>
-                                                <div class="H_artist_desc">
-                                                    <div class="H_Name_artist"><%= v.Name %></div>
-                                                    <div class="H_description"><%= v.TName%></div>
-                                                    <div class="H_loca "  ><i style="font-size:11px;color: #484848;" class="fas" >&#xf3c5;</i> <%= v.District%><%= v.City%></div>
-                                                </div>
-                                            </div>
-                                            <div class=" H_display_review">
-                                                <div class="row col-md-6 H_display_review_left">
-                                                                    <span class="H_display_sprice">
-                                                                        5/5.216 Review
-                                                                    </span>
-                                                    <span class="H_Icon">
-                                                                        <i style="font-size:15px; color: red;" class="fa">&#xf004;&#xf004;&#xf004;&#xf004;&#xf004;</i>
-                                                                    </span>
-                                                </div>
-                                                <div class="row col-md-6 H_display_review_right">
-                                                    <span class="H_display_sprice">Start from:</span>
-                                                    <span class="H_display_sprice2" > <%= v.SPrice%>VND </span>
-                                                </div>
-                                            </div>
-                                        </a>
+                                        <img id="id_img1" src="<%= v.Cover%>" height="100%">
                                     </div>
+                                    <a href="/service/<%=v.P_Id%>" target="_blank">
+                                        <div class="H_info_artist">
+                                            <div class=" H_avt_artist">
+                                                <img class="H_img " src="<%= v.Avartar%>" height="250" width="250"/>
+                                            </div>
+                                            <div class="H_artist_desc">
+                                                <div class="H_Name_artist"><%= v.Name %></div>
+                                                <div class="H_description"><%= v.TName%></div>
+                                                <div class="H_loca "  ><i style="font-size:11px;color: #484848;" class="fas" >&#xf3c5;</i> <%= v.District%><%= v.City%></div>
+                                            </div>
+                                        </div>
+                                        <div class=" H_display_review">
+                                            <div class="row col-md-6 H_display_review_left">
+                                                                <span class="H_display_sprice">
+                                                                    5/5.216 Review
+                                                                </span>
+                                                <span class="H_Icon">
+                                                                    <i style="font-size:15px; color: red;" class="fa">&#xf004;&#xf004;&#xf004;&#xf004;&#xf004;</i>
+                                                                </span>
+                                            </div>
+                                            <div class="row col-md-6 H_display_review_right">
+                                                <span class="H_display_sprice">Start from:</span>
+                                                <span class="H_display_sprice2" > <%= v.SPrice%>VND </span>
+                                            </div>
+                                        </div>
+                                    </a>
                                 </div>
                             <%}) %>
                         </div>
-
                     </li>
-
                 </ul>
             </div>
-
-
         </div>
 
     </div>
