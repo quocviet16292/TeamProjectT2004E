@@ -171,7 +171,25 @@
                              <div class="d-flex">
                                  <div class="col-lg-10 search-buton-left">
                                      <i class='fas fa-map-marker-alt search-buton-s1'>&nbsp&nbsp&nbsp</i>
-                                     <span class="search-buton-s1">Hà Nội,Phố Cát Linh</span>
+                                         <pre class="search-buton-s1 pre-son-s1">Locating you...</pre>
+                                     <script type="text/javascript">
+                                         const address = document.querySelector("pre");
+
+                                         function onError() {
+                                             address.textContent = "Unable to locate you";
+                                         }
+                                         async function onSuccess(position) {
+                                             const geocode = await fetch(`https://geocode.xyz/${position.coords.latitude},${position.coords.longitude}?json=1`);
+                                             const geoResponse = await geocode.json();
+                                             address.textContent = ` ${geoResponse.staddress},${geoResponse.city},${geoResponse.country}`;
+                                         }
+
+                                         if (!navigator.geolocation) {
+                                             onError();
+                                         } else {
+                                             navigator.geolocation.getCurrentPosition(onSuccess, onError);
+                                         }
+                                     </script>
                                  </div>
                                  <div class="col-lg-2 search-buton-right">
                                      <i class='fas fa-location-arrow search-buton-s1'></i>
@@ -208,9 +226,25 @@
                                      <div class="modal-body-span">
                                          Your Current Location
                                      </div>
-                                     <div>
-                                         Hà nội,Phố Cát Linh
-                                     </div>
+                                         <strong class="search-buton-s1 pre-son-s1">Locating you...</strong>
+                                         <script type="text/javascript">
+                                             const address2 = document.querySelector("strong");
+
+                                             function onError() {
+                                                 address2.textContent = "Unable to locate you";
+                                             }
+                                             async function onSuccess(position) {
+                                                 const geocode2 = await fetch(`https://geocode.xyz/${position.coords.latitude},${position.coords.longitude}?json=1`);
+                                                 const geoResponse2 = await geocode2.json();
+                                                 address2.textContent = ` ${geoResponse2.staddress},${geoResponse2.city},${geoResponse2.country}`;
+                                             }
+
+                                             if (!navigator.geolocation) {
+                                                 onError();
+                                             } else {
+                                                 navigator.geolocation.getCurrentPosition(onSuccess, onError);
+                                             }
+                                         </script>
                                  </div>
                                  <div class="col-lg-4">
                                      <form action="/map" method="get">
