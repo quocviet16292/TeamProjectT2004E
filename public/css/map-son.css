@@ -38,7 +38,8 @@ body {
     margin-left: 12px;
 }
 .map-son-s1{
-    margin: 0 13.5vw!important;
+    margin-left: 12vw!important;
+    margin-right: 13.8vw!important;
     height: 60%!important;
 }
 .map-son-s0-span{
@@ -87,5 +88,165 @@ body {
 }
 
 .map-son-buttom{
-    margin-top: 2.3vw;
+    margin-top: 1vw;
+}
+
+.map-son-search{
+    text-align: left;
+    float: left;
+}
+.form-group-District{
+    text-align: left!important;
+}
+.form-group-District-city{
+    padding-left: 0.5vw;
+}
+
+.hotel-search {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background: #fff;
+    padding: 1vw 0;
+    position: relative;
+}
+
+.form-group-city{
+    margin-top: 1vw;
+}
+
+
+.submit-search{
+    margin-top: 1vw;
+}
+
+.controls{
+    display: flex;
+    flex-direction: row;
+    /*padding-right: 6vw;*/
+    /*padding-left: 12vw;*/
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    width: 1200px;
+    margin: 0 auto;
+}
+#autocomplete {
+    width: 100%;
+}
+.form-tk{
+    margin-bottom: 1vw;
+}
+#country {
+    width: 100%;
+}
+
+.placeIcon {
+    width: 20px;
+    height: 34px;
+    margin: 4px;
+}
+
+.hotelIcon {
+    width: 24px;
+    height: 24px;
+}
+
+#resultsTable {
+    border-collapse: collapse;
+    width: 240px;
+}
+
+
+.iw_table_row {
+    height: 18px;
+}
+
+.iw_attribute_name {
+    font-weight: bold;
+    text-align: right;
+}
+
+.iw_table_icon {
+    text-align: right;
+}
+
+
+#description {
+    font-size: 15px;
+    font-weight: 300;
+}
+
+#infowindow-content .title {
+    font-weight: bold;
+}
+
+#infowindow-content {
+    /*display: none;*/
+}
+
+#map #infowindow-content {
+    display: inline;
+}
+
+.pac-card {
+    margin: 10px 10px 0 0;
+    border-radius: 2px 0 0 2px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    outline: none;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    background-color: #fff;
+}
+
+#pac-container {
+    padding-bottom: 12px;
+    margin-right: 12px;
+}
+
+.pac-controls {
+    display: inline-block;
+    padding: 5px 11px;
+}
+
+.pac-controls label {
+    font-size: 13px;
+    font-weight: 300;
+}
+.form-control-select:focus{
+    /*color: #FF5C5C!important;*/
+    box-shadow: none!important;
+    border-color: #FF5C5C!important;
+}
+#pac-input {
+    background-color: #fff;
+    font-size: 15px;
+    font-weight: 300;
+    margin-left: 12px;
+    padding: 0 11px 0 13px;
+    text-overflow: ellipsis;
+    width: 300px;
+}
+.form-map-son{
+    position: absolute;
+    top: 2%!important;
+    left: 65%!important;
+    /*overflow: revert!important;*/
+}
+#pac-input:focus {
+    border-color: #FF5C5C;
+    box-shadow: none!important;
+}
+
+#title {
+    color: #fff;
+    background-color: #FF5C5C;
+    font-size: 25px;
+    font-weight: 500;
+    padding: 6px 12px;
+}
+
+#target {
+    width: 345px;
 }

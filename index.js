@@ -36,6 +36,7 @@ var db = new mssql.Request();
 
 const bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({extended:true}));
+// app.use(bodyParser.json());
 
 
 
@@ -139,21 +140,34 @@ app.get("/services",function (req,res) {
     res.render("service");
 })
 
-app.post('/booking/success', (req,res)=>{
-    res.render('success');
-})
 
 
 //------------------------------------------SON------------------------------------------------------------------
+
+app.get("/Promotions",function (req,res) {
+    res.render("navbar-Promotions-s");
+})
+app.get("/artisan-registration-and-service",function (req,res) {
+    res.render("Re-Arsist-services-son");
+})
+app.get("/Gallery",function (req,res) {
+    res.render("Gallery-s");
+})
 
 app.get("/map",function (req,res) {
     res.render("maps-son");
 });
 
+app.get("/dknghenhan",function (req,res) {
+    res.render("DangkyNgheNhan");
+});
 
+app.get("/success-arists",function (req,res) {
+    res.render("regSuccess");
+});
 
 app.get("/",function (req,res) {
-    let sql_text = "SELECT * FROM view_home;SELECT * FROM T2004E_Nhom1_VIEW_NEW;SELECT * FROM T2004E_Nhom1_VIEW_RATING;SELECT * FROM T2004E_Nhom1_MU_Type; SELECT * FROM T2004E_Nhom1_District WHERE Id IN ('001','002','003','005','006','007','008','009','019','021','268');";
+    let sql_text = "SELECT * FROM view_home;SELECT * FROM T2004E_Nhom1_VIEW_NEW;SELECT * FROM T2004E_Nhom1_VIEW_RATING;SELECT * FROM T2004E_Nhom1_MU_Type;SELECT * FROM  T2004E_Nhom1_District WHERE Id IN ('001','002','003','005','006','007','008','009','019','021','268');";
     db.query(sql_text,function (err,rows) {
         if (err) res.send(err);
         else{
@@ -197,8 +211,7 @@ app.get("/New-Arists",function (req,res) {
 })
 
 app.get("/Promotion/District/search",function (req,res) {
-
-    let key_search = "'%"+req.query.keyword+"%'";
+    let key_search = "N'%"+req.query.keyword+"%'";
     db.query("SELECT * FROM T2004E_Nhom1_VIEW_SEACH_Huy_2 WHERE District LIKE "+key_search,function (err,rows) {
         if(err) res.send("Ko co ket qua");
         else
@@ -208,9 +221,19 @@ app.get("/Promotion/District/search",function (req,res) {
             });
     });
 });
+app.get("/Promotion/ServicName/search",function (req,res) {
+    let key_search = "N'%"+req.query.keyword+"%'";
+    db.query("SELECT * FROM T2004E_Nhom1_VIEW_SEACH_Huy_3 WHERE SName LIKE "+key_search,function (err,rows) {
+        if(err) res.send("Ko co ket qua");
+        else
+            // res.send(rows.recordset);
+            res.render("artistbeauty",{
+                artist: rows.recordset
+            });
+    });
+});
 app.get("/Promotion/Servis/search",function (req,res) {
-
-    let key_search = "'%"+req.query.keyword+"%'";
+    let key_search = "N'%"+req.query.keyword+"%'";
     db.query("SELECT * FROM T2004E_Nhom1_VIEW_SEACH_Huy_2 WHERE TName LIKE "+key_search,function (err,rows) {
         if(err) res.send("Ko co ket qua");
         else
@@ -225,12 +248,12 @@ app.get("/Promotion/servic/:id",async function (req,res) {
     let arad = req.params.id;
     let sql_text1 = "SELECT top 300 a.Name,a.District,a.Avartar,a.Cover,a.Phone,b.TName,b.T_Id,c.SWTime,c.SPromo,e.*\n" +
         "\t\tFROM T2004E_Nhom1_Artist a\n" +
-        "\t\tFULL JOIN T2004E_Nhom1_MU_Services c\n" +
+        "\t\tINNER JOIN T2004E_Nhom1_MU_Services c\n" +
         "\t\tON c.Id = a.Id\n" +
-        "\t\tFULL JOIN T2004E_Nhom1_MU_Type b\n" +
+        "\t\tINNER JOIN T2004E_Nhom1_MU_Type b\n" +
         "\t\tON c.T_Id = b.T_Id\n" +
-        "\t\tFULL JOIN T2004E_Nhom1_Portfolio_2 e\n" +
-        "\t\ton e.P_Id = a.Id\n" +
+        "\t\tINNER JOIN T2004E_Nhom1_Portfolio_2 e\n" +
+        "\t\tON e.P_Id = a.Id\n" +
         "\t\tWHERE  NOT EXISTS (SELECT * FROM T2004E_Nhom1_MU_Services cc WHERE cc.Id = c.Id AND cc.SPrice > c.SPrice) AND b.T_Id =" +arad;
     let add = "ko co";
     await db.query(sql_text1).then(rs=>{
@@ -245,17 +268,17 @@ app.get("/Promotion/servic/:id",async function (req,res) {
 
 app.get("/Promotion/District/:id",async function (req,res) {
     let arad = req.params.id;
-    let sql_text1 = "SELECT TOP 200 a.Id_District,a.Name,a.District,a.Avartar,a.Cover,a.Phone,b.TName,b.T_Id,c.SWTime,c.SPromo,e.*,d.Name,d.Id\n" +
-        "\t\tFROM T2004E_Nhom1_Artist a\n" +
-        "\t\tFULL JOIN T2004E_Nhom1_MU_Services c\n" +
-        "\t\tON c.Id = a.Id\n" +
-        "\t\tFULL JOIN T2004E_Nhom1_MU_Type b\n" +
-        "\t\tON c.T_Id = b.T_Id\n" +
-        "\t\tFULL JOIN T2004E_Nhom1_Portfolio_2 e\n" +
-        "\t\tON e.P_Id = a.Id\n" +
-        "\t\tFULL JOIN T2004E_Nhom1_District d\n" +
-        "\t\tON d.Id =a.Id_District\n" +
-        "\t\tWHERE  NOT EXISTS (SELECT * FROM T2004E_Nhom1_MU_Services cc WHERE cc.Id = c.Id AND cc.SPrice > c.SPrice) AND a.Id_District =" +arad;
+    let sql_text1 = "SELECT  a.Name,a.District,a.Avartar,a.Cover,a.Phone,b.TName,a.Id,c.*,e.*,d.Id\n" +
+        "        FROM T2004E_Nhom1_Artist a\n" +
+        "        INNER JOIN T2004E_Nhom1_MU_Services c\n" +
+        "        ON c.Id = a.Id\n" +
+        "        INNER JOIN T2004E_Nhom1_MU_Type b\n" +
+        "        ON c.T_Id = b.T_Id\n" +
+        "        INNER JOIN T2004E_Nhom1_Portfolio_2 e\n" +
+        "        ON e.P_Id = a.Id\n" +
+        "\t\tINNER JOIN T2004E_Nhom1_District d\n" +
+        "\t\tON d.Id =a.Id_District \n" +
+        "        WHERE NOT EXISTS (SELECT * FROM T2004E_Nhom1_MU_Services cc WHERE cc.Id = c.Id AND cc.SPrice > c.SPrice) AND d.Id =" +arad;
     let add = "ko co";
     await db.query(sql_text1).then(rs=>{
         add = rs;
@@ -263,7 +286,7 @@ app.get("/Promotion/District/:id",async function (req,res) {
         console.log(err);
     });
     await res.render("artistbeauty",{
-        artist: add.recordsets
+        artist: add.recordset,
     });
 })
 
@@ -374,8 +397,6 @@ app.get("/service/:id",async function (req,res) {
         portfolio: p.recordset,
         review: r.recordset,
 
-        // khachhang:kh,
-        // donhang:donhang
     });
 })
 
@@ -420,39 +441,36 @@ app.get("/registet",function (req,res) {
     res.render("H_register")
 })
 app.get("/BeautyArtist",function (req,res) {
-    db.query( " SELECT top 300 a.Name,a.District,a.Avartar,a.Cover,a.Phone,b.TName,b.T_Id,c.*,e.*\n" +
-        "\t\tFROM T2004E_Nhom1_Artist a\n" +
-        "\t\tFULL JOIN T2004E_Nhom1_MU_Services c\n" +
-        "\t\tON c.Id = a.Id\n" +
-        "\t\tFULL JOIN T2004E_Nhom1_MU_Type b\n" +
-        "\t\tON c.T_Id = b.T_Id\n" +
-        "\t\tFULL JOIN T2004E_Nhom1_Portfolio_2 e\n" +
-        "\t\ton e.P_Id = a.Id\n" +
-        "\t\t--WHERE NOT EXISTS (SELECT * FROM T2004E_Nhom1_MU_Services cc WHERE cc.Id = c.Id )\n" +
-        "\t\tORDER BY a.Name DESC;\n" +
-        "select * from T2004E_Nhom1_MU_Type", function(err,rows){
+    db.query( "SELECT TOP 300 a.Name,a.District,a.Avartar,a.Cover,a.Phone,b.TName,a.Id,c.*,a.Id_District\n" +
+        "        FROM T2004E_Nhom1_Artist a\n" +
+        "        INNER JOIN T2004E_Nhom1_MU_Services c\n" +
+        "        ON c.Id = a.Id\n" +
+        "        INNER JOIN T2004E_Nhom1_MU_Type b\n" +
+        "        ON c.T_Id = b.T_Id\n" +
+        "INNER JOIN T2004E_Nhom1_District d\n" +
+        "ON d.Id =a.Id_District \n" +
+        "        WHERE NOT EXISTS (SELECT * FROM T2004E_Nhom1_MU_Services cc WHERE cc.Id = c.Id AND cc.SPrice > c.SPrice) \n" +
+        "        ORDER BY a.Name DESC; ", function(err,rows){
         if(err)
             res.send("kog co ket qua");
         else
             // res.send(rows.recordset);  //trả về dữ liệu của database mk tryu vấn
-
             res.render("artistbeauty",{
-                artist:rows.recordsets[0],
-                sevices:rows.recordsets[1]
+                artist: rows.recordset
             })
     })
 });
 app.get("/search",function (req,res) {
     let key_district = "N'%"+ req.query.keyword+"%'";
-    db.query(" SELECT top 300 a.Name,a.District,a.Avartar,a.Cover,a.Phone,b.TName,b.T_Id,c.*,e.*\n" +
-        "\t\tFROM T2004E_Nhom1_Artist a\n" +
-        "\t\tFULL JOIN T2004E_Nhom1_MU_Services c\n" +
-        "\t\tON c.Id = a.Id\n" +
-        "\t\tFULL JOIN T2004E_Nhom1_MU_Type b\n" +
-        "\t\tON c.T_Id = b.T_Id\n" +
-        "\t\tFULL JOIN T2004E_Nhom1_Portfolio_2 e\n" +
-        "\t\ton e.P_Id = a.Id\n" +
-        "\t\tWHERE  a.District like " + key_district,
+    db.query("SELECT  a.Name,a.District,a.Avartar,a.Cover,a.Phone,b.TName,a.Id,c.*,a.Id_District\n" +
+        "        FROM T2004E_Nhom1_Artist a\n" +
+        "        INNER JOIN T2004E_Nhom1_MU_Services c\n" +
+        "        ON c.Id = a.Id\n" +
+        "        INNER JOIN T2004E_Nhom1_MU_Type b\n" +
+        "        ON c.T_Id = b.T_Id\n" +
+        "INNER JOIN T2004E_Nhom1_District d\n" +
+        "ON d.Id =a.Id_District \n" +
+        "        WHERE NOT EXISTS (SELECT * FROM T2004E_Nhom1_MU_Services cc WHERE cc.Id = c.Id AND cc.SPrice > c.SPrice) AND a.District LIKE  " + key_district,
         function(err,rows){
             if(err)
                 res.send(err);
@@ -465,15 +483,15 @@ app.get("/search",function (req,res) {
 });
 app.get("/search_keyword/typemake_up",function (req,res) {
     let key_type ="'%"+ req.query.keyword1 + "%'";
-    db.query(" SELECT top 300 a.Name,a.District,a.Avartar,a.Cover,a.Phone,b.TName,b.T_Id,c.*,e.*\n" +
-        "\t\tFROM T2004E_Nhom1_Artist a\n" +
-        "\t\tFULL JOIN T2004E_Nhom1_MU_Services c\n" +
-        "\t\tON c.Id = a.Id\n" +
-        "\t\tFULL JOIN T2004E_Nhom1_MU_Type b\n" +
-        "\t\tON c.T_Id = b.T_Id\n" +
-        "\t\tFULL JOIN T2004E_Nhom1_Portfolio_2 e\n" +
-        "\t\ton e.P_Id = a.Id\n" +
-        "\t\tWHERE  b.TName like " + key_type,
+    db.query("SELECT  a.Name,a.District,a.Avartar,a.Cover,a.Phone,b.TName,a.Id,c.*,a.Id_District\n" +
+        "        FROM T2004E_Nhom1_Artist a\n" +
+        "        INNER JOIN T2004E_Nhom1_MU_Services c\n" +
+        "        ON c.Id = a.Id\n" +
+        "        INNER JOIN T2004E_Nhom1_MU_Type b\n" +
+        "        ON c.T_Id = b.T_Id\n" +
+        "\t\tINNER JOIN T2004E_Nhom1_District d\n" +
+        "\t\tON d.Id =a.Id_District \n" +
+        "        WHERE NOT EXISTS (SELECT * FROM T2004E_Nhom1_MU_Services cc WHERE cc.Id = c.Id AND cc.SPrice > c.SPrice) AND b.TName LIKE " + key_type,
         function(err,rows){
             if(err)
                 res.send(err);
@@ -486,15 +504,15 @@ app.get("/search_keyword/typemake_up",function (req,res) {
 });
 app.get("/sprice",function (req,res) {
     let max = req.query.max;
-    db.query("SELECT top 300 a.Name,a.District,a.Avartar,a.Cover,a.Phone,b.TName,b.T_Id,c.*,e.*\n" +
-        "\t\tFROM T2004E_Nhom1_Artist a\n" +
-        "\t\tFULL JOIN T2004E_Nhom1_MU_Services c\n" +
-        "\t\tON c.Id = a.Id\n" +
-        "\t\tFULL JOIN T2004E_Nhom1_MU_Type b\n" +
-        "\t\tON c.T_Id = b.T_Id\n" +
-        "\t\tFULL JOIN T2004E_Nhom1_Portfolio_2 e\n" +
-        "\t\ton e.P_Id = a.Id\n" +
-        "\t\tWHERE  SPrice <= " + max, function (err, rows) {
+    db.query("SELECT  a.Name,a.District,a.Avartar,a.Cover,a.Phone,b.TName,a.Id,c.*,a.Id_District\n" +
+        "        FROM T2004E_Nhom1_Artist a\n" +
+        "        INNER JOIN T2004E_Nhom1_MU_Services c\n" +
+        "        ON c.Id = a.Id\n" +
+        "        INNER JOIN T2004E_Nhom1_MU_Type b\n" +
+        "        ON c.T_Id = b.T_Id\n" +
+        "\t\tINNER JOIN T2004E_Nhom1_District d\n" +
+        "\t\tON d.Id =a.Id_District \n" +
+        "        WHERE NOT EXISTS (SELECT * FROM T2004E_Nhom1_MU_Services cc WHERE cc.Id = c.Id AND cc.SPrice > c.SPrice) AND SPrice <= " + max, function (err, rows) {
         if (err) res.send(err);
         else
             // res.send(rows.recordset);
@@ -505,8 +523,10 @@ app.get("/sprice",function (req,res) {
 });
 
 
-
 //------------V----------------------------------------------------------------------------
+app.get("/booking/success",function (req,res) {
+    res.render("success");
+});
 app.get('/booking/:serviceID', async (req,res)=>{
     let sID = req.params.serviceID;
     let sname = req.query.serviceTitle;
@@ -549,7 +569,6 @@ app.get('/booking/:serviceID', async (req,res)=>{
     })
     await db.query(sql_text6).then(rs=>{
         svs = rs;
-        console.log(svs);
     }).catch(function (err){
         console.log(err);
     })
@@ -563,44 +582,47 @@ app.get('/booking/:serviceID', async (req,res)=>{
         svs:svs.recordset
     });
 })
+app.post('/booking/success', (req,res)=> {
+    console.log(req.body.title);
+
+    res.render("success");
+})
 
 
-app.post('/booking/success', async (req,res)=> {
-    let a = req.body.Dkhang;
-    let b = req.body.DPhone;
-    let c = req.body.DEmail;
-    let d = req.body.DDate;
-    let e = req.body.DTime;
-    let f = req.body.DAdress;
-    let g = req.body.DTinh;
-    let h = req.body.DQuan;
-    let i = req.body.quantity;
-    let j = req.body.DThanhTien;
-    let k = req.body.DComment;
-    let title = req.body.serviceTitle;
-    let Art = req.body.artname;
-    let sv = "";
-    let sql_text = "SELECT * FROM T2004E_Nhom1_MU_Services WHERE SName IN (N'" + title + "')";
-    await db.query(sql_text).then(rs => {
-        sv = rs
-    })
-    let sql_text1 = "SELECT * FROM T2004E_Nhom1_Artist WHERE Name LIKE N'" + Art + "'";
-    let idArt = "";
-    await db.query(sql_text1).then(rs => {
-        idArt = rs
-    })
-    let sql_text2 = "INSERT INTO T2004E_Nhom1_DonHang(Dkhang,DPhone,DEmail,DDate,DTime,DAdress,DTinh,DQuan,DThanhTien,DComment,Id)" +
-        " VALUES(N'" + a + "','" + b + "','" + c + "','" + d + "," + e + "'," + f + "',N'" + g + "',N'" + h + "'," + j + ",N'" + k + "', " + idArt.Id + ");SELECT SCOPE_IDENTITY() AS D_Id;";
-    await db.query(sql_text2, function (err, rows) {
-        let donhang = rows.recordsets[0];
-        let MaSo = donhang.D_Id;
-        let sql_text3 = "";
-        sv.map(function (e) {
-            sql_text3 += "INSERT INTO T2004E_Nhom1_DonHang_Services(D_Id,S_Id,SoLuong,ThanhTien) VALUES(" + MaSo + "," + e.S_Id + ", 2," + (e.SPrice * 2) + ");";
-        })
-        db.query(sql_text3, function (err, rows) {
-            if (err) res.send(err);
-            else res.redirect("/booking/success");
-        })
-    })
-});
+// app.post('/booking/success', async (req,res)=> {
+//     let service = document.getElementsByClassName('service__title');
+//     let selected = [];
+//     service.map(e=>{
+//         selected.push(e.textContent);
+//     })
+//     console.log(selected)
+//     let a = req.body.Dkhang;
+//     let b = req.body.DPhone;
+//     let c = req.body.DEmail;
+//     let d = req.body.DDate;
+//     let e = req.body.DTime;
+//     let f = req.body.DAdress;
+//     let g = req.body.DTinh;
+//     let h = req.body.DQuan;
+//     let i = req.body.quantity;
+//     let k = req.body.DComment;
+//     let sv = "";
+//     let sql_text = "SELECT * FROM T2004E_Nhom1_MU_Services WHERE SName IN ("+selected.join(', ')+")";
+//     await db.query(sql_text).then(rs => {
+//         sv = rs
+//     })
+//     let sql_text2 = "INSERT INTO T2004E_Nhom1_DonHang(Dkhang,DPhone,DEmail,DDate,DTime,DAdress,DTinh,DQuan,DThanhTien,DComment,Id)" +
+//         " VALUES(N'" + a + "','" + b + "','" + c + "','" + d + "','" + e + "',N'" + f + "',N'" + g + "',N'" + h + "'," + sum + ",N'" + k + "', " + sv.Id + ");SELECT SCOPE_IDENTITY() AS D_Id;";
+//     await db.query(sql_text2, function (err, rows) {
+//         let donhang = rows.recordsets[0];
+//         let MaSo = donhang.D_Id;
+//         let sql_text3 = "";
+//         sv.map(function (e) {
+//             sql_text3 += "INSERT INTO T2004E_Nhom1_DonHang_Services(D_Id,S_Id,SoLuong,ThanhTien) VALUES(" + MaSo + "," + e.S_Id + ", 2," + (e.SPrice * 2) + ");";
+//         })
+//         db.query(sql_text3, function (err, rows) {
+//             if (err) res.send(err);
+//             else res.redirect("/booking/success");
+//         })
+//     })
+// });
