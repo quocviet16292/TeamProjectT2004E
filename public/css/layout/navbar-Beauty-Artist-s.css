@@ -169,7 +169,9 @@ body {
 }
 /*seach*/
 
-
+#nav-pro{
+    display: none;
+}
 /*Promotions*/
 .form-group-nav-pro{
     /*padding-left: 5vw;*/
@@ -177,14 +179,16 @@ body {
     position: relative;
 }
 .form-group-nav-pro-input{
-    margin-left: 3vw;
+    margin-left: 6vw;
+    margin-right: 5vw;
     border-radius: 1vw!important;
-    padding: 1vw 10vw 1vw 1vw !important;
+    /*padding: 0.375rem 1.5rem !important;*/
+    padding: 1vw 15vw 1vw 1vw;
 }
 .form-group-nav-pro-icon{
     position: absolute;
     top: 20%;
-    left: 105%;
+    left: 115%;
 }
 .img-banne-s{
     width: 100%;
