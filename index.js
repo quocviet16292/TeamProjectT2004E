@@ -414,7 +414,7 @@ app.get("/BeautyArtist",function (req,res) {
         "        WHERE NOT EXISTS (SELECT * FROM T2004E_Nhom1_MU_Services cc WHERE cc.Id = c.Id AND cc.SPrice > c.SPrice) \n" +
         "        ORDER BY a.Name DESC; ", function(err,rows){
         if(err)
-            res.send("kog co ket qua");
+            res.send(err);
         else
             // res.send(rows.recordset);  //trả về dữ liệu của database mk tryu vấn
             res.render("artistbeauty",{
