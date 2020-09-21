@@ -263,6 +263,7 @@ img{
 .search-buton-left{
     padding: 0 !important;
     text-align: left !important;
+    display: flex;
 }
 
 .search-buton-s1{
@@ -1728,4 +1729,10 @@ img{
 
 .foot-don{
     margin-top: 4vw;
+}
+
+
+.pre-son-s1{
+        margin: 0!important;
+         font-size: 0.9vw;
 }
