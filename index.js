@@ -397,8 +397,6 @@ app.get("/service/:id",async function (req,res) {
         portfolio: p.recordset,
         review: r.recordset,
 
-        // khachhang:kh,
-        // donhang:donhang
     });
 })
 
