@@ -129,7 +129,7 @@
                 <%=v.Name %>
                 <img src="/imgs/img/tichs%20do.png" style="max-width: 100%;height: 50px">
             </div>
-            <div class="N_profile_aftername">Jakarta Selatan - DKI Jakarta</div>
+            <div class="N_profile_aftername"><%= v.Adress%></div>
             <div class="N_profile_bio">
                 <%=v.Intro %>
             </div>
@@ -293,14 +293,16 @@
         </div>
         <div class="N_Terms">
             <div class="N_Terms_Name">
-                Terms & Conditions
+                Find Us on the Map
             </div>
             <span>
-             For appointment please reserve H-2
+             Click the map to see how to go
             </span>
         </div>
-        <div id="mapholder">
-        </div>
+        <% artist.map(e=>{%>
+        <a href="https://maps.google.com/maps?q= <%= e.Adress%>" target="_blank"> <div id="mapholder">
+        </div></a>
+        <% })%>
     </div>
 </section>
 

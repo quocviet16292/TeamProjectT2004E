@@ -124,10 +124,11 @@ a.H_hover{
     height: auto;
 
 }
+
 .H_img_artist_desc{
     background-color: white;
     height: auto;
-
+    object-fit: cover;
     display: block;
 
 
@@ -223,7 +224,7 @@ a.H_hover{
 .H_avt_artist img{
     height: 100%;
     width: 100%;
-    object-fit: contain;
+    object-fit: cover;
     border-radius: 50%;
 }
 .H_artist_desc div{

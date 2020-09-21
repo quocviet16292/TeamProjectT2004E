@@ -40,6 +40,9 @@ body {
     bottom: -15%;
     border-radius: 50%;
 }
+.N_cover_avatar img{
+    object-fit: cover;
+}
 .N_profile{
     margin-top: 60px;
     margin-bottom: 20px;
