@@ -1560,7 +1560,7 @@ img{
 }
 
 [tooltip]:before {
-    font-family: 'Roboto';
+
     font-weight: 600;
     border-radius: 2px;
     background-color: #585858;
@@ -1577,11 +1577,11 @@ img{
     white-space: nowrap;
 }
 
-[tooltip]:hover:before,
-[tooltip]:hover:after {
-    visibility: visible;
-    opacity: 1;
-}
+/*[tooltip]:hover:before,*/
+/*[tooltip]:hover:after {*/
+/*    visibility: visible;*/
+/*    opacity: 1;*/
+/*}*/
 .sbutton.mainsbutton {
     background: #ff5c5c;
 }
