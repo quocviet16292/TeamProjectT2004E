@@ -41,8 +41,8 @@
 </header>
 
 <div class="H_css_main">
-    <div class="row">
-        <div class="container ">
+    <div class="container">
+        <div class="row ">
             <div class=" col-3 H_css_main_left">
                 <div class="sticky-top">
                     <div class="H_form_right" >
@@ -60,7 +60,7 @@
                         </form>
                         <form action="/sprice" method="get">
                             <div class=" H_form ">
-                                <label class="H_form">Sort by price:</label>
+                                <label class="H_form">Desired Price:</label>
                                 <input class="H_css_main_left_input" type="search" name="max" placeholder=" Search Price " >
                             </div>
                         </form>
@@ -70,47 +70,19 @@
             <div class= " col-9 H_css_main_right">
                 <ul class="list-group  list-group-flush">
                     <li class="list-group-item" >
-                        <% artist.map(function (v) {%>
-                            <div class="row col-6  H_img_artist_desc test">
-                                <div class=" H_img_artist">
-                                    <div class="H_topup">
-                                        Top beauty artist
-                                    </div>
-                                    <div class="H_topup_icon">
-                                        <img src=" https://www.hellobeauty.id/assets/images/verified.svg">
-                                    </div>
-                                    <div  class="carousel slide " data-ride="carousel">
-                                        <!--                                                         Indicators-->
-                                        <ul class="carousel-indicators">
-                                            <li data-target="#id_img1" data-slide-to="0" class="active"></li>
-                                            <li data-target="#id_img2" data-slide-to="1"></li>
-                                            <li data-target="#id_img3" data-slide-to="2"></li>
-                                            <li data-target="#id_img4" data-slide-to="3"></li>
-                                        </ul>
-                                        <!--                                                         The slideshow -->
-                                        <div class="carousel-inner active H_article">
-                                            <div  class="carousel-item active H_thumb  ">
-                                                <img id="id_img1" src="<%= v.Cover_1%>"  >
-                                            </div>
-                                            <div class="carousel-item H_thumb">
-                                                <img id="id_img2"   src="<%= v.Cover_2%>" >
-                                            </div>
-                                            <div   class="carousel-item H_thumb">
-                                                <img id="id_img3" src="<%= v.Cover_3%>" >
-                                            </div>
-                                            <div   class="carousel-item H_thumb">
-                                                <img id="id_img4" src="<%= v.Cover_4%>" >
-                                            </div>
+                        <div class="row">
+                            <% artist.map(function (v) {%>
+                                <div class="col-6  H_img_artist_desc test">
+                                    <div class=" H_img_artist">
+                                        <div class="H_topup">
+                                            Top beauty artist
                                         </div>
-                                        <!-- Left and right controls -->
-                                        <!--                                                        <a class="carousel-control-prev" href="#id_img" data-slide="prev">-->
-                                        <!--                                                            <span class="carousel-control-prev-icon"></span>-->
-                                        <!--                                                        </a>-->
-                                        <!--                                                        <a class="carousel-control-next" href="#id_img" data-slide="next">-->
-                                        <!--                                                            <span class="carousel-control-next-icon"></span>-->
-                                        <!--                                                        </a>-->
+                                        <div class="H_topup_icon">
+                                            <img src=" https://www.hellobeauty.id/assets/images/verified.svg">
+                                        </div>
+                                        <img id="id_img1" src="<%= v.Cover%>"  height="100%"  >
                                     </div>
-                                    <a href="/service/<%=v.P_Id%>" class="">
+                                    <a href="/service/<%=v.P_Id%>" target="_blank">
                                         <div class="H_info_artist">
                                             <div class=" H_avt_artist">
                                                 <img class="H_img " src="<%= v.Avartar%>" height="250" width="250"/>
@@ -123,12 +95,12 @@
                                         </div>
                                         <div class=" H_display_review">
                                             <div class="row col-md-6 H_display_review_left">
-                                                                    <span class="H_display_sprice">
-                                                                        5/5.216 Review
-                                                                    </span>
+                                                                <span class="H_display_sprice">
+                                                                    5/5.216 Review
+                                                                </span>
                                                 <span class="H_Icon">
-                                                                        <i style="font-size:15px; color: red;" class="fa">&#xf004;&#xf004;&#xf004;&#xf004;&#xf004;</i>
-                                                                    </span>
+                                                                    <i style="font-size:15px; color: red;" class="fa">&#xf004;&#xf004;&#xf004;&#xf004;&#xf004;</i>
+                                                                </span>
                                             </div>
                                             <div class="row col-md-6 H_display_review_right">
                                                 <span class="H_display_sprice">Start from:</span>
@@ -137,8 +109,9 @@
                                         </div>
                                     </a>
                                 </div>
-                            </div>
-                        <%}) %>
+                            <%}) %>
+                        </div>
+
                     </li>
 
                 </ul>
