@@ -56,18 +56,17 @@
                 <div class="Beauty-Artist-s1">
                     <a href="/service/<%= v.Id %>" class="Beauty-Artist-a">
                         <img class="img-fluid imgs-cover" src="<%= v.Cover %>" alt="a">
-                        <a href="/service/<%= v.Id %>"><img class="imgs-avartar" src="<%= v.Avartar %>" alt="a"></a>
+                        <img class="imgs-avartar" src="<%= v.Avartar %>" alt="a">
                         <div class="Beauty-Artist-s112">
-                            <a href="#" class="Beauty-Artist-s112-a"><span class="Beauty-Artist-s112-span"><%= v.Name %></span></a>
+                        <span class="Beauty-Artist-s112-span"><%= v.Name %></span>
                         </div>
                         <div class="Beauty-Artist-s1123">
-                            <a class="Beauty-Artist-s1123-a">Discount <%= v.SPromo %>% OFF</a>
+                            <span class="Beauty-Artist-s1123-a">Discount <%= v.SPromo %>% OFF</span>
                         </div>
                         <div class="Beauty-Artist-s12">
-                            <a href="#" class="header-fooder-notamenu-s4">
                                 <div class="d-flex Beauty-Artist-s121">
                                     <div class="tensp"><span class="Beauty-Artist-s121-span"><del><%= v.SPrice %> VND</del></span></div>
-                                    <div class="Beauty-Artist-s1212"><i class='fas fa-arrow-right'></i></div>
+                                    <div class="Beauty-Artist-s1212"><i class='fas fa-arrow-right Beauty-Artist-s121-span-icon'></i></div>
                                     <div class="tensp"><span class="Beauty-Artist-s121-span">
                                              <script type="text/javascript">
                                                         var a= parseInt('<%= v.SPrice*(1-v.SPromo/100) %>');
@@ -75,20 +74,15 @@
                                                  </script>
                                             VND</span> </div>
                                 </div>
-                            </a>
                             <div class="Beauty-Artist-s12-name">
-                                <a href="#" class="header-fooder-notamenu-s4">
                                     <span><%= v.TName %> </span>
-                                </a>
                             </div>
                             <hr>
                             <div class="d-flex">
                                 <div class="col-lg-6 Beauty-Artist-s126">
                                     <div class="d-flex Beauty-Artist-s125">
-                                        <a href="#" class="header-fooder-notamenu-s4">
                                             <i class="fa fa-clock-o Beauty-Artist-s125-icon"></i>&nbsp
                                             <span class="Beauty-Artist-s125-span">Until</span>
-                                        </a>
                                     </div>
                                     <div class="Beauty-Artist-s12-SWTime">
                                         <span id="demo">
@@ -107,10 +101,8 @@
 
                                 <div class="col-lg-6">
                                     <div class="d-flex Beauty-Artist-s125">
-                                        <a href="#" class="header-fooder-notamenu-s4 header-fooder-notamenu-s42">
                                             <i class='fas fa-map-marker-alt Beauty-Artist-s125-icon'></i>&nbsp
                                             <span class="Beauty-Artist-s125-span">District</span>
-                                        </a>
                                     </div>
                                     <div class="Beauty-Artist-s12-SWTime">
                                         <span><%= v.District %> </span>
