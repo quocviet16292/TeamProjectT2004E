@@ -223,7 +223,7 @@
                         </div>
                         <div class="N_Beauty_Private_introduce_ID">
                             <span  class="N_Beauty_Private_introduce_ID_BasisPrice <% if (v.SPrice === v.SPrice*(1-(v.SPromo/100))) { %> N_oldPrice <% } %>"><i class="far fa-money-bill-alt"></i>  VND <%=v.SPrice %></span>
-                            <i  class=" N_hand_price fas fa-hand-point-right <% if (v.SPrice === v.SPrice*(1-(v.SPromo/100))) { %> N_oldPrice <% } %>"></i>
+                            <span class="<% if (v.SPrice === v.SPrice*(1-(v.SPromo/100))) { %> N_oldPrice <% } %>"><i  class=" N_hand_price fas fa-hand-point-right "></i></span>
 
                             <span class="N_priceOff"><i class="far fa-money-bill-alt"></i>  VND <%=v.SPrice*(1-(v.SPromo/100)) %></span>
                         </div>
@@ -279,7 +279,7 @@
                         <i class="fas fa-heart"></i>
                         <i class="fas fa-heart"></i>
                         <i class="fas fa-heart"></i>
-                        <i class="fas fa-heart" style="color: white"></i>
+                        <i class="fas fa-heart"></i>
                     </div>
                     <div class="N_Review_comment_intro_comment col-md-12">
                         <%=v.R_Content %>

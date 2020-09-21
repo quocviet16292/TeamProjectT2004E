@@ -358,18 +358,15 @@ app.get("/service/:id",async function (req,res) {
     let aid = req.params.id;
     let artist = "select * from T2004E_Nhom1_Artist WHERE Id ="+aid;
     let a = "ko co";
-
     await db.query(artist).then(rs=>{
         a = rs;
     }).catch(function (err) {
         console.log(err);
     });
     let service = "select * from T2004E_Nhom1_MU_Services\n" +
-        "inner join T2004E_Nhom1_Artist\n" +
-        "on T2004E_Nhom1_MU_Services.Id=T2004E_Nhom1_Artist.Id\n" +
         "inner join T2004E_Nhom1_MU_Type\n" +
         "on T2004E_Nhom1_MU_Services.T_Id = T2004E_Nhom1_MU_Type.T_Id\n" +
-        "where T2004E_Nhom1_Artist.Id = "+aid;
+        "where Id = "+aid+"order by TName"
     let s = [];
     await db.query(service).then(rs=>{
         s = rs;
@@ -396,52 +393,17 @@ app.get("/service/:id",async function (req,res) {
         service: s.recordset,
         portfolio: p.recordset,
         review: r.recordset,
-
+        // khachhang:kh,
+        // donhang:donhang
     });
 })
 
-app.get("/service",function (req,res) {
-    //lay du lieu
-    db.query("select * from T2004E_Nhom1_MU_Services\n" +
-        "inner join T2004E_Nhom1_Artist\n" +
-        "on T2004E_Nhom1_MU_Services.Id=T2004E_Nhom1_Artist.Id\n" +
-        "inner join T2004E_Nhom1_MU_Type\n" +
-        "on T2004E_Nhom1_MU_Services.T_Id = T2004E_Nhom1_MU_Type.T_Id\n" +
-        "where T2004E_Nhom1_Artist.Id = 3;select * from T2004E_Nhom1_Artist where Id=3;" +
-        "select * from T2004E_Nhom1_Portfolio where P_Id = 3\n",
-        function(err,rows){
-            if(err)
-                res.send("kog co ket qua");
-            else
-                // res.send(rows.recordset);  //trả về dữ liệu của database mk tryu vấn
-
-                res.render("service",{
-                    service:rows.recordsets[0],
-                    artist:rows.recordsets[1],
-                    portfolio:rows.recordsets[2]
-                })
-        })
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
 // CỦA HUYYYYYYYYYYYYY------------------------------------------------------------
-
 app.get("/registet",function (req,res) {
     res.render("H_register")
 })
 app.get("/BeautyArtist",function (req,res) {
-    db.query( "SELECT TOP 300 a.Name,a.District,a.Avartar,a.Cover,a.Phone,b.TName,a.Id,c.*,a.Id_District\n" +
+    db.query( "SELECT TOP 300 a.Name,a.District,a.Avartar,a.Cover,a.Phone,b.TName,c.*,a.Id_District\n" +
         "        FROM T2004E_Nhom1_Artist a\n" +
         "        INNER JOIN T2004E_Nhom1_MU_Services c\n" +
         "        ON c.Id = a.Id\n" +
@@ -462,7 +424,7 @@ app.get("/BeautyArtist",function (req,res) {
 });
 app.get("/search",function (req,res) {
     let key_district = "N'%"+ req.query.keyword+"%'";
-    db.query("SELECT  a.Name,a.District,a.Avartar,a.Cover,a.Phone,b.TName,a.Id,c.*,a.Id_District\n" +
+    db.query("SELECT  a.Name,a.District,a.Avartar,a.Cover,a.Phone,b.TName,c.*,a.Id_District\n" +
         "        FROM T2004E_Nhom1_Artist a\n" +
         "        INNER JOIN T2004E_Nhom1_MU_Services c\n" +
         "        ON c.Id = a.Id\n" +
@@ -483,7 +445,7 @@ app.get("/search",function (req,res) {
 });
 app.get("/search_keyword/typemake_up",function (req,res) {
     let key_type ="'%"+ req.query.keyword1 + "%'";
-    db.query("SELECT  a.Name,a.District,a.Avartar,a.Cover,a.Phone,b.TName,a.Id,c.*,a.Id_District\n" +
+    db.query("SELECT  a.Name,a.District,a.Avartar,a.Cover,a.Phone,b.TName,c.*,a.Id_District\n" +
         "        FROM T2004E_Nhom1_Artist a\n" +
         "        INNER JOIN T2004E_Nhom1_MU_Services c\n" +
         "        ON c.Id = a.Id\n" +
@@ -504,7 +466,7 @@ app.get("/search_keyword/typemake_up",function (req,res) {
 });
 app.get("/sprice",function (req,res) {
     let max = req.query.max;
-    db.query("SELECT  a.Name,a.District,a.Avartar,a.Cover,a.Phone,b.TName,a.Id,c.*,a.Id_District\n" +
+    db.query("SELECT  a.Name,a.District,a.Avartar,a.Cover,a.Phone,b.TName,c.*,a.Id_District\n" +
         "        FROM T2004E_Nhom1_Artist a\n" +
         "        INNER JOIN T2004E_Nhom1_MU_Services c\n" +
         "        ON c.Id = a.Id\n" +
@@ -521,8 +483,6 @@ app.get("/sprice",function (req,res) {
             })
     })
 });
-
-
 //------------V----------------------------------------------------------------------------
 app.get("/booking/success",function (req,res) {
     res.render("success");
