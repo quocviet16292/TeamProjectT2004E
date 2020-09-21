@@ -102,58 +102,24 @@ body {
     padding-left: 0.5vw;
 }
 
-/*#map {*/
-/*    height: 100%;*/
-/*}*/
-
-/* Optional: Makes the sample page fill the window. */
-
-
-
-/*table {*/
-/*    font-size: 12px;*/
-/*}*/
-
 .hotel-search {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
     background: #fff;
     padding: 1vw 0;
+    position: relative;
 }
+
 .form-group-city{
     margin-top: 1vw;
 }
-/*#map {*/
-/*    margin-top: 40px;*/
-/*    width: 440px;*/
-/*}*/
 
-/*#listing {*/
-/*    position: absolute;*/
-/*    width: 200px;*/
-/*    height: 470px;*/
-/*    overflow: auto;*/
-/*    left: 442px;*/
-/*    top: 0px;*/
-/*    cursor: pointer;*/
-/*    overflow-x: hidden;*/
-/*}*/
-
-/*#findhotels {*/
-/*    font-size: 14px;*/
-/*}*/
 
 .submit-search{
     margin-top: 1vw;
 }
 
-
-
-/*#controls {*/
-/*    -ms-flex: 1 1 140px;*/
-/*    flex: 1 1 140px;*/
-/*}*/
 .controls{
     display: flex;
     flex-direction: row;
@@ -208,7 +174,6 @@ body {
 
 
 #description {
-    font-family: Roboto;
     font-size: 15px;
     font-weight: 300;
 }
@@ -218,7 +183,7 @@ body {
 }
 
 #infowindow-content {
-    display: none;
+    /*display: none;*/
 }
 
 #map #infowindow-content {
@@ -233,7 +198,6 @@ body {
     outline: none;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
     background-color: #fff;
-    font-family: Roboto;
 }
 
 #pac-container {
@@ -247,29 +211,37 @@ body {
 }
 
 .pac-controls label {
-    font-family: Roboto;
     font-size: 13px;
     font-weight: 300;
 }
-
+.form-control-select:focus{
+    /*color: #FF5C5C!important;*/
+    box-shadow: none!important;
+    border-color: #FF5C5C!important;
+}
 #pac-input {
     background-color: #fff;
-    font-family: Roboto;
     font-size: 15px;
     font-weight: 300;
     margin-left: 12px;
     padding: 0 11px 0 13px;
     text-overflow: ellipsis;
-    width: 400px;
+    width: 300px;
 }
-
+.form-map-son{
+    position: absolute;
+    top: 2%!important;
+    left: 65%!important;
+    /*overflow: revert!important;*/
+}
 #pac-input:focus {
-    border-color: #4d90fe;
+    border-color: #FF5C5C;
+    box-shadow: none!important;
 }
 
 #title {
     color: #fff;
-    background-color: #4d90fe;
+    background-color: #FF5C5C;
     font-size: 25px;
     font-weight: 500;
     padding: 6px 12px;

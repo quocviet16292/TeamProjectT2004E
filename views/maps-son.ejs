@@ -29,20 +29,20 @@
 <form method="#" onsubmit="showAddress(this.address.value); return false">
     <div class="hotel-search ">
         <div id="controls" class="controls">
-            <div class="col-lg-4 form-group-city">
+            <div class="col-lg-5 form-group-city">
                 <div class="form-group form-group-District form-group-District-city">
                     <label for="exampleFormControlSelect1"><span>City</span></label>
-                    <select class="form-control" id="exampleFormControlSelect1">
+                    <select class="form-control form-control-select" id="exampleFormControlSelect1">
                         <option value="" disabled selected>Select your City</option>
                         <option value="Hà Nội">Hà Nội</option>
 <!--                        <option>Hồ Chí Minh</option>-->
                     </select>
                 </div>
             </div>
-            <div class="col-lg-4">
+            <div class="col-lg-5">
                 <form method="get" class="form-group form-group-District">
                     <label for="exampleFormControlSelect1" class="form-group-District"><span class="form-group-District">District</span></label>
-                    <select class="form-control" id="country">
+                    <select class="form-control form-control-select" id="country">
                         <option value="all">Select your District</option>
                         <option value="hk">Hoàn Kiếm</option>
                         <option value="hbt">Hai Bà Trưng </option>
@@ -59,50 +59,18 @@
                 </form>
             </div>
             <div class="col-lg-2">
-                <label for="exampleFormControlSelect1"><span>Tìm Kiếm</span></label>
-                <input class="form-control form-map-son" type="text" name="keyword" placeholder=""/>
-
+<!--                <label for="exampleFormControlSelect1"><span>Tìm Kiếm</span></label>-->
+                <input id="pac-input" class="form-control form-map-son" type="text" placeholder="Search Box"/>
             </div>
-            <div class="col-lg-2 submit-search">
-                <button type="submit" class="btn-danger map-son-buttom">Tìm Kiếm</button>
-            </div>
+<!--            <div class="col-lg-2 submit-search">-->
+<!--                <button type="submit" class="btn-danger map-son-buttom">Tìm Kiếm</button>-->
+<!--            </div>-->
         </div>
     </div>
 </form>
     <div id="map" class="map-son-s1"></div>
 
-    <div id="listing">
-        <table id="resultsTable">
-            <tbody id="results"></tbody>
-        </table>
-    </div>
 
-    <div style="display: none">
-        <div id="info-content">
-            <table>
-                <tr id="iw-url-row" class="iw_table_row">
-                    <td id="iw-icon" class="iw_table_icon"></td>
-                    <td id="iw-url"></td>
-                </tr>
-                <tr id="iw-address-row" class="iw_table_row">
-                    <td class="iw_attribute_name">Address:</td>
-                    <td id="iw-address"></td>
-                </tr>
-                <tr id="iw-phone-row" class="iw_table_row">
-                    <td class="iw_attribute_name">Telephone:</td>
-                    <td id="iw-phone"></td>
-                </tr>
-                <tr id="iw-rating-row" class="iw_table_row">
-                    <td class="iw_attribute_name">Rating:</td>
-                    <td id="iw-rating"></td>
-                </tr>
-                <tr id="iw-website-row" class="iw_table_row">
-                    <td class="iw_attribute_name">Website:</td>
-                    <td id="iw-website"></td>
-                </tr>
-            </table>
-        </div>
-    </div>
 
 <%- include('layout/footer')-%>
 

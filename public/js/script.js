@@ -17,21 +17,7 @@ $(document).ready(function() {
 			document.getElementById("nav-head-s").style.boxShadow = "none";
 			document.getElementById("nav-pro").style.display = "none";
 		}
-		// if (pos-pos_body>430){
-		// 	document.getElementById('nav-pro').style.display = 'inline';
-		// }else {
-		// 	document.getElementById('nav-pro').style.display = 'none';
-		// }
-		// if (pos-pos_body>430){
-		// 	document.getElementsByClassName('nav-head-s').style.boxShadow = '0px 3px 9px 0px rgba(0,0,0,0.75)';
-		// }
-		// if(pos_body>430){
-		// 	$('.back-to-top').addClass('hien-ra');
-		//
-		// }
-		// else{
-		// 	$('.back-to-top').removeClass('hien-ra');
-		// }
+
 	});
 	$('.back-to-top').click(function(event) {
 		$('html,body').animate({
