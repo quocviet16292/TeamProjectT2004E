@@ -129,7 +129,7 @@
                 <%=v.Name %>
                 <img src="/imgs/img/tichs%20do.png" style="max-width: 100%;height: 50px">
             </div>
-            <div class="N_profile_aftername">Jakarta Selatan - DKI Jakarta</div>
+            <div class="N_profile_aftername"><%= v.Adress%></div>
             <div class="N_profile_bio">
                 <%=v.Intro %>
             </div>
@@ -223,7 +223,7 @@
                         </div>
                         <div class="N_Beauty_Private_introduce_ID">
                             <span  class="N_Beauty_Private_introduce_ID_BasisPrice <% if (v.SPrice === v.SPrice*(1-(v.SPromo/100))) { %> N_oldPrice <% } %>"><i class="far fa-money-bill-alt"></i>  VND <%=v.SPrice %></span>
-                            <i  class=" N_hand_price fas fa-hand-point-right <% if (v.SPrice === v.SPrice*(1-(v.SPromo/100))) { %> N_oldPrice <% } %>"></i>
+                            <span class="<% if (v.SPrice === v.SPrice*(1-(v.SPromo/100))) { %> N_oldPrice <% } %>"><i  class=" N_hand_price fas fa-hand-point-right "></i></span>
 
                             <span class="N_priceOff"><i class="far fa-money-bill-alt"></i>  VND <%=v.SPrice*(1-(v.SPromo/100)) %></span>
                         </div>
@@ -279,7 +279,7 @@
                         <i class="fas fa-heart"></i>
                         <i class="fas fa-heart"></i>
                         <i class="fas fa-heart"></i>
-                        <i class="fas fa-heart" style="color: white"></i>
+                        <i class="fas fa-heart"></i>
                     </div>
                     <div class="N_Review_comment_intro_comment col-md-12">
                         <%=v.R_Content %>
@@ -293,14 +293,16 @@
         </div>
         <div class="N_Terms">
             <div class="N_Terms_Name">
-                Terms & Conditions
+                Find Us on the Map
             </div>
             <span>
-             For appointment please reserve H-2
+             Click the map to see how to go
             </span>
         </div>
-        <div id="mapholder">
-        </div>
+        <% artist.map(e=>{%>
+        <a href="https://maps.google.com/maps?q= <%= e.Adress%>" target="_blank"> <div id="mapholder">
+        </div></a>
+        <% })%>
     </div>
 </section>
 

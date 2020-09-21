@@ -4,6 +4,7 @@
     text-align: center;
 }
 
+
 .H_css_heaer_backgroundcolor{
     background-color: rgba(100, 100, 100, 0.8);
     width: 100%;
@@ -123,10 +124,11 @@ a.H_hover{
     height: auto;
 
 }
+
 .H_img_artist_desc{
     background-color: white;
     height: auto;
-
+    object-fit: cover;
     display: block;
 
 
@@ -222,7 +224,7 @@ a.H_hover{
 .H_avt_artist img{
     height: 100%;
     width: 100%;
-    object-fit: contain;
+    object-fit: cover;
     border-radius: 50%;
 }
 .H_artist_desc div{
@@ -289,4 +291,7 @@ span.H_display_sprice{
     font-size: 11px !important;
     font-weight: 700;
     color: rgba(0,0,0,0.54);
+}
+.id_img1{
+    object-fit: cover;
 }

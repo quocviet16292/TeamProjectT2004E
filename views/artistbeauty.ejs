@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="/css/home-son.css"/>
 </head>
 <body>
+
 <header class=" H_css_header" id="img_background">
     <section class="section sticky-top ">
         <%- include ('layout/navbar-Promotions-s'); -%>
@@ -72,12 +73,12 @@
                                         <div class="H_topup_icon">
                                             <img src=" https://www.hellobeauty.id/assets/images/verified.svg">
                                         </div>
-                                        <img id="id_img1" src="<%= v.Cover%>" height="100%">
+                                        <img class="id_img1" src="<%= v.Cover%>" height="100%">
                                     </div>
-                                    <a href="/service/<%=v.P_Id%>" target="_blank">
+                                    <a href="/service/<%=v.Id%>">
                                         <div class="H_info_artist">
                                             <div class=" H_avt_artist">
-                                                <img class="H_img " src="<%= v.Avartar%>" height="250" width="250"/>
+                                                <img class="H_img" src="<%= v.Avartar%>" height="250" width="250"/>
                                             </div>
                                             <div class="H_artist_desc">
                                                 <div class="H_Name_artist"><%= v.Name %></div>
