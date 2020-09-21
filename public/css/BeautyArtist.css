@@ -291,3 +291,6 @@ span.H_display_sprice{
     font-weight: 700;
     color: rgba(0,0,0,0.54);
 }
+.id_img1{
+    object-fit: cover;
+}
