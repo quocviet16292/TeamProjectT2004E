@@ -14,59 +14,58 @@
     <link rel="stylesheet" href="/css/BeautyArtist.css"/>
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/H_css_login.css"/>
-
 </head>
 <body>
-<div class="jumbotron jumbotron-fluid H_css_login">
+<div class="jumbotron jumbotron-fluid H_css_login" style="margin-bottom: 0">
     <div class="container">
         <div class="row">
-            <div class="col-12" style="text-align: center;color: #FF5C5C;margin-top: 50px">
-                <a href="#" style="color: #ff5c5c">
-                    <i class="fa fa-home" style="font-size: 70px"></i>
-                </a>
-            </div>
             <div class="col-12">
-                <div class="row">
                     <div class="H_css_login_form">
                         <div class="row">
                             <div class="col-12">
                                 <img src="https://partner.hellobeauty.id/assets/images/logo-black.png" style="width: 180px">
                             </div>
                         </div>
-                        <form class="col-12 " id="H_form_id" action="#" method="post">
-                            <div class="form-group">
-                                <input id="email" name="email" type="text" placeholder="Username or email" class="form-control H_css_login_form_input" required="Please enter your email">
-                            </div>
-                            <div class="form-group">
-                                <input id="password" name="password" type="text" placeholder="Password" class="form-control H_css_login_form_input" required="Please enter your email">
-                            </div>
-                            <div class="col-12" style="text-align: left">
-                                <label class="checkbox" style="font-size: 14px">
-                                    <input type="checkbox" name="remember">
-                                    Remember Me
-                                </label>
-                            </div>
-                            <div class="form-group">
-                                <button id="button-login" onclick="notify()" class=" btn-lg btn-block H_css_login_buttom">
-                                    Login
-                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-box-arrow-in-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0v-2z"/>
-                                        <path fill-rule="evenodd" d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
-                                    </svg>
-                                </button>
-                            </div>
+                        <div class="row">
+                            <form class="col-12 " id="H_form_id" action="#" method="post">
+                                <div class="form-group">
+                                    <input id="email" name="email" type="text" placeholder="Username or email" class="form-control H_css_login_form_input" required="Please enter your email">
+                                </div>
+                                <div class="form-group">
+                                    <input id="password" name="password" type="text" placeholder="Password" class="form-control H_css_login_form_input" required="Please enter your email">
+                                </div>
+                                <div class="row">
+                                    <div class="col-12" style="text-align: left">
+                                        <label class="checkbox" style="font-size: 14px">
+                                            <input type="checkbox" name="remember">
+                                            Remember Me
+                                        </label>
+                                    </div>
 
-                            <div style="text-align: left">
-                                <p><a href="#" style="color:#ff5c5c;text-decoration: none">Forgot your password?</a></p>
-                                <p>Don't have an account? please register <a href="#" style="color: #FF5C5C;text-decoration: none" >here</a>.</p>
-                            </div>
-                        </form>
+                                </div>
+                                <div class="form-group">
+                                    <button id="button-login" onclick="notify()" class=" btn-lg btn-block H_css_login_buttom">
+                                        Login
+                                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-box-arrow-in-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0v-2z"/>
+                                            <path fill-rule="evenodd" d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
+                                        </svg>
+                                    </button>
+                                </div>
+
+                                <div style="text-align: left">
+                                    <p><a href="#" style="color:#ff5c5c;text-decoration: none">Forgot your password?</a></p>
+                                    <p>Don't have an account? please register <a href="#" style="color: #FF5C5C;text-decoration: none" >here</a>.</p>
+                                </div>
+                            </form>
+
+                        </div>
                         <p class="col-12" style="margin-top: 65px;color: #777;font-size: 20px">©2020 HelloBeauty</p>
                     </div>
-                </div>
-
             </div>
+
         </div>
+
     </div>
 
 </div>
