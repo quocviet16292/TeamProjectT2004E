@@ -135,7 +135,7 @@
                                     <label>Date of Plan</label>
                                     <div class="row">
                                         <div class="col-sm-3">
-                                            <input type="text" name="DDate" class="form-control datepicker" data-date-format="yyyy-mm-dd" id="Cdate">
+                                            <input type="text" name="DDate" id="datepicker" class="form-control datepicker" data-date-format="yyyy-mm-dd" id="Cdate">
                                         </div>
                                         <div class="col-sm-3">
                                             <input type="text" name="DTime" class="form-control clockpicker" id="Ctime">
@@ -289,8 +289,8 @@
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label>
-                                                <input type="checkbox" name="confirm" value="1">
-                                                I have agreed to HelloBeauty Terms & Conditions
+                                                <input type="checkbox" name="confirm" value="1" required>
+                                                <a href="/pages/terms-and-conditions" target="_blank">I have agreed to HelloBeauty Terms & Conditions</a>
                                             </label>
                                         </div>
                                     </div>
@@ -360,7 +360,7 @@
 <script src="/js/serviceCart.js"></script>
 <script src="/js/home-son.js"></script>
 <script>
-    $('.datepicker').datepicker();
+    $('#datepicker').datepicker({ startDate: new Date(),todayHighlight:'TRUE' });
     $('.clockpicker').clockpicker();
 
 
@@ -408,7 +408,7 @@
 
     function nextPrev(n) {
         var x = document.getElementsByClassName("vbooking__step");
-        // if (n == 1 && !validateForm() && currentTab < 2) return false;
+        if (n == 1 && !validateForm() && currentTab < 2) return false;
         x[currentTab].style.display = "none";
         currentTab = currentTab + n;
         if (currentTab >= x.length) {
