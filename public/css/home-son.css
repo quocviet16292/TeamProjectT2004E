@@ -921,7 +921,8 @@ img{
     display: none;
 }
 .form-group-nav-pro-input{
-    margin-left: 3vw;
+    margin-left: 4vw;
+    margin-right: 5vw;
     border-radius: 1vw!important;
     /*padding: 0.375rem 1.5rem !important;*/
     padding: 1vw 10vw 1vw 1vw;
@@ -1560,7 +1561,7 @@ img{
 }
 
 [tooltip]:before {
-    font-family: 'Roboto';
+
     font-weight: 600;
     border-radius: 2px;
     background-color: #585858;
@@ -1577,11 +1578,11 @@ img{
     white-space: nowrap;
 }
 
-[tooltip]:hover:before,
-[tooltip]:hover:after {
-    visibility: visible;
-    opacity: 1;
-}
+/*[tooltip]:hover:before,*/
+/*[tooltip]:hover:after {*/
+/*    visibility: visible;*/
+/*    opacity: 1;*/
+/*}*/
 .sbutton.mainsbutton {
     background: #ff5c5c;
 }
