@@ -98,7 +98,7 @@ section{
     top: 70%;
     right: 50%;
     width: 600px;
-    height: 300px;
+    height: 360px;
     padding: 50px 50px;
 }
 .img__bottom--right{
@@ -107,7 +107,7 @@ section{
     top: 70%;
     left: 50%;
     width: 600px;
-    height: 300px;
+    height: 320px;
     padding: 50px 50px;
 }
 .img__bottom h3, .img__bottom--right h3{
