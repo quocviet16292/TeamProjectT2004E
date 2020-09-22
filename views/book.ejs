@@ -329,9 +329,9 @@
                             </table>
                         </div>
                         <div class="col-md-12 box__info">
-                            <p><b>Service Location</b></p>
+                            <p><b>Client Information</b></p>
                             <p id="getCName"></p>
-                            <p><span id="getCity"></span><span id="getDistrict"></span></p>
+                            <p><span id="getDistrict"></span><span id="getCity"></span></p>
                             <p id="getCPhone"></p>
                             <p><b>Date & Time</b></p>
                             <p><span id="getDate"></span>  &nbsp; &nbsp;  <span id="getTime"></span></p>
@@ -369,8 +369,8 @@
         if($(this).data('options') === undefined){
             $(this).data('options',$('#Cdistrict option').clone());
         }
-        var id = $(this).val();
-        var options = $(this).data('options').filter('[value=' + id + ']');
+        var id = $(this).val() ;
+        var options = $(this).data('options').filter('[value='+ id +']');
         $('#Cdistrict').html(options);
     });
 
@@ -416,6 +416,7 @@
             return false;
         }
         showTab(currentTab);
+
     }
 
     function validateForm() {
@@ -535,9 +536,9 @@
     function getInfoStep1(){
         document.getElementById('getCName').innerHTML = document.getElementById('Cname').value;
         document.getElementById('getCName1').innerHTML = document.getElementById('Cname').value;
-        document.getElementById('getCity').innerHTML = document.getElementById('Ccity').options[document.getElementById('Ccity').selectedIndex].text + ", ";
+        document.getElementById('getCity').innerHTML = document.getElementById('Ccity').options[document.getElementById('Ccity').selectedIndex].text;
         document.getElementById('getCity1').innerHTML = document.getElementById('Ccity').options[document.getElementById('Ccity').selectedIndex].text + ",  ";
-        document.getElementById('getDistrict').innerHTML = document.getElementById('Cdistrict').options[document.getElementById('Cdistrict').selectedIndex].text;
+        document.getElementById('getDistrict').innerHTML = document.getElementById('Cdistrict').options[document.getElementById('Cdistrict').selectedIndex].text + ", ";
         document.getElementById('getDistrict1').innerHTML = document.getElementById('Cdistrict').options[document.getElementById('Cdistrict').selectedIndex].text;
         document.getElementById('getCPhone').innerHTML = document.getElementById('Cphone').value;
         document.getElementById('getCPhone1').innerHTML = document.getElementById('Cphone').value;
@@ -617,18 +618,19 @@
 </script>
 
 //Create AJAX
+// var length = $('.service__title').length;
+// var data = [];
+//
+// for(let i = 0; i < length; i++){
+//     data.push({
+//         title: $('.service__title').eq(i).text(),
+//         quantity: parseInt($('.display__number').eq(i).text()),
+//         subtotal: parseInt($('.display__total').eq(i).text())
+//     })
+// }
 <script>
     $("button[type='submit']").click(function (){
-        // var length = $('.service__title').length;
-        // var data = [];
-        //
-        // for(let i = 0; i < length; i++){
-        //     data.push({
-        //         title: $('.service__title').eq(i).text(),
-        //         quantity: parseInt($('.display__number').eq(i).text()),
-        //         subtotal: parseInt($('.display__total').eq(i).text())
-        //     })
-        // }
+
         var length = $('.service__title').length;
         var title = [];
         var quantity = [];

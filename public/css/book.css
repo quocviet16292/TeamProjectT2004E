@@ -164,3 +164,10 @@ small{
 #submitBtn{
     display: none;
 }
+.cart-items{
+    margin-bottom: 20px;
+}
+.cart-row{
+    padding-top: 5px;
+    border-bottom: 0.5px solid #99999920;
+}
