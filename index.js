@@ -180,7 +180,7 @@ app.get("/Promotion",function (req,res) {
 
 app.get("/Promotion/ServicName/search",function (req,res) {
     let key_search = "N'%"+req.query.keyword+"%'";
-    db.query("SELECT TOP 300 a.Name,a.District,a.Avartar,a.Cover,a.Phone,b.TName,a.Id,c.*,a.Id_District\n" +
+    db.query("SELECT TOP 300 a.Name,a.District,a.Avartar,a.Cover,a.Phone,b.TName,c.*,a.Id_District\n" +
         "          FROM T2004E_Nhom1_Artist a\n" +
         "          INNER JOIN T2004E_Nhom1_MU_Services c\n" +
         "         ON c.Id = a.Id\n" +
@@ -199,7 +199,7 @@ app.get("/Promotion/ServicName/search",function (req,res) {
 });
 app.get("/Promotion/Servis/search",function (req,res) {
     let key_search = "N'%"+req.query.keyword+"%'";
-    db.query("SELECT TOP 300 a.Name,a.District,a.Avartar,a.Cover,a.Phone,b.TName,a.Id,c.*,a.Id_District\n" +
+    db.query("SELECT TOP 300 a.Name,a.District,a.Avartar,a.Cover,a.Phone,b.TName,c.*,a.Id_District\n" +
         "              FROM T2004E_Nhom1_Artist a\n" +
         "              INNER JOIN T2004E_Nhom1_MU_Services c\n" +
         "              ON c.Id = a.Id\n" +
@@ -218,7 +218,7 @@ app.get("/Promotion/Servis/search",function (req,res) {
 
 app.get("/Promotion/servic/:id",async function (req,res) {
     let arad = req.params.id;
-    let sql_text1 = "SELECT TOP 300 a.Name,a.District,a.Avartar,a.Cover,a.Phone,b.TName,a.Id,c.*,a.Id_District\n" +
+    let sql_text1 = "SELECT TOP 300 a.Name,a.District,a.Avartar,a.Cover,a.Phone,b.TName,c.*,a.Id_District\n" +
         "              FROM T2004E_Nhom1_Artist a\n" +
         "              INNER JOIN T2004E_Nhom1_MU_Services c\n" +
         "              ON c.Id = a.Id\n" +
@@ -240,7 +240,7 @@ app.get("/Promotion/servic/:id",async function (req,res) {
 
 app.get("/Promotion/District/:id",async function (req,res) {
     let arad = req.params.id;
-    let sql_text1 = "SELECT TOP 300 a.Name,a.District,a.Avartar,a.Cover,a.Phone,b.TName,a.Id,c.*,a.Id_District\n" +
+    let sql_text1 = "SELECT TOP 300 a.Name,a.District,a.Avartar,a.Cover,a.Phone,b.TName,c.*,a.Id_District\n" +
         "              FROM T2004E_Nhom1_Artist a\n" +
         "              INNER JOIN T2004E_Nhom1_MU_Services c\n" +
         "              ON c.Id = a.Id\n" +
